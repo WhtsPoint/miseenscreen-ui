@@ -1,0 +1,14 @@
+.localSelect {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  &__select {
+    min-width: 0;
+    width: 50px;
+    justify-content: center;
+    &__options {
+      justify-content: center;
+    }
+  }
+}

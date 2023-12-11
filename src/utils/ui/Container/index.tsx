@@ -4,14 +4,19 @@ import { Children } from '@/utils/interfaces/Children'
 import { cl } from '@/utils/lib/cl'
 
 interface Params extends Children<ReactNode> {
-    isVisible?: boolean,
-    className?: string
+    isHidden?: boolean,
+    className?: string,
+    isShowed?: boolean
 }
 
-export default function Container({ isVisible, children, className}: Params) {
-    const classes = cl(!isVisible && styles.hidden, className)
+export default function Container(params: Params) {
+    const { isHidden, children, className, isShowed = true } = params
+    const classes = cl(
+        isHidden && styles.hidden,
+        className
+    )
 
-    return (<div className={classes}>
+    return (isShowed && <div className={classes}>
         {children}
     </div>)
 }

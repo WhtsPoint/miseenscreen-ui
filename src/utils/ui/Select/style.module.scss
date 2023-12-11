@@ -1,17 +1,40 @@
 .select {
+  min-width: 60px;
   position: relative;
   color: white;
   cursor: pointer;
 
   &, &__optionList__option {
+    min-height: 30px;
     display: flex;
     align-items: center;
-    min-width: 60px;
-    min-height: 30px;
     user-select: none;
   }
   &__optionList {
+    display: flex;
+    flex-direction: column;
+    left: 0;
+    right: 0;
     top: 100%;
+    animation: showOn 400ms forwards;
+
     position: absolute;
+    &__option {
+      width: 100%;
+
+      &:hover {
+        background: #1c1c1c;
+        transition: background 400ms;
+      }
+    }
+  }
+}
+
+@keyframes showOn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
