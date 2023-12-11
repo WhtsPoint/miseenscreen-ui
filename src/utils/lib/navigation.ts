@@ -2,7 +2,7 @@ import { createLocalizedPathnamesNavigation } from 'next-intl/navigation'
 import config from '@/utils/config'
 import { ObjectType } from '@/utils/types/ObjectType'
 
-export const { Link } = createLocalizedPathnamesNavigation<
+export const { Link, useRouter } = createLocalizedPathnamesNavigation<
     string[],
     ObjectType<string, string>
 >({

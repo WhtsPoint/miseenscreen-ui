@@ -1,0 +1,17 @@
+.select {
+  position: relative;
+  color: white;
+  cursor: pointer;
+
+  &, &__optionList__option {
+    display: flex;
+    align-items: center;
+    min-width: 60px;
+    min-height: 30px;
+    user-select: none;
+  }
+  &__optionList {
+    top: 100%;
+    position: absolute;
+  }
+}

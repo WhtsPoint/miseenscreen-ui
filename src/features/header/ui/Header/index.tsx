@@ -2,6 +2,7 @@ import styles from './styles.module.scss'
 import config from '@/utils/config'
 import { useTranslations } from 'next-intl'
 import { Link } from '@/utils/lib/navigation'
+import { LocaleSelect } from '@/widgets/header'
 
 const routes = config.routes
 
@@ -17,6 +18,7 @@ export default function Header() {
                 <li><Link href={routes.ourStory}>{t('our-story')}</Link></li>
                 <li><Link href={routes.blog}>{t('blog')}</Link></li>
                 <li><Link href={routes.contactUs}>{t('contact-us')}</Link></li>
+                <LocaleSelect />
             </ul>
         </nav>
     </header>)
