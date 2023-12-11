@@ -1,0 +1,23 @@
+.header {
+  width: 100%;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-shrink: 0;
+  background: black;
+  padding: 10px;
+}
+
+.header__nav {
+  &__ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+  }
+  li, a {
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+  }
+}
