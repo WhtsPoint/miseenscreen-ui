@@ -16,6 +16,7 @@ export default function DefaultLayout({ children, params }: Children<ReactNode> 
     return (<html lang={locale}>
         <body style={IBMPlexSans.style} className={styles.root}>
         <NextIntlClientProvider locale={locale}>
+            {/*<Contacts />*/}
             <Header />
             <main className={styles.root__main}>{children}</main>
         </NextIntlClientProvider>

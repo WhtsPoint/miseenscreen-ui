@@ -1,6 +1,10 @@
-import styles from './styles.module.scss'
+import { Scene } from '@/widgets/scene'
+import WelcomeSection from '@/layer/main/ui/WelcomeSection'
+import StackPage from '@/layer/main/ui/StackPage'
 
 export default function MainPage() {
-    return (<div className={styles.mainPage}>
-    </div>)
+    return (<Scene>{[
+        <WelcomeSection key={0} />,
+        <StackPage key={1} />
+    ]}</Scene>)
 }

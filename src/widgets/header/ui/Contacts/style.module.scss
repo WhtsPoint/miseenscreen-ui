@@ -1,0 +1,12 @@
+.address {
+  width: 100%;
+  background: black;
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+  padding: 5px 10px;
+  a {
+    color: white;
+    font-style: normal;
+  }
+}

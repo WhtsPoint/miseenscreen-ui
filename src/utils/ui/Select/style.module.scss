@@ -17,8 +17,9 @@
     right: 0;
     top: 100%;
     animation: showOn 400ms forwards;
-
     position: absolute;
+    background: black;
+
     &__option {
       width: 100%;
 
