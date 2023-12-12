@@ -1,0 +1,22 @@
+.underline {
+  position: relative;
+
+  &:hover:after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    height: 2px;
+    background: white;
+    animation: widthToFull 00ms forwards ease;
+  }
+}
+
+@keyframes widthToFull {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 110%;
+  }
+}

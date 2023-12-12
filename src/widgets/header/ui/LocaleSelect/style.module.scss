@@ -10,5 +10,10 @@
     &__options {
       justify-content: center;
     }
+    &__value {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
   }
 }

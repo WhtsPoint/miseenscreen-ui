@@ -18,13 +18,15 @@ export default function LocaleSelect() {
     const onChange = (locale: string) => push('/', { locale })
 
     return (<div className={styles.localSelect}>
-        <Image src={icon.src} alt={""} width={18} height={18} />
         <Select
             className={styles.localSelect__select}
             optionClass={styles.localSelect__select__options}
             options={selectValues}
             value={currentLocale}
             onChange={onChange}
-        />
+            valueClass={styles.localSelect__select__value}
+        >
+            <Image src={icon.src} alt={""} width={18} height={18} />
+        </Select>
     </div>)
 }
