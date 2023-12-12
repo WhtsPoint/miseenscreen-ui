@@ -8,6 +8,8 @@ import config from '@/utils/config'
 import styles from './styles/root.module.scss'
 import './styles/global.scss'
 
+
+
 export default function DefaultLayout({ children, params }: Children<ReactNode> & any) {
     const { locale } = params
 

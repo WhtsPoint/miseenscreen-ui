@@ -1,5 +1,23 @@
 .section {
   width: 100%;
   height: 100%;
-  background: red;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  background: black;
+  color: white;
+  &__article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 100px;
+    &__name {
+      font-size: 6em;
+      margin: 0;
+    }
+    &__subtext {
+      font-size: 3em;
+      text-transform: uppercase;
+    }
+  }
 }

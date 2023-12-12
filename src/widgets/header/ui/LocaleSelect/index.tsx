@@ -2,7 +2,7 @@
 
 import Select from '@/utils/ui/Select'
 import { useLocale } from 'use-intl'
-import { useRouter } from '@/utils/lib/navigation'
+import { useRouter, usePathname } from '@/utils/lib/navigation'
 import styles from './style.module.scss'
 import icon from '@/utils/assets/images/planet.svg'
 import Image from 'next/image'
@@ -15,7 +15,8 @@ const selectValues = {
 export default function LocaleSelect() {
     const currentLocale = useLocale()
     const { push } = useRouter()
-    const onChange = (locale: string) => push('/', { locale })
+    const currentPath = usePathname()
+    const onChange = (locale: string) => push(currentPath, { locale })
 
     return (<div className={styles.localSelect}>
         <Select
