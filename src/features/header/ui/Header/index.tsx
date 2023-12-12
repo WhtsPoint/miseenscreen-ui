@@ -6,6 +6,7 @@ import { LocaleSelect } from '@/widgets/header'
 import animations from '@/utils/assets/styles/animation.module.scss'
 import { Children } from '@/utils/interfaces/Children'
 import { ReactNode } from 'react'
+import Logo from '@/widgets/header/ui/Logo'
 
 const routes = config.routes.header
 
@@ -16,6 +17,7 @@ function StyledLi({ children }: Children<ReactNode>) {
 export default function Header() {
     const t = useTranslations('header')
     return (<header className={styles.header}>
+        <Logo />
         <nav className={styles.header__nav}>
             <ul className={styles.header__nav__ul}>
                 <StyledLi>{t('service')}</StyledLi>
