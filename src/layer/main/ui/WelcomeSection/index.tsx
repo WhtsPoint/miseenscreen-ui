@@ -1,23 +1,21 @@
 'use client'
 
 import styles from './style.module.scss'
-import openSans from '@/utils/assets/fonts/OpenSans'
-import { useAnimate } from 'framer-motion'
+import { useRef } from 'react'
+import { useScroll } from 'framer-motion'
+import { WelcomeText } from '@/widgets/main'
+import { LightScene } from '@/widgets/main'
 
 export default function WelcomeSection() {
-    const [ref, animate] = useAnimate()
+    const ref = useRef(null)
+    const { scrollYProgress } = useScroll({
+        target: ref,
+        offset: ['0 0', '1 0']
+    })
 
     return (<section ref={ref} className={styles.section}>
-        <article className={styles.section__article}>
-            <h1 style={openSans.style} className={styles.section__article__name}>
-                MISEENSCREEN
-            </h1>
-            <b className={styles.section__article__description}>
-                Adaptation of ideas for your business and activities
-            </b>
-            <b className={styles.section__article__subtext}>
-                Web app development
-            </b>
-        </article>
+        <LightScene />
+        <WelcomeText scrollY={scrollYProgress} />
+        <div style={{ height: 30 }}/>
     </section>)
 }
