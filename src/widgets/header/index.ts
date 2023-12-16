@@ -1,4 +1,5 @@
 import LocaleSelect from './ui/LocaleSelect'
-import HomeLogo from '@/widgets/header/ui/HomeLogo'
+import HomeLogo from './ui/HomeLogo'
+import { useHeaderSettings } from './stores/header-settings'
 
-export { LocaleSelect, HomeLogo }
+export { LocaleSelect, HomeLogo, useHeaderSettings }

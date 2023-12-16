@@ -1,4 +1,4 @@
-.header {
+@mixin header {
   width: 100%;
   display: flex;
   align-items: center;
@@ -7,21 +7,25 @@
   background: black;
   padding: 0 20px;
   top: 0;
-  position: sticky;
+  position: fixed;
   height: 70px;
   z-index: 50;
+  &__nav {
+    &__ul {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      list-style: none;
+      text-transform: uppercase;
+    }
+
+    li, a {
+      color: white;
+      cursor: pointer;
+    }
+  }
 }
 
-.header__nav {
-  &__ul {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    list-style: none;
-    text-transform: uppercase;
-  }
-  li, a {
-    color: white;
-    cursor: pointer;
-  }
+.header {
+  @include header
 }

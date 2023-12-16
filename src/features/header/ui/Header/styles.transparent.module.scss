@@ -1,0 +1,12 @@
+@use 'styles.module';
+
+.header {
+  @include styles.header;
+  background: none;
+  &__localeSelect {
+    background: none !important;
+    &__optionList {
+      background: none !important;
+    }
+  }
+}

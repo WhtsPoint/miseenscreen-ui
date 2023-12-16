@@ -1,15 +1,14 @@
 'use client'
 
 import styles from './style.module.scss'
-import { useRef } from 'react'
+import { forwardRef, RefObject } from 'react'
 import { useScroll } from 'framer-motion'
 import { WelcomeText } from '@/widgets/main'
 import { LightScene } from '@/widgets/main'
 
-export default function WelcomeSection() {
-    const ref = useRef(null)
+const WelcomeSection = forwardRef<HTMLSelectElement>((params, ref) => {
     const { scrollYProgress } = useScroll({
-        target: ref,
+        target: ref as RefObject<HTMLElement>,
         offset: ['0 0', '1 0']
     })
 
@@ -17,4 +16,8 @@ export default function WelcomeSection() {
         <LightScene scrollY={scrollYProgress} />
         <WelcomeText scrollY={scrollYProgress} />
     </section>)
-}
+})
+
+WelcomeSection.displayName = 'WelcomeSection'
+
+export default WelcomeSection

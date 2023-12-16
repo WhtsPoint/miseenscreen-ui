@@ -19,9 +19,9 @@ export default function Select(params: Params) {
     const [isVisible, setIsVisible] = useState<boolean>(false)
     const swapVisibility = () => setIsVisible((prev) => !prev)
 
-    return (<div onClick={swapVisibility} className={cl(styles.select, optionClass, className)}>
+    return (<div onClick={swapVisibility} className={cl(styles.select, className)}>
         <div className={valueClass}>{children}{options[value]}</div>
-        <Container className={styles.select__optionList} isShowed={isVisible}>
+        <Container className={cl(styles.select__optionList, optionClass)} isShowed={isVisible}>
             {Object.entries(options).map(([value, name]) => <div
                 key={value}
                 className={cl(styles.select__optionList__option, optionClass)}
