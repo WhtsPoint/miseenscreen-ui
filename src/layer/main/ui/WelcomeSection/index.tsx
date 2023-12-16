@@ -15,6 +15,6 @@ export default function WelcomeSection() {
 
     return (<section ref={ref} className={styles.section}>
         <LightScene scrollY={scrollYProgress} />
-        {/*<WelcomeText scrollY={scrollYProgress} />*/}
+        <WelcomeText scrollY={scrollYProgress} />
     </section>)
 }
