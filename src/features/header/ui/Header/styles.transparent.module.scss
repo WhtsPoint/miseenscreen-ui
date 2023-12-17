@@ -2,11 +2,7 @@
 
 .header {
   @include styles.header;
-  background: none;
-  &__localeSelect {
-    background: none !important;
-    &__optionList {
-      background: none !important;
-    }
+  &, &__localeSelect, &__localeSelect__optionList {
+      background-color: transparent !important;
   }
 }

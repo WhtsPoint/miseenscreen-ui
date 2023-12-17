@@ -3,8 +3,8 @@
 import styles from './style.module.scss'
 import { forwardRef, RefObject } from 'react'
 import { useScroll } from 'framer-motion'
-import { WelcomeText } from '@/widgets/main'
-import { LightScene } from '@/widgets/main'
+import { WelcomeText } from '../../../../widgets/welcome'
+import { LightScene } from '../../../../widgets/welcome'
 
 const WelcomeSection = forwardRef<HTMLSelectElement>((params, ref) => {
     const { scrollYProgress } = useScroll({

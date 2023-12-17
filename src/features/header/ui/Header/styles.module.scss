@@ -4,12 +4,11 @@
   align-items: center;
   justify-content: space-between;
   flex-shrink: 0;
-  background: black;
-  padding: 0 20px;
+  padding: 10px 20px;
   top: 0;
   position: fixed;
-  height: 70px;
   z-index: 50;
+  background-color: black;
   &__nav {
     &__ul {
       display: flex;
@@ -17,8 +16,8 @@
       gap: 20px;
       list-style: none;
       text-transform: uppercase;
+      margin: 0;
     }
-
     li, a {
       color: white;
       cursor: pointer;

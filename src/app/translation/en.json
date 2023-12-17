@@ -6,5 +6,12 @@
     "our-story": "Our story",
     "blog": "Blog",
     "contact-us": "Contact us"
+  },
+  "stack": {
+    "ecommerce": "Ecommerce",
+    "web-services": "Online services&Web portals",
+    "elearning-solution": "Elearning solution",
+    "hr-software": "Hr software",
+    "analytics": "Analytics"
   }
 }

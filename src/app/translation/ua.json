@@ -6,5 +6,8 @@
     "our-story": "Our story",
     "blog": "Blog",
     "contact-us": "Contact us"
+  },
+  "stack": {
+    "ecommerce": "Ecommerce"
   }
 }
