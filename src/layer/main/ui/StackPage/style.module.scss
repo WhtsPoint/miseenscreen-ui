@@ -1,7 +1,13 @@
+.scrollBlock {
+  height: 200vh;
+}
+
 .section {
-  height: calc(100% - 100px);
+  height: 100vh;
   background: black;
   overflow: hidden;
+  position: sticky;
+  top: 0;
   @media (max-width: 500px) {
     height: auto;
   }

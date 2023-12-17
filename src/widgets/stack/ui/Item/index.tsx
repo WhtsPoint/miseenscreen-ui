@@ -9,16 +9,16 @@ interface Video {
 }
 
 interface Params {
-    className?: string,
     style?: MotionStyle
     video: Video,
-    theme: string
+    theme: string,
+    themeClass?: string
 }
 
-export default function Item({ className, video, theme, style }: Params) {
+export default function Item({ video, theme, style, themeClass }: Params) {
     const { src, type = 'video/mp4' } = video
 
-    return (<motion.article className={cl(styles.item, className)} style={style}>
+    return (<motion.article className={styles.item} style={style}>
         <div className={styles.item__videoBlock}>
             <video
                 muted={true}
@@ -30,6 +30,6 @@ export default function Item({ className, video, theme, style }: Params) {
                 <source src={src} type={type} />
             </video>
         </div>
-        <h3 style={openSans.style} className={styles.item__theme}>{theme}</h3>
+        <h3 style={openSans.style} className={cl(styles.item__theme, themeClass)}>{theme}</h3>
     </motion.article>)
 }
