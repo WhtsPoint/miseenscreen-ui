@@ -1,7 +1,7 @@
 import styles from './styles.module.scss'
 import { cl } from '@/utils/lib/cl'
 import openSans from '@/utils/assets/fonts/OpenSans'
-import { CSSProperties } from 'react'
+import { motion, MotionStyle } from 'framer-motion'
 
 interface Video {
     src: string,
@@ -10,7 +10,7 @@ interface Video {
 
 interface Params {
     className?: string,
-    style?: CSSProperties
+    style?: MotionStyle
     video: Video,
     theme: string
 }
@@ -18,7 +18,7 @@ interface Params {
 export default function Item({ className, video, theme, style }: Params) {
     const { src, type = 'video/mp4' } = video
 
-    return (<article className={cl(styles.item, className)} style={style}>
+    return (<motion.article className={cl(styles.item, className)} style={style}>
         <div className={styles.item__videoBlock}>
             <video
                 muted={true}
@@ -31,5 +31,5 @@ export default function Item({ className, video, theme, style }: Params) {
             </video>
         </div>
         <h3 style={openSans.style} className={styles.item__theme}>{theme}</h3>
-    </article>)
+    </motion.article>)
 }
