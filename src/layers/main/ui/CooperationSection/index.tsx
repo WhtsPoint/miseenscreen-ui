@@ -1,9 +1,16 @@
 import { Points, TitleBlock } from '@/features/cooperation'
 import styles from './styles.module.scss'
+import { useRef } from 'react'
+import { useInView } from 'framer-motion'
+import VerticalLine from '../../../../features/cooperation/ui/VerticalLine'
 
 export default function CooperationSection() {
-    return (<section className={styles.cooperationSection}>
-        <TitleBlock className={styles.cooperationSection__title} />
-        <Points className={styles.cooperationSection__points} />
+    const ref = useRef(null)
+    const isInView = useInView(ref, { margin: '-40%' })
+
+    return (<section ref={ref} className={styles.cooperationSection}>
+        <TitleBlock isInView={isInView} className={styles.cooperationSection__title} />
+        <VerticalLine isInView={isInView} />
+        <Points isInView={isInView} className={styles.cooperationSection__points} />
     </section>)
 }
