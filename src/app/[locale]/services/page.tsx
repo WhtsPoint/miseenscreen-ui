@@ -1,4 +1,4 @@
-import MainPage from '@/layer/main/ui/MainPage'
+import MainPage from '@/layers/main/ui/MainPage'
 
 export default function Page() {
     return (<MainPage />)

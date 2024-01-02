@@ -1,0 +1,28 @@
+.section {
+  height: 100vh;
+  padding: 30px;
+  display: grid;
+  grid-gap: 20px;
+  grid-template-areas:
+          "a a b c"
+          "d d e c";
+  @media (max-width: 1300px) {
+    grid-template-areas:
+            "a b"
+            "d e"
+            "c c";
+  }
+  @media (max-width: 500px) {
+    padding: 50px 30px;
+    grid-template-areas:
+            "a"
+            "b"
+            "d"
+            "e"
+            "c";
+  }
+  & article {
+    min-width: 0;
+    min-height: 0;
+  }
+}

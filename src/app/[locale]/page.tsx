@@ -1,6 +1,6 @@
 'use server'
 
-import MainPage from '@/layer/main/ui/MainPage'
+import MainPage from '@/layers/main/ui/MainPage'
 
 export default async function Page() {
     return (<MainPage />)
