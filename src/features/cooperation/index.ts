@@ -1,3 +1,4 @@
 import TitleBlock from './ui/TitleBlock'
+import Points from './ui/Points'
 
-export { TitleBlock }
+export { TitleBlock, Points }

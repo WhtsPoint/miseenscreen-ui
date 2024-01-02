@@ -10,7 +10,6 @@ interface Params {
 
 export default function Eccomerce({ style }: Params) {
     const t = useTranslations('stack')
-    console.log(t)
 
     return (<Item
         style={style}
