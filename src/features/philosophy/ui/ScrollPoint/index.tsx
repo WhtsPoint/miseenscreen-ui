@@ -1,8 +1,8 @@
 import { Point } from '../../../../widgets/philosophy'
 import { useTranslations } from 'next-intl'
-import { MotionValue, useMotionValue, useMotionValueEvent, useTransform } from 'framer-motion'
+import { MotionValue, useMotionValueEvent } from 'framer-motion'
 import { useState } from 'react'
-import value from '*.png'
+import useDescriptionAnimation from '@/widgets/philosophy/hooks/useDescriptionAnimation'
 
 type Topic = 'allInOnce' | 'companyInSmartphone' | 'passionate'
 
@@ -20,10 +20,7 @@ const getTopicByScrollProgress = (progress: number) => {
 export default function ScrollPoint({ className, scrollProgress }: Params) {
     const [topic, setTopic] = useState<Topic>('allInOnce')
     const t = useTranslations('philosophy')
-
-    const xStepProgress = useTransform(scrollProgress, value => value % (1 / 3))
-    const xProgress = useTransform(xStepProgress, [0.25, 1 / 3], [0, -250])
-    const opacityProgress = useTransform(xStepProgress, [0, 0.1, 0.25, 1 / 3], [0, 1, 1, 0])
+    const descriptionStyles = useDescriptionAnimation({ scrollProgress, count: 3 })
 
     useMotionValueEvent(scrollProgress, 'change', (value) => {
         setTopic(getTopicByScrollProgress(value))
@@ -33,6 +30,6 @@ export default function ScrollPoint({ className, scrollProgress }: Params) {
         className={className}
         article={t(topic + '-article')}
         description={t(topic + '-description')}
-        descriptionStyles={{ x: xProgress, opacity: opacityProgress }}
+        descriptionStyles={descriptionStyles}
     />)
 }

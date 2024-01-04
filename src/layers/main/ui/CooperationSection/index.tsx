@@ -6,7 +6,7 @@ import VerticalLine from '../../../../features/cooperation/ui/VerticalLine'
 
 export default function CooperationSection() {
     const ref = useRef(null)
-    const isInView = useInView(ref, { margin: '-40%' })
+    const isInView = useInView(ref, { margin: '-40%', once: true })
 
     return (<section ref={ref} className={styles.cooperationSection}>
         <TitleBlock isInView={isInView} className={styles.cooperationSection__title} />
