@@ -9,6 +9,9 @@
     border: 1px solid white;
     padding: 20px;
     color: white;
+    h2 {
+      margin: 0;
+    }
   }
   &__description {
     max-width: 750px;
