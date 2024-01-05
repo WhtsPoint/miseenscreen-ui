@@ -5,11 +5,14 @@
   flex-direction: column;
   &__video {
     width: 100%;
-    height: 350px;
+    flex: 3;
+    &__content {
+      height: auto;
+    }
   }
   &__information {
     display: flex;
-    flex: 4;
+    flex: 5;
     padding: 50px;
     &__title {
       flex: 1;

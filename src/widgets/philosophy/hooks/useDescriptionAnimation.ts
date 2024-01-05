@@ -14,7 +14,6 @@ export default function useDescriptionAnimation(params: Params) {
     const animationStartAt = step - a
 
     const xStepProgress = useTransform(scrollProgress, value => {
-        console.log(value > animationStartAt && value < 1 - a ? value % step : animationStartAt)
         return value > animationStartAt && value < 1 - a ? value % step : animationStartAt
     })
     const xProgress = useTransform(xStepProgress, [animationStartAt, step], [0, -250])

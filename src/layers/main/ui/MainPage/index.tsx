@@ -3,8 +3,9 @@
 import WelcomeSection from '../WelcomeSection'
 import StackPage from '../StackPage'
 import useHeaderTransition from '../../hooks/useHeaderTransition'
-import CooperationSection from '@/layers/main/ui/CooperationSection'
-import PhilosophySection from '@/layers/main/ui/PhilosophySection'
+import CooperationSection from '../CooperationSection'
+import PhilosophySection from '../PhilosophySection'
+import StepsSection from '../StepsSection'
 
 export default function MainPage() {
     const [firstRef, secondRef] = useHeaderTransition()
@@ -14,5 +15,6 @@ export default function MainPage() {
         <StackPage ref={secondRef} />
         <CooperationSection />
         <PhilosophySection />
+        <StepsSection />
     </>)
 }
