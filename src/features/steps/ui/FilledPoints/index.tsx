@@ -1,19 +1,30 @@
 import { useTranslations } from 'next-intl'
 import { Points } from '@/widgets/steps'
+import { MotionValue } from 'framer-motion'
+import { Topic } from '@/widgets/steps/interfaces/Topic'
 
-const topics = ['qa', 'deployment', 'support', 'monitoring']
+const topics = [
+    ['planning', 'qa'],
+    ['task', 'deployment'],
+    ['design', 'support'],
+    ['development', 'monitoring']
+]
 
 interface Params {
     isInView?: boolean,
-    className?: string
+    className?: string,
+    position: MotionValue<number>
 }
 
-export default function FilledPoints({ isInView, className }: Params) {
+export default function FilledPoints({ isInView, className, position }: Params) {
     const t = useTranslations('steps')
-    const points = topics.map((topic) => ({
+    const translateTopic = (topic: string) => ({
         topic: t(topic),
         description: t(topic + '-description')
-    }))
+    })
+    const points = topics.map(([first, second]): [Topic, Topic] => {
+        return [translateTopic(first), translateTopic(second)]
+    })
 
-    return (<Points isInView={isInView} className={className} points={points} />)
+    return (<Points position={position} isInView={isInView} className={className} points={points} />)
 }

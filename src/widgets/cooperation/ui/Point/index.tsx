@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion'
 import styles from './styles.module.scss'
+import StyledDt from '@/utils/ui/StyledDt'
 
 interface Params {
     topic: string,
@@ -15,7 +16,7 @@ export default function Point({ topic, description, isInView, animationOptions, 
         transition={{ duration: isInView ? 2 : 0.5, ...animationOptions }}
         className={className}
     >
-        <dt className={styles.topic__dt}>{topic}</dt>
+        <StyledDt>{topic}</StyledDt>
         <dd className={styles.topic__dd}>{description}</dd>
     </motion.div>)
 }
