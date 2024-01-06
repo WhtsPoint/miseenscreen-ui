@@ -5,10 +5,7 @@
   flex-direction: column;
   &__video {
     width: 100%;
-    flex: 3;
-    &__content {
-      height: auto;
-    }
+    flex: 3;  
   }
   &__information {
     display: flex;

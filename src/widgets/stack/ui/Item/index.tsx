@@ -2,6 +2,8 @@ import styles from './styles.module.scss'
 import { cl } from '@/utils/lib/cl'
 import openSans from '@/utils/assets/fonts/OpenSans'
 import { motion, MotionStyle } from 'framer-motion'
+import BackgroundVideo from '@/utils/ui/BackgroundVideo'
+import BasicLoading from '@/utils/ui/LoadingBlock'
 
 interface Video {
     src: string,
@@ -16,19 +18,9 @@ interface Params {
 }
 
 export default function Item({ video, theme, style, themeClass }: Params) {
-    const { src, type = 'video/mp4' } = video
-
     return (<motion.article className={styles.item} style={style}>
         <div className={styles.item__videoBlock}>
-            <video
-                muted={true}
-                autoPlay={true}
-                loop={true}
-                controls={false}
-                className={styles.item__videoBlock__video}
-            >
-                <source src={src} type={type} />
-            </video>
+            <BackgroundVideo {...video} loadingElement={<BasicLoading />} />
         </div>
         <h3 style={openSans.style} className={cl(styles.item__theme, themeClass)}>{theme}</h3>
     </motion.article>)
