@@ -5,15 +5,15 @@ interface Params {
     topic: string,
     description: string,
     isInView?: boolean,
-    animationOptions?: {
-        delay?: number
-    }
+    animationOptions?: { delay?: number },
+    className?: string
 }
 
-export default function Point({ topic, description, isInView, animationOptions }: Params) {
+export default function Point({ topic, description, isInView, animationOptions, className }: Params) {
     return (<motion.div
         animate={{ opacity: isInView ? 1 : 0 }}
         transition={{ duration: isInView ? 2 : 0.5, ...animationOptions }}
+        className={className}
     >
         <dt className={styles.topic__dt}>{topic}</dt>
         <dd className={styles.topic__dd}>{description}</dd>

@@ -1,0 +1,17 @@
+.points {
+  display: flex;
+  gap: 20px;
+  position: relative;
+  &__list {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
+    margin: 0;
+  }
+  &__line {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+  }
+}

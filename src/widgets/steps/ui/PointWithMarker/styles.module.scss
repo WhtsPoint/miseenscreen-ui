@@ -1,0 +1,11 @@
+.point {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  &__point dt {
+    margin-top: 0;
+  }
+  &__marker {
+    flex-shrink: 0;
+  }
+}

@@ -1,14 +1,16 @@
 import styles from './styles.module.scss'
-import Marker from '@/widgets/steps/ui/Marker'
+import { cl } from '@/utils/lib/cl'
+import { motion } from 'framer-motion'
 
 interface Params {
-    isInView?: boolean
+    isInView?: boolean,
+    className?: string
 }
 
-export default function VerticalLine({ isInView }: Params) {
-    return (<div className={styles.verticalLine}>
-        {Array.from(Array(5).keys()).map((index) => {
-            return <Marker isInView={isInView} key={index} transition={{ delay: index / 3 }} />
-        })}
-    </div>)
+export default function VerticalLine({ isInView, className }: Params) {
+    return (<motion.hr
+        className={cl(styles.verticalLine, className)}
+        initial={{ height: 0, display: 'none' }}
+        animate={ isInView && { height: '100%', display: 'initial' }}
+    />)
 }

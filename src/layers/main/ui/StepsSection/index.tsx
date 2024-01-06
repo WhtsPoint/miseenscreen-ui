@@ -1,8 +1,8 @@
 import styles from './styles.module.scss'
 import { TitleBlock } from '@/features/steps'
-import { Points } from '@/widgets/steps'
 import { useInView } from 'framer-motion'
 import { useRef } from 'react'
+import { FilledPoints } from '@/features/steps'
 
 export default function StepsSection() {
     const ref = useRef(null)
@@ -10,6 +10,6 @@ export default function StepsSection() {
 
     return (<section ref={ref} className={styles.stepSection}>
         <TitleBlock className={styles.stepSection__title} />
-        <Points isInView={isInView} className={styles.stepSection__points} />
+        <FilledPoints isInView={isInView} className={styles.stepSection__points} />
     </section>)
 }
