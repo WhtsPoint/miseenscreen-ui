@@ -1,0 +1,10 @@
+.details {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  color: white;
+  &__title {
+    display: flex;
+    gap: 10px;
+  }
+}

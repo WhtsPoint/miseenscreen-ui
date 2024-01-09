@@ -10,7 +10,6 @@ interface Params {
     loadingElement?: ReactNode
 }
 
-
 export default function BackgroundVideo(
     { className, src, videoClass, loadingElement, type = 'video/mp4' }: Params
 ) {
