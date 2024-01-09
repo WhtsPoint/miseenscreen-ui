@@ -1,0 +1,13 @@
+.details {
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  color: white;
+  font-size: 1.5em;
+  &__subTitle {
+    white-space: pre-line;
+  }
+  &__text {
+    font-size: 0.8em;
+  }
+}
