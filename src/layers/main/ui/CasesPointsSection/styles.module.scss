@@ -3,4 +3,12 @@
   height: 100%;
   display: flex;
   justify-content: flex-end;
+  align-items: flex-end;
+  &__details {
+    max-width: 700px;
+  }
+}
+
+.stickyScroll {
+  height: 600vh;
 }
