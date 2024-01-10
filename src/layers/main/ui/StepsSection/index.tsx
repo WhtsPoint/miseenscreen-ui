@@ -11,7 +11,6 @@ export default function StepsSection() {
     const scrollProgress = useMotionValue<number>(0)
     const position = useTransform(scrollProgress, (value) => Math.round(value))
 
-    console.log(position.get())
     return (<StickyScroll onScroll={(val) => scrollProgress.set(val)} className={styles.stickyScroll}>
         <section ref={ref} className={styles.stickyScroll__stepSection}>
             <TitleBlock className={styles.stickyScroll__stepSection__title} />

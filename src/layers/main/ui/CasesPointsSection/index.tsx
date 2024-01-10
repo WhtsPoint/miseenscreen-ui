@@ -1,7 +1,7 @@
 import styles from './styles.module.scss'
-import { Details } from '@/features/cases-points'
+import { Background, Details } from '@/features/cases-points'
 import { useRef } from 'react'
-import { useInView, useMotionValue, useMotionValueEvent, useTransform } from 'framer-motion'
+import { useInView, useMotionValue, useTransform } from 'framer-motion'
 import StickyScroll from '@/utils/ui/StickyScroll'
 
 export default function CasesPointsSection() {
@@ -9,11 +9,11 @@ export default function CasesPointsSection() {
     const isInView = useInView(ref, { margin: '-40%' })
     const scrollProgress = useMotionValue(0)
     const frame = useTransform(scrollProgress, (value) => Math.min(Math.floor(value * 3), 2))
-
-    useMotionValueEvent(frame, 'change', console.log)
+    const isBackgroundInView = useTransform(scrollProgress, (value) => value >= 0.2)
 
     return (<StickyScroll className={styles.stickyScroll} onScroll={(value) => scrollProgress.set(value)}>
         <section ref={ref} className={styles.casesPointsSection}>
+            <Background isInViewMotion={isInView} className={styles.casesPointsSection__background} />
             <Details frame={frame} isInView={isInView} className={styles.casesPointsSection__details} />
         </section>
     </StickyScroll>)
