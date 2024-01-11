@@ -9,7 +9,7 @@ import { LightScene } from '../../../../widgets/welcome'
 const WelcomeSection = forwardRef<HTMLSelectElement>((params, ref) => {
     const { scrollYProgress } = useScroll({
         target: ref as RefObject<HTMLElement>,
-        offset: ['0 0', '1 0']
+        offset: ['0 0', '1.png 0']
     })
 
     return (<section ref={ref} className={styles.section}>
