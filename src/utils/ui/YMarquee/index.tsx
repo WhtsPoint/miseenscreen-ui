@@ -1,20 +1,29 @@
 import { MotionMarquee } from '@/utils/ui/Marquee'
 import { Children } from '@/utils/interfaces/Children'
 import { ReactNode } from 'react'
-import { useTime, useTransform } from 'framer-motion'
+import { MotionValue, useAnimate, useMotionValue, useMotionValueEvent, useTime, useTransform } from 'framer-motion'
+import { Direction, methods } from '@/utils/lib/y-marquee'
 
 interface Params extends Children<ReactNode> {
     className?: string
-    cycleTime: number
+    speed: MotionValue<number>,
+    direction: Direction
 }
 
-export default function YMarquee({ children, className, cycleTime }: Params) {
+export default function YMarquee({ children, className, speed, direction }: Params) {
+    const method = methods[direction]
     const time = useTime()
-    const y = useTransform(time, (value) => value % cycleTime / (cycleTime / 100))
-    const transform = useTransform(y, (value) => {
-        console.log(value)
-        return `translateY(-${value}%)`
+    const progress = useMotionValue<number>(method.initial)
+    const y = useTransform(progress, (value) => value + '%')
+
+    useMotionValueEvent(time, 'change', () => {
+        progress.set(method.calcProgress(progress.get(), speed.get()))
     })
 
-    return (<MotionMarquee className={className} style={{ transform }} >{children}</MotionMarquee>)
+    return (<MotionMarquee
+        style={{ y }}
+        className={className}
+    >
+        {children}
+    </MotionMarquee>)
 }
