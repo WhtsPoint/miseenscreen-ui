@@ -17,7 +17,11 @@ const downPhotos: StaticImageData[] = [photo1, photo2, photo5]
 export default function Background({ className, isInViewMotion }: Params) {
 
     return (<div className={cl(styles.background, className)}>
-        <motion.div transition={{ duration: 0.8 }} animate={{ y: isInViewMotion ? 0 : '100%' }} style={{ width: '100%', height: '100%', background: 'blue'}}>
+        <motion.div
+            transition={{ duration: 0.8 }}
+            animate={{ y: isInViewMotion ? 0 : '100%' }}
+            className={styles.background__container}
+        >
             <NotFilledBackground downPhotos={downPhotos} upPhotos={downPhotos} />
         </motion.div>
     </div>)

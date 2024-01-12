@@ -6,8 +6,9 @@ import useHeaderTransition from '../../hooks/useHeaderTransition'
 import CooperationSection from '../CooperationSection'
 import PhilosophySection from '../PhilosophySection'
 import StepsSection from '../StepsSection'
-import CasesSection from '@/layers/main/ui/CasesSection'
-import CasesPointsSection from '@/layers/main/ui/CasesPointsSection'
+import CasesSection from '../CasesSection'
+import CasesPointsSection from '../CasesPointsSection'
+import AboutUsSection from '../AboutUsSection'
 
 export default function MainPage() {
     const [firstRef, secondRef] = useHeaderTransition()
@@ -20,5 +21,6 @@ export default function MainPage() {
         <StepsSection />
         <CasesSection />
         <CasesPointsSection />
+        <AboutUsSection />
     </>)
 }
