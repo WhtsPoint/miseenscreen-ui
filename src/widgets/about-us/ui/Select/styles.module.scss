@@ -1,0 +1,20 @@
+.personSelect {
+  display: flex;
+  align-items: center;
+  padding: 0 50px;
+  &__images {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    &__image {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  &__arrowBlock {
+    width: 50px;
+    height: 50px;
+  }
+}
