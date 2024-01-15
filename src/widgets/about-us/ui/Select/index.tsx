@@ -18,7 +18,7 @@ const calculateStyles = (delta: number) => {
     return {
         left: `${delta * -25}%`,
         padding: `${padding} ${padding} 0 ${padding}`,
-        zIndex: Math.abs(delta) * -1,
+        zIndex: (Math.abs(delta) + 1) * -1,
         filter: `brightness(${Math.abs(delta) === 0 ? 1 : 0.3})`
     }
 }
