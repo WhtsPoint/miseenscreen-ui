@@ -1,0 +1,27 @@
+.footer {
+  display: flex;
+  &__other {
+    display: flex;
+    justify-content: space-between;
+    &__block {
+      display: flex;
+      flex-direction: column;
+      b {
+        text-transform: uppercase;
+        font-size: 1.2em;
+        margin: 10px 0;
+      }
+      a {
+        color: white;
+      }
+      padding: 10px;
+    }
+    &__nav {
+      nav {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+    }
+  }
+}

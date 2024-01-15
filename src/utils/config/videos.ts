@@ -11,7 +11,8 @@ const videos = {
     philosophy: 'https://www.dropbox.com/scl/fi/2yfqrju7e3sguv111lkgv/philosophy_1.mp4?rlkey=bs71f084v1q7r21mi3y5zs8ci&raw=1',
     steps: 'https://www.dropbox.com/scl/fi/1gvhlvkawmwwjlcd2zy3x/1.mp4?rlkey=68dwk7sq1wil270acr8o9kwmy&raw=1',
     cases: 'https://www.dropbox.com/scl/fi/nincuietac8twd1dmweeg/1.mp4?rlkey=g9zrumlnji7bd3hhnp5orrj30&raw=1',
-    aboutUs: 'https://www.dropbox.com/scl/fi/mhfdarhglee2ccipobirr/1.mp4?rlkey=hp2mzmsdesi3d0cn9x7lutxnx&raw=1'
+    aboutUs: 'https://www.dropbox.com/scl/fi/mhfdarhglee2ccipobirr/1.mp4?rlkey=hp2mzmsdesi3d0cn9x7lutxnx&raw=1',
+    footer: 'https://www.dropbox.com/scl/fi/b7tzogov2a9uyl7e6o1k2/MISEENSCREEN-7.mp4?rlkey=cjdbewd5a0x0xeat2knurkmsl&raw=1'
 }
 
 export default videos
