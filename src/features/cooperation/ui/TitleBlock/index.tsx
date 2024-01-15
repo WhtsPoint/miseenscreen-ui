@@ -4,13 +4,12 @@ import { motion, useMotionValueEvent, useTransform } from 'framer-motion'
 import useTextTyping from '@/utils/hooks/useTextTyping'
 import { useEffect } from 'react'
 import BackgroundVideo from '@/utils/ui/BackgroundVideo'
+import videos from '@/utils/config/videos'
 
 interface Params {
     className?: string,
     isInView?: boolean
 }
-
-const videoLink = 'https://drive.google.com/uc?export=download&id=1foaVTyFh0DJnQNms4WswgdZNkaQcczNW'
 
 export default function TitleBlock({ className, isInView }: Params) {
     const [text, trigger, restart] = useTextTyping({
@@ -28,7 +27,7 @@ export default function TitleBlock({ className, isInView }: Params) {
     }, [isInView, restart, trigger])
 
     return (<div className={cl(styles.titleBlock, className)}>
-        <BackgroundVideo src={videoLink} className={styles.titleBlock__video} />
+        <BackgroundVideo src={videos.cooperation} className={styles.titleBlock__video} />
         <h2 className={styles.titleBlock__title}>
             <motion.b className={styles.titleBlock__title__big}>{upperText}</motion.b>
             <motion.span className={styles.titleBlock__title__small}>{middleText}</motion.span>

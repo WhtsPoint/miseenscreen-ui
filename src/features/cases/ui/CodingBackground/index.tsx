@@ -1,10 +1,9 @@
 import { MotionValue, useTransform } from 'framer-motion'
 import styles from './styles.module.scss'
 import BackgroundVideo from '@/utils/ui/BackgroundVideo'
-import { motion} from 'framer-motion'
+import { motion } from 'framer-motion'
 import { cl } from '@/utils/lib/cl'
-
-const videoLink = 'https://drive.google.com/uc?export=download&id=1ci7_r883rwxlhv83mlYF4_Jxk-h7P8iz'
+import videos from '@/utils/config/videos'
 
 interface Params {
     scrollProgress: MotionValue<number>,
@@ -17,7 +16,7 @@ export default function CodingBackground({ scrollProgress, className }: Params) 
 
     return (<div className={cl(styles.codingBackground, className)}>
         <motion.div className={styles.codingBackground__container} style={{ x, opacity }}>
-            <BackgroundVideo src={videoLink} />
+            <BackgroundVideo src={videos.cases} />
         </motion.div>
     </div>)
 }

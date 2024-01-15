@@ -1,8 +1,7 @@
 import { useRef } from 'react'
 import { MotionValue, useMotionValueEvent, useTransform } from 'framer-motion'
 import styles from './styles.module.scss'
-
-const videoLink = 'https://drive.google.com/uc?export=download&id=1HDTUbX-cWOkhHxSUn8U4akHtFaFNqG4A'
+import videos from '@/utils/config/videos'
 
 interface Params {
     scrollY: MotionValue<number>
@@ -30,7 +29,7 @@ export default function LightScene({ scrollY }: Params) {
             controls={false}
             preload={'preload'}
         >
-            <source src={videoLink} type={'video/mp4'} />
+            <source src={videos.lightScene} type={'video/mp4'} />
         </video>
     </div>)
 }

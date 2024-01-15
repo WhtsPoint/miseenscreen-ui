@@ -1,8 +1,8 @@
 import { Item } from '@/widgets/stack'
 import { useTranslations } from 'next-intl'
 import { MotionStyle } from 'framer-motion'
+import videos from '@/utils/config/videos'
 
-const videoLink = 'https://drive.google.com/uc?export=download&id=1JF2YR_g_fwzcS2L8kalNdiH0hBWyjFcb'
 
 interface Params {
     style?: MotionStyle
@@ -13,7 +13,7 @@ export default function HrSoftware({ style }: Params) {
 
     return (<Item
         style={style}
-        video={{ src: videoLink }}
+        video={{ src: videos.stack[4] }}
         theme={t('hr-software')}
     />)
 }
