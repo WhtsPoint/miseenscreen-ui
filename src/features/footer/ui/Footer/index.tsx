@@ -1,28 +1,25 @@
 import styles from './styles.module.scss'
-import { Link } from '@/utils/lib/navigation'
-import { cl } from '@/utils/lib/cl'
+import Navigate from '../Navigate'
+import Official from '../Official'
+import SocialMedia from '../SocialMedia'
+import Support from '../Support'
+import EmailSubscription from '../EmailSubscription'
+import { useTranslations } from 'next-intl'
 
 export default function Footer() {
+    const t = useTranslations('footer')
+
     return (<footer className={styles.footer}>
-        <div className={styles.footer__other}>
-            <div className={cl(styles.footer__other__block, styles.footer__other__nav)}>
-                <b>Navigate</b>
-                <nav>
-                    <Link href={'#services'}>Services</Link>
-                    <Link href={'#our-story'}>Our Story</Link>
-                    <Link href={'#cases'}>Cases</Link>
-                    <Link href={'#support'}>Support</Link>
-                </nav>
-            </div>
-            <div className={cl(styles.footer__other__block, styles.footer__other__nav)}>
-                <b>Social Media</b>
-                <nav>
-                    <Link href={'#services'}>Instagram</Link>
-                    <Link href={'#our-story'}>Facebook</Link>
-                    <Link href={'#cases'}>Youtube</Link>
-                    <Link href={'#support'}>Twitter</Link>
-                </nav>
-            </div>
+        <div className={styles.footer__subscription}>
+            <p>{t('tip')}</p>
+            <EmailSubscription className={styles.footer__subscription__form} />
+            <p>{t('warning')}</p>
+        </div>
+        <div className={styles.footer__navigation}>
+            <Navigate />
+            <Official />
+            <SocialMedia />
+            <Support />
         </div>
     </footer>)
 }

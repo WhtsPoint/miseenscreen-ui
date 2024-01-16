@@ -11,7 +11,8 @@ const config = {
             blog: '/blog',
             contactUs: '/contact'
         }
-    }
+    },
+    api: 'http://localhost:8000/api/v0/'
 }
 
 export default config

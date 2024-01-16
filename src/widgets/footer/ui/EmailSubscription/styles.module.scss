@@ -1,0 +1,31 @@
+.emailSubscription {
+  height: 100%;
+  display: flex;
+  &_error {
+    *, *::placeholder {
+      border-color: red !important;
+      color: red !important;
+    }
+  }
+  *, *::placeholder {
+    color: white;
+    font-size: 1.3em;
+    border-color: white;
+  }
+  &__input {
+    outline: none;
+  }
+  &__send {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: -1px;
+    cursor: pointer;
+  }
+  &__input, &__send {
+    background: none;
+    border-width: 1px;
+    border-style: solid;
+    padding: 15px;
+  }
+}

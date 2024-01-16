@@ -1,27 +1,26 @@
 .footer {
+  width: 100%;
   display: flex;
-  &__other {
+  &__subscription {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+    flex: 1;
+    p {
+      font-size: 0.7em;
+    }
+    &__form {
+      height: 50px;
+      *, *::placeholder {
+        font-size: 0.9em;
+      }
+    }
+  }
+  &__navigation {
+    flex: 2;
+    padding: 10px;
     display: flex;
     justify-content: space-between;
-    &__block {
-      display: flex;
-      flex-direction: column;
-      b {
-        text-transform: uppercase;
-        font-size: 1.2em;
-        margin: 10px 0;
-      }
-      a {
-        color: white;
-      }
-      padding: 10px;
-    }
-    &__nav {
-      nav {
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-      }
-    }
   }
 }
