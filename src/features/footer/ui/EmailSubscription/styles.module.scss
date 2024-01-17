@@ -1,0 +1,8 @@
+.emailSubscription {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  &__loading {
+    width: fit-content;
+  }
+}

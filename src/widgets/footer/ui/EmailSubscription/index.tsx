@@ -1,18 +1,29 @@
 import styles from './styles.module.scss'
 import { useTranslations } from 'next-intl'
 import { cl } from '@/utils/lib/cl'
-import { FormEvent, useRef, useState } from 'react'
+import { ChangeEvent, FormEvent, useRef, useState } from 'react'
 import { isEmail } from '@/utils/lib/validator'
+import SubscribeButton from '@/widgets/footer/ui/SubscribeButton'
+import { Status } from '../../types/Status'
 
 interface Params {
     onSend: (email: string) => unknown,
-    className?: string
+    onChange?: () => unknown,
+    className?: string,
+    status: Status
 }
 
-export default function EmailSubscription({ onSend, className }: Params) {
+export default function EmailSubscription({ onSend, onChange, status, className }: Params) {
     const t = useTranslations('email-subscription')
     const email = useRef<string>('')
     const [isError, setIsError] = useState<boolean>()
+
+    const isNotWaiting = status !== 'waiting'
+
+    const onInput = ({ target }: ChangeEvent<HTMLInputElement>) => {
+        email.current = target.value
+        onChange?.()
+    }
 
     const onSubmit = (event: FormEvent<HTMLFormElement>) => {
         event.preventDefault()
@@ -30,10 +41,10 @@ export default function EmailSubscription({ onSend, className }: Params) {
     return (<form onSubmit={onSubmit} className={style}>
         <input
             name={'email'}
-            onChange={({ target }) => email.current = target.value}
+            onChange={onInput}
             placeholder={t('input-placeholder')}
             className={styles.emailSubscription__input}
         />
-        <button type={'submit'} className={styles.emailSubscription__send}>{t('send')}</button>
+        <SubscribeButton status={status} className={styles.emailSubscription__send} name={t('send')} />
     </form>)
 }
