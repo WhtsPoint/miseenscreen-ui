@@ -7,18 +7,20 @@
   gap: 30px;
   padding-right: 50px;
   @media (max-width: 1000px) {
+    min-height: auto;
     height: fit-content;
     gap: 0;
-    padding: 0 50px;
+    padding: 50px;
     flex-direction: column;
   }
   @media (max-width: 415px) {
     font-size: 0.8em;
-    padding: 0 20px;
+    padding: 20px;
   }
   &__title {
     @media (max-width: 1000px) {
       width: 100%;
+      flex: none;
     }
     @media (max-width: 460px) {
       font-size: 0.7em;
@@ -36,7 +38,8 @@
     padding: 100px 0;
     flex: 3;
     @media (max-width: 1000px) {
-      padding-top: 0;
+      padding: 0;
+      flex: none;
     }
   }
 }

@@ -11,6 +11,10 @@
     display: flex;
     flex: 8;
     padding: 50px;
+    @media (max-width: 1000px) {
+      flex-direction: column;
+      padding: 20px;
+    }
     &__title {
       flex: 1;
       height: fit-content;
@@ -19,9 +23,33 @@
       color: white;
       font-size: 3em;
       text-transform: uppercase;
+      @media (max-width: 1000px) {
+        width: 100%;
+        flex: none;
+        text-align: center;
+        margin: 20px 0;
+      }
+      @media (max-width: 600px) {
+        font-size: 1.9em;
+      }
     }
     &__point {
       flex: 1;
+      @media (max-width: 1000px) {
+        align-items: center;
+        gap: 20px;
+      }
+      @media (max-width: 600px) {
+        font-size: 0.8em;
+      }
+      @media (max-width: 440px) {
+        h2 {
+          font-size: 1.3em;
+        }
+      }
+      @media (max-width: 360px) {
+        font-size: 0.75em;
+      }
     }
   }
 }
