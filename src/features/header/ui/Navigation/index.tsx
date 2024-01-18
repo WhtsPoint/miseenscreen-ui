@@ -1,12 +1,12 @@
 import { Link } from '@/utils/lib/navigation'
 import { LocaleSelect } from '@/widgets/header'
-import { ObjectType } from '@/utils/types/ObjectType'
 import { Children } from '@/utils/interfaces/Children'
-import { ReactNode } from 'react'
+import { forwardRef, ReactNode } from 'react'
+import { ObjectType } from '@/utils/types/ObjectType'
+import { Translation } from '../../interfaces/Translation'
 import animations from '@/utils/assets/styles/animation.module.scss'
-import { Translation } from '@/features/header/interfaces/Translation'
-import config from '@/utils/config'
 import { cl } from '@/utils/lib/cl'
+import config from '@/utils/config'
 
 interface Params {
     styles: ObjectType<string, string>,
@@ -20,8 +20,11 @@ function StyledLi({ children }: Children<ReactNode>) {
     return (<li className={animations.underline}>{children}</li>)
 }
 
-export default function Navigation({ styles, translation: t, className }: Params) {
-    return (<nav className={cl(styles.header__nav, className)}>
+const Navigation = forwardRef<HTMLDivElement, Params>((
+    { styles, translation: t, className }: Params,
+    ref
+) => {
+    return (<nav ref={ref} className={cl(styles.header__nav, className)}>
         <ul className={styles.header__nav__ul}>
             <StyledLi>{t.services}</StyledLi>
             <StyledLi><Link href={'/'}>{t.cases}</Link></StyledLi>
@@ -35,4 +38,9 @@ export default function Navigation({ styles, translation: t, className }: Params
             />
         </ul>
     </nav>)
-}
+})
+
+Navigation.displayName = 'Navigation'
+
+export default Navigation
+export type { Params as NavigationParams }

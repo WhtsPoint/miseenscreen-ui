@@ -22,6 +22,9 @@
       color: white;
       cursor: pointer;
     }
+    @media (max-width: 1000px) {
+      background-color: black;
+    }
   }
 }
 

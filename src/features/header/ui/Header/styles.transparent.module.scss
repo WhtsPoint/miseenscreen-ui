@@ -5,4 +5,9 @@
   &, &__localeSelect, &__localeSelect__optionList {
       background-color: transparent !important;
   }
+  &__nav {
+    @media (max-width: 1000px) {
+      background-color: transparent;
+    }
+  }
 }
