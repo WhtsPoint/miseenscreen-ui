@@ -6,7 +6,7 @@ import { useScroll } from 'framer-motion'
 import { WelcomeText } from '../../../../widgets/welcome'
 import { LightScene } from '../../../../widgets/welcome'
 
-const WelcomeSection = forwardRef<HTMLSelectElement>((params, ref) => {
+const WelcomeSection = forwardRef<HTMLDivElement>((_params, ref) => {
     const { scrollYProgress } = useScroll({
         target: ref as RefObject<HTMLElement>,
         offset: ['0 0', '1 0']

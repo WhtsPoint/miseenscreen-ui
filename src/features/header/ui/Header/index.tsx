@@ -22,7 +22,7 @@ export default function Header({ translation }: Params) {
     const navigationAttributes = { styles, translation }
 
     return (<header className={styles.header}>
-        <HomeLogo />
+        <HomeLogo className={styles.header__logo} />
         {width > 1000 ? <Navigation {...navigationAttributes} /> : <List>
             <AnimatedNavigation className={mobileStyle.header} {...navigationAttributes} />
         </List>}

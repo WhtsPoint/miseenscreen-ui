@@ -9,6 +9,14 @@
   position: fixed;
   z-index: 50;
   background-color: black;
+  &__logo {
+    @media (max-width: 640px) {
+      font-size: 0.8em;
+    }
+    @media (max-width: 340px) {
+      font-size: 0.6em;
+    }
+  }
   &__nav {
     &__ul {
       display: flex;

@@ -4,4 +4,7 @@
   white-space: pre-line;
   position: absolute;
   line-height: 30px;
+  @media (max-width: 440px) {
+    line-height: 15px;
+  }
 }

@@ -12,11 +12,11 @@ import AboutUsSection from '../AboutUsSection'
 import FooterSection from '@/layers/main/ui/FooterSection'
 
 export default function MainPage() {
-    const [firstRef, secondRef] = useHeaderTransition()
+    const ref = useHeaderTransition()
 
     return (<>
-        <WelcomeSection ref={firstRef} />
-        <StackPage ref={secondRef} />
+        <WelcomeSection ref={ref} />
+        <StackPage />
         <CooperationSection />
         <PhilosophySection />
         <StepsSection />
