@@ -13,7 +13,9 @@ export default function StickyScroll({ className, children, onScroll }: Params) 
     const ref = useRef(null)
     const { scrollYProgress } = useScroll({ target: ref })
 
-    useMotionValueEvent(scrollYProgress, 'change', onScroll)
+    useMotionValueEvent(scrollYProgress, 'change', (value) => {
+        onScroll(value)
+    })
 
     return (<div ref={ref} className={cl(styles.stickyScroll, className)}>
         <div className={styles.stickyScroll__content}>

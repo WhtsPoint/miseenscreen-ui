@@ -4,7 +4,7 @@ import WelcomeSection from '../WelcomeSection'
 import StackPage from '../StackPage'
 import useHeaderTransition from '../../hooks/useHeaderTransition'
 import CooperationSection from '../CooperationSection'
-import PhilosophySection from '../PhilosophySection'
+import PhilosophySection from '../AdaptedPhilosophySection'
 import StepsSection from '../StepsSection'
 import CasesSection from '../CasesSection'
 import CasesPointsSection from '../CasesPointsSection'
@@ -19,10 +19,10 @@ export default function MainPage() {
         <StackPage />
         <CooperationSection />
         <PhilosophySection />
-        <StepsSection />
-        <CasesSection />
-        <CasesPointsSection />
-        <AboutUsSection />
-        <FooterSection />
+        {/*<StepsSection />*/}
+        {/*<CasesSection />*/}
+        {/*<CasesPointsSection />*/}
+        {/*<AboutUsSection />*/}
+        {/*<FooterSection />*/}
     </>)
 }

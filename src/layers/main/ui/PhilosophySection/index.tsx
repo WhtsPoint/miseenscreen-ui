@@ -1,22 +1,35 @@
-import StickyScroll from '@/utils/ui/StickyScroll'
-import { useMotionValue } from 'framer-motion'
-import styles from './styles.module.scss'
 import { useTranslations } from 'next-intl'
-import { ScrollPoint } from '@/features/philosophy'
 import BackgroundVideo from '@/utils/ui/BackgroundVideo'
 import videos from '@/utils/config/videos'
+import { ScrollPoint } from '@/features/philosophy'
+import { MotionValue } from 'framer-motion'
+import styles from './styles.module.scss'
 
-export default function PhilosophySection() {
-    const scrollProgress = useMotionValue(0)
+interface Params {
+    scrollProgress: MotionValue<number>
+    onLeft?: () => unknown,
+    onRight?: () => unknown
+}
+
+export default function PhilosophySection(
+    { scrollProgress, onLeft, onRight }: Params
+) {
     const t = useTranslations('philosophy')
 
-    return (<StickyScroll className={styles.stickyScroll} onScroll={(v) => scrollProgress.set(v)}>
-        <section className={styles.section}>
-            <BackgroundVideo className={styles.section__video} videoClass={styles.section__video__content} src={videos.philosophy} />
-            <div className={styles.section__information}>
-                <h2 className={styles.section__information__title}>{t('title')}</h2>
-                <ScrollPoint className={styles.section__information__point} scrollProgress={scrollProgress} />
-            </div>
-        </section>
-    </StickyScroll>)
+    return (<section className={styles.section}>
+        <BackgroundVideo
+            className={styles.section__video}
+            videoClass={styles.section__video__content}
+            src={videos.philosophy}
+        />
+        <div className={styles.section__information}>
+            <h2 className={styles.section__information__title}>{t('title')}</h2>
+            <ScrollPoint
+                className={styles.section__information__point}
+                scrollProgress={scrollProgress}
+                onLeft={onLeft}
+                onRight={onRight}
+            />
+        </div>
+    </section>)
 }

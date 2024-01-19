@@ -1,3 +1,4 @@
 import Point from './ui/Point'
+import useDescriptionAnimation from './hooks/useDescriptionAnimation'
 
-export { Point }
+export { Point, useDescriptionAnimation }
