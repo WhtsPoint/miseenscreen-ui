@@ -15,4 +15,17 @@
     top: 0;
     bottom: 0;
   }
+  @media (max-width: 1400px) {
+    font-size: 0.8em;
+  }
+  @media (max-width: 800px) {
+    padding: 100px 30px;
+  }
+  @media (max-width: 500px) {
+    h2 {
+      font-size: 5em;
+      text-align: center;
+    }
+    padding: 50px 30px;
+  }
 }

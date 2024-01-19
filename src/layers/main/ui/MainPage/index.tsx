@@ -20,7 +20,7 @@ export default function MainPage() {
         <CooperationSection />
         <PhilosophySection />
         {/*<StepsSection />*/}
-        {/*<CasesSection />*/}
+        <CasesSection />
         {/*<CasesPointsSection />*/}
         {/*<AboutUsSection />*/}
         {/*<FooterSection />*/}
