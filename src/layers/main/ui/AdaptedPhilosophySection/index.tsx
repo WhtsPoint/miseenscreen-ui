@@ -10,8 +10,7 @@ export default function AdaptedPhilosophySection() {
     const move = usePointMove(scrollProgress)
     const width = useWidth()
 
-
-    return (width > 1000 ?
+    return (width && width > 1000 ?
     <StickyScroll
         className={styles.stickyScroll}
         onScroll={(v) => scrollProgress.set(v)}
