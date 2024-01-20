@@ -7,10 +7,12 @@ import { Direction, methods } from '@/utils/lib/y-marquee'
 interface Params extends Children<ReactNode> {
     className?: string
     speed: MotionValue<number>,
-    direction: Direction
+    direction: Direction,
 }
 
-export default function YMarquee({ children, className, speed, direction }: Params) {
+export default function YMarquee(
+    { children, className, speed, direction }: Params
+) {
     const method = methods[direction]
     const time = useTime()
     const progress = useMotionValue<number>(method.initial)

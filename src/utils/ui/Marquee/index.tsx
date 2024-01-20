@@ -2,7 +2,7 @@ import { Children } from '@/utils/interfaces/Children'
 import { forwardRef, ReactNode } from 'react'
 import styles from './styles.module.scss'
 import { cl } from '@/utils/lib/cl'
-import { motion} from 'framer-motion'
+import { motion } from 'framer-motion'
 
 interface Params extends Children<ReactNode> {
     className?: string

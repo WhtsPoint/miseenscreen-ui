@@ -21,7 +21,7 @@ export default function MainPage() {
         <PhilosophySection />
         {/*<StepsSection />*/}
         <CasesSection />
-        {/*<CasesPointsSection />*/}
+        <CasesPointsSection />
         {/*<AboutUsSection />*/}
         {/*<FooterSection />*/}
     </>)

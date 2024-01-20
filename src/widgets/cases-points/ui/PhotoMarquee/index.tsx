@@ -13,14 +13,13 @@ interface Params {
 export default function PhotoMarquee({ photos, ...params }: Params) {
     return (<YMarquee className={styles.yMarquee} {...params}>
         <div className={styles.photoMarquee}>
-            {photos.map((photo, index) => <Image
-                key={index}
+            {photos.map((photo, index) => <div key={index}><Image
                 width={photo.width}
                 height={photo.height}
                 src={photo}
                 className={styles.photoMarquee__image}
                 alt={''}
-            />)}
+            /></div>)}
         </div>
     </YMarquee>)
 }

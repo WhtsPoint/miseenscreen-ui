@@ -1,8 +1,7 @@
 import styles from './styles.module.scss'
 import { useScroll, useTransform, useVelocity } from 'framer-motion'
-import PhotoMarquee from '@/widgets/cases-points/ui/PhotoMarquee'
+import PhotoMarquee from '../PhotoMarquee'
 import { StaticImageData } from 'next/image'
-
 
 interface Params {
     downPhotos: StaticImageData[],

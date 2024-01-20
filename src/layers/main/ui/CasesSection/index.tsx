@@ -6,7 +6,7 @@ import styles from './styles.module.scss'
 export default function CasesSection() {
     const ref = useRef(null)
     const { scrollYProgress } = useScroll({ target: ref, offset: ['0 1', '1 0'] })
-    const opacity = useTransform(scrollYProgress, [0.9, 1], [1, 0])
+    const opacity = useTransform(scrollYProgress, [0.6, 0.8], [1, 0])
 
     return (<motion.section ref={ref} style={{ opacity }} className={styles.casesSection}>
         <CodingBackground
