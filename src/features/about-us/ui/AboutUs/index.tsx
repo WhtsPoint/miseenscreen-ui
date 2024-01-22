@@ -1,8 +1,8 @@
 import styles from './styles.module.scss'
 import { useState } from 'react'
-import { Person } from '@/features/about-us/types/Person'
-import PersonInformation from '@/features/about-us/ui/PersonInformation'
-import PersonSelect from '@/features/about-us/ui/PersonSelect'
+import { Person } from '../../types/Person'
+import PersonInformation from '../PersonInformation'
+import PersonSelect from '../PersonSelect'
 
 export default function AboutUs() {
     const [person, setPerson] = useState<Person>('darya')

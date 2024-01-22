@@ -11,7 +11,7 @@ export default function AboutUsSection() {
     const { scrollYProgress } = useScroll({ target: ref, offset: ['0.5 1', '1 0'] })
     const opacity = useTransform(scrollYProgress, [0.5, 0.8], [1, 0])
 
-    return (<motion.section style={{ opacity     }} ref={ref} className={styles.aboutUs}>
+    return (<motion.section style={{ opacity }} ref={ref} className={styles.aboutUs}>
         <BackgroundVideo src={videos.aboutUs} className={styles.aboutUs__background} />
         <AboutUs />
     </motion.section>)

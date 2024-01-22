@@ -1,3 +1,9 @@
 .stickyScroll {
   height: 600svh;
+  @media (max-width: 1000px) {
+    height: fit-content;
+    & > div:first-child {
+      height: 100%;
+    }
+  }
 }
