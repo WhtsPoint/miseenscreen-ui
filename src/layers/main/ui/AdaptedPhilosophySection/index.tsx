@@ -4,14 +4,21 @@ import PhilosophySection from '../PhilosophySection'
 import styles from './styles.module.scss'
 import usePointMove from '@/layers/main/usePointMove'
 import useWidth from '@/utils/hooks/useWidth'
+import { useEffect } from 'react'
 
 export default function AdaptedPhilosophySection() {
-    const scrollProgress = useMotionValue(0)
+    const scrollProgress = useMotionValue<number>(0)
     const [move, moveProgress] = usePointMove()
     const width = useWidth()
-    const progress = useTransform(
-        () => width && width > 1000 ? scrollProgress.get() : moveProgress.get()
-    )
+    const progress = useMotionValue<number>(0)
+
+    const updateProgress = () => {
+        progress.set(width && width > 1000 ? scrollProgress.get() : moveProgress.get())
+    }
+
+    useEffect(updateProgress, [updateProgress])
+    scrollProgress.on('change', updateProgress)
+    moveProgress.on('change', updateProgress)
 
     return (<StickyScroll
         className={styles.stickyScroll}

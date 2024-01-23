@@ -16,7 +16,7 @@ export default function Arrow({ direction = 'right', className, onClick }: Param
     const [ref, animate] = useAnimate()
     const isInView = useInView(ref, { once: true })
 
-    const x = 5 * (direction === 'right' ? 1 : -1)
+    const x = 5 * (['right', 'down'] ? 1 : -1)
 
     useEffect(() => {
         if (isInView) {
@@ -29,7 +29,7 @@ export default function Arrow({ direction = 'right', className, onClick }: Param
             whileHover={{ x }}
             ref={ref}
             src={arrowImage.src}
-            style={direction === 'left' ? { rotate: '180deg'} : {}}
+            className={styles['arrow_' + direction]}
             alt={''}
         />
     </button>)

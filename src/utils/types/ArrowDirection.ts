@@ -1,3 +1,3 @@
-type ArrowDirection = 'left' | 'right'
+type ArrowDirection = 'left' | 'right' | 'up' | 'down'
 
 export type { ArrowDirection }

@@ -19,10 +19,10 @@ export default function MainPage() {
         <StackPage />
         <CooperationSection />
         <PhilosophySection />
-        {/*<StepsSection />*/}
+        <StepsSection />
         <CasesSection />
         <CasesPointsSection />
-        <AboutUsSection />
+        {/*<AboutUsSection />*/}
         {/*<FooterSection />*/}
     </>)
 }
