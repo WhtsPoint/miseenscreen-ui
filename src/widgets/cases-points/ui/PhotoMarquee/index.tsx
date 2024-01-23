@@ -1,25 +1,23 @@
 import YMarquee from '@/utils/ui/YMarquee'
 import { MotionValue } from 'framer-motion'
 import { Direction } from '@/utils/lib/y-marquee'
-import styles from './styles.module.scss'
-import Image, { StaticImageData } from 'next/image'
+import { StaticImageData } from 'next/image'
+import MarqueeLine from '../MarqueeLine'
 
 interface Params {
-    photos: StaticImageData[]
+    allPhotos: StaticImageData[][]
     speed: MotionValue<number>,
-    direction: Direction
+    direction: Direction,
+    position: number,
 }
 
-export default function PhotoMarquee({ photos, ...params }: Params) {
-    return (<YMarquee className={styles.yMarquee} {...params}>
-        <div className={styles.photoMarquee}>
-            {photos.map((photo, index) => <div key={index}><Image
-                width={photo.width}
-                height={photo.height}
-                src={photo}
-                className={styles.photoMarquee__image}
-                alt={''}
-            /></div>)}
-        </div>
+export default function PhotoMarquee({ allPhotos, position, ...params }: Params) {
+    return (<YMarquee {...params}>
+        {allPhotos.map((photos, index) => {
+            return <MarqueeLine
+            key={index}
+            isHidden={index !== position}
+            photos={photos}
+        />})}
     </YMarquee>)
 }
