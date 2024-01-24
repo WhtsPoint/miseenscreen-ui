@@ -1,17 +1,35 @@
 .footer {
   width: 100%;
   display: flex;
+  border-top: 1px solid white;
+  overflow: hidden;
+  @media (max-width: 900px) {
+    flex-direction: column;
+  }
   &__subscription {
     display: flex;
     flex-direction: column;
     justify-content: center;
     padding: 20px;
     flex: 1;
+    border: 1px solid white;
+    margin: -1px;
+    @media (max-width: 900px) {
+      align-items: center;
+      text-align: center;
+    }
     p {
       font-size: 0.7em;
     }
     &__form {
-      height: 50px;
+      height: 100%;
+      @media (max-width: 320px) {
+        flex-direction: column;
+        & > button {
+          width: 100%;
+          margin: -1px 0 0 0;
+        }
+      }
       *, *::placeholder {
         font-size: 0.9em;
       }
@@ -20,7 +38,17 @@
   &__navigation {
     flex: 2;
     padding: 10px;
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    @media (max-width: 670px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @media (max-width: 400px) {
+      grid-template-columns: repeat(1, 1fr);
+      & > div {
+        align-items: center;
+        text-align: center;
+      }
+    }
   }
 }

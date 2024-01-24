@@ -18,8 +18,6 @@ export default function EmailSubscription({ onSend, onChange, status, className 
     const email = useRef<string>('')
     const [isError, setIsError] = useState<boolean>()
 
-    const isNotWaiting = status !== 'waiting'
-
     const onInput = ({ target }: ChangeEvent<HTMLInputElement>) => {
         email.current = target.value
         onChange?.()

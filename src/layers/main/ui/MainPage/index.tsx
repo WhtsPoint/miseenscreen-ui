@@ -23,6 +23,6 @@ export default function MainPage() {
         <CasesSection />
         <CasesPointsSection />
         {/*<AboutUsSection />*/}
-        {/*<FooterSection />*/}
+        <FooterSection />
     </>)
 }

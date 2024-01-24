@@ -1,4 +1,5 @@
 .emailSubscription {
+  width: 100%;
   height: 100%;
   display: flex;
   &_error {
@@ -13,6 +14,7 @@
     border-color: white;
   }
   &__input {
+    width: 100%;
     outline: none;
   }
   &__send {

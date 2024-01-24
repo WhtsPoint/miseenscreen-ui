@@ -1,8 +1,13 @@
 .emailSubscription {
+  width: 100%;
+  max-width: 400px;
   display: flex;
   align-items: center;
   gap: 10px;
   &__loading {
     width: fit-content;
+    &_hidden {
+      opacity: 0;
+    }
   }
 }
