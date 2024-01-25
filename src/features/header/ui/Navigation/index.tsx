@@ -27,7 +27,7 @@ const Navigation = forwardRef<HTMLDivElement, Params>((
     return (<nav ref={ref} className={cl(styles.header__nav, className)}>
         <ul className={styles.header__nav__ul}>
             <StyledLi>{t.services}</StyledLi>
-            <StyledLi><Link href={'/'}>{t.cases}</Link></StyledLi>
+            <StyledLi><a href={routes.cases}>{t.cases}</a></StyledLi>
             <StyledLi><Link href={routes.cooperation}>{t.cooperation}</Link></StyledLi>
             <StyledLi><Link href={routes.ourStory}>{t.ourStory}</Link></StyledLi>
             <StyledLi><Link href={routes.blog}>{t.blog}</Link></StyledLi>

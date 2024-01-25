@@ -2,7 +2,7 @@ import { forwardRef } from 'react'
 import { Analytics, Eccomerce, ElSolution, HrSoftware, WebServices } from '@/features/stack'
 import styles from './style.module.scss'
 
-const StackPage = forwardRef<HTMLSelectElement>((_params, ref) => {
+const StackPage = forwardRef<HTMLDivElement>((_params, ref) => {
     return (<div className={styles.scrollBlock}>
         <section ref={ref} className={styles.section}>
                 <Eccomerce style={{ gridArea: 'a' }} />

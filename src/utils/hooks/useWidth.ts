@@ -11,7 +11,7 @@ export default function useWidth() {
         onResize()
         window.addEventListener('resize', onResize)
         return () => window.removeEventListener('resize', onResize)
-    })
+    }, [])
 
     return width
 }
