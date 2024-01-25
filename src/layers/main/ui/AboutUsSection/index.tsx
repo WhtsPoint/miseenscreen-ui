@@ -13,6 +13,6 @@ export default function AboutUsSection() {
 
     return (<motion.section style={{ opacity }} ref={ref} className={styles.aboutUs}>
         <BackgroundVideo src={videos.aboutUs} className={styles.aboutUs__background} />
-        <AboutUs />
+        <AboutUs className={styles.aboutUs__aboutUs} />
     </motion.section>)
 }

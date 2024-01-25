@@ -4,7 +4,6 @@ import { cl } from '@/utils/lib/cl'
 import styles from './styles.module.scss'
 import ArrowWithText from '@/utils/ui/ArrowWithText'
 import { motion } from 'framer-motion'
-import { useEffect, useRef } from 'react'
 
 interface Params<T extends string = string> {
     person: T,
@@ -20,7 +19,6 @@ const calculateStyles = (delta: number) => {
     return {
         marginLeft: `${50 - delta * -25}%`,
         height: padding,
-        transform: 'translateX(-50%)',
         position: isFirst ? 'static' : 'absolute',
         zIndex: (Math.abs(delta) + 1) * -1,
         filter: `brightness(${isFirst ? 1 : 0.3})`
@@ -40,11 +38,11 @@ export default function Select<T extends string = string>(
             {imagesData.map(({ src }, index) => {
                 const animation = calculateStyles(index - currentIndex)
                 return <motion.img
-                    layout
                     initial={animation}
                     animate={animation}
                     key={index}
                     src={src}
+                    style={{ transform: 'translateX(-50%)' }}
                     className={styles.personSelect__images__image}
                     transition={{ duration: 0.5 }}
                     alt={''}

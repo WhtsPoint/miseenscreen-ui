@@ -3,15 +3,20 @@ import { useState } from 'react'
 import { Person } from '../../types/Person'
 import PersonInformation from '../PersonInformation'
 import PersonSelect from '../PersonSelect'
+import { cl } from '@/utils/lib/cl'
 
-export default function AboutUs() {
+interface Params {
+    className?: string
+}
+
+export default function AboutUs({ className }: Params) {
     const [person, setPerson] = useState<Person>('darya')
 
     const swapPerson = () => {
         setPerson((current) => current === 'darya' ? 'vladimir' : 'darya')
     }
 
-    return (<div className={styles.aboutUs}>
+    return (<div className={cl(styles.aboutUs, className)}>
         <PersonSelect
             person={person}
             swapPerson={swapPerson}
