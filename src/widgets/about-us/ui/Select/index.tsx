@@ -4,6 +4,7 @@ import { cl } from '@/utils/lib/cl'
 import styles from './styles.module.scss'
 import ArrowWithText from '@/utils/ui/ArrowWithText'
 import { motion } from 'framer-motion'
+import { useEffect, useRef } from 'react'
 
 interface Params<T extends string = string> {
     person: T,
@@ -14,13 +15,16 @@ interface Params<T extends string = string> {
 }
 
 const calculateStyles = (delta: number) => {
-    const padding = Math.abs(delta) * 50 + 'px'
+    const isFirst = delta === 0
+    const padding = `calc(100% - ${Math.abs(delta) * 50}px)`
     return {
-        left: `${delta * -25}%`,
-        padding: `${padding} ${padding} 0 ${padding}`,
+        marginLeft: `${50 - delta * -25}%`,
+        height: padding,
+        transform: 'translateX(-50%)',
+        position: isFirst ? 'static' : 'absolute',
         zIndex: (Math.abs(delta) + 1) * -1,
-        filter: `brightness(${Math.abs(delta) === 0 ? 1 : 0.3})`
-    }
+        filter: `brightness(${isFirst ? 1 : 0.3})`
+    } as const
 }
 
 export default function Select<T extends string = string>(
@@ -36,6 +40,7 @@ export default function Select<T extends string = string>(
             {imagesData.map(({ src }, index) => {
                 const animation = calculateStyles(index - currentIndex)
                 return <motion.img
+                    layout
                     initial={animation}
                     animate={animation}
                     key={index}

@@ -1,12 +1,36 @@
 .aboutUs {
   width: 100%;
   height: 100%;
-  left: 0;
-  top: 0;
-  right: 0;
-  bottom: 0;
   padding-top: 50px;
   position: relative;
+  @media (max-width: 1000px) {
+    height: fit-content;
+    & > div:nth-child(2) {
+      padding: 0 25px;
+      flex-direction: column;
+      & > div:first-child {
+        width: 100%;
+        padding: 0;
+        min-width: auto;
+      }
+      & > div:nth-child(2) {
+        padding: 0 0 30px 0;
+        width: 100%;
+        text-align: center;
+        & > div {
+          padding: 0;
+        }
+      }
+    }
+  }
+  @media (max-width: 420px) {
+    font-size: 0.8em;
+  }
+  @media (max-width: 280px) {
+    b {
+      font-size: 1em;
+    }
+  }
   &__background {
     z-index: -5;
     position: absolute;

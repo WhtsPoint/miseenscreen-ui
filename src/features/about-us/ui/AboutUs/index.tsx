@@ -12,11 +12,11 @@ export default function AboutUs() {
     }
 
     return (<div className={styles.aboutUs}>
-        <PersonInformation person={person} className={styles.aboutUs__infromation}/>
         <PersonSelect
             person={person}
             swapPerson={swapPerson}
             className={styles.aboutUs__personSelect}
         />
+        <PersonInformation person={person} className={styles.aboutUs__infromation}/>
     </div>)
 }
