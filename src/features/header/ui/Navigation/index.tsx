@@ -28,10 +28,10 @@ const Navigation = forwardRef<HTMLDivElement, Params>((
         <ul className={styles.header__nav__ul}>
             <StyledLi>{t.services}</StyledLi>
             <StyledLi><a href={routes.cases}>{t.cases}</a></StyledLi>
-            <StyledLi><Link href={routes.cooperation}>{t.cooperation}</Link></StyledLi>
-            <StyledLi><Link href={routes.ourStory}>{t.ourStory}</Link></StyledLi>
-            <StyledLi><Link href={routes.blog}>{t.blog}</Link></StyledLi>
-            <StyledLi><Link href={routes.contactUs}>{t.contactUs}</Link></StyledLi>
+            <StyledLi><a href={routes.cooperation}>{t.cooperation}</a></StyledLi>
+            <StyledLi><a href={routes.ourStory}>{t.ourStory}</a></StyledLi>
+            <StyledLi><a href={routes.blog}>{t.blog}</a></StyledLi>
+            <StyledLi><a href={routes.contactUs}>{t.contactUs}</a></StyledLi>
             <LocaleSelect
                 className={styles.header__localeSelect}
                 optionClass={styles.header__localeSelect__optionList}

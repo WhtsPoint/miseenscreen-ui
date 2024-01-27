@@ -12,7 +12,7 @@ export default function Eccomerce({ style }: Params) {
 
     return (<Item
         style={style}
-        video={{ src: videos.stack[3] }}
+        v
         theme={t('ecommerce')}
     />)
 }

@@ -14,26 +14,25 @@ import useSpecialSection from '@/utils/hooks/useSpecialSections'
 import useOnUrlHashChange from '@/utils/hooks/useOnUrlHashChange'
 import { useEffect } from 'react'
 
-const sections = ['welcome'] as ['welcome']
+const sections = ['cases', 'cooperation'] as ['cases', 'cooperation']
 
 export default function MainPage() {
     const ref = useHeaderTransition()
-    const { refs: { welcome }, moveByLink } = useSpecialSection<HTMLDivElement, 'welcome'>(sections)
+    const { refs: { cases, cooperation }, moveByLink } = useSpecialSection<
+        HTMLDivElement, 'cases' | 'cooperation'
+    >(sections)
 
     useEffect(moveByLink, [moveByLink])
-    useOnUrlHashChange(() => {
-        console.log(1)
-        moveByLink()
-    })
+    useOnUrlHashChange(moveByLink)
 
     return (<>
         <WelcomeSection ref={ref} />
-        <StackPage ref={welcome} />
-        <CooperationSection />
+        <StackPage />
+        <CooperationSection ref={cooperation} />
         <PhilosophySection />
         <StepsSection />
         <CasesSection />
-        <CasesPointsSection />
+        <CasesPointsSection ref={cases} />
         <AboutUsSection />
         <FooterSection />
     </>)

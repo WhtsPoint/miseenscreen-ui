@@ -19,7 +19,6 @@ export default function useSpecialSection
     }, [refs])
 
     const moveByLink = useCallback(() => {
-        console.log(document.location)
         const section = document.location.hash.slice(1) as T
         if (sections.includes(section)) move(section)
     }, [move, sections])
