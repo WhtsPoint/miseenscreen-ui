@@ -13,7 +13,7 @@ export default function AdaptedPhilosophySection() {
     const progress = useMotionValue<number>(0)
 
     const updateProgress = () => {
-        progress.set(width && width > 1000 ? scrollProgress.get() : moveProgress.get())
+        progress.set(width && width > 1024 ? scrollProgress.get() : moveProgress.get())
     }
 
     useEffect(updateProgress, [updateProgress])

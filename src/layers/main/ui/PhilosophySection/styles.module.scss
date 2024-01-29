@@ -9,7 +9,7 @@
   &__video {
     width: 100%;
     flex: 3;
-    @media (max-width: 1000px) {
+    @media (max-width: 1024px) {
       flex: none;
       height: 150px;
     }
@@ -18,7 +18,7 @@
     display: flex;
     flex: 8;
     padding: 50px;
-    @media (max-width: 1000px) {
+    @media (max-width: 1024px) {
       flex-direction: column;
       padding: 20px;
     }
@@ -30,7 +30,7 @@
       color: white;
       font-size: 3em;
       text-transform: uppercase;
-      @media (max-width: 1000px) {
+      @media (max-width: 1024px) {
         width: 100%;
         flex: none;
         text-align: center;
@@ -42,7 +42,7 @@
     }
     &__point {
       flex: 1;
-      @media (max-width: 1000px) {
+      @media (max-width: 1024px) {
         align-items: center;
         gap: 20px;
         padding: 30px 0;
@@ -58,7 +58,7 @@
           font-size: 1.2em;
         }
       }
-      @media (min-width: 1000px) {
+      @media (min-width: 1025px) {
         button {
           display: none;
         }

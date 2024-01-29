@@ -13,8 +13,5 @@ const useStore = create<Store>()((set) => ({
 }))
 
 export const useHeaderSettings = () => {
-    const theme = useStore(({ theme }) => theme)
-    const setTheme = useStore(({ setTheme }) => setTheme)
-
-    return { theme, setTheme }
+    return useStore((store) => store)
 }

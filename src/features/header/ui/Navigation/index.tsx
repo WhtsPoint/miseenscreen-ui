@@ -7,6 +7,7 @@ import { Translation } from '../../interfaces/Translation'
 import animations from '@/utils/assets/styles/animation.module.scss'
 import { cl } from '@/utils/lib/cl'
 import config from '@/utils/config'
+import { useSpecialSection } from '@/layers/main/stores/section'
 
 interface Params {
     styles: ObjectType<string, string>,
@@ -24,14 +25,20 @@ const Navigation = forwardRef<HTMLDivElement, Params>((
     { styles, translation: t, className }: Params,
     ref
 ) => {
+    const { set } = useSpecialSection()
+
     return (<nav ref={ref} className={cl(styles.header__nav, className)}>
         <ul className={styles.header__nav__ul}>
             <StyledLi>{t.services}</StyledLi>
-            <StyledLi><a href={routes.cases}>{t.cases}</a></StyledLi>
-            <StyledLi><a href={routes.cooperation}>{t.cooperation}</a></StyledLi>
-            <StyledLi><a href={routes.ourStory}>{t.ourStory}</a></StyledLi>
-            <StyledLi><a href={routes.blog}>{t.blog}</a></StyledLi>
-            <StyledLi><a href={routes.contactUs}>{t.contactUs}</a></StyledLi>
+            <StyledLi><Link href={routes.cases}>{t.cases}</Link></StyledLi>
+            <StyledLi>
+                <Link href={routes.cooperation} onClick={() => set('cooperation')}>
+                    {t.cooperation}
+                </Link>
+            </StyledLi>
+            <StyledLi><Link href={routes.ourStory}>{t.ourStory}</Link></StyledLi>
+            <StyledLi><Link href={routes.blog}>{t.blog}</Link></StyledLi>
+            <StyledLi><Link href={routes.contactUs}>{t.contactUs}</Link></StyledLi>
             <LocaleSelect
                 className={styles.header__localeSelect}
                 optionClass={styles.header__localeSelect__optionList}
