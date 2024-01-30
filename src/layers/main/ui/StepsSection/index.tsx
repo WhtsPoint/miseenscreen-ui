@@ -20,7 +20,7 @@ export default function StepsSection() {
 
     const updateProgress = () => {
         position.set(
-            width && width > 1000 ?
+            width && width > 1024 ?
             Math.round(scrollProgress.get()) :
             moveProgress.get()
         )

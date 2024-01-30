@@ -7,7 +7,7 @@ import { Translation } from '../../interfaces/Translation'
 import animations from '@/utils/assets/styles/animation.module.scss'
 import { cl } from '@/utils/lib/cl'
 import config from '@/utils/config'
-import { useSpecialSection } from '@/layers/main/stores/section'
+import { useSpecialSection } from '@/features/main'
 
 interface Params {
     styles: ObjectType<string, string>,
@@ -25,14 +25,18 @@ const Navigation = forwardRef<HTMLDivElement, Params>((
     { styles, translation: t, className }: Params,
     ref
 ) => {
-    const { set } = useSpecialSection()
+    const { invoke } = useSpecialSection()
 
     return (<nav ref={ref} className={cl(styles.header__nav, className)}>
         <ul className={styles.header__nav__ul}>
             <StyledLi>{t.services}</StyledLi>
-            <StyledLi><Link href={routes.cases}>{t.cases}</Link></StyledLi>
             <StyledLi>
-                <Link href={routes.cooperation} onClick={() => set('cooperation')}>
+                <Link href={'/'} scroll={false} onClick={() => invoke('cases')}>
+                    {t.cases}
+                </Link>
+            </StyledLi>
+            <StyledLi>
+                <Link href={'/'} scroll={false} onClick={() => invoke('cooperation')}>
                     {t.cooperation}
                 </Link>
             </StyledLi>

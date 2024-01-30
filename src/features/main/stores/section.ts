@@ -17,5 +17,9 @@ const useStore = create<Store>()((set) => ({
 }))
 
 export const useSpecialSection = () => {
-    return useStore((store) => store)
+    const { triggers, ...other} = useStore((store) => store)
+
+    const invoke = (section: string) => triggers.forEach((event) => event(section))
+    
+    return { invoke, ...other }
 }

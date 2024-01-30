@@ -1,8 +1,9 @@
-import styles from './styles.module.scss'
 import { Background, Details } from '@/features/cases-points'
-import { useRef, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { useInView, useMotionValue, useMotionValueEvent, useTransform } from 'framer-motion'
 import StickyScroll from '@/utils/ui/StickyScroll'
+import { useSpecialSection } from '@/features/main'
+import styles from './styles.module.scss'
 
 function CasesPointsSection() {
     const ref = useRef<HTMLDivElement>(null)
@@ -10,6 +11,16 @@ function CasesPointsSection() {
     const scrollProgress = useMotionValue(0)
     const frame = useTransform(scrollProgress, (value) => Math.min(Math.floor(value * 3), 2))
     const [position, setPosition] = useState<number>(0)
+    const { add, remove } = useSpecialSection()
+
+    useEffect(() => {
+        const move = (section: string) => {
+            if (section !== 'cases') return
+            ref?.current?.scrollIntoView({ behavior: 'smooth' })
+        }
+        add(move)
+        return () => remove(move)
+    }, [add, remove])
 
     useMotionValueEvent(frame, 'change', setPosition)
 
