@@ -5,9 +5,14 @@ interface Return {
     status: number
 }
 
-export default async function subscribeEmail(email: string): Promise<Return> {
+interface Params {
+    email: string,
+    reCaptchaToken: string
+}
+
+export default async function subscribeEmail({ email, reCaptchaToken }: Params): Promise<Return> {
     const data = await fetch(
-        config.api + 'subscription?email=' + email,
+        config.api + `subscription?email=${email}&token=${reCaptchaToken}`,
         { method: 'POST' }
     )
     const { error } = await data.json()
