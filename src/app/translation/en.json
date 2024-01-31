@@ -88,5 +88,18 @@
   "email-subscription": {
     "send": "Subscribe",
     "input-placeholder": "Your Email"
+  },
+  "contact-us": {
+    "title": "Contact Us",
+    "form": {
+      "problem": "How can we help you?",
+      "name": "Full name",
+      "company": "Company name",
+      "email": "Work email",
+      "employees-amount": "The number of employee",
+      "phone": "Phone",
+      "services": "Necessary services",
+      "submit": "Submit"
+    }
   }
 }
