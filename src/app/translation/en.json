@@ -99,7 +99,16 @@
       "employees-amount": "The number of employee",
       "phone": "Phone",
       "services": "Necessary services",
-      "submit": "Submit"
+      "submit": "Submit",
+      "files": {
+        "title": "Files",
+        "add": "Add file",
+        "tip": "Max files count: {count}, Max file size: {size} MB",
+        "errors": {
+          "size": "File {name} is to big",
+          "count": "Too many files"
+        }
+      }
     }
   }
 }

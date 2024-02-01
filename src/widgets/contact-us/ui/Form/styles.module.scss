@@ -20,6 +20,15 @@ $borderColor: #a4a4a4;
     gap: $gap;
     row-gap: 15px;
   }
+  &__submit {
+      cursor: pointer;
+      width: fit-content;
+      padding: 5px 50px;
+      border: 1px solid $borderColor;
+      background: none;
+      color: white;
+      font-size: 1.1em;
+  }
   input, textarea {
     border: none;
     border-bottom: 1px solid $borderColor;
@@ -41,14 +50,5 @@ $borderColor: #a4a4a4;
   textarea {
     resize: none;
     font-weight: normal;
-  }
-  button {
-    cursor: pointer;
-    width: fit-content;
-    padding: 5px 50px;
-    border: 1px solid $borderColor;
-    background: none;
-    color: white;
-    font-size: 1.1em;
   }
 }

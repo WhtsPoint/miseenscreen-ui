@@ -1,0 +1,27 @@
+$borderColor: #a4a4a4;
+$errorColor: red;
+
+.fileUpload {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  &__title {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    &__error {
+      color: red;
+    }
+  }
+  &__files {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  &__tip {
+    text-decoration: underline;
+    color: #a4a4a4;
+  }
+}
