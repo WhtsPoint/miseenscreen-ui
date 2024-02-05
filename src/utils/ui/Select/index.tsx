@@ -7,20 +7,22 @@ import { Children } from '@/utils/interfaces/Children'
 
 interface Params extends Partial<Children<ReactNode>> {
     options: ObjectType<string, string>,
-    value: string,
+    value?: string,
     onChange: (selected: string) => unknown,
     optionClass?: string,
     className?: string,
-    valueClass?: string
+    valueClass?: string,
+    placeholder?: string
 }
 
 export default function Select(params: Params) {
-    const {options, onChange, value, optionClass, className, children, valueClass } = params
+    const {options, onChange, value, optionClass, className, children, valueClass, placeholder } = params
     const [isVisible, setIsVisible] = useState<boolean>(false)
+
     const swapVisibility = () => setIsVisible((prev) => !prev)
 
     return (<div onClick={swapVisibility} className={cl(styles.select, className)}>
-        <div className={valueClass}>{children}{options[value]}</div>
+        <div className={valueClass}>{children}{value ? options[value] : placeholder }</div>
         <Container className={cl(styles.select__optionList, optionClass)} isShowed={isVisible}>
             {Object.entries(options).map(([value, name]) => <div
                 key={value}

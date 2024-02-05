@@ -1,0 +1,18 @@
+.phoneInput {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  * {
+    color: white;
+    font-size: 1em;
+  }
+  &__flag {
+    width: 30px;
+  }
+  &__input {
+    border: none;
+    background: none;
+    width: 100%;
+    outline: none;
+  }
+}

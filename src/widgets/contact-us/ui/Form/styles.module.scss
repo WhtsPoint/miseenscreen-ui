@@ -29,9 +29,8 @@ $borderColor: #a4a4a4;
       color: white;
       font-size: 1.1em;
   }
-  input, textarea {
+  &__services, input, textarea {
     border: none;
-    border-bottom: 1px solid $borderColor;
     padding: 20px 10px;
     background: none;
     outline: none;
@@ -46,6 +45,12 @@ $borderColor: #a4a4a4;
     &::-webkit-scrollbar {
       display: none;
     }
+  }
+  &__services, &__other > input, & > input, & > textarea, &__phone {
+    border-bottom: 1px solid $borderColor;
+  }
+  &__services__optionList > div {
+    padding: 10px;
   }
   textarea {
     resize: none;

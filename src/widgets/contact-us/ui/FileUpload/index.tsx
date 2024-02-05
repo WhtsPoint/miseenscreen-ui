@@ -1,20 +1,22 @@
 import { useTranslations } from 'next-intl'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import FileUploadButton from '@/utils/ui/FileUploadButton'
 import FileContainer from '@/widgets/contact-us/ui/FileContainer'
 import styles from './styles.module.scss'
 import buttonStyles from '../../assets/styles/button.module.scss'
-import useFilesError from '@/widgets/contact-us/hooks/useFilesError'
 
 interface Params {
     maxSize: number,
-    maxCount: number
+    maxCount: number,
+    error?: string | null,
+    onFilesChange?: (files: File[]) => unknown
 }
 
-export default function FileUpload({ maxSize, maxCount }: Params) {
+export default function FileUpload({ maxSize, maxCount, error, onFilesChange }: Params) {
     const t = useTranslations('contact-us.form.files')
     const [files, setFiles] = useState<File[]>([])
-    const error = useFilesError(files, maxCount, maxSize)
+
+    useEffect(() => { onFilesChange && onFilesChange(files) }, [onFilesChange, files])
 
     const onFileUpload = (files: File[]) => setFiles((prev) => [...prev, ...files])
     const onDelete = (file: File) => () => setFiles((prev) => prev.filter((f) => file !== f))
