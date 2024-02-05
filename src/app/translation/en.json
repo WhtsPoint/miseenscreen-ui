@@ -107,7 +107,8 @@
         "errors": {
           "size": "File {name} is to big",
           "count": "Too many files"
-        }
+        },
+        "drag-tip": "Upload Files"
       }
     }
   }

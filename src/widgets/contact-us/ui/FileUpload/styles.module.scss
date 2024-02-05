@@ -6,6 +6,7 @@ $errorColor: red;
   display: flex;
   flex-direction: column;
   gap: 20px;
+  position: relative;
   &__title {
     display: flex;
     align-items: center;

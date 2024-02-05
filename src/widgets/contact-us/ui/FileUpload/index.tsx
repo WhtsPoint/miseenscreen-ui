@@ -1,9 +1,13 @@
+import { DragEvent } from 'react'
 import { useTranslations } from 'next-intl'
 import { useEffect, useState } from 'react'
 import FileUploadButton from '@/utils/ui/FileUploadButton'
-import FileContainer from '@/widgets/contact-us/ui/FileContainer'
+import FileContainer from '../FileContainer'
+import DragOverTip from '../DragOverTip'
+import { useMotionValue } from 'framer-motion'
 import styles from './styles.module.scss'
 import buttonStyles from '../../assets/styles/button.module.scss'
+import fileListToArray from '@/utils/lib/fileListToArray'
 
 interface Params {
     maxSize: number,
@@ -15,13 +19,30 @@ interface Params {
 export default function FileUpload({ maxSize, maxCount, error, onFilesChange }: Params) {
     const t = useTranslations('contact-us.form.files')
     const [files, setFiles] = useState<File[]>([])
+    const isDragOver = useMotionValue<boolean>(false)
 
     useEffect(() => { onFilesChange && onFilesChange(files) }, [onFilesChange, files])
 
     const onFileUpload = (files: File[]) => setFiles((prev) => [...prev, ...files])
     const onDelete = (file: File) => () => setFiles((prev) => prev.filter((f) => file !== f))
+    const onDragOver = (event: DragEvent<HTMLDivElement>) => {
+        isDragOver.set(true)
+        event.preventDefault()
 
-    return (<div className={styles.fileUpload}>
+    }
+    const onDrop = (event: DragEvent<HTMLDivElement>) => {
+        event.preventDefault()
+        isDragOver.set(false)
+        onFileUpload(fileListToArray(event.dataTransfer.files))
+    }
+
+    return (<div
+        onDrop={onDrop}
+        onDragOver={onDragOver}
+        onDragLeave={() => isDragOver.set(false)}
+        className={styles.fileUpload}
+    >
+        <DragOverTip isDragOver={isDragOver} />
         <div className={styles.fileUpload__title}>
             <span>{t('title')}</span>
             {error && <small className={styles.fileUpload__title__error}>{error}</small>}
