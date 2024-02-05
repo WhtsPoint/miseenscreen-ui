@@ -10,6 +10,7 @@ import styles from './styles.module.scss'
 import buttonStyles from '../../assets/styles/button.module.scss'
 import Select from '@/utils/ui/Select'
 import PhoneInput from '@/utils/ui/PhoneInput'
+import ReCaptcha from '@/features/re-captcha/ui/ReCaptcha'
 
 interface Params {
     onSend: (formData: FormParams) => unknown,
@@ -40,6 +41,7 @@ export default function Form({ onSend, className }: Params) {
                 onChange={setService}
             />
         </div>
+        <ReCaptcha />
         <button className={buttonStyles.button} type={'submit'}>{t('submit')}</button>
     </form>)
 }
