@@ -2,15 +2,16 @@ import { FormParams } from '../../interfaces/FormParams'
 import FileUpload from '../FileUpload'
 import { useTranslations } from 'next-intl'
 import { cl } from '@/utils/lib/cl'
+import { useState } from 'react'
+import PhoneInput from '@/utils/ui/PhoneInput'
+import ServicesSelect from '@/widgets/contact-us/ui/ServicesSelect'
+import useFormSend from '../../hooks/useFormSend'
+import FormError from '@/widgets/contact-us/ui/FormError'
+import useFormAdaptation from '@/widgets/contact-us/hooks/useFormAnimation'
 import IBMPlexSans from '@/utils/assets/fonts/IBMPlexSans'
 import form from '@/utils/config/form'
-import { useState } from 'react'
-import useFilesError from '@/widgets/contact-us/hooks/useFilesError'
 import styles from './styles.module.scss'
 import buttonStyles from '../../assets/styles/button.module.scss'
-import Select from '@/utils/ui/Select'
-import PhoneInput from '@/utils/ui/PhoneInput'
-import ReCaptcha from '@/features/re-captcha/ui/ReCaptcha'
 
 interface Params {
     onSend: (formData: FormParams) => unknown,
@@ -20,28 +21,47 @@ interface Params {
 export default function Form({ onSend, className }: Params) {
     const t = useTranslations('contact-us.form')
     const [files, setFiles] = useState<File[]>([])
-    const filesError = useFilesError(files, form.file.maxCount, form.file.maxSize)
-    const [service, setService] = useState<string>()
+    const [services, setServices] = useState<string[]>([])
+    const [onFormSend, getError] = useFormSend({ services, files, validation: { files: form.file } })
 
-    return (<form className={cl(styles.form, className)}>
-        <textarea maxLength={3000} style={IBMPlexSans.style} name={'problem'} placeholder={t('problem')} />
-        <FileUpload onFilesChange={setFiles} error={filesError} {...form.file} />
+    const ref = useFormAdaptation()
+
+    return (<form ref={ref} onSubmit={onFormSend} className={cl(styles.form, className)}>
+        <FormError error={getError('problem')}>
+            <textarea maxLength={3000} style={IBMPlexSans.style} name={'problem'} placeholder={t('problem')} />
+        </FormError>
+        <FileUpload onFilesChange={setFiles} error={getError('file-size')} />
         <div className={styles.form__other}>
-            <input maxLength={100} name={'name'} placeholder={t('name')} />
-            <input maxLength={100} name={'company'} placeholder={t('company')} />
-            <input maxLength={100} name={'email'} placeholder={t('email')} />
-            <input maxLength={100} name={'employeesAmount'} placeholder={t('employees-amount')}  />
-            <PhoneInput maxLength={100} className={styles.form__phone} defaultValue={'+1'} placeholder={t('phone')} />
-            <Select
-                optionClass={styles.form__services__optionList}
-                className={styles.form__services}
-                options={{ 'a': 'a', 'b': 'b', 'c': 'c'}}
-                value={service}
-                placeholder={t('services')}
-                onChange={setService}
-            />
+            <FormError error={getError('name')}>
+                <input maxLength={100} type={'text'} name={'name'} placeholder={t('name')} />
+            </FormError>
+            <FormError error={getError('company')}>
+                <input maxLength={100} name={'company'} placeholder={t('company')} />
+            </FormError>
+            <FormError error={getError('email')}>
+                <input maxLength={100} name={'email'} placeholder={t('email')} />
+            </FormError>
+            <FormError error={getError('employees-amount')}>
+                <input maxLength={100} name={'employeesAmount'} placeholder={t('employees-amount')} />
+            </FormError>
+            <FormError error={getError('phone')}>
+                <PhoneInput
+                    name={'phone'}
+                    maxLength={100}
+                    className={styles.form__phone}
+                    defaultValue={'+1'}
+                    placeholder={t('phone')}
+                />
+            </FormError>
+            <FormError error={getError('services')}>
+                <ServicesSelect
+                    value={services[0]}
+                    onChange={(s) => setServices([s])}
+                    className={styles.form__services}
+                    optionClass={styles.form__services__optionList}
+                />
+            </FormError>
         </div>
-        <ReCaptcha />
         <button className={buttonStyles.button} type={'submit'}>{t('submit')}</button>
     </form>)
 }

@@ -8,8 +8,7 @@ $errorColor: red;
   gap: 20px;
   position: relative;
   &__title {
-    display: flex;
-    align-items: center;
+    height: 30px;
     gap: 20px;
     &__error {
       color: red;
@@ -24,5 +23,15 @@ $errorColor: red;
   &__tip {
     text-decoration: underline;
     color: #a4a4a4;
+  }
+  &__button {
+    width: fit-content;
+    border: none;
+    background: none;
+    color: white;
+    text-decoration: underline;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
   }
 }

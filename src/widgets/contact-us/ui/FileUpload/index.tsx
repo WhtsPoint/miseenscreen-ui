@@ -10,13 +10,11 @@ import buttonStyles from '../../assets/styles/button.module.scss'
 import fileListToArray from '@/utils/lib/fileListToArray'
 
 interface Params {
-    maxSize: number,
-    maxCount: number,
     error?: string | null,
     onFilesChange?: (files: File[]) => unknown
 }
 
-export default function FileUpload({ maxSize, maxCount, error, onFilesChange }: Params) {
+export default function FileUpload({ error, onFilesChange }: Params) {
     const t = useTranslations('contact-us.form.files')
     const [files, setFiles] = useState<File[]>([])
     const isDragOver = useMotionValue<boolean>(false)
@@ -44,19 +42,17 @@ export default function FileUpload({ maxSize, maxCount, error, onFilesChange }: 
     >
         <DragOverTip isDragOver={isDragOver} />
         <div className={styles.fileUpload__title}>
-            <span>{t('title')}</span>
             {error && <small className={styles.fileUpload__title__error}>{error}</small>}
         </div>
         <div className={styles.fileUpload__files}>
             {files.map((file, index) => <FileContainer key={index} file={file} onDelete={onDelete(file)}/>)}
         </div>
-        <FileUploadButton className={buttonStyles.button} onFileUpload={onFileUpload} multiple={true}>
-            {t('add')}
+        <FileUploadButton
+            dangerousText={t.raw('add')}
+            className={styles.fileUpload__button}
+            onFileUpload={onFileUpload}
+            multiple={true}
+        >
         </FileUploadButton>
-        <aside>
-            <small className={styles.fileUpload__tip}>
-                {t('tip', { count: maxCount, size: maxSize / 10 ** 6 })}
-            </small>
-        </aside>
     </div>)
 }

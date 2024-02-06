@@ -7,7 +7,8 @@ interface Params {
     placeholder?: string,
     defaultValue: string,
     className: string,
-    maxLength?: number
+    maxLength?: number,
+    name?: string
 }
 
 export default function PhoneInput({ className, defaultValue, ...params }: Params) {

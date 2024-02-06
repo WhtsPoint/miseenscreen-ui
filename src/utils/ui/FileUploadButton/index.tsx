@@ -5,10 +5,13 @@ import fileListToArray from '@/utils/lib/fileListToArray'
 interface Params extends Partial<Children<ReactNode>> {
     multiple?: boolean,
     onFileUpload: (files: File[]) => unknown,
-    className?: string
+    dangerousText?: string,
+    className?: string,
 }
 
-export default function FileUploadButton({ multiple, children, onFileUpload, className }: Params) {
+export default function FileUploadButton(
+    { multiple, children, onFileUpload, dangerousText, ...params }: Params
+) {
     const inputRef = useRef<HTMLInputElement>(null)
     const triggerInput = () => inputRef?.current?.click()
     const onFileSelected = (event: ChangeEvent<HTMLInputElement>) => {
@@ -18,7 +21,14 @@ export default function FileUploadButton({ multiple, children, onFileUpload, cla
     }
 
     return (<>
-        <button className={className} type={'button'} onClick={triggerInput}>{children}</button>
+        <button
+            dangerouslySetInnerHTML={dangerousText ? { __html: dangerousText } : undefined}
+            type={'button'}
+            onClick={triggerInput}
+            {...params}
+        >
+            {children}
+        </button>
         <input onChange={onFileSelected} ref={inputRef} type={'file'} multiple={multiple} hidden />
     </>)
 }

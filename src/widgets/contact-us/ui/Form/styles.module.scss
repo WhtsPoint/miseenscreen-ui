@@ -18,7 +18,7 @@ $borderColor: #a4a4a4;
     display: grid;
     grid-template-columns: repeat(auto-fill, calc(50% - $gap / 2));
     gap: $gap;
-    row-gap: 15px;
+    row-gap: 30px;
   }
   &__submit {
       cursor: pointer;
@@ -46,7 +46,7 @@ $borderColor: #a4a4a4;
       display: none;
     }
   }
-  &__services, &__other > input, & > input, & > textarea, &__phone {
+  input, textarea, &__services {
     border-bottom: 1px solid $borderColor;
   }
   &__services__optionList > div {

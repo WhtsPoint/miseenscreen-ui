@@ -98,17 +98,32 @@
       "email": "Work email",
       "employees-amount": "The number of employee",
       "phone": "Phone",
-      "services": "Necessary services",
+      "services": {
+        "ecommerce": "Ecommerce",
+        "placeholder": "Necessary services",
+        "web-services": "Online services&Web portals",
+        "elearning-solution": "Elearning solution",
+        "hr-software": "Hr software",
+        "analytics": "Management&Analytics",
+        "other": "Other"
+      },
       "submit": "Submit",
       "files": {
         "title": "Files",
-        "add": "Add file",
+        "add": "Drag and drop or browse to <b>upload your file(s)</b>",
         "tip": "Max files count: {count}, Max file size: {size} MB",
-        "errors": {
-          "size": "File {name} is to big",
-          "count": "Too many files"
-        },
         "drag-tip": "Upload Files"
+      },
+      "errors": {
+        "problem": "Problem is empty",
+        "name": "Name is too short, min. length is {min}",
+        "company": "Company name is too short, min. length is {min}",
+        "employees-amount": "Employees amount value is empty",
+        "email": "Email is empty",
+        "phone": "Phone is empty",
+        "services": "No one service selected",
+        "file-count": "Too many files",
+        "file-size": "File {name} is to big"
       }
     }
   }

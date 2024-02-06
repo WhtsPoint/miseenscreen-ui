@@ -1,0 +1,18 @@
+.box {
+  width: 100%;
+  position: relative;
+  > * {
+    width: 100%;
+  }
+  &_error *, &_error *::placeholder {
+    transition: color 1s, border-color 1s;
+    color: red !important;
+    border-color: red !important;
+  }
+  &__error {
+    position: absolute;
+    left: 0;
+    top: calc(100% + 5px);
+    z-index: -1;
+  }
+}
