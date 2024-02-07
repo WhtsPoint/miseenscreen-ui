@@ -1,13 +1,12 @@
 import { DragEvent } from 'react'
 import { useTranslations } from 'next-intl'
 import { useEffect, useState } from 'react'
-import FileUploadButton from '@/utils/ui/FileUploadButton'
 import FileContainer from '../FileContainer'
 import DragOverTip from '../DragOverTip'
-import { useMotionValue } from 'framer-motion'
-import styles from './styles.module.scss'
-import buttonStyles from '../../assets/styles/button.module.scss'
+import { AnimatePresence, useMotionValue } from 'framer-motion'
 import fileListToArray from '@/utils/lib/fileListToArray'
+import styles from './styles.module.scss'
+import FileUploadButton from '@/utils/ui/FileUploadButton'
 
 interface Params {
     error?: string | null,
@@ -45,7 +44,11 @@ export default function FileUpload({ error, onFilesChange }: Params) {
             {error && <small className={styles.fileUpload__title__error}>{error}</small>}
         </div>
         <div className={styles.fileUpload__files}>
-            {files.map((file, index) => <FileContainer key={index} file={file} onDelete={onDelete(file)}/>)}
+            <AnimatePresence>
+                {files.map((file, index) =>
+                    <FileContainer key={index} file={file} onDelete={onDelete(file)} />
+                )}
+            </AnimatePresence>
         </div>
         <FileUploadButton
             dangerousText={t.raw('add')}

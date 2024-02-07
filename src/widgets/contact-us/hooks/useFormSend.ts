@@ -8,12 +8,13 @@ import { ValidationRules } from '../interfaces/ValidationRules'
 interface Params {
     services: string[],
     files: File[],
-    validation: ValidationRules
+    validation: ValidationRules,
+    onSend: (params: FormParams) => unknown
 }
 
 type Return = [(event: FormEvent<HTMLFormElement>) => unknown, (name: string) => string | undefined]
 
-export default function useFormSend({ validation, ...params }: Params): Return {
+export default function useFormSend({ validation, onSend: send, ...params }: Params): Return {
     const t =  useTranslations('contact-us.form.errors')
     const [errors, setErrors] = useState<FormError[]>([])
 
@@ -22,8 +23,10 @@ export default function useFormSend({ validation, ...params }: Params): Return {
         const data = {
             ...Object.fromEntries(new FormData(event.currentTarget)),
             ...params
-        }
-        setErrors(validateForm(data as unknown as FormParams, validation))
+        } as unknown as FormParams
+        const errors = validateForm(data, validation)
+        setErrors(errors)
+        if (1) send(data)
     }
 
     const getError = (name: string) => {

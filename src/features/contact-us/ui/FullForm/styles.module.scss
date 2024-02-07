@@ -1,0 +1,17 @@
+.fullForm {
+  width: 100%;
+  &__steps {
+    width: 100%;
+    &__step {
+      width: 100%;
+    }
+    &__form {
+      display: flex;
+      justify-content: center;
+      &__content {
+        width: 100%;
+        max-width: 700px;
+      }
+    }
+  }
+}

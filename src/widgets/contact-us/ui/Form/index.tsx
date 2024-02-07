@@ -1,32 +1,36 @@
 import { FormParams } from '../../interfaces/FormParams'
 import FileUpload from '../FileUpload'
 import { useTranslations } from 'next-intl'
-import { cl } from '@/utils/lib/cl'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import PhoneInput from '@/utils/ui/PhoneInput'
 import ServicesSelect from '@/widgets/contact-us/ui/ServicesSelect'
 import useFormSend from '../../hooks/useFormSend'
 import FormError from '@/widgets/contact-us/ui/FormError'
 import useFormAdaptation from '@/widgets/contact-us/hooks/useFormAnimation'
+import { cl } from '@/utils/lib/cl'
 import IBMPlexSans from '@/utils/assets/fonts/IBMPlexSans'
 import form from '@/utils/config/form'
+import { motion } from 'framer-motion'
 import styles from './styles.module.scss'
 import buttonStyles from '../../assets/styles/button.module.scss'
 
 interface Params {
     onSend: (formData: FormParams) => unknown,
-    className?: string
+    className?: string,
 }
 
 export default function Form({ onSend, className }: Params) {
     const t = useTranslations('contact-us.form')
     const [files, setFiles] = useState<File[]>([])
     const [services, setServices] = useState<string[]>([])
-    const [onFormSend, getError] = useFormSend({ services, files, validation: { files: form.file } })
+    const [onFormSend, getError] = useFormSend({ services, files, onSend, validation: { files: form.file } })
+    const [lockedSubmit, setLockedSubmit] = useState<boolean>(true)
+    const animRef = useFormAdaptation()
 
-    const ref = useFormAdaptation()
+    //BUG: Before next hydrate js, form event is not handled
+    useEffect(() => setLockedSubmit(false), [lockedSubmit])
 
-    return (<form ref={ref} onSubmit={onFormSend} className={cl(styles.form, className)}>
+    return (<motion.form ref={animRef} onSubmit={onFormSend} className={cl(styles.form, className)}>
         <FormError error={getError('problem')}>
             <textarea maxLength={3000} style={IBMPlexSans.style} name={'problem'} placeholder={t('problem')} />
         </FormError>
@@ -62,6 +66,12 @@ export default function Form({ onSend, className }: Params) {
                 />
             </FormError>
         </div>
-        <button className={buttonStyles.button} type={'submit'}>{t('submit')}</button>
-    </form>)
+        <button
+            style={{ pointerEvents: lockedSubmit ? 'none' : 'auto'}}
+            className={buttonStyles.button}
+            type={'submit'}
+        >
+            {t('submit')}
+        </button>
+    </motion.form>)
 }

@@ -8,17 +8,24 @@ $borderColor: #a4a4a4;
   align-items: center;
   gap: 50px;
   padding: 50px;
+  opacity: 0;
+  @media (max-width: 700px) {
+    padding: 0;
+  }
   textarea[name='problem'] {
     width: 100%;
-    height: 200px;
+    height: 150px;
   }
   &__other {
     $gap: 40px;
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(auto-fill, calc(50% - $gap / 2));
+    grid-template-columns: repeat(2, 1fr);
     gap: $gap;
     row-gap: 30px;
+    @media (max-width: 500px) {
+      grid-template-columns: 1fr;
+    }
   }
   &__submit {
       cursor: pointer;
@@ -46,7 +53,7 @@ $borderColor: #a4a4a4;
       display: none;
     }
   }
-  input, textarea, &__services {
+  &__other input:not([name='phone']), &__phone, &__services, textarea {
     border-bottom: 1px solid $borderColor;
   }
   &__services__optionList > div {
