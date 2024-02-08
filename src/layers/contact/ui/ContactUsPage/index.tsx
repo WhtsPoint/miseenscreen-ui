@@ -10,7 +10,6 @@ export default function ContactUsPage() {
 
     useEffect(() => { setTheme('solid') }, [setTheme])
 
-
     return (<div className={styles.page}>
         <Title className={styles.page__title} />
         <div className={styles.page__main}>

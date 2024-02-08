@@ -5,10 +5,8 @@ $errorColor: red;
   width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 30px;
   position: relative;
   &__title {
-    height: 30px;
     gap: 20px;
     &__error {
       color: red;
@@ -19,6 +17,7 @@ $errorColor: red;
     display: flex;
     flex-direction: column;
     gap: 10px;
+    padding: 20px 0;
   }
   &__tip {
     text-decoration: underline;

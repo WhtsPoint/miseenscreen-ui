@@ -5,8 +5,9 @@ import FileContainer from '../FileContainer'
 import DragOverTip from '../DragOverTip'
 import { AnimatePresence, useMotionValue } from 'framer-motion'
 import fileListToArray from '@/utils/lib/fileListToArray'
-import styles from './styles.module.scss'
 import FileUploadButton from '@/utils/ui/FileUploadButton'
+import styles from './styles.module.scss'
+import { cl } from '@/utils/lib/cl'
 
 interface Params {
     error?: string | null,
@@ -43,13 +44,13 @@ export default function FileUpload({ error, onFilesChange }: Params) {
         <div className={styles.fileUpload__title}>
             {error && <small className={styles.fileUpload__title__error}>{error}</small>}
         </div>
-        <div className={styles.fileUpload__files}>
+        {<div className={cl(files.length > 0 && styles.fileUpload__files)}>
             <AnimatePresence>
                 {files.map((file, index) =>
                     <FileContainer key={index} file={file} onDelete={onDelete(file)} />
                 )}
             </AnimatePresence>
-        </div>
+        </div>}
         <FileUploadButton
             dangerousText={t.raw('add')}
             className={styles.fileUpload__button}

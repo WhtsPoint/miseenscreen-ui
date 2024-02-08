@@ -11,6 +11,7 @@ interface Params {
 export default function FileContainer({ file, onDelete }: Params) {
     const { name, size } = file
     const kb = size / 1000
+    const text = `${name} (${(kb < 1 ? '< 1' : kb.toFixed(2))} KB)`
 
     return (
         <motion.div
@@ -18,9 +19,7 @@ export default function FileContainer({ file, onDelete }: Params) {
             exit={{ x: [0, -100], opacity: [1, 0] }}
             className={styles.container}
         >
-            <span>{name}</span>
-            <small className={styles.container__error}></small>
-            <span>{(kb < 1 ? '< 1' : kb.toFixed(2)) + 'KB'}</span>
+            <span className={styles.container__column}>{text}</span>
             <div className={styles.container__delete}>
                 <button onClick={onDelete} type={'button'} className={styles.container__delete__button}>
                     <Image src={xIcon} alt={''} />

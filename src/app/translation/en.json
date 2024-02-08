@@ -125,6 +125,12 @@
         "file-count": "Too many files",
         "file-size": "File {name} is to big"
       }
+    },
+    "result": {
+      "success-title": "You form has been successfully submitted. Within 24 hours, our manager will contact you using the provide contact information",
+      "error-title": "Something went wrong. Try to send form later",
+      "to-form": "Return to form",
+      "to-home": "Return to home page"
     }
   }
 }
