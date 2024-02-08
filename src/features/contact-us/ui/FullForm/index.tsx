@@ -3,7 +3,7 @@ import { useRef, useState } from 'react'
 import SectionSteps from '@/utils/ui/SectionSteps'
 import { useReCaptchaModal } from '@/features/re-captcha'
 import { useTranslations } from 'next-intl'
-import { SuccessWindow } from '@/widgets/contact-us'
+import { ResultWindow } from '@/widgets/contact-us'
 import { cl } from '@/utils/lib/cl'
 import { useRouter } from '@/utils/lib/navigation'
 import styles from './styles.module.scss'
@@ -35,7 +35,7 @@ export default function FullForm({ formClassName }: Params) {
                 <Form className={cl(styles.fullForm__steps__step__item, formClassName)} onSend={onSend} />
             </div>,
             <div key={1} className={styles.fullForm__steps__step}>
-                <SuccessWindow
+                <ResultWindow
                     iconSrc={isSendError ? xIcon : checkIcon}
                     text={isSendError ? t('error-title') : t('success-title')}
                     onBackToForm={() => setStep(0)}

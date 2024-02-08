@@ -1,6 +1,6 @@
 import Form from './ui/Form'
-import SuccessWindow from './ui/SuccessWindow'
+import ResultWindow from './ui/ResultWindow'
 import { FormParams } from './interfaces/FormParams'
 
-export { Form, SuccessWindow }
+export { Form, ResultWindow }
 export type { FormParams }

@@ -9,19 +9,7 @@ interface Params extends Children<ReactNode[]> {
     step: number
 }
 
-const getAnimationByStep = (step: number) => (index: number) => {
-    const isCurrent = index === step
-    const state = { opacity: isCurrent ? 1 : 0 }
-    return {
-        initial: state,
-        animate: state,
-        transition: { duration: 0.5, delay: isCurrent ? 0.5 : 0 }
-    }
-}
-
 export default function SectionSteps({ className, children, step }: Params) {
-    const getAnimation = getAnimationByStep(step)
-
     return (<div className={cl(styles.container, className)}>
         <AnimatePresence>
             <motion.div
@@ -36,23 +24,3 @@ export default function SectionSteps({ className, children, step }: Params) {
         </AnimatePresence>
     </div>)
 }
-
-// export default function SectionSteps({ className, children, step }: Params) {
-//     const getAnimation = getAnimationByStep(step)
-//
-//     return (<div className={cl(styles.container, className)}>
-//         <motion.div
-//             className={styles.container__items}
-//             animate={{ x: `${-100 * step}%` }}
-//             transition={{ duration: 1, ease: 'linear' }}
-//         >
-//             {children.map((child, index) => <motion.div
-//                 key={index}
-//                 className={styles.container__items__item}
-//                 {...getAnimation(index)}
-//             >
-//                 {child}
-//             </motion.div>)}
-//         </motion.div>
-//     </div>)
-// }

@@ -10,7 +10,7 @@ interface Params {
     iconSrc: StaticImageData
 }
 
-export default function SuccessCircle({ className, iconSrc }: Params) {
+export default function ResultCircle({ className, iconSrc }: Params) {
     const [ref, animate] = useAnimate()
     const progress = useMotionValue(0)
     const isInView = useInView(ref)
