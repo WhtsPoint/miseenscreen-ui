@@ -9,6 +9,7 @@ import { useRouter } from '@/utils/lib/navigation'
 import styles from './styles.module.scss'
 import checkIcon from '@/utils/assets/images/check.svg'
 import xIcon from '@/utils/assets/images/x.svg'
+import postForm from '@/features/contact-us/api/postForm'
 
 interface Params {
     formClassName?: string
@@ -22,11 +23,11 @@ export default function FullForm({ formClassName }: Params) {
     const { open } = useReCaptchaModal()
     const router = useRouter()
 
-    const onSend = (data: FormParams) => {
-        open((token) => {
-            captchaToken.current = token
-            setStep(1)
-        })
+    const onSend = async (data: FormParams) => {
+        // open(async (token) => {
+            captchaToken.current = ''
+            await postForm({ ...data, token: '' })
+        // })
     }
 
     return (<div className={styles.fullForm}>

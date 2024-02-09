@@ -26,7 +26,7 @@ export default function useFormSend({ validation, onSend: send, ...params }: Par
         } as unknown as FormParams
         const errors = validateForm(data, validation)
         setErrors(errors)
-        if (1) send(data)
+        if (errors.length === 0) send(data)
     }
 
     const getError = (name: string) => {

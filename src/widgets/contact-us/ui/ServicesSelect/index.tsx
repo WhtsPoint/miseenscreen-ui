@@ -1,9 +1,10 @@
-import Select from '@/utils/ui/Select'
 import { useTranslations } from 'next-intl'
+import MultipleSelect from '@/utils/ui/MultipleSelect'
+import { Option } from '../../types/Option'
 
 interface Params {
-    value?: string,
-    onChange: (service: string) => unknown,
+    values: Option[],
+    onChange: (service: Option) => unknown,
     optionClass?: string,
     className?: string
 }
@@ -11,7 +12,7 @@ interface Params {
 export default function ServicesSelect(params: Params) {
     const t = useTranslations('contact-us.form.services')
 
-    return (<Select
+    return (<MultipleSelect<Option>
         options={{
             'ecommerce': t('ecommerce'),
             'webPortals': t('web-services'),

@@ -13,9 +13,8 @@ export default function ReCaptcha({ onComplete }: Params) {
     const { isLoaded } = useCaptchaLoading()
 
     useEffect(() => {
-        if (!isLoaded) return console.log((window as any).grecaptcha)
+        if (!isLoaded) return
         const extendedWindow = window as unknown as ExtendedWindow
-        console.log(extendedWindow.grecaptcha)
         if (!ref.current) return
         //BUG: There is problem with react strict mode, when component renders twice and trigger recaptcha exception.
         try { extendedWindow.grecaptcha.render(ref.current) } catch (error) { console.error(error) }

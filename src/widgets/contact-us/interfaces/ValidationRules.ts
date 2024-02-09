@@ -1,7 +1,8 @@
 interface ValidationRules {
     files: {
         maxSize: number,
-        maxCount: number
+        maxCount: number,
+        approvedFormats: string[]
     }
 }
 

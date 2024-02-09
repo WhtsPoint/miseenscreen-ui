@@ -3,8 +3,16 @@
   position: relative;
   color: white;
   cursor: pointer;
-  background: black ;
-
+  background: black;
+  button {
+    font-size: 1em;
+    background: none;
+    border: none;
+    color: white;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+  }
   &, &__optionList__option {
     min-height: 30px;
     display: flex;
@@ -12,6 +20,7 @@
     user-select: none;
   }
   &__optionList {
+    z-index: 5;
     display: flex;
     flex-direction: column;
     left: 0;
@@ -20,10 +29,8 @@
     animation: showOn 400ms forwards;
     position: absolute;
     background: black;
-
     &__option {
       width: 100%;
-
       &:hover {
         background: #1c1c1c;
         transition: background 400ms;

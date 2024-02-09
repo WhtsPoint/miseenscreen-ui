@@ -15,8 +15,8 @@ export default function SectionSteps({ className, children, step }: Params) {
             <motion.div
                 key={step}
                 className={styles.container__item}
-                animate={{ opacity: [0, 1], x: [-300, 0] }}
-                exit={{ opacity: [1, 0], x: [0, -300] }}
+                animate={{ opacity: [0, 1], x: [-300, 0], position: 'static' }}
+                exit={{ opacity: [1, 0], x: [0, -300], position: 'absolute' }}
                 transition={{ duration: 1 }}
             >
                 {children[step]}

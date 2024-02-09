@@ -11,16 +11,16 @@ interface Params {
 }
 
 export default function validateForm(
-    { problem, name, company, employeesAmount, phone, services, email, files}: FormParams,
+    { comment, fullName, companyName, employeeNumber, phone, services, email, files}: FormParams,
     validationRules: ValidationRules
 ): FormError[] {
     const errors = []
-    const fileError = validateFiles(files, validationRules.files.maxCount, validationRules.files.maxSize)
+    const fileError = validateFiles(files, validationRules.files)
 
-    if (problem.length === 0) errors.push({ name: 'problem' })
-    if (name.length < minLength) errors.push({ name: 'name', params: { min: minLength }})
-    if (company.length < minLength) errors.push({ name: 'company', params: { min: minLength }})
-    if (employeesAmount.length === 0) errors.push({ name: 'employees-amount' })
+    if (comment.length === 0) errors.push({ name: 'problem' })
+    if (fullName.length < minLength) errors.push({ name: 'name', params: { min: minLength }})
+    if (companyName.length < minLength) errors.push({ name: 'company', params: { min: minLength }})
+    if (employeeNumber.length === 0) errors.push({ name: 'employees-amount' })
     if (phone.length === 0) errors.push({ name: 'phone' })
     if (email.length === 0) errors.push({ name: 'email' })
     if (services.length === 0) errors.push({ name: 'services' })

@@ -10,8 +10,8 @@ interface Params {
 3
 export default function FileContainer({ file, onDelete }: Params) {
     const { name, size } = file
-    const kb = size / 1000
-    const text = `${name} (${(kb < 1 ? '< 1' : kb.toFixed(2))} KB)`
+    const kb = size / 10 ** 6
+    const text = `${name} (${(kb < 1 ? '< 1' : kb.toFixed(2))} MB)`
 
     return (
         <motion.div

@@ -1,9 +1,9 @@
 interface FormParams {
-    problem: string,
-    name: string,
-    company: string,
+    comment: string,
+    fullName: string,
+    companyName: string,
     email: string,
-    employeesAmount: string,
+    employeeNumber: string,
     phone: string,
     services: string[],
     files: File[]

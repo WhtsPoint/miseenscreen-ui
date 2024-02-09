@@ -12,7 +12,7 @@ const config = {
             contactUs: '/contact'
         }
     },
-    api: 'http://localhost:8000/api/v0/'
+    api: 'http://localhost:5500/api/v0/'
 }
 
 export default config

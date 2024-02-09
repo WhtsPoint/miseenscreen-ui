@@ -1,4 +1,4 @@
-'use client'
+    'use client'
 
 import { useCaptchaLoading } from '../stores/captcha-loading'
 import { Children } from '@/utils/interfaces/Children'

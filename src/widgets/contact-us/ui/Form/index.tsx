@@ -11,6 +11,8 @@ import { cl } from '@/utils/lib/cl'
 import IBMPlexSans from '@/utils/assets/fonts/IBMPlexSans'
 import form from '@/utils/config/form'
 import { motion } from 'framer-motion'
+import { Option } from '../../types/Option'
+import useMultipleValues from '@/utils/hooks/useMultipleValues'
 import styles from './styles.module.scss'
 import buttonStyles from '../../assets/styles/button.module.scss'
 
@@ -22,31 +24,41 @@ interface Params {
 export default function Form({ onSend, className }: Params) {
     const t = useTranslations('contact-us.form')
     const [files, setFiles] = useState<File[]>([])
-    const [services, setServices] = useState<string[]>([])
+    const [services, onServiceChange] = useMultipleValues<Option>([])
     const [onFormSend, getError] = useFormSend({ services, files, onSend, validation: { files: form.file } })
     const [lockedSubmit, setLockedSubmit] = useState<boolean>(true)
     const animRef = useFormAdaptation()
+
+    const fileError = getError('file-size') || getError('file-count') || getError('file-format')
 
     //BUG: Before next hydrate js, form event is not handled
     useEffect(() => setLockedSubmit(false), [lockedSubmit])
 
     return (<motion.form ref={animRef} onSubmit={onFormSend} className={cl(styles.form, className)}>
         <FormError error={getError('problem')}>
-            <textarea maxLength={3000} style={IBMPlexSans.style} name={'problem'} placeholder={t('problem')} />
+            <textarea maxLength={3000} style={IBMPlexSans.style} name={'comment'} placeholder={t('problem')} />
         </FormError>
-        <FileUpload onFilesChange={setFiles} error={getError('file-size')} />
+        <FileUpload onFilesChange={setFiles} error={fileError} />
         <div className={styles.form__other}>
             <FormError error={getError('name')}>
-                <input maxLength={100} type={'text'} name={'name'} placeholder={t('name')} />
+                <input maxLength={100} type={'text'} name={'fullName'} placeholder={t('name')} />
             </FormError>
             <FormError error={getError('company')}>
-                <input maxLength={100} name={'company'} placeholder={t('company')} />
+                <input maxLength={100} name={'companyName'} placeholder={t('company')} />
             </FormError>
             <FormError error={getError('email')}>
                 <input maxLength={100} name={'email'} placeholder={t('email')} />
             </FormError>
+            <FormError error={getError('services')}>
+                <ServicesSelect
+                    values={services}
+                    onChange={onServiceChange}
+                    className={styles.form__services}
+                    optionClass={styles.form__services__optionList}
+                />
+            </FormError>
             <FormError error={getError('employees-amount')}>
-                <input maxLength={100} name={'employeesAmount'} placeholder={t('employees-amount')} />
+                <input maxLength={100} name={'employeeNumber'} placeholder={t('employees-amount')} />
             </FormError>
             <FormError error={getError('phone')}>
                 <PhoneInput
@@ -55,14 +67,6 @@ export default function Form({ onSend, className }: Params) {
                     className={styles.form__phone}
                     defaultValue={'+1'}
                     placeholder={t('phone')}
-                />
-            </FormError>
-            <FormError error={getError('services')}>
-                <ServicesSelect
-                    value={services[0]}
-                    onChange={(s) => setServices([s])}
-                    className={styles.form__services}
-                    optionClass={styles.form__services__optionList}
                 />
             </FormError>
         </div>

@@ -48,7 +48,7 @@
     @media (min-width: 1001px) {
       width: auto !important;
       height: auto !important;
-      button {
+      > button {
         display: none;
       }
       & > div:nth-child(2) {
@@ -56,6 +56,9 @@
         position: static;
       }
     }
+  }
+  &__localeSelect button {
+    font-weight: bold;
   }
 }
 

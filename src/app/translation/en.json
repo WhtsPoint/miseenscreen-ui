@@ -122,8 +122,9 @@
         "email": "Email is empty",
         "phone": "Phone is empty",
         "services": "No one service selected",
-        "file-count": "Too many files",
-        "file-size": "File {name} is to big"
+        "file-count": "Too many files, max count is {maxCount}",
+        "file-size": "File {name} is to big, max size is {maxSize} MB",
+        "file-format": "File {name} has prohibited format"
       }
     },
     "result": {
