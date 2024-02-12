@@ -23,6 +23,7 @@ export default function Ring({ radius, width, color, progress, rotate }: Params)
             stroke={color}
             strokeWidth={width}
             r={radius - width}
+            fill={'transparent'}
             cx="50%"
             cy="50%"
         />

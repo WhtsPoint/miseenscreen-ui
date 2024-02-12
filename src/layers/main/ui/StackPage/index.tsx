@@ -1,8 +1,15 @@
-import { forwardRef } from 'react'
 import { Analytics, Eccomerce, ElSolution, HrSoftware, WebServices } from '@/features/stack'
 import styles from './style.module.scss'
+import { stagger, useAnimate } from 'framer-motion'
+import { useEffect } from 'react'
 
-const StackPage = forwardRef<HTMLDivElement>((_params, ref) => {
+export default function StackPage() {
+    const [ref, animate] = useAnimate()
+
+    useEffect(() => {
+        animate('article', { opacity: [0, 1] }, { delay: stagger(0.3) })
+    }, [animate])
+
     return (<div className={styles.scrollBlock}>
         <section ref={ref} className={styles.section}>
                 <Eccomerce style={{ gridArea: 'a' }} />
@@ -12,8 +19,4 @@ const StackPage = forwardRef<HTMLDivElement>((_params, ref) => {
                 <Analytics style={{ gridArea: 'c' }}/>
         </section>
     </div>)
-})
-
-StackPage.displayName = 'StackPage'
-
-export default StackPage
+}

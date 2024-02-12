@@ -5,9 +5,9 @@ const config = {
     },
     routes: {
         header: {
-            cases: '#cases',
-            cooperation: '#cooperation',
-            ourStory: '#about',
+            cases: '/#cases',
+            cooperation: '/#cooperation',
+            ourStory: '/#our-story',
             blog: '/blog',
             contactUs: '/contact'
         }

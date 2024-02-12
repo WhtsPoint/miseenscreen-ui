@@ -1,25 +1,17 @@
 'use client'
 
 import { Points, TitleBlock } from '@/features/cooperation'
-import { RefObject, useEffect, useRef } from 'react'
+import { RefObject, useRef } from 'react'
 import { useInView } from 'framer-motion'
 import VerticalLine from '../../../../features/cooperation/ui/VerticalLine'
-import { useSpecialSection } from '@/features/main'
 import styles from './styles.module.scss'
+import useCertainSection from '@/utils/hooks/useCertainSection'
 
-function CooperationSection() {
+function    CooperationSection() {
     const ref = useRef<HTMLDivElement>(null)
     const isInView = useInView(ref as RefObject<HTMLElement>, { margin: '-40%', once: true })
-    const { add, remove } = useSpecialSection()
 
-    useEffect(() => {
-        const move = (section: string) => {
-            if (section !== 'cooperation') return
-            ref?.current?.scrollIntoView({ behavior: 'smooth' })
-        }
-        add(move)
-        return () => remove(move)
-    }, [add, remove])
+    useCertainSection({ ref, section: 'cooperation' })
 
     return (<section ref={ref} className={styles.cooperationSection}>
         <TitleBlock isInView={isInView} className={styles.cooperationSection__title} />

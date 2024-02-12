@@ -18,9 +18,9 @@ export default function EmailSubscription({ className }: Params) {
     const onSend = async (email: string) => {
         open(async (token) => {
             setIsLoading(true)
-            const { status } = await subscribeEmail({ email, reCaptchaToken: token })
+            const isSuccess = await subscribeEmail({ email, reCaptchaToken: token })
             setIsLoading(false)
-            setStatus(status === 200 ? 'success' : 'failure')
+            setStatus(isSuccess ? 'success' : 'failure')
         })
     }
 

@@ -2,7 +2,7 @@ import StickyScroll from '@/utils/ui/StickyScroll'
 import { useMotionValue, useTransform } from 'framer-motion'
 import PhilosophySection from '../PhilosophySection'
 import styles from './styles.module.scss'
-import usePointMove from '@/layers/main/usePointMove'
+import usePointMove from '@/layers/main/hooks/usePointMove'
 import useWidth from '@/utils/hooks/useWidth'
 import { useEffect } from 'react'
 
