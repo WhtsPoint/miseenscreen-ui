@@ -49,6 +49,11 @@ $borderColor: #a4a4a4;
       display: none;
     }
   }
+  &__send {
+    width: 100%;
+    max-width: 180px;
+    height: 35px;
+  }
   &__other input:not([name='phone']), &__phone, &__services, textarea {
     border-bottom: 1px solid $borderColor;
   }

@@ -9,22 +9,27 @@ interface Params {
     services: string[],
     files: File[],
     validation: ValidationRules,
-    onSend: (params: FormParams) => unknown
+    onSend: (params: FormParams) => unknown,
+    isLoading: boolean
 }
 
 type Return = [(event: FormEvent<HTMLFormElement>) => unknown, (name: string) => string | undefined]
 
-export default function useFormSend({ validation, onSend: send, ...params }: Params): Return {
+export default function useFormSend({ validation, onSend: send, isLoading, ...params }: Params): Return {
     const t =  useTranslations('contact-us.form.errors')
     const [errors, setErrors] = useState<FormError[]>([])
 
     const onSend = (event: FormEvent<HTMLFormElement>) => {
         event.preventDefault()
+
+        if (isLoading) return
+
         const data = {
             ...Object.fromEntries(new FormData(event.currentTarget)),
             ...params
         } as unknown as FormParams
         const errors = validateForm(data, validation)
+
         setErrors(errors)
         if (errors.length === 0) send(data)
     }

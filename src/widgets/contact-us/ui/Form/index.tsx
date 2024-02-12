@@ -15,17 +15,19 @@ import { Option } from '../../types/Option'
 import useMultipleValues from '@/utils/hooks/useMultipleValues'
 import styles from './styles.module.scss'
 import buttonStyles from '../../assets/styles/button.module.scss'
+import BasicLoading from '../../../../utils/ui/BasicLoading'
 
 interface Params {
     onSend: (formData: FormParams) => unknown,
     className?: string,
+    isLoading: boolean
 }
 
-export default function Form({ onSend, className }: Params) {
+export default function Form({ onSend, className, isLoading }: Params) {
     const t = useTranslations('contact-us.form')
     const [files, setFiles] = useState<File[]>([])
     const [services, onServiceChange] = useMultipleValues<Option>([])
-    const [onFormSend, getError] = useFormSend({ services, files, onSend, validation: { files: form.file } })
+    const [onFormSend, getError] = useFormSend({ services, files, onSend, validation: { files: form.file }, isLoading })
     const [lockedSubmit, setLockedSubmit] = useState<boolean>(true)
     const animRef = useFormAdaptation()
 
@@ -72,10 +74,10 @@ export default function Form({ onSend, className }: Params) {
         </div>
         <button
             style={{ pointerEvents: lockedSubmit ? 'none' : 'auto'}}
-            className={buttonStyles.button}
+            className={cl(styles.form__send, buttonStyles.button)}
             type={'submit'}
         >
-            {t('submit')}
+            { isLoading ? <BasicLoading radius={10} /> : t('submit')}
         </button>
     </motion.form>)
 }

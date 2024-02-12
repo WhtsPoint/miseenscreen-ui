@@ -1,7 +1,7 @@
 import { EmailSubscription as Form } from '@/widgets/footer'
 import subscribeEmail from '@/features/footer/api/subscribeEmail'
 import { useState } from 'react'
-import BasicLoading from '@/utils/ui/LoadingBlock'
+import BasicLoading from '../../../../utils/ui/BasicLoading'
 import { Status } from '@/widgets/footer/types/Status'
 import { useReCaptchaModal } from '@/features/re-captcha'
 import styles from './styles.module.scss'
@@ -25,7 +25,6 @@ export default function EmailSubscription({ className }: Params) {
     }
 
     const onChange = () => setStatus('waiting')
-
 
     return (<div className={styles.emailSubscription}>
         <Form className={className} status={status} onSend={onSend} onChange={onChange} />

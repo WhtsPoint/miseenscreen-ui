@@ -19,21 +19,30 @@ export default function FullForm({ formClassName }: Params) {
     const t = useTranslations('contact-us.result')
     const [step, setStep] = useState<number>(0)
     const captchaToken = useRef<string>('')
+    const [isLoading ,setIsLoading] = useState<boolean>(false)
     const [isSendError, setIsSendError] = useState<boolean>(true)
     const { open } = useReCaptchaModal()
     const router = useRouter()
 
     const onSend = async (data: FormParams) => {
-        // open(async (token) => {
+        open(async (token) => {
             captchaToken.current = ''
-            await postForm({ ...data, token: '' })
-        // })
+            setIsLoading(true)
+            const [id, error] = await postForm({ ...data, token })
+            setIsSendError(error !== null)
+            setStep(1)
+            setIsLoading(false)
+        })
     }
 
     return (<div className={styles.fullForm}>
         <SectionSteps className={styles.fullForm__steps} step={step}>{[
             <div key={0} className={styles.fullForm__steps__step}>
-                <Form className={cl(styles.fullForm__steps__step__item, formClassName)} onSend={onSend} />
+                <Form
+                    className={cl(styles.fullForm__steps__step__item, formClassName)}
+                    onSend={onSend}
+                    isLoading={isLoading}
+                />
             </div>,
             <div key={1} className={styles.fullForm__steps__step}>
                 <ResultWindow

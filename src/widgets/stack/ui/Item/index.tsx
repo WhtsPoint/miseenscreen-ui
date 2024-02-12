@@ -3,7 +3,7 @@ import { cl } from '@/utils/lib/cl'
 import openSans from '@/utils/assets/fonts/OpenSans'
 import { motion, MotionStyle } from 'framer-motion'
 import BackgroundVideo from '@/utils/ui/BackgroundVideo'
-import BasicLoading from '@/utils/ui/LoadingBlock'
+import BasicLoading from '../../../../utils/ui/BasicLoading'
 
 interface Video {
     src: string,
