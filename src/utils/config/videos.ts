@@ -12,7 +12,8 @@ const videos = {
     steps: 'https://www.dropbox.com/scl/fi/1gvhlvkawmwwjlcd2zy3x/1.mp4?rlkey=68dwk7sq1wil270acr8o9kwmy&raw=1',
     cases: 'https://www.dropbox.com/scl/fi/4t5j3jsxdn2vyhzcpbn1m/1_1.mp4?rlkey=bm0wzdu1zv91nuajo9hzcmp35&raw=1',
     aboutUs: 'https://www.dropbox.com/scl/fi/mhfdarhglee2ccipobirr/1.mp4?rlkey=hp2mzmsdesi3d0cn9x7lutxnx&raw=1',
-    footer: 'https://www.dropbox.com/scl/fi/yybb5ook2gi6ny66gvflt/1_1.mp4?rlkey=n5cks8egmnf3ldjxklvzarq4l&raw=1'
-}
+    footer: 'https://www.dropbox.com/scl/fi/yybb5ook2gi6ny66gvflt/1_1.mp4?rlkey=n5cks8egmnf3ldjxklvzarq4l&raw=1',
+    services: 'https://www.dropbox.com/scl/fi/k39e1ccvxlwjvy32k169j/1.mp4?rlkey=3mo8jaxpizz8ndyroo2oxop89&raw=1'
+} as const
 
 export default videos

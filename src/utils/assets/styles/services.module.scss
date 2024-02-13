@@ -1,0 +1,35 @@
+.title {
+  font-size: 6em;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.props {
+  width: 100%;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 270px);
+  flex-wrap: wrap;
+  gap: 50px;
+  justify-content: center;
+  align-items: center;
+  &__item {
+    width: 100%;
+    max-width: 270px;
+    margin: auto;
+    padding: 10px;
+    text-align: center;
+    border: 1px solid white;
+    list-style: none;
+  }
+}
+
+.line {
+  width: 100%;
+  position: relative;
+  margin: 50px 0;
+}
+
+.paragraph {
+  font-style: italic;
+}

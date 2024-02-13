@@ -1,3 +1,5 @@
+'use client'
+
 import { cl } from '@/utils/lib/cl'
 import styles from './styles.module.scss'
 import { ReactNode, useState } from 'react'
