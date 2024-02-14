@@ -1,3 +1,5 @@
+'use client'
+
 import styles from './styles.module.scss'
 import Navigate from '../Navigate'
 import Official from '../Official'

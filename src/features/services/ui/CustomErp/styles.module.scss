@@ -1,0 +1,12 @@
+.customErp {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  &__comment {
+    white-space: pre-line;
+  }
+  &__article {
+    width: 100%;
+  }
+}

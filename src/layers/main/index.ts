@@ -1,3 +1,4 @@
-import MainPage from '@/layers/main/ui/MainPage'
+import MainPage from './ui/MainPage'
+import FooterSection from './ui/FooterSection'
 
-export { MainPage }
+export { MainPage, FooterSection }

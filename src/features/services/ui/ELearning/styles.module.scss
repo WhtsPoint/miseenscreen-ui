@@ -1,0 +1,15 @@
+.eLearning {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  &__head {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &__comment {
+    white-space: pre-line;
+  }
+}
