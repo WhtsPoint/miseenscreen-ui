@@ -19,7 +19,11 @@ export default function useTextTyping({ text, animationOptions }: Params): Retur
     const controls = useRef<AnimationPlaybackControls>()
     const current = useMotionValue(0)
     const trigger = () => {
-        controls.current = animate(current, text.length, animationOptions)
+        return controls.current = animate(
+            current,
+            text.length,
+            { ease: 'linear', ...animationOptions }
+        )
     }
     const stop = () => {
         controls.current?.stop()
