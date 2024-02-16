@@ -1,7 +1,9 @@
 .eCommerce {
   width: 100%;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
   position: relative;
   padding: 80px 0;

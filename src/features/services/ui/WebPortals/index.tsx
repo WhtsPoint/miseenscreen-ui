@@ -1,16 +1,16 @@
-import sectionStyles from '@/utils/assets/styles/services.module.scss'
-import styles from './styles.module.scss'
+'use client'
+
 import { useTranslations } from 'next-intl'
-import { PropsWithDescription } from '@/widgets/services'
+import { Description, Hl, PropsWithDescription, Service, Title } from '@/widgets/services'
 import { Prop } from '@/widgets/services/intefaces/Prop'
 
 export default function WebPortals() {
     const t = useTranslations('services.web-portals')
 
-    return (<section className={styles.webPortals}>
-        <h2 className={sectionStyles.title}>{t('title')}</h2>
-        <p>{t('subtitle')}</p>
-        <div className={sectionStyles.line} />
+    return (<Service>
+        <Title>{t('title')}</Title>
+        <Description>{t('subtitle')}</Description>
+        <Hl />
         <PropsWithDescription props={t.raw('props') as Prop[]} />
-    </section>)
+    </Service>)
 }

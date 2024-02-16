@@ -1,27 +1,19 @@
-import { Prop } from '@/widgets/services/intefaces/Prop'
-import { Comment, PropsWithDescription } from '@/widgets/services'
-import { useTranslations } from 'next-intl'
-import sectionStyles from '@/utils/assets/styles/services.module.scss'
-import styles from './styles.module.scss'
+'use client'
 
-interface Segment {
-    subtitle: string,
-    props: Prop[]
-}
+import { Comment, Description, Hl, PropsWithDescription, Service, Title } from '@/widgets/services'
+import { useTranslations } from 'next-intl'
+import styles from './styles.module.scss'
 
 export default function CustomErp() {
     const t = useTranslations('services.custom-erp')
 
-    return (<section className={styles.customErp}>
-        <h2 className={sectionStyles.title}>{t('title')}</h2>
-        {Object.values<Segment>(t.raw('segments')).map(({ subtitle, props }, index) => {
-            return <article key={index} className={styles.customErp__article}>
-                <p>{subtitle}</p>
-                <div className={sectionStyles.line} />
-                <PropsWithDescription props={props} />
-            </article>
-        })}
-        <p>{t('description')}</p>
+    return (<Service>
+        <Title>{t('title')}</Title>
+        <Description>{t('segments.0.subtitle')}</Description>
+        <Hl />
+        <PropsWithDescription props={t.raw('segments.0.props')} />
+        <Hl />
+        <PropsWithDescription props={t.raw('segments.1.props')} />
         <Comment textClassName={styles.customErp__comment} text={t('comment')} isAnimate={true} />
-    </section>)
+    </Service>)
 }

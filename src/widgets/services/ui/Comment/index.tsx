@@ -3,7 +3,6 @@
 import Image, { StaticImageData } from 'next/image'
 import useTextTyping from '@/utils/hooks/useTextTyping'
 import { motion } from 'framer-motion'
-import { useEffect } from 'react'
 import { cl } from '@/utils/lib/cl'
 import styles from './styles.module.scss'
 import sectionStyles from '@/utils/assets/styles/services.module.scss'
@@ -17,16 +16,24 @@ interface Params {
 }
 
 export default function Comment(
-    { text, textClassName, commentatorImage = daryaImage, isAnimate }: Params
+    { text, textClassName, commentatorImage = daryaImage }: Params
 ) {
     const [currentText, start] = useTextTyping({
         text,
         animationOptions: { duration: 5 }
     })
 
-    useEffect(() => { isAnimate && start() }, [start, isAnimate])
+    const onAnimationComplete = (variant: string) => {
+        if (variant !== 'inView') return
+        start()
+    }
 
-    return (<div data-tag={'comment'} className={styles.comment}>
+    return (<motion.aside
+        className={styles.comment}
+        initial={{ opacity: 0 }}
+        variants={{ inView: { opacity: 1 }}}
+        onAnimationComplete={onAnimationComplete}
+    >
         <div className={styles.comment__start}>
             <Image
                 className={styles.comment__start__icon}
@@ -40,5 +47,5 @@ export default function Comment(
             sectionStyles.paragraph,
             textClassName
         )}>{currentText}</motion.p>
-    </div>)
+    </motion.aside>)
 }

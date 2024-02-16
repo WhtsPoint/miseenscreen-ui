@@ -1,21 +1,17 @@
-import { Comment } from '@/widgets/services'
+'use client'
+
+import { Comment, Props, Service, Title, Description } from '@/widgets/services'
 import { useTranslations } from 'next-intl'
-import styles from './styles.module.scss'
-import sectionStyles from '@/utils/assets/styles/services.module.scss'
+import { Hl } from '@/widgets/services'
 
 export default function ECommerce() {
     const t = useTranslations('services.ecommerce')
-    //const [isCommentAnimate, setIsCommentAnimate] = useState<boolean>(true)
 
-    return (<section className={styles.eCommerce}>
-        <h2 className={sectionStyles.title}>{t('title')}</h2>
-        <ul className={sectionStyles.props}>
-            {Object.values(t.raw('props')).map((item, index) => {
-                return <li key={index} className={sectionStyles.props__item}>{item as string}</li>
-            })}
-        </ul>
-        <div data-tag={'hl'} className={sectionStyles.line} />
-        <p data-tag={'description'} className={sectionStyles.paragraph}>{t('description.0')}</p>
+    return (<Service>
+        <Title>{t('title')}</Title>
+        <Props props={t.raw('props') as string[]} />
+        <Hl />
+        <Description>{t('description.0')}</Description>
         <Comment isAnimate={true} text={t('description.1')} />
-    </section>)
+    </Service>)
 }
