@@ -47,10 +47,12 @@ export default function Comment(
             />
             <div className={styles.comment__start__line} />
         </div>
-        <motion.p className={cl(
-            styles.comment__text,
-            sectionStyles.paragraph,
-            textClassName
-        )}>{currentText}</motion.p>
+        <blockquote className={styles.comment__quote}>
+            <motion.p className={cl(
+                styles.comment__quote__text,
+                sectionStyles.paragraph,
+                textClassName
+            )}>{currentText}</motion.p>
+        </blockquote>
     </motion.aside>)
 }

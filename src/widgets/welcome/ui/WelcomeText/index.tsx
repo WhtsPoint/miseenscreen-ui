@@ -17,9 +17,9 @@ export default function WelcomeText({ scrollY }: Params) {
         <h1 style={openSans.style} className={styles.welcomeText__name}>
             MISEENSCREEN
         </h1>
-        <b className={styles.welcomeText__description}>
+        <h3 className={styles.welcomeText__description}>
             Adaptation of ideas for your business and activities
-        </b>
-        <b className={styles.welcomeText__subtext}>Web app development</b>
+        </h3>
+        <h2 className={styles.welcomeText__subtext}>Web app development</h2>
     </motion.article>)
 }

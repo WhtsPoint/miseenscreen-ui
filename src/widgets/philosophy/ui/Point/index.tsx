@@ -18,7 +18,7 @@ export default function Point(
     return (<article className={cl(styles.point, className)}>
         <div className={styles.point__article}>
             <Arrow className={styles.point__article__arrow} onClick={onLeft} direction={'left'} />
-            <h2 className={styles.point__article__title}>{article}</h2>
+            <h3 className={styles.point__article__title}>{article}</h3>
             <Arrow className={styles.point__article__arrow} onClick={onRight} direction={'right'} />
         </div>
         <motion.p style={descriptionStyles} className={styles.point__description}>

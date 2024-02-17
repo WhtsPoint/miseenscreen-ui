@@ -1,7 +1,7 @@
 .point {
   max-width: 500px;
   height: 120px;
-  b {
+  h4 {
     width: 100%;
     height: 100%;
     display: flex;
@@ -10,5 +10,6 @@
     text-transform: uppercase;
     letter-spacing: 3px;
     overflow: hidden;
+    margin: 0;
   }
 }

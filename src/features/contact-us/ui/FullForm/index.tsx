@@ -37,14 +37,14 @@ export default function FullForm({ formClassName }: Params) {
 
     return (<div className={styles.fullForm}>
         <SectionSteps className={styles.fullForm__steps} step={step}>{[
-            <div key={0} className={styles.fullForm__steps__step}>
+            <section key={0} className={styles.fullForm__steps__step}>
                 <Form
                     className={cl(styles.fullForm__steps__step__item, formClassName)}
                     onSend={onSend}
                     isLoading={isLoading}
                 />
-            </div>,
-            <div key={1} className={styles.fullForm__steps__step}>
+            </section>,
+            <section key={1} className={styles.fullForm__steps__step}>
                 <ResultWindow
                     iconSrc={isSendError ? xIcon : checkIcon}
                     text={isSendError ? t('error-title') : t('success-title')}
@@ -52,7 +52,7 @@ export default function FullForm({ formClassName }: Params) {
                     onBackToHome={() => router.push('/')}
                     className={styles.fullForm__steps__step__item}
                 />
-            </div>
+            </section>
         ]}</SectionSteps>
     </div>)
 }

@@ -12,6 +12,6 @@ export default function Point({ frame }: Params) {
     const t = useTranslations('cases-points')
 
     return (<SceneSwitcher position={frame} className={styles.point}>
-        {points.map((point) => <b key={point}>{t('article.' + point)}</b>)}
+        {points.map((point) => <h4 key={point}>{t('article.' + point)}</h4>)}
     </SceneSwitcher>)
 }
