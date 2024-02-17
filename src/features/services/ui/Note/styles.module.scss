@@ -4,8 +4,16 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 200px;
+  padding: 200px 10px 0;
   font-size: 1.5em;
+  container-type: inline-size;
+  @media (max-width: 640px) {
+    text-align: center;
+    font-size: 1em;
+  }
+  @media (max-width: 420px) {
+    font-size: 0.8em;
+  }
   &__title {
     text-transform: uppercase;
     opacity: 0;

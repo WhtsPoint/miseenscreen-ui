@@ -1,11 +1,12 @@
 import { Item } from '@/widgets/stack'
 import { useTranslations } from 'next-intl'
-import { MotionStyle } from 'framer-motion'
 import styles from './styles.module.scss'
 import videos from '@/utils/config/videos'
+import { CSSProperties } from 'react'
+import config from '@/utils/config'
 
 interface Params {
-    style?: MotionStyle
+    style?: CSSProperties
 }
 
 export default function Analytics({ style }: Params) {
@@ -16,5 +17,6 @@ export default function Analytics({ style }: Params) {
         video={{ src: videos.stack[0] }}
         theme={t('analytics')}
         themeClass={styles.themeText}
+        href={config.routes.services.analytics}
     />)
 }

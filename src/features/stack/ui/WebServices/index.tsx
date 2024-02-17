@@ -1,12 +1,11 @@
 import { Item } from '@/widgets/stack'
 import { useTranslations } from 'next-intl'
-import { MotionStyle } from 'framer-motion'
 import videos from '@/utils/config/videos'
-
-const videoLink = 'https://drive.google.com/uc?export=download&id=1EQ1PuYaMexE9rs7kHhUc9AbcKLB_wP9k'
+import config from '@/utils/config'
+import { CSSProperties } from 'react'
 
 interface Params {
-    style?: MotionStyle
+    style?: CSSProperties
 }
 
 export default function WebServices({ style }: Params) {
@@ -16,5 +15,6 @@ export default function WebServices({ style }: Params) {
         style={style}
         video={{ src: videos.stack[1] }}
         theme={t('web-services')}
+        href={config.routes.services.webPortals}
     />)
 }

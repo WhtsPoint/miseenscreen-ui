@@ -1,7 +1,21 @@
 .comment {
   width: 100%;
   display: flex;
+  @media (max-width: 640px) {
+    flex-direction: column;
+    align-items: center;
+    &__start {
+      flex-direction: column;
+      gap: 10px;
+      &__line {
+        margin: 0;
+        width: 100% !important;
+        height: 3px !important;
+      }
+    }
+  }
   &__start {
+    width: fit-content;
     height: fit-content;
     display: flex;
     align-items: center;
@@ -12,7 +26,6 @@
       border-radius: 50%;
       flex-shrink: 0;
     }
-
     &__line {
       width: 3px;
       height: 60px;

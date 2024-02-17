@@ -7,7 +7,7 @@ import { Prop } from '@/widgets/services/intefaces/Prop'
 export default function WebPortals() {
     const t = useTranslations('services.web-portals')
 
-    return (<Service>
+    return (<Service name={'web-portals'}>
         <Title>{t('title')}</Title>
         <Description>{t('subtitle')}</Description>
         <Hl />

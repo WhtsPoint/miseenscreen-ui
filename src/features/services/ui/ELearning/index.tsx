@@ -7,7 +7,7 @@ import styles from './styles.module.scss'
 export default function ELearning() {
     const t = useTranslations('services.elearning')
 
-    return (<Service>
+    return (<Service name={'e-learning'}>
         <Title>{t('title')}</Title>
         <Props props={t.raw('props')} />
         <Hl />

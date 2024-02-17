@@ -2,15 +2,20 @@ import { Children } from '@/utils/interfaces/Children'
 import { ReactNode, useRef } from 'react'
 import { useInView } from 'framer-motion'
 import { motion } from 'framer-motion'
-import sectionStyles from '@/utils/assets/styles/services.module.scss'
 import { useFadeAnimation } from '@/widgets/services'
+import useCertainSection from '@/utils/hooks/useCertainSection'
+import sectionStyles from '@/utils/assets/styles/services.module.scss'
 
-interface Params extends Children<ReactNode> {}
+interface Params extends Children<ReactNode> {
+    name: string
+}
 
-export default function Service({ children }: Params) {
+export default function Service({ children, name }: Params) {
     const ref = useRef(null)
     const isInView = useInView(ref, { once: true })
     const [opacity] = useFadeAnimation(ref)
+
+    useCertainSection({ ref, section: name })
 
     return (<motion.section
         ref={ref}

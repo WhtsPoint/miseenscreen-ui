@@ -7,7 +7,7 @@ import { Hl } from '@/widgets/services'
 export default function ECommerce() {
     const t = useTranslations('services.ecommerce')
 
-    return (<Service>
+    return (<Service name={'ecommerce'}>
         <Title>{t('title')}</Title>
         <Props props={t.raw('props') as string[]} />
         <Hl />

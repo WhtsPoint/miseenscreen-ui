@@ -29,7 +29,7 @@ const Navigation = forwardRef<HTMLDivElement, Params>((
 
     return (<nav ref={ref} className={cl(styles.header__nav, className)}>
         <ul className={styles.header__nav__ul}>
-            <StyledLi>{t.services}</StyledLi>
+            <StyledLi><Link href={routes.services} onClick={() => invoke('services')} scroll={false}>{t.services}</Link></StyledLi>
             <StyledLi><Link href={routes.cases} onClick={() => invoke('cases')} scroll={false}>
                     {t.cases}
             </Link></StyledLi>
