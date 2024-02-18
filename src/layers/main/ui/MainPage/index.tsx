@@ -10,7 +10,6 @@ import CasesSection from '../CasesSection'
 import CasesPointsSection from '../CasesPointsSection'
 import AboutUsSection from '../AboutUsSection'
 import FooterSection from '@/layers/main/ui/FooterSection'
-import { ContactUsPage } from '@/layers/contact'
 
 export default function MainPage() {
     const ref = useHeaderTransition()

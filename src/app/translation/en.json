@@ -1,4 +1,4 @@
-{
+  {
   "header": {
     "services": "Services",
     "cases": "Cases",
@@ -16,58 +16,58 @@
   },
   "cooperation": {
     "responsibility": "Responsibility",
-    "responsibility-description": "Мы работаем через заключение индивидуальных договоров, выставлением счетов и подписанием актов выполненных работ.",
+    "responsibility-description": "We work through the conclusion of individual contracts, invoicing, and signing certificates of completed work.",
     "technologies": "The best development technologies",
-    "technologies-description": "После детального анализа запросов и целей заказчика команда программистов подбирает наилучшие технологии и языки программирования для реализации продукта.В предыдущем проекте мы использовали для пользовательского интерфейса React.js вместе с TypeScript Ona (SPA).",
+    "technologies-description": "After conducting a detailed analysis of the client's requests and goals, the team of programmers selects the best technologies and programming languages for implementing the product. In the previous project, we used React.js along with TypeScript for the user interface, specifically as a Single Page Application (SPA).",
     "guarantee": "Guarantee&Protection",
-    "guarantee-description": "Мы предоставляем на выполненные работы гарантию и обслуживание от 6 до 12 месяцев. В течение гарантийного периода мы отвечаем на все запросы и оказываем как техническую, так и информационную поддержку, включая обучение по использованию продукта.",
+    "guarantee-description": "We provide a warranty and maintenance for completed work ranging from 6 to 12 months. During the warranty period, we respond to all inquiries and provide both technical and informational support, including training on product usage.",
     "support": "Support 24/7",
-    "support-description": "На протяжении всего сотрудничества с нами и в течение гарантийного обслуживания мы предоставляем поддержку 24/7 по всем запросам от заказчика, касающимся разработки  и работы продукта.",
+    "support-description": "Throughout our collaboration and during the warranty period, we provide 24/7 support for all  inquiries related to product development and operation.",
     "launch": "Launch support",
-    "launch-description": "После реализации продукта команда MISEENSCREEN осуществляет сопровождение запуска. Мы предоставляем обучающие материалы, охватывающие весь функционал, а также обучение по использованию продукта через видео, тренинги и инструкции. В рамках гарантийного обслуживания мы отвечаем на все запросы и вопросы заказчика, связанные с работой разработанного продукта."
+    "launch-description": "After the product implementation, the MISEENSCREEN team provides launch support. We offer training materials covering the entire functionality, as well as product usage training through videos, workshops, and instructions. During the warranty period, we respond to all customer inquiries and questions related to the operation of the developed product."
   },
   "philosophy": {
     "title": "Miseenscreen philosophy",
     "allInOnce-article": "Everything everywhere and at once",
-    "allInOnce-description": "MISEENSCREEN предоставляет полный спектр услуг для реализации вашей идеи на экранах смартфонов и других устройств. \n\nМы поможем вам с созданием названия, стиля, логотипа, разработкоій концепции, написанием текстов, разработкой функционала и оказываем помощь в запуске проекта. Мы готовы предоставить все необходимое для успешной реализации вашего проекта.",
+    "allInOnce-description": "MISEENSCREEN offers a full range of services to bring your idea to life on smartphone screens and other devices. We can assist you with creating a name, style, logo, developing a concept, writing texts, implementing functionality, and providing support for project launch. We are prepared to provide everything needed for the successful realization of your project.",
     "companyInSmartphone-article": "Company in smartphone concept",
-    "companyInSmartphone-description": "При разработке веб-приложений команда MISEENSCREEN придерживается концепции \"компания в смартфоне\". Эта концепция направлена на помощь бизнесу в оптимизации системы и объединении процессов, требующих участия нескольких департаментов, в одну кнопку.\n\nМы также предлагаем нашим заказчикам решение, которое оптимизирует последующее обслуживание веб-приложения и разрабатываем ключевые функции управления, минимизируя необходимость привлечения программиста для обслуживания продукта.",
+    "companyInSmartphone-description": "When developing web applications, the MISEENSCREEN team adheres to the concept of \"company in a smartphone.\" This concept aims to assist businesses in optimizing their systems and consolidating processes that involve multiple departments into one button.\n\nWe also offer our clients a solution that streamlines subsequent maintenance of the web application. We develop key management functions that minimize the need to involve a programmer for product maintenance.",
     "passionate-article": "Passionate and in touch",
-    "passionate-description": "На каждом этапе вашего проекта работают люди, которые не только заинтересованы в успешной реализации проекта в данный момент, но также уделяют внимание долгосрочной перспективе, которая влияет на историю развития компании.Команда MISEENSCREEN активно участвует в каждом этапе вашего проекта. \n\nНаш первый крупный проект был выполнен двумя специалистами, которые глубоко изучили каждый этап, начиная от технического задания и дизайна, и заканчивая back-end, front-end и QA. Сегодня при разработке нового проекта мы работаем в команде, состоящей из опытных специалистов и талантливых профессионалов. Однако на каждом этапе проекта мы оставляем нашу экспертизу и сопровождение создателей, которые постоянно обучаются новым системам и \nтехнологиям в своей области ответственности. \n\nДополнительную информацию вы можете найти в разделе \"Our Story\"."
+    "passionate-description": "At every stage of your project, the MISEENSCREEN team consists of individuals who are not only interested in the successful implementation of the project at present but also pay attention to the long-term perspective that influences the company's development history. We actively participate in every stage of your project.\n\nOur first major project was executed by two specialists who deeply studied each stage, starting from the technical requirements and design, and ending with back-end, front-end, and QA. Today, when developing a new project, we work as a team consisting of experienced specialists and talented professionals. However, at every stage of the project, we retain our expertise and support from the creators who continuously acquire knowledge of new systems and technologies in their respective areas of responsibility.\n\nYou can find additional information in the \"Our Story\" section."
   },
   "steps": {
     "title": "Web app\nDevelopment\nSteps",
     "qa": "QA and testing",
-    "qa-description": "Команда QA анализирует требования к порталу, пользовательские истории и проектную архитектуру. Параллельно с разработкой, наша команда проверяет, чтобы ваш веб-портал работал согласно плану и соответствовал всем установленным требованиям, а также обеспечивает безопасность ваших данных.",
+    "qa-description": "The QA team analyzes the requirements for the portal, user stories, and project architecture. Parallel to the development process, our team ensures that your web portal functions according to plan and meets all established requirements. Additionally, we prioritize the security of your data.",
     "deployment": "Deployment and setup",
-    "deployment-description": "После реализации продукта команда MISEENSCREEN осуществляет сопровождение запуска. Мы предоставляем обучающие материалы, охватывающие весь функционал, а также обучение по использованию продукта через видео, тренинги и инструкции. В рамках гарантийного обслуживания мы отвечаем на все запросы и вопросы заказчика, связанные с работой разработанного продукта.",
+    "deployment-description": "After the product is implemented, the MISEENSCREEN team provides launch support. We provide training materials that cover the entire functionality of the product, as well as training on how to use the product through videos, trainings, and instructions. As part of our warranty service, we respond to all customer requests and questions related to the operation of the developed product.",
     "support": "After - release support",
-    "support-description": "Мы предоставляем на выполненные работы гарантию и обслуживание от 6 до 12 месяцев. В течение гарантийного периода мы отвечаем на все запросы и оказываем как техническую, так и информационную поддержку, включая обучение по использованию продукта.",
+    "support-description": "We provide a warranty and maintenance for the completed work for a period of 6 to 12 months. During the warranty period, we respond to all inquiries and provide both technical and informational support, including training on how to use the product.",
     "monitoring": "Ongoing monitoring",
-    "monitoring-description": "MISEENSCREEN несет ответственность за управление производительностью веб-портала, устранение неполадок, развитие и управление изменениями, чтобы поддерживать высокую доступность вашего портала и его соответствие вашим потребностям.",
+    "monitoring-description": "MISEENSCREEN takes responsibility for managing the performance of the web portal, resolving any issues, and managing changes to ensure the high availability of your portal and its alignment with your needs.",
     "planning": "Planning",
-    "planning-description": "Проведение детального изучения конкретных потребностей вашего бизнеса, анализ соответствующих нормативных ограничений, сбор и обработка мнений и ожиданий заинтересованных сторон проекта, а также разработка подробных требований к порталу и техническим спецификациям.",
+    "planning-description": "MISEENSCREEN conducts a detailed study of your business's specific needs, analyzes relevant regulatory constraints, collects and processes the opinions and expectations of project stakeholders, and develops detailed requirements for the portal and technical specifications.",
     "task": "Technical task",
-    "task-description": "В техническом задании фиксируются технические характеристики, которым должен соответствовать проект, требования к визуальной составляющей, а также подробно описывается механика всего функционала продукта.",
+    "task-description": "The technical specification document captures the technical specifications that the project must meet, requirements for the visual components, and provides a detailed description of the mechanics of the product's entire functionality.",
     "design": "Design",
-    "design-description": "Создание проекта архитектуры портала и реализация UX/UI дизайна.\nПри разработке дизайна учитываются принципы удобства и интуитивности использования, а также учитываются пожелания заказчика относительно концепции, стиля, цветов и желаемых элементов дизайна.",
+    "design-description": "Creating the portal's architecture and implementing UX/UI design.\n\nWhen designing, we take into account the principles of usability and intuitiveness of use, as well as the client's preferences regarding the concept, style, colors, and desired design elements.",
     "development": "Backend and frontend development",
-    "development-description": "Команда программистов разрабатывает продукт в соответствии с утвержденным техническим заданием, макетами и таймлайном. Продукт адаптируется под все устройства и операционные системы, и каждая функция доступна для тестирования Заказчикам поэтапно. В среднем каждые 2-4 недели выпускается новая опция в соответствии с утвержденным таймлайном проекта.",
+    "development-description": "The team of programmers develops the product in accordance with the approved technical specification, layouts, and timeline. The product is adapted for all devices and operating systems, and each function is made available for testing to the Clients in stages. On average, a new feature is released every 2-4 weeks, according to the approved project timeline.",
     "arrow-up": "Previous",
     "arrow-down": "Next"
   },
   "cases": {
     "title": "Cases",
     "sub-title": "ELEARNING &\nMANAGEMENT RETAIL PROCESS \nWEB APP",
-    "text": "Наша первая разработка веб-приложения предназначена для компании МНС Инвестмент, официального представителя итальянских модных брендов Calzedonia, Intimissimi, Tezenis и Falconeri в Украине. Мы создали корпоративный портал для обучения сотрудников, поддержки и развития корпоративной культуры, а также систематизации ритейл-процессов компании."
+    "text": "Our first web application development is designed for MNS Investment, the official representative of Italian fashion brands Calzedonia, Intimissimi, Tezenis, and Falconeri in Ukraine. We have created a corporate portal for employee training, support, and the development of corporate culture, as well as systematizing the company's retail processes."
   },
   "cases-points": {
     "title": "Cases",
-    "sub-title": "МНС ИНВЕСТМЕНТ официальный представитель брендов CALZEDONIA, INTIMISSIMI, TEZENIS, FALCONERI в Украине",
+    "sub-title": "MNS Investment is the official representative of the CALZEDONIA, INTIMISSIMI, TEZENIS, FALCONERI brands in Ukraine.",
     "article": {
-      "portal": "Мультибрендовый корпоративный портал для сотрудников",
-      "education": "Система обучения и развития персонала",
-      "optimization": "Опитмизация и управление ритейл процессами"
+      "portal": "Multi-brand corporate portal for employees",
+      "education": "Employee training and development system",
+      "optimization": "Optimization and management of retail processes"
     }
   },
   "about-us": {
@@ -76,14 +76,14 @@
       "darya": {
         "name": "Daria Pryimak",
         "role": "Project manager & Owner",
-        "skills": "\n1 год опыта в разработке и управлении Web Apps\n3 года опыта в разработке системы обучения, развития и оценки персонала, рекрутинговой системы и создании корпоративной культуры в должности руководителя отдела обучения и персонала в компании МНС ИНВЕСТМЕНТ официальный представитель брендов Calzedonia,Intimissimi,Tezenis,Falconeri в Украине.\n3 года опыта управления магазином в компании бытовой техники ФОКСТРОТ.",
-        "about": "Hello everyone,\nМеня зовут Дарья, и я менеджер по экранизации ваших идей. Я сопровождаю и несу ответственность за  проект от первого общения до подписания передачи готового продукта. Мной будет разработано коммерческое предложение, техническое задание, обучающие материалы и инструкции по использованию готового продукта. Также я буду вашим менеджером по запуску, предоставлять информационную поддержку, проводить тренинги и обучение, чтобы вы эффективно запустили и внедрили новые разработки и процессы в свой бизнес.\n\nПрочитайте нашу историю (Our Story), чтобы узнать больше о том, кто, как и с какой философией будет разрабатывать новые продукты для вашего бизнеса."
+        "skills": " 1 year of experience in developing and managing web apps.\n\n3 years of experience in developing an employee training, development, and evaluation system, recruiting system, and creating a corporate culture as the head of the training and personnel department at MNS Investment, the official representative of Calzedonia, Intimissimi, Tezenis, Falconeri brands in Ukraine.\n\n3 years of experience in managing a store in a home appliances company, Foxtrot.",
+        "about": "Hello everyone,\n\nMy name is Daria, and I am a manager for bringing your ideas to the screen. I accompany and take responsibility for the project from the first communication to the signing of the delivery of the finished product. I will develop a commercial proposal, technical specifications, instructional materials, and instructions for using the finished product. I will also be your launch manager, providing informational support, conducting training, and education to help you effectively launch and implement new developments and processes into your business.\n\nRead our story (Our Story) to learn more about who, how, and with what philosophy will be developing new products for your business. "
       }
     }
   },
   "footer": {
-    "tip": "Присоединяйтесь к MISEENSCREEN, чтобы воплотить в жизнь цифровые идеи вашего бизнеса.",
-    "warning": "Подписываясь, вы соглашаетесь с нашей Политикой конфиденциальности"
+    "tip": "Join us on MISEENSCREEN to make your business digital ideas come true",
+    "warning": "By signing up, you agree to our Privacy Policy*"
   },
   "email-subscription": {
     "send": "Subscribe",

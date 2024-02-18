@@ -30,7 +30,7 @@ export default function ReCaptcha({ onComplete }: Params) {
     return (<>
         <div
             id={id}
-            data-sitekey={'6LdA-mApAAAAAFv1ICSpiiWoac7PZzzKKWquboox'}
+            data-sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_PUBLIC_KEY}
             data-callback={callbackName}
             ref={ref}
         />
