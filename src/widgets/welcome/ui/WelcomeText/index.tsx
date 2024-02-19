@@ -1,13 +1,16 @@
 import { MotionValue, useTransform } from 'framer-motion'
 import { motion } from 'framer-motion'
-import styles from './styles.module.scss'
 import openSans from '@/utils/assets/fonts/OpenSans'
+import { useTranslations } from 'next-intl'
+import styles from './styles.module.scss'
 
 interface Params {
     scrollY: MotionValue<number>
 }
 
 export default function WelcomeText({ scrollY }: Params) {
+    const t = useTranslations('welcome')
+
     const style = {
         opacity: useTransform(scrollY, [0, 0.6], [1, 0]),
         y: useTransform(scrollY, [0, 0.6], [0, -200])
@@ -18,7 +21,7 @@ export default function WelcomeText({ scrollY }: Params) {
             MISEENSCREEN
         </h1>
         <h3 className={styles.welcomeText__description}>
-            Adaptation of ideas for your business and activities
+            {t('adaptation')}
         </h3>
         <h2 className={styles.welcomeText__subtext}>Web app development</h2>
     </motion.article>)
