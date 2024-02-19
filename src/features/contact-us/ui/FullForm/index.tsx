@@ -9,7 +9,8 @@ import { useRouter } from '@/utils/lib/navigation'
 import styles from './styles.module.scss'
 import checkIcon from '@/utils/assets/images/check.svg'
 import xIcon from '@/utils/assets/images/x.svg'
-import postForm from '@/features/contact-us/api/postForm'
+import postForm from '../../api/postForm'
+import ContactInformation from '../ContactInformation'
 
 interface Params {
     formClassName?: string
@@ -54,5 +55,6 @@ export default function FullForm({ formClassName }: Params) {
                 />
             </section>
         ]}</SectionSteps>
+        <ContactInformation className={styles.fullForm__contacts} />
     </div>)
 }

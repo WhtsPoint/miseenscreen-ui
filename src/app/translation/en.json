@@ -120,6 +120,9 @@
   },
   "contact-us": {
     "title": "Contact Us",
+    "contacts": {
+      "title": "Get in touch instantly"
+    },
     "form": {
       "problem": "How can we help you?",
       "name": "Full name",

@@ -22,4 +22,12 @@
       }
     }
   }
+  &__contacts {
+    @media (max-width: 620px) {
+      ul {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+  }
 }

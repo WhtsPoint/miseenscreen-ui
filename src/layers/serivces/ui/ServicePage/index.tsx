@@ -3,8 +3,8 @@
 import { FooterSection } from '@/layers/main'
 import { BackgroundWrapper, CustomErp, Eccomerce, ELearning, HrSoftware, Note, WebPortals } from '@/features/services'
 import { useHeaderSettings } from '@/widgets/header'
-import styles from './styles.module.scss'
 import { useEffect } from 'react'
+import styles from './styles.module.scss'
 
 export default function ServicePage() {
     const { setTheme } = useHeaderSettings()

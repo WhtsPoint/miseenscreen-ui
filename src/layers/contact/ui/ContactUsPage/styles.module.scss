@@ -8,6 +8,10 @@
   &__title {
     padding-left: 50px;
     text-transform: uppercase;
+    @media (max-width: 620px) {
+      padding-left: 0;
+      text-align: center;
+    }
   }
   &__main {
     width: 100%;

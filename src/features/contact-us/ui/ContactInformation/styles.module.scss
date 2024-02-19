@@ -1,0 +1,24 @@
+.contactInformation {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  &__title {
+    text-transform: uppercase;
+  }
+  &__list {
+    display: flex;
+    list-style-type: none;
+    gap: 20px;
+    padding: 0;
+    &__item {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      a {
+        font-style: normal;
+        color: white;
+      }
+    }
+  }
+}

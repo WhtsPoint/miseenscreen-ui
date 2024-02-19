@@ -13,8 +13,8 @@ import form from '@/utils/config/form'
 import { motion } from 'framer-motion'
 import { Option } from '../../types/Option'
 import useMultipleValues from '@/utils/hooks/useMultipleValues'
-import styles from './styles.module.scss'
 import buttonStyles from '../../assets/styles/button.module.scss'
+import styles from './styles.module.scss'
 import BasicLoading from '../../../../utils/ui/BasicLoading'
 
 interface Params {
@@ -73,8 +73,8 @@ export default function Form({ onSend, className, isLoading }: Params) {
             </FormError>
         </div>
         <button
-            style={{ pointerEvents: lockedSubmit ? 'none' : 'auto'}}
-            className={cl(styles.form__send, buttonStyles.button)}
+            style={{ pointerEvents: lockedSubmit ? 'none' : 'auto', padding: 0 }}
+            className={cl(buttonStyles.button, styles.form__send)}
             type={'submit'}
         >
             { isLoading ? <BasicLoading radius={10} /> : t('submit')}

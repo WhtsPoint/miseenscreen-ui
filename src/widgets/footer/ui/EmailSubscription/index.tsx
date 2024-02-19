@@ -43,6 +43,6 @@ export default function EmailSubscription({ onSend, onChange, status, className 
             placeholder={t('input-placeholder')}
             className={styles.emailSubscription__input}
         />
-        <SubscribeButton status={status} className={styles.emailSubscription__send} name={t('send')} />
+        <SubscribeButton status={status} className={styles.emailSubscription__send} />
     </form>)
 }
