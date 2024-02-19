@@ -5,6 +5,7 @@ import useTextTyping from '@/utils/hooks/useTextTyping'
 import { useEffect } from 'react'
 import BackgroundVideo from '@/utils/ui/BackgroundVideo'
 import videos from '@/utils/config/videos'
+import { useTranslations } from 'next-intl'
 
 interface Params {
     className?: string,
@@ -12,8 +13,9 @@ interface Params {
 }
 
 export default function TitleBlock({ className, isInView }: Params) {
+    const t = useTranslations('cooperation')
     const [text, trigger, restart] = useTextTyping({
-        text: 'Cooperation With Missenscreen',
+        text: t('title'),
         animationOptions: { duration: 3 }
     })
 

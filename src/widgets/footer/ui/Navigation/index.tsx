@@ -3,7 +3,9 @@ import { Link } from '@/utils/lib/navigation'
 
 interface Item {
     href: string,
-    text: string
+    text: string,
+    onClick?: () => unknown,
+    scroll?: boolean
 }
 
 interface Params {
@@ -16,8 +18,8 @@ export default function Navigation({ title, links }: Params) {
         <b>{title}</b>
         <nav>
             <ul>
-                {links.map(({ href, text }, index) => <li key={index}>
-                    <Link href={href}>{text}</Link>
+                {links.map(({ text, ...params }, index) => <li key={index}>
+                    <Link {...params}>{text}</Link>
                 </li>)}
             </ul>
         </nav>

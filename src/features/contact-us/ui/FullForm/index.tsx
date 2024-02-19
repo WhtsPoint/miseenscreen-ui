@@ -28,7 +28,7 @@ export default function FullForm({ formClassName }: Params) {
         open(async (token) => {
             captchaToken.current = ''
             setIsLoading(true)
-            const [id, error] = await postForm({ ...data, token })
+            const [, error] = await postForm({ ...data, token })
             setIsSendError(error !== null)
             setStep(1)
             setIsLoading(false)

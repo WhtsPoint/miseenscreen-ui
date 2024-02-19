@@ -1,10 +1,13 @@
 import { Navigation } from '@/widgets/footer'
+import { useTranslations } from 'next-intl'
 
 export default function Support() {
-    return (<Navigation title={'Support'} links={[
-        { href: '#', text: 'We’re here M-F 7am - 7pm PST.' },
-        { href: '#', text: 'Drop us a note anytime: supportmin' },
-        { href: '#', text: 'Do Not Sell or Share My Personal Information' },
-        { href: '#', text: 'Cookie Preferences' }
+    const t = useTranslations('footer.support')
+
+    return (<Navigation title={t('title')} links={[
+        { href: '#', text: t('graphic') },
+        { href: '#', text: t('contact') },
+        { href: '#', text: t('personal-info') },
+        { href: '#', text: t('cookie') }
     ]} />)
 }

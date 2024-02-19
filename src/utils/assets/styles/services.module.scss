@@ -28,14 +28,14 @@
   width: 100%;
   padding: 0;
   display: grid;
-  grid-template-columns: repeat(auto-fill, 280px);
+  grid-template-columns: repeat(auto-fill, 300px);
   flex-wrap: wrap;
   gap: 50px;
   justify-content: center;
   align-items: center;
   &__item {
     width: 100%;
-    max-width: 280px;
+    max-width: 300px;
     margin: auto;
     padding: 10px;
     font-size: 0.9em;
