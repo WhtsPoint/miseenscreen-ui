@@ -1,4 +1,18 @@
-  {
+{
+  "pages": {
+    "main": {
+      "title": "Web Apps Development",
+      "description": "Online services and web portals, Ecommerce, E-learning solutions, HR Software, Custom ERP"
+    },
+    "contact-us": {
+      "title": "",
+      "description": "Schedule an online meeting with the MISEENSCREEN team to discuss creating web app solutions for your business.\nOnline services and web portals, Ecommerce, E-learning solutions, HR Software, Custom ERP"
+    },
+    "services": {
+      "title": "",
+      "description": "Online services and web portals, Ecommerce, E-learning solutions, HR Software, Custom ERP"
+    }
+  },
   "header": {
     "services": "Services",
     "cases": "Cases",
