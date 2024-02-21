@@ -9,7 +9,7 @@ import styles from './styles.module.scss'
 export default function ServicePage() {
     const { setTheme } = useHeaderSettings()
 
-    useEffect(() => { setTheme('solid') }, [])
+    useEffect(() => { setTheme('solid') }, [setTheme])
 
     return (<div className={styles.page}>
         <BackgroundWrapper

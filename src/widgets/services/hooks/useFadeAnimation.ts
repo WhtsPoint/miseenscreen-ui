@@ -24,8 +24,7 @@ export default function useFadeAnimation(ref: MutableRefObject<null>) {
             unsubInOpacity()
             unsubOutOpacity()
         }
-    }, [])
-
+    }, [inOpacity, init, opacity, outOpacity])
 
     return [ opacity ] as const
 }

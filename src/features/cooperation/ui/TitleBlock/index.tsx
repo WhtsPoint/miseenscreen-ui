@@ -1,6 +1,6 @@
 import styles from './styles.module.scss'
 import { cl } from '@/utils/lib/cl'
-import { motion, useMotionValueEvent, useTransform } from 'framer-motion'
+import { motion, useTransform } from 'framer-motion'
 import useTextTyping from '@/utils/hooks/useTextTyping'
 import { useEffect } from 'react'
 import BackgroundVideo from '@/utils/ui/BackgroundVideo'

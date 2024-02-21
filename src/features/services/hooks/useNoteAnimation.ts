@@ -18,7 +18,7 @@ export default function useNoteAnimation({ quoteText }: Params) {
         await animate('h2', { opacity: [0, 1] }, { duration: 1, ease: 'linear' })
         await runQuote()
         await animate('cite', { opacity: [0, 1] }, { delay: 1, duration: 1, ease: 'linear' })
-    })()}, [isInView])
+    })()}, [isInView, runQuote])
 
     return [ref, citeRef, quote] as const
 }

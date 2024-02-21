@@ -15,7 +15,6 @@ const useStore = create<Store>()((set) => ({
     close: () => set({ isOpened: false, onComplete: null })
 }))
 
-
 export const useReCaptchaModal = () => {
     return useStore((store) => store)
 }

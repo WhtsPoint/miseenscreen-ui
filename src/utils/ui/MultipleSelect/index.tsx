@@ -28,7 +28,6 @@ export default function MultipleSelect<T extends string>(params: Params<T>) {
         .map(([, name]) => name)
     const text = values.length > 0 ? selectedValues.join(', ') : placeholder
 
-
     return (<div ref={ref} className={cl(selectStyles.select, className)}>
         <button type={'button'} onClick={swapVisibility} className={cl(styles.select__value, valueClass)}>{text}</button>
         <Container className={cl(selectStyles.select__optionList, optionClass)} isShowed={isVisible}>

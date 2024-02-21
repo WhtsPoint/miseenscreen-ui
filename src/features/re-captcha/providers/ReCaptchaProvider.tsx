@@ -1,8 +1,8 @@
-    'use client'
+'use client'
 
 import { useCaptchaLoading } from '../stores/captcha-loading'
 import { Children } from '@/utils/interfaces/Children'
-import { ReactNode, useEffect } from 'react'
+import { ReactNode } from 'react'
 import Script from 'next/script'
 import { ExtendedWindow } from '@/features/re-captcha/types/ExtendedWindow'
 

@@ -1,5 +1,4 @@
 import { MotionValue, useTransform } from 'framer-motion'
-import value from '*.png'
 
 interface Params {
     scrollProgress: MotionValue<number>,

@@ -21,6 +21,6 @@ const config = {
         }
     },
     api: 'http://localhost:5500/api/v0/'
-} as const
+}
 
 export default config

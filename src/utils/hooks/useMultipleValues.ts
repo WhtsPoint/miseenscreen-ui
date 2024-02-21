@@ -13,6 +13,5 @@ export default function useMultipleValues<T extends string>(initValue: T[]): Ret
         })
     }
 
-
     return [values, onChange]
 }

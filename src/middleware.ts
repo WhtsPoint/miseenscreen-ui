@@ -3,5 +3,5 @@ import globalConfig from '@/utils/config'
 export default createMiddleware(globalConfig.locale);
 
 export const config = {
-    matcher: ['/', '/(en|ru|ua)/:path*']
+    matcher: ['/', '/(en|ru|ua)/:path*', '/((?!_next|_vercel|.*\\..*).*)']
 };

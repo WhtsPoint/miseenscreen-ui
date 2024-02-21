@@ -18,7 +18,7 @@ $borderColor: #a4a4a4;
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: $gap;
-    row-gap: 30px;
+    row-gap: 50px;
     @media (max-width: 500px) {
       grid-template-columns: minmax(0, 1fr);
     }

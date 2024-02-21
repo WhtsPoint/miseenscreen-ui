@@ -14,7 +14,7 @@ export default function useCertainSection({ ref, section }: Params) {
         if (sectionRef.current === search) {
             ref?.current?.scrollIntoView({ behavior: 'smooth' })
         }
-    }, [])
+    }, [ref])
 
     useEffect(() => moveToSection(document.location.hash.slice(1)), [moveToSection])
 

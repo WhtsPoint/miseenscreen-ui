@@ -1,6 +1,5 @@
 import { FormParams } from '@/widgets/contact-us'
 
-
 //TODO: Would be better to create universal function to serialize object to FormData
 export default function formToFormData(params: FormParams & { token: string }): FormData {
     const formData = new FormData()
