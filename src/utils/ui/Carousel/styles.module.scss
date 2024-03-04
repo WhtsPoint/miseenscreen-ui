@@ -1,0 +1,22 @@
+.articleCarousel {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  &__carousel {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    &__content {
+      width: 100%;
+      height: 100%;
+      overflow: visible;
+      white-space: nowrap;
+      &__element {
+        height: 100%;
+        display: inline-block;
+      }
+    }
+  }
+}

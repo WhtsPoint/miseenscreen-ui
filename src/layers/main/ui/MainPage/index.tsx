@@ -10,6 +10,7 @@ import CasesSection from '../CasesSection'
 import CasesPointsSection from '../CasesPointsSection'
 import AboutUsSection from '../AboutUsSection'
 import FooterSection from '@/layers/main/ui/FooterSection'
+import BlogSection from '@/layers/main/ui/BlogSection'
 
 export default function MainPage() {
     const ref = useHeaderTransition()
@@ -23,6 +24,7 @@ export default function MainPage() {
         <CasesSection />
         <CasesPointsSection />
         <AboutUsSection />
+        <BlogSection />
         <FooterSection />
     </>)
 }

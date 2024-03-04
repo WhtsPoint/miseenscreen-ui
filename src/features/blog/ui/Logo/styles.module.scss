@@ -1,0 +1,18 @@
+.logo {
+  display: flex;
+  align-items: center;
+  color: white;
+  &__name {
+    font-size: 0.8em;
+    background: black;
+    z-index: 2;
+  }
+  &__right {
+    width: 100%;
+    max-width: 130px;
+    border: 1px solid white;
+    padding: 10px 15px;
+    text-align: center;
+    margin-left: -20px;
+  }
+}
