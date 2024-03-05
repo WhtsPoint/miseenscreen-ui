@@ -1,3 +1,5 @@
+'use client'
+
 import arrowImage from '@/utils/assets/images/arrow.svg'
 import styles from './styles.module.scss'
 import { cl } from '@/utils/lib/cl'

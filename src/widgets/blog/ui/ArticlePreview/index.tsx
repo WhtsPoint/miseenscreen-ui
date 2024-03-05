@@ -8,7 +8,6 @@ import { motion } from 'framer-motion'
 interface Params {
     blog: BlogPreview,
     onClick?: () => unknown,
-    buttonText: string,
     className?: string,
     onInViewChange?: (isInView: boolean) => unknown,
 }
@@ -17,7 +16,7 @@ const ArticlePreview = motion(forwardRef<HTMLDivElement, Params>((
     { blog: { title, previewCover }, onClick, className },
     ref
 ) => {
-    return (<div ref={ref} onClick={onClick} className={cl(styles.articlePreview, className)}>
+    return (<article ref={ref} onClick={onClick} className={cl(styles.articlePreview, className)}>
             <Image
                 className={styles.articlePreview__cover}
                 src={previewCover}
@@ -26,7 +25,7 @@ const ArticlePreview = motion(forwardRef<HTMLDivElement, Params>((
             <div className={styles.articlePreview__info}>
                 <h3 className={styles.articlePreview__info__title}>{title}</h3>
             </div>
-    </div>)
+    </article>)
 }))
 
 ArticlePreview.displayName = 'ArticlePreview'

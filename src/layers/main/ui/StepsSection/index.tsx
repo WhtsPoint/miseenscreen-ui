@@ -1,3 +1,5 @@
+'use client'
+
 import styles from './styles.module.scss'
 import { TitleBlock } from '@/features/steps'
 import { useInView, useMotionValue, useMotionValueEvent, useTransform } from 'framer-motion'

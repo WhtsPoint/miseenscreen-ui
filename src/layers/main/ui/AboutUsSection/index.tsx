@@ -1,8 +1,10 @@
+'use client'
+
 import BackgroundVideo from '@/utils/ui/BackgroundVideo'
 import styles from './styles.module.scss'
 import { AboutUs } from '@/features/about-us'
 import videos from '@/utils/config/videos'
-import { useMotionValueEvent, useScroll, useTransform } from 'framer-motion'
+import { useScroll, useTransform } from 'framer-motion'
 import { useRef } from 'react'
 import { motion } from 'framer-motion'
 import useCertainSection from '@/utils/hooks/useCertainSection'

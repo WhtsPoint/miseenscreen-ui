@@ -1,9 +1,12 @@
 import { StaticImageData } from 'next/image'
 
 interface Blog {
-    title: string,
     id: string,
-    previewCover: StaticImageData
+    title: string,
+    description: string
+    themes: string[],
+    previewCover: StaticImageData,
+    createdAt: Date
 }
 
 export type { Blog }

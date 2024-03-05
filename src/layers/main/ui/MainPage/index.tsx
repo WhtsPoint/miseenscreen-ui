@@ -1,22 +1,16 @@
-'use client'
-
-import WelcomeSection from '../WelcomeSection'
 import StackPage from '../StackPage'
-import useHeaderTransition from '../../hooks/useHeaderTransition'
 import CooperationSection from '../CooperationSection'
 import PhilosophySection from '../AdaptedPhilosophySection'
 import StepsSection from '../StepsSection'
 import CasesSection from '../CasesSection'
 import CasesPointsSection from '../CasesPointsSection'
 import AboutUsSection from '../AboutUsSection'
-import FooterSection from '@/layers/main/ui/FooterSection'
-import BlogSection from '@/layers/main/ui/BlogSection'
+import FooterSection from '../FooterSection'
+import BlogSection from '../BlogSection'
+import WelcomeSectionWrapper from '../WelcomeSectionWrapper'
 
 export default function MainPage() {
-    const ref = useHeaderTransition()
-
-    return (<>
-        <WelcomeSection ref={ref} />
+   return (<WelcomeSectionWrapper>
         <StackPage />
         <CooperationSection />
         <PhilosophySection />
@@ -26,5 +20,5 @@ export default function MainPage() {
         <AboutUsSection />
         <BlogSection />
         <FooterSection />
-    </>)
+   </WelcomeSectionWrapper>)
 }

@@ -7,7 +7,7 @@ import VerticalLine from '../../../../features/cooperation/ui/VerticalLine'
 import styles from './styles.module.scss'
 import useCertainSection from '@/utils/hooks/useCertainSection'
 
-function    CooperationSection() {
+function CooperationSection() {
     const ref = useRef<HTMLDivElement>(null)
     const isInView = useInView(ref as RefObject<HTMLElement>, { margin: '-40%', once: true })
 

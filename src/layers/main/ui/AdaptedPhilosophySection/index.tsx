@@ -1,5 +1,7 @@
+'use client'
+
 import StickyScroll from '@/utils/ui/StickyScroll'
-import { useMotionValue, useTransform } from 'framer-motion'
+import { useMotionValue } from 'framer-motion'
 import PhilosophySection from '../PhilosophySection'
 import styles from './styles.module.scss'
 import usePointMove from '@/layers/main/hooks/usePointMove'

@@ -1,3 +1,5 @@
+'use client'
+
 import { CodingBackground, Details, Title } from '@/features/cases'
 import { useRef } from 'react'
 import { motion, useScroll, useTransform } from 'framer-motion'

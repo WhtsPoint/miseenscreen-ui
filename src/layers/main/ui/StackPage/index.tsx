@@ -1,8 +1,10 @@
+'use client'
+
 import { Analytics, Eccomerce, ElSolution, HrSoftware, WebServices } from '@/features/stack'
-import styles from './style.module.scss'
 import { stagger, useAnimate } from 'framer-motion'
 import { useEffect } from 'react'
 import useCertainSection from '@/utils/hooks/useCertainSection'
+import styles from './style.module.scss'
 
 export default function StackPage() {
     const [ref, animate] = useAnimate()

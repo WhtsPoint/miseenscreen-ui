@@ -1,3 +1,5 @@
+'use client'
+
 import { Background, Details } from '@/features/cases-points'
 import { useRef, useState } from 'react'
 import { useInView, useMotionValue, useMotionValueEvent, useTransform } from 'framer-motion'

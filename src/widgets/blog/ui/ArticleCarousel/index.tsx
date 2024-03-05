@@ -1,3 +1,5 @@
+'use client'
+
 import { BlogPreview } from '../../interfaces/BlogPreview'
 import ArticlePreview from '../ArticlePreview'
 import styles from './styles.module.scss'
@@ -7,7 +9,6 @@ import { cl } from '@/utils/lib/cl'
 
 interface Params {
     blogs: BlogPreview[],
-    buttonText: string,
     onClick: (id: string) => unknown,
     className?: string
 }
