@@ -1,0 +1,12 @@
+.otherBlogs {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  &__title {
+    font-size: 3em;
+  }
+  &__list {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+}

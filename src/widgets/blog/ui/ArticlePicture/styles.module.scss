@@ -1,6 +1,6 @@
 .picture {
   width: fit-content;
-  padding: 50px;
+  padding: 25px 0;
   margin: 0 auto;
   &__image {
     width: 100%;
@@ -9,6 +9,6 @@
   }
   &__caption {
     font-style: italic;
-    padding: 10px 0;
+    padding-top: 10px;
   }
 }

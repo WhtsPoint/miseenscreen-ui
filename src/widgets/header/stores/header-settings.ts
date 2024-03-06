@@ -1,6 +1,6 @@
 import { create } from 'zustand'
 
-type Theme = 'transparent' | 'solid'
+export type Theme = 'transparent' | 'solid'
 
 interface Store {
     theme: Theme,

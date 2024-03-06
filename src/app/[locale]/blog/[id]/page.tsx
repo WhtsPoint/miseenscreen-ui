@@ -1,5 +1,6 @@
-import { getAllBlogsId, getBlogById } from '@/features/blog'
-import { getLocale, getTranslations } from 'next-intl/server'
+import { BlogOtherArticles, getAllBlogsId, getBlogById } from '@/features/blog'
+import { getLocale } from 'next-intl/server'
+import { FooterSection } from '@/layers/main'
 import { BlogArticle } from '@/widgets/blog'
 
 interface Params {
@@ -22,11 +23,12 @@ export async function generateStaticParams() {
 export default async function Page({ params: { id } }: Params) {
     const locale = await getLocale()
     const blog = await getBlogById(locale, id)
-    const t = await getTranslations('blogs.content')
 
-    // if (!Object.keys(staticBlogs).includes(blog.id)) notFound()
-
-    return (<BlogArticle blog={blog}>
-        {blog.content}
-    </BlogArticle>)
+    return (<>
+        <BlogArticle blog={blog}>
+            {blog.content}
+        </BlogArticle>
+        <BlogOtherArticles id={blog.id} />
+        <FooterSection />
+    </>)
 }
