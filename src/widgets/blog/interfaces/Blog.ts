@@ -1,4 +1,5 @@
 import { StaticImageData } from 'next/image'
+import { ReactNode } from 'react'
 
 interface Blog {
     id: string,
@@ -6,7 +7,8 @@ interface Blog {
     description: string
     themes: string[],
     previewCover: StaticImageData,
-    createdAt: Date
+    createdAt: Date,
+    content: ReactNode
 }
 
 export type { Blog }
