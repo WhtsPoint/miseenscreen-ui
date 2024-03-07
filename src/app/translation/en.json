@@ -319,8 +319,20 @@
     }
   },
   "blogs": {
-    "what": {
-      "title": "Digital Culture of the Company. How many \"WHAT\"?",
+    "company-consciousness": {
+      "title": "Access to the company's consciousness. Ch. 1",
+      "themes": [
+        "Organizational culture",
+        "Employee support",
+        "ENPS",
+        "Freedom of speech and democracy in the company",
+        "Relationships between people",
+        "Gamified interaction",
+        "Digital technologies in employee culture"
+      ]
+    },
+    "company-consciousness-2": {
+      "title": "Access to the company's consciousness. Ch. 2",
       "themes": [
         "Organizational culture",
         "Employee support",
@@ -332,7 +344,7 @@
       ]
     },
     "content": {
-      "what": {
+      "company-consciousness": {
         "subtitle": [
           "To be alive? To be efficient in the system?",
           "All living beings have certain behavior patterns. Only digital systems, artificial\nintelligence, and robots with programs cannot deviate from their programs."
@@ -354,7 +366,59 @@
           "If we cannot reprogram a person, what can we do to ensure that people interact within\nan efficient system necessary for the organization, while minimizing the negative impact\nof emotions?"
         ],
         "link": [
-          "The article \"Access to the company's consciousness\" further discusses what can be\ndone and how digital technologies can help in issues such as culture and employee\nrelations. "
+          "About what can be done and how digital technologies can help in such\nGiven the culture and respect for staff, it is further stated in\narticle - Access to the consciousness of the company. Chapter 2."
+        ]
+      },
+      "company-consciousness-2": {
+        "subtitle": [
+          "Volume 1. Corporate Culture. Interaction.",
+          "STAFF SUPPORT. Feedback. Questions. Ideas.",
+          "STUFF SUPPORT. eNPS",
+          "STAFF SUPPORT. Add a little romance... SMS: \"I remember you and appreciate you.\""
+        ],
+        "img-caption": [
+          "The picture of Elon Musk was downloaded from Pinterest.",
+          "The movie \"The Truman show\" (1998), directed by Peter Weir",
+          "The movie \"La La Land\" (2016), directed by Damien Chazelle"
+        ],
+        "bold": [
+          "Privilege - having an opinion. It is beneficial for people to see other points of view, rather than just confirming their own."
+        ],
+        "paragraph": [
+          "In the previous article on digital culture, we examined the reasons why implementing platforms\nand applications, as well as using digital options, can be a beneficial solution for both the\norganization and its employees. As technologies advance, so do people, as evolution\ndemonstrates, from caves to the point where we create new life forms.",
+          "Company culture encompasses all aspects of work, starting from the choice of chairs for\nemployees and including performance evaluation systems, training, compensation, and\ncommunication between employees and between the company and its employees. In this\nwork, we will propose options that can be implemented to improve communication within the\ncompany and receive feedback from employees",
+          "Within the framework of supporting and transparency of corporate culture, there are several\nkey strategies that contribute to improving interaction with employees.",
+          "Just as in social media, where everyone writes and everyone can view comments and requests\nfrom others, a similar opportunity can be provided within the organization, except when the\nrequest is directed directly. This option also encourages employees to adhere to company\nnorms and rules, and the ability to remain anonymous helps people gradually open up, as fears\nand following authorities can suppress the desire to express ideas and be open.",
+          "A responsible representative of the organization can formulate answers to employees there and\ngenerated AI options for responses, based on the company's norms and standards.",
+          "There is no need to fear or think that if you provide a resource of open culture and freedom of\nspeech in the company, employees will \"take over the world.\" It is an additional ability to see\nmore within your organization and, possessing this information, to develop.",
+          "For example, in the movie \"The Truman Show,\" the main character lived according to a\npredetermined script for about 30 years and was a participant in the show. The realization of\nthis came when he began to notice what was happening around him. Everything was the same\nas yesterday, but today he wants and is ready to see his reality. This leads to the evolving finale\nof his personality. If you have been working on culture and democracy in your organization, the\nsystem and AI will only confirm this, and working on improvements and support will become a\nnatural process for you.",
+          "If you do not have the desire to see things that can be developed, no matter how accurate a\nsystem is, it will not be able to show you what you do not want to see and realize. It is\nimportant to understand that responding to employees' requests is not about agreeing with\neverything, but also an opportunity to educate and help employees understand why certain\nprocesses and decisions happen in a certain way and why it is important.",
+          "One of the reasons objections arise is a lack of information!",
+          "ENPS is an electronic satisfaction survey with individually customizable parameters for your\norganization. It helps determine the satisfaction levels and requests of managers, stores, online\nplatforms, and teams.",
+          "Additionally, incorporating ENPS results into the evaluation of responsible employees'\nperformance can enhance the work of managers in this indicat",
+          "The system, while maintaining the anonymity and security of employees' feedback, can provide\nyou with analytics on problematic requests and their frequency. For the employee, this is\ntransparent feedback, while for the organization, it is a layered systematic analysis of job\nsatisfaction and requests.",
+          "Could there be factors of randomness, subjectivity, or bias? It is possible, but the likelihood of\nthis in a representative period and with the use of test rotations is minimized.",
+          "All of this gives employees a sense and resources of freedom, awareness of the opportunity for\nself-expression at work, and receiving objective and honest solutions to their requests that do\nnot contradict the organization's policies. It also gives a sense that not only is the organization\nevaluating the employee based on specific job criteria, but the employee is also evaluating the \nfavorability of working conditions. It is also worth noting that, for human nature, this provides\nmany with the desired feelings of influence and significance,",
+          "In romantic movies, depth of field is often used when shooting the main characters. This means that when a couple in love is in the frame, they are in focus, while everything else is blurred, losing focus. This visual technique enhances the portrayal of love and shows that nothing else matters except the object of affection.",
+          "What can create such \"romantic\" moments in the relationship between a company and an employee? When everything else fades into the background except the joy of the present moment?",
+          "Automatically send birthday greetings, promotions, and congratulations for years of service in the organization to employees.",
+          "Automatically generate themed memes, news about the organization, interesting facts, and create interest clubs can always increase enthusiasm for work.",
+          "Using gamification in a system with ratings and rewards, where employees can earn points, bonuses, and compete in a gaming format, and then use the earned credits and benefits to their advantage.",
+          "Systematizing corporate culture with the help of AI can be implemented through an app that employees will want to access, like scrolling through an Instagram feed, because there will be interesting and important information for the employee.",
+          "And at the end of this article, I remembered that Elon Musk, indeed, bought Twitter (name changed to \"X\"). Many were curious about why such large and technological companies are adding a social network. Many will say - for power, and there is something to it. However, Elon himself answers in interviews that this purchase was made for one purpose - the development of democracy and freedom of speech for humanity.",
+          "Think about freedom of speech in your organization: how free are employees in their expressions, ideas, and suggestions? And as with Elon and the idea of freedom of speech, such resources undoubtedly provide greater influence, in the case of business - influence on the world of your organization.",
+          "What is the freedom of speech in your organization like? How freely do employees express their thoughts, ideas, and suggestions? How does the culture inspire being a part of the organization not just because it's important, but because it's interesting?",
+          "And, of course, just like in the case of Elon Musk and the idea of freedom of speech, such resources undoubtedly provide greater influence, in the case of business - <b>influence on the world of your organization.</b>"
+        ],
+        "list": [
+          [
+            "Allowing all employees to leave feedback and ask questions through a special system,\ncreating the opportunity for everyone to express opinions and suggestions.",
+            "Supporting the idea of \"I can say everything!\", even if it is in written form.",
+            "Creating a system that provides anonymity or openness of questions and requests upon\nemployee's request."
+          ]
+        ],
+        "link": [
+          "which we will discuss more in\nan article on the system of growth, advancement, and personnel evaluation"
         ]
       },
       "general": {

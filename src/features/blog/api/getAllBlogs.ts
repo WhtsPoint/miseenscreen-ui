@@ -1,20 +1,27 @@
 'use server'
 
-import cover from '@/utils/assets/images/blog/what/preview.jpeg'
 import { getTranslations } from 'next-intl/server'
 import { Blog } from '@/widgets/blog'
-import { WhatBlog } from '@/features/blog'
+import { What2Blog, WhatBlog } from '@/features/blog'
 import { createElement } from 'react'
+import cover1 from '@/utils/assets/images/blog/what/preview.jpeg'
+import cover2 from '@/utils/assets/images/blog/what2/preview.png'
 
 export default async function getAllBlogs(locale: string): Promise<Blog[]> {
     const t = await getTranslations({ locale, namespace: 'blogs' })
 
     const blogs: Omit<Blog, 'title' | 'description' | 'themes'>[] = [
         {
-            id: 'what',
-            previewCover: cover,
-            createdAt: new Date('December 17, 1995 03:24:00'),
+            id: 'company-consciousness',
+            previewCover: cover1,
+            createdAt: new Date('03.02.2024'),
             content: createElement(WhatBlog)
+        },
+        {
+            id: 'company-consciousness-2',
+            previewCover: cover2,
+            createdAt: new Date('03.07.2024'),
+            content: createElement(What2Blog)
         }
     ]
     blogs.sort((first, second) => {

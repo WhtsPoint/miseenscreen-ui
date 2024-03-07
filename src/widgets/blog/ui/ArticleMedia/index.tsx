@@ -1,6 +1,6 @@
 import Image, { StaticImageData } from 'next/image'
-import { cl } from '@/utils/lib/cl'
 import styles from './styles.module.scss'
+import { cl } from '@/utils/lib/cl'
 
 interface Params {
     image: StaticImageData,
