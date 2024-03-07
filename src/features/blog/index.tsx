@@ -5,5 +5,6 @@ import getAllBlogsId from './api/getAllBlogsId'
 import WhatBlog from './ui/WhatBlog'
 import What2Blog from './ui/What2Blog'
 import BlogOtherArticles from './ui/BlogOtherArticles'
+import EmployeesPromotionBlog from './ui/EmployeesPromotionBlog'
 
-export { ArticleCarousel, getAllBlogs, getBlogById, getAllBlogsId, WhatBlog, What2Blog, BlogOtherArticles }
+export { ArticleCarousel, getAllBlogs, getBlogById, getAllBlogsId, WhatBlog, What2Blog, BlogOtherArticles, EmployeesPromotionBlog }

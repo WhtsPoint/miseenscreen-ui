@@ -45,7 +45,10 @@ export default async function What2Blog() {
             </Link>
         </p>
         <div>
-            <ArticlePicture className={styles.gosling} image={gosling} caption={''} />
+            <ArticlePicture
+                className={styles.gosling} image={gosling}
+                caption={t('company-consciousness-2.img-caption.2')}
+            />
             <h3>{t('company-consciousness-2.subtitle.3')}</h3>
             <p>{t('company-consciousness-2.paragraph.14')}</p>
             <p>{t('company-consciousness-2.paragraph.15')}</p>

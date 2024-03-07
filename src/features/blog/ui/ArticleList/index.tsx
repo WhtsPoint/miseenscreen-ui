@@ -9,7 +9,7 @@ interface Params {
     blogs: BlogPreview[]
 }
 
-export default async function ArticleList({ blogs, ...params }: Params) {
+export default function ArticleList({ blogs, ...params }: Params) {
     const router = useRouter()
 
     return (<ArticleCarousel

@@ -2,10 +2,11 @@
 
 import { getTranslations } from 'next-intl/server'
 import { Blog } from '@/widgets/blog'
-import { What2Blog, WhatBlog } from '@/features/blog'
+import { EmployeesPromotionBlog, What2Blog, WhatBlog } from '@/features/blog'
 import { createElement } from 'react'
 import cover1 from '@/utils/assets/images/blog/what/preview.jpeg'
 import cover2 from '@/utils/assets/images/blog/what2/preview.png'
+import cover3 from '@/utils/assets/images/blog/what2/preview.png'
 
 export default async function getAllBlogs(locale: string): Promise<Blog[]> {
     const t = await getTranslations({ locale, namespace: 'blogs' })
@@ -20,8 +21,14 @@ export default async function getAllBlogs(locale: string): Promise<Blog[]> {
         {
             id: 'company-consciousness-2',
             previewCover: cover2,
-            createdAt: new Date('03.07.2024'),
+            createdAt: new Date('03.02.2024'),
             content: createElement(What2Blog)
+        },
+        {
+            id: 'employees-promotion',
+            previewCover: cover3,
+            createdAt: new Date('03.06.2024'),
+            content: createElement(EmployeesPromotionBlog)
         }
     ]
     blogs.sort((first, second) => {

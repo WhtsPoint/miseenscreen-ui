@@ -9,7 +9,7 @@ import FooterSection from '../FooterSection'
 import BlogSection from '../BlogSection'
 import WelcomeSectionWrapper from '../WelcomeSectionWrapper'
 
-export default function MainPage() {
+export default async function MainPage() {
    return (<WelcomeSectionWrapper>
         <StackPage />
         <CooperationSection />
