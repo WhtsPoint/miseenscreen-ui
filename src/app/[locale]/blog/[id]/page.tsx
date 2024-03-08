@@ -1,7 +1,6 @@
-import { BlogOtherArticles, getAllBlogsId, getBlogById } from '@/features/blog'
-import { getLocale } from 'next-intl/server'
-import { FooterSection } from '@/layers/main'
-import { BlogArticle } from '@/widgets/blog'
+import { getAllBlogsId, getBlogById } from '@/features/blog'
+import { BlogPage } from '@/layers/blog'
+import { Metadata } from 'next'
 
 interface Params {
     params: {
@@ -10,7 +9,7 @@ interface Params {
     }
 }
 
-export async function generateMetadata({ params: { id, locale } }: Params) {
+export async function generateMetadata({ params: { id, locale } }: Params): Promise<Metadata> {
     const { title, description } = await getBlogById(locale, id)
 
     return { title, description }
@@ -21,14 +20,5 @@ export async function generateStaticParams() {
 }
 
 export default async function Page({ params: { id } }: Params) {
-    const locale = await getLocale()
-    const blog = await getBlogById(locale, id)
-
-    return (<>
-        <BlogArticle blog={blog}>
-            {blog.content}
-        </BlogArticle>
-        <BlogOtherArticles id={blog.id} />
-        <FooterSection />
-    </>)
+   return <BlogPage blogId={id} />
 }
