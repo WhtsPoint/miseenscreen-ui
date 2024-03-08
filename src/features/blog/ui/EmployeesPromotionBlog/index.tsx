@@ -12,15 +12,16 @@ export default async function EmployeesPromotionBlog() {
     const t = await getTranslations('blogs.content')
 
     return (<div className={blogStyles.main}>
-        <ArticlePicture image={arnoldImage} caption={t('employees-promotion.img-caption.0')} />
+        <ArticlePicture image={goslingImage} caption={t('employees-promotion.img-caption.3')} />
         <p className={blogStyles.init}>{t('general.init')}</p>
         <h2>{t('employees-promotion.subtitle.0')}</h2>
+        <p>{t('employees-promotion.paragraph.0')}</p>
         <p>{t('employees-promotion.paragraph.1')}</p>
         <p>{t('employees-promotion.paragraph.2')}</p>
         <p>{t('employees-promotion.paragraph.3')}</p>
         <p>{t('employees-promotion.paragraph.4')}</p>
         <h2>{t('employees-promotion.subtitle.1')}</h2>
-        <ArticlePicture image={insideOutImage} caption={t('employees-promotion.img-caption.1')} />
+        <ArticlePicture image={arnoldImage} caption={t('employees-promotion.img-caption.0')} />
         <p>{t('employees-promotion.paragraph.5')}</p>
         <p>{t('employees-promotion.paragraph.6')}</p>
         <p>{t('employees-promotion.paragraph.7')}</p>
@@ -36,9 +37,9 @@ export default async function EmployeesPromotionBlog() {
         <p>{t('employees-promotion.paragraph.10')}</p>
         <p>{t('employees-promotion.paragraph.11')}</p>
         <p>{t('employees-promotion.paragraph.12')}</p>
-        <p>{t('employees-promotion.paragraph.13')}</p>
-        <p>{t('employees-promotion.paragraph.14')}</p>
+        <p dangerouslySetInnerHTML={{ __html: t.raw('employees-promotion.paragraph.13') }} />
+        <b>{t('employees-promotion.bold.0')}</b>
+        <ArticlePicture image={insideOutImage} caption={t('employees-promotion.img-caption.1')} />
         <Link className={blogStyles.link} href={'#'}>{t('employees-promotion.link.0')}</Link>
-        <ArticlePicture image={goslingImage} caption={t('employees-promotion.img-caption.3')} />
     </div> )
 }

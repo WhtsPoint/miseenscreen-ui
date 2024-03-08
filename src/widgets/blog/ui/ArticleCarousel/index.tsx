@@ -16,7 +16,7 @@ interface Params {
 const getArticleAnimation = (delta: number) => {
     const isCurrent = delta === 0
     return {
-        marginLeft: `calc(50% - ${delta * -350}px`,
+        marginLeft: `calc(50% - ${delta * -350}px)`,
         scale: isCurrent ? 1 : 0.8,
         position: isCurrent ? 'static' : 'absolute'
     } as const

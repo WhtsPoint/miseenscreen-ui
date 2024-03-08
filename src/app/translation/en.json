@@ -344,7 +344,7 @@
       ]
     },
     "employees-promotion": {
-      "title": "Digital promotion and development of employees",
+      "title": "Why am I always number two?",
       "themes": [
         "Assessment and Certification System",
         "Staff Promotion System",
@@ -451,8 +451,7 @@
           "The digital technology for employee development is like a \"treasure map\" with a clear path and\na reward at the end.",
           "The more understandable the system and calculations are, the more motivated employees will\nbe to follow these paths and contribute to the organization through their growth. It is possible\nthat some may question the accuracy of the system, but only the numbers can show the\neffectiveness over a comparative period. What happened to the metrics after the system was\nimplemented and what was it like before? That will be the answer.",
           "People are already fulfilling their roles with a digital partner on the team. There is no need to\nthink about who to promote among employees - your system has already calculated the\nratings. There is no need to explain to a likable and pleasant colleague why they may not\nreceive a bonus or promotion this month - the system will calculate all results and show the\ncause-and-effect relationship.",
-          "And constant interim results help reduce the \"pain\" of a person's work expectations, as most\npeople suffer not from actual circumstances, but from their expectations. The system covers all requests and embedded calculations, while a person's ability to control everything down to the\nsmallest detail is limited.",
-          "With a digital system involving both the employee and the company, there is a \"rational\ndialogue,\" whereas people can only be as rational with others as they allow themselves to be."
+          "And constant interim results help reduce the \"pain\" of a person's work expectations, as <b>most people suffer not from actual circumstances, but from their expectations</b>. The system covers all requests and embedded calculations, while a person's ability to control everything down to the\nsmallest detail is limited."
         ],
         "list": [
           [
@@ -472,6 +471,9 @@
           "The animation movie «Inside Out» (2015). Story by Pete Docter; Ronnie del Carmen",
           "The TV Show «Westworld (2016)», directed by Jonathan Nolan, Lisa Goy",
           "The movie «Barbie» (2023).directed by Greta Gerwig"
+        ],
+        "bold": [
+          "With a digital system involving both the employee and the company, there is a \"rational\ndialogue,\" whereas people can only be as rational with others as they allow themselves to be."
         ]
       },
       "general": {

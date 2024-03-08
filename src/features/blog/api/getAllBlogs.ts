@@ -6,7 +6,7 @@ import { EmployeesPromotionBlog, What2Blog, WhatBlog } from '@/features/blog'
 import { createElement } from 'react'
 import cover1 from '@/utils/assets/images/blog/what/preview.jpeg'
 import cover2 from '@/utils/assets/images/blog/what2/preview.png'
-import cover3 from '@/utils/assets/images/blog/what2/preview.png'
+import cover3 from '@/utils/assets/images/blog/employees-promotion/preview.jpeg'
 
 export default async function getAllBlogs(locale: string): Promise<Blog[]> {
     const t = await getTranslations({ locale, namespace: 'blogs' })

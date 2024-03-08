@@ -1,3 +1,5 @@
+'use client'
+
 import { ObjectType } from '@/utils/types/ObjectType'
 import { StaticImageData } from 'next/image'
 import { cl } from '@/utils/lib/cl'
