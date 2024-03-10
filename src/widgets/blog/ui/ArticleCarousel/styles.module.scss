@@ -28,8 +28,11 @@
       }
       @media (max-width: 500px) {
         font-size: 0.6em;
+        h3 {
+          text-align: center;
+        }
         img {
-          height: auto;
+          height: 400px;
         }
       }
     }

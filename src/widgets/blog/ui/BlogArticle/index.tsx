@@ -4,12 +4,14 @@ import { Children } from '@/utils/interfaces/Children'
 import { Fragment, ReactNode } from 'react'
 import { HeaderThemeSwitcher } from '@/features/header'
 import styles from './styles.module.scss'
+import { getTranslations } from 'next-intl/server'
 
 interface Params extends Children<ReactNode> {
     blog: Pick<Blog, 'title' | 'themes' | 'previewCover' | 'id' | 'createdAt'>
 }
 
 export default async function BlogArticle({ blog, children }: Params) {
+    const t = await getTranslations('blogs.content.general')
     const { title, themes, previewCover: { width, height, src }, createdAt } = blog
     const [year, month, day] = [
         createdAt.getFullYear(),
@@ -29,7 +31,7 @@ export default async function BlogArticle({ blog, children }: Params) {
                 <h1 className={styles.blogArticle__content__header__title}>{title}</h1>
                 <div className={styles.blogArticle__content__header__meta}>
                     <div className={styles.blogArticle__content__header__meta__themes}>
-                        <p>Themes:</p>
+                        <p>{t('themes')}</p>
                         <ul className={styles.blogArticle__content__header__meta__themes__list}>
                             {themes.map((theme, index) => <Fragment key={index}>
                                 <li>{theme}</li>
@@ -37,7 +39,10 @@ export default async function BlogArticle({ blog, children }: Params) {
                             </Fragment>)}
                         </ul>
                     </div>
-                    <p>Created At: {`${month}.${day}.${year}`}</p>
+                    <div className={styles.blogArticle__content__header__meta__themes}>
+                        <p>{t('created-at')}</p>
+                        <p>{`${month}.${day}.${year}`}</p>
+                    </div>
                 </div>
             </header>
             <article className={styles.blogArticle__body}>

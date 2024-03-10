@@ -15,3 +15,9 @@
 .init {
   font-style: italic;
 }
+
+.paragraph {
+  &_wrap {
+    white-space: pre-line;
+  }
+}

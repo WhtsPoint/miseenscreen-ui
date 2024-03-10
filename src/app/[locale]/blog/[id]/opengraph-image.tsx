@@ -36,7 +36,7 @@ export default async function OGImage({ params: { locale, id } }: Params) {
             </div>
         </div>
         <div style={{ width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center', background: 'black' }}>
-            <h2 style={{ fontSize: '25px', color: 'white' }}>{cover.title}</h2>
+            <h2 style={{ fontSize: '25px', color: 'white', textAlign: 'center' }}>{cover.title}</h2>
         </div>
     </div>, { fonts: [{ name: 'openSans', data: await readFile('./src/utils/assets/fonts/open-sans.ttf') }] })
 }

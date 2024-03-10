@@ -38,8 +38,8 @@ export default async function EmployeesPromotionBlog() {
         <p>{t('employees-promotion.paragraph.11')}</p>
         <p>{t('employees-promotion.paragraph.12')}</p>
         <p dangerouslySetInnerHTML={{ __html: t.raw('employees-promotion.paragraph.13') }} />
-        <b>{t('employees-promotion.bold.0')}</b>
         <ArticlePicture image={insideOutImage} caption={t('employees-promotion.img-caption.1')} />
+        <p className={blogStyles.bold}>{t('employees-promotion.bold.0')}</p>
         <Link className={blogStyles.link} href={'#'}>{t('employees-promotion.link.0')}</Link>
     </div> )
 }

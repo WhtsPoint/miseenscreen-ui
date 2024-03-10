@@ -3,6 +3,9 @@
   flex-direction: column;
   color: white;
   &__title {
+    @media (max-width: 500px) {
+      text-align: center;
+    }
     font-size: 3em;
   }
   &__list {

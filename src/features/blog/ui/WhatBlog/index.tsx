@@ -16,7 +16,7 @@ export default async function WhatBlog() {
         <p>{t('company-consciousness.paragraph.0')}</p>
         <b className={blogStyles.bold}>{t('company-consciousness.bold.0')}</b>
         <ArticlePicture image={iRobotImage} caption={t('company-consciousness.img-caption.1')} />
-        <p>{t('company-consciousness.paragraph.1')}</p>
+        <p className={blogStyles.paragraph_wrap}>{t('company-consciousness.paragraph.1')}</p>
         <p>{t('company-consciousness.paragraph.2')}</p>
         <b className={blogStyles.bold}>{t('company-consciousness.bold.1')}</b>
         <ArticlePicture image={soulImage} caption={t('company-consciousness.img-caption.2')} />

@@ -1,7 +1,7 @@
 import blogStyles from '@/utils/assets/styles/blog.module.scss'
 import { getTranslations } from 'next-intl/server'
 import elon from '@/utils/assets/images/blog/what2/elon.jpeg'
-import truman from '@/utils/assets/images/blog/what2/truman.png'
+import truman from '@/utils/assets/images/blog/what2/truman.gif'
 import gosling from '@/utils/assets/images/blog/what2/gosling.gif'
 import { ArticlePicture } from '@/widgets/blog'
 import { Link } from '@/utils/lib/navigation'
