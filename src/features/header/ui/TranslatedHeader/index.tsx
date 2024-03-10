@@ -1,8 +1,8 @@
 import Header from '../Header'
-import { useTranslations } from 'next-intl'
+import { getTranslations } from 'next-intl/server'
 
-export default function TranslatedHeader() {
-    const t = useTranslations('header')
+export default async function TranslatedHeader() {
+    const t = await getTranslations('header')
 
     const translation = {
         services: t('services'),

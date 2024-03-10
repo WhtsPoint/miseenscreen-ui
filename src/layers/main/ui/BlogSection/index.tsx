@@ -1,12 +1,11 @@
-import { ArticleCarousel } from '@/features/blog'
-import Logo from '@/features/blog/ui/Logo'
-import { getAllBlogs } from '@/features/blog'
+import { ArticleCarousel, getAllBlogsPreviews } from '@/features/blog'
+import { Logo } from '@/features/blog'
 import { getLocale } from 'next-intl/server'
 import styles from './styles.module.scss'
 
 export default async function BlogSection() {
     const locale = await getLocale()
-    const blogs = await getAllBlogs(locale)
+    const blogs = await getAllBlogsPreviews(locale)
 
     return (<section className={styles.section}>
         <Logo className={styles.section__logo} />
