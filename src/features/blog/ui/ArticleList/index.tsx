@@ -14,7 +14,7 @@ export default function ArticleList({ blogs, ...params }: Params) {
 
     return (<ArticleCarousel
         blogs={blogs}
-        onClick={(id) => router.push(config.routes.header.blog + '/' + id)}
+        onClick={(id) => router.push(config.routes.blog + '/' + id)}
         {...params}
     />)
 }

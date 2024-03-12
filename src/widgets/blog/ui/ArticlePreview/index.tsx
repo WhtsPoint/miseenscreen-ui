@@ -14,22 +14,24 @@ interface Params {
     style: MotionStyle
 }
 
-const ArticlePreview = motion(forwardRef<HTMLDivElement, Params>((
+const ArticlePreview = forwardRef<HTMLDivElement, Params>((
     { blog: { title, previewCover }, style, onClick, className },
     ref
 ) => {
+    const { src, width, height } = previewCover
+
     return (<motion.article ref={ref} style={style} onClick={onClick} className={cl(styles.articlePreview, className)}>
         <Image
             className={styles.articlePreview__cover}
-            src={previewCover}
+            {...{ src, width, height }}
             alt={`"${title}" blog cover`}
         />
         <div className={styles.articlePreview__info}>
             <h3 className={styles.articlePreview__info__title}>{title}</h3>
         </div>
     </motion.article>)
-}))
+})
 
 ArticlePreview.displayName = 'ArticlePreview'
 
-export default ArticlePreview
+export default motion(ArticlePreview)

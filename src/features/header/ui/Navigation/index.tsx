@@ -29,17 +29,31 @@ const Navigation = forwardRef<HTMLDivElement, Params>((
 
     return (<nav ref={ref} className={cl(styles.header__nav, className)}>
         <ul className={styles.header__nav__ul}>
-            <StyledLi><Link href={routes.services} onClick={() => invoke('services')} scroll={false}>{t.services}</Link></StyledLi>
-            <StyledLi><Link href={routes.cases} onClick={() => invoke('cases')} scroll={false}>
+            <StyledLi>
+                <Link href={routes.services} onClick={() => invoke('services')} scroll={false}>
+                    {t.services}
+                </Link>
+            </StyledLi>
+            <StyledLi>
+                <Link href={routes.cases} onClick={() => invoke('cases')} scroll={false}>
                     {t.cases}
-            </Link></StyledLi>
-            <StyledLi><Link href={routes.cooperation} onClick={() => invoke('cooperation')} scroll={false}>
+                </Link>
+            </StyledLi>
+            <StyledLi>
+                <Link href={routes.cooperation} onClick={() => invoke('cooperation')} scroll={false}>
                     {t.cooperation}
-            </Link></StyledLi>
-            <StyledLi><Link href={routes.ourStory} onClick={() => invoke('our-story')} scroll={false}>
-                {t.ourStory}
-            </Link></StyledLi>
-            <StyledLi><Link href={routes.blog}>{t.blog}</Link></StyledLi>
+                </Link>
+            </StyledLi>
+            <StyledLi>
+                <Link href={routes.ourStory} onClick={() => invoke('our-story')} scroll={false}>
+                    {t.ourStory}
+                </Link>
+            </StyledLi>
+            <StyledLi>
+                <Link href={routes.blog} onClick={() => invoke('blog')} scroll={false}>
+                    {t.blog}
+                </Link>
+            </StyledLi>
             <StyledLi><Link href={routes.contactUs}>{t.contactUs}</Link></StyledLi>
             <LocaleSelect
                 className={styles.header__localeSelect}

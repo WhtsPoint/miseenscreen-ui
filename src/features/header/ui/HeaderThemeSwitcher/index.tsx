@@ -18,7 +18,7 @@ export default function HeaderThemeSwitcher(params: Params) {
 
     useEffect(() => {
         setTheme(isInView ? whenInView : whenNotInView)
-    }, [isInView])
+    }, [isInView, setTheme, whenInView, whenNotInView])
 
     return (<div ref={ref} ></div>)
 }

@@ -8,7 +8,7 @@ const config = {
             cases: '/#cases',
             cooperation: '/#cooperation',
             ourStory: '/#our-story',
-            blog: '/blog',
+            blog: '/#blog',
             contactUs: '/contact',
             services: '/#services'
         },
@@ -18,7 +18,8 @@ const config = {
             elearning: '/services#e-learning',
             hrSoftware: '/services#hr-software',
             analytics: '/services#custom-erp'
-        }
+        },
+        blog: '/blog'
     },
     api: 'http://localhost:5500/api/v0/'
 }

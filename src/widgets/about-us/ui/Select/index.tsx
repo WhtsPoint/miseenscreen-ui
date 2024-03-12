@@ -17,9 +17,9 @@ interface Params<T extends string = string> {
 
 const calculateStyles = (delta: number) => {
     const isFirst = delta === 0
-    const padding = `calc(100% - ${Math.abs(delta) * 50}px)`
+    const padding = `calc(100% - ${Math.abs(delta) * 30}px)`
     return {
-        marginLeft: `${50 - delta * -25}%`,
+        x: `${50 - delta * -25}%`,
         height: padding,
         position: isFirst ? 'static' : 'absolute',
         zIndex: (Math.abs(delta) + 1) * -1,
@@ -39,16 +39,14 @@ export default function Select<T extends string = string>(
         <div className={styles.personSelect__images}>
             {imagesData.map(({ src }, index) => {
                 const animation = calculateStyles(index - currentIndex)
-                return <motion.img
+                return <motion.div
                     initial={animation}
                     animate={animation}
-                    key={index}
-                    src={src}
-                    style={{ transform: 'translateX(-50%)' }}
                     className={styles.personSelect__images__image}
                     transition={{ duration: 0.5 }}
-                    alt={''}
-                />
+                >
+                    <motion.img key={index} src={src} alt={''}/>
+                </motion.div>
             })}
         </div>
         <ArrowWithText onClick={onNext} text={'Next'} />

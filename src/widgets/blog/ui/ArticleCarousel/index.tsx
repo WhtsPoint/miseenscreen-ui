@@ -9,7 +9,7 @@ import { cl } from '@/utils/lib/cl'
 
 interface Params {
     blogs: BlogPreview[],
-    onClick: (id: string) => unknown,
+    onClick?: (id: string) => unknown,
     className?: string
 }
 
@@ -29,7 +29,7 @@ export default function ArticleCarousel({ blogs, onClick, className, ...params }
     })
 
     const onBlogClick = (index: number, id: string) => () => {
-        current === index ? onClick(id) : choose(index)
+        current === index ? onClick?.(id) : choose(index)
     }
 
     return (<div className={cl(styles.articleCarousel, className)}>
