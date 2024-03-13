@@ -1,7 +1,6 @@
 import { ImageResponse } from 'next/og'
-import { getBlogById } from '@/features/blog'
+import { getBlogById, getBlogCoverById } from '@/features/blog'
 import { readFile } from 'fs/promises'
-import config from '@/utils/config'
 
 export const alt = 'Blog cover'
 
@@ -16,7 +15,8 @@ interface Params {
 }
 
 export default async function OGImage({ params: { locale, id } }: Params) {
-    const cover = await getBlogById(locale, id)
+    const { title } = await getBlogById(locale, id)
+    const coverLink = await getBlogCoverById(locale, id)
 
     return new ImageResponse(<div style={{
         width: '100%',
@@ -26,13 +26,8 @@ export default async function OGImage({ params: { locale, id } }: Params) {
         justifyContent: 'space-between',
         position: 'relative'
     }}>
-        <picture>
-            <img
-                style={{ width: '100%', position: 'absolute' }}
-                //Will not work for not static blogs
-                src={process.env.BLOG_IMAGES_HOST + cover.previewCover.src}
-                alt={''}
-            />
+        <picture style={{ position: 'absolute' }}>
+            <img style={{ width: '100%' }} src={coverLink} alt={''} />
         </picture>
         <div style={{ width: '100%', display: 'flex', justifyContent: 'flex-end' }}>
             <div style={{ width: '400px', height: '100px', display: 'flex', justifyContent: 'center', alignItems: 'center', background: 'black' }}>
@@ -40,7 +35,7 @@ export default async function OGImage({ params: { locale, id } }: Params) {
             </div>
         </div>
         <div style={{ width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center', background: 'black' }}>
-            <h2 style={{ fontSize: '25px', color: 'white', textAlign: 'center' }}>{cover.title}</h2>
+            <h2 style={{ fontSize: '25px', color: 'white', textAlign: 'center' }}>{title}</h2>
         </div>
     </div>, { fonts: [{ name: 'openSans', data: await readFile('./src/utils/assets/fonts/open-sans.ttf') }] })
 }

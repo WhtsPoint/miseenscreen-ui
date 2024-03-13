@@ -40,6 +40,7 @@ export default function Select<T extends string = string>(
             {imagesData.map(({ src }, index) => {
                 const animation = calculateStyles(index - currentIndex)
                 return <motion.div
+                    key={index}
                     initial={animation}
                     animate={animation}
                     className={styles.personSelect__images__image}

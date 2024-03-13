@@ -8,7 +8,7 @@ interface Store {
 }
 
 const useStore = create<Store>()((set) => ({
-    theme: 'transparent',
+    theme: 'solid',
     setTheme: (theme: Theme) => set({ theme })
 }))
 

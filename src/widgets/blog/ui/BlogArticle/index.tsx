@@ -2,7 +2,6 @@ import { Blog } from '../../interfaces/Blog'
 import Image from 'next/image'
 import { Children } from '@/utils/interfaces/Children'
 import { Fragment, ReactNode } from 'react'
-import { HeaderThemeSwitcher } from '@/features/header'
 import styles from './styles.module.scss'
 import { getTranslations } from 'next-intl/server'
 
@@ -25,7 +24,6 @@ export default async function BlogArticle({ blog, children }: Params) {
             alt={'Article cover page'}
             {...{ width, height, src }}
         />
-        <HeaderThemeSwitcher />
         <div className={styles.blogArticle__content}>
             <header className={styles.blogArticle__content__header}>
                 <h1 className={styles.blogArticle__content__header__title}>{title}</h1>
