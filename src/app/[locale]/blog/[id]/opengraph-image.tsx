@@ -21,7 +21,6 @@ interface MetaDataParams {
 }
 
 export async function generateImageMetadata({ params: { locale } }: MetaDataParams) {
-    console.log((await getAllBlogsId()).map((id) => ({ id })))
     return (await getAllBlogsId()).map((id) => ({ id }))
 }
 
