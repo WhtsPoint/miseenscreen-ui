@@ -1,5 +1,5 @@
 import { ImageResponse } from 'next/og'
-import { getBlogById, getBlogCoverById } from '@/features/blog'
+import { getAllBlogsId, getBlogById, getBlogCoverById } from '@/features/blog'
 import { readFile } from 'fs/promises'
 
 export const alt = 'Blog cover'
@@ -12,6 +12,17 @@ interface Params {
         locale: string,
         id: string
     }
+}
+
+interface MetaDataParams {
+    params: {
+        locale: string
+    }
+}
+
+export async function generateImageMetadata({ params: { locale } }: MetaDataParams) {
+    console.log((await getAllBlogsId()).map((id) => ({ id })))
+    return (await getAllBlogsId()).map((id) => ({ id }))
 }
 
 export default async function OGImage({ params: { locale, id } }: Params) {

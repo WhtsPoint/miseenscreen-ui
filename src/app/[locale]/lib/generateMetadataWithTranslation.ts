@@ -9,6 +9,7 @@ export default async function generateMetadataWithTranslation(
 ): Promise<Metadata> {
     const t = await getTranslations({ locale, namespace: 'pages' })
     const metadata = t.raw(page)
+    const metadataBase = process.env.HOST_URL ? new URL(process.env.HOST_URL) : null
 
-    return { ...metadata, openGraph: { ...metadata, images: [{ url: src, width, height }] } }
+    return { ...metadata, metadataBase, openGraph: { ...metadata, images: [{ url: src, width, height }] } }
 }
