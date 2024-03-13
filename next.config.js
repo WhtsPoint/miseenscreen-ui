@@ -3,6 +3,8 @@ const nextIntlWrapper = require('next-intl/plugin')(
 );
 
 /** @type {import('next').NextConfig} */
-const nextConfig = nextIntlWrapper({})
+const nextConfig = nextIntlWrapper({
+    output: 'standalone'
+})
 
 module.exports = nextConfig

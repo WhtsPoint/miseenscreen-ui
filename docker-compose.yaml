@@ -1,0 +1,8 @@
+services:
+  miseenscreen_ui:
+    build: .
+    environment:
+      - PORT=80
+      - HOST=localhost
+    ports:
+      - 80:80

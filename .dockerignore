@@ -23,12 +23,15 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-# local env files
-.env*.local
-
 # typescript
 *.tsbuildinfo
 next-env.d.ts
 
 #Webstorm
 .idea
+
+#Docker
+docker-compose.yaml
+
+#Eslint
+.eslintrc.json

@@ -15,7 +15,7 @@ interface Params {
 export async function generateMetadata({ params: { id, locale } }: Params): Promise<Metadata> {
     const { title, description } = await getBlogById(locale, id)
 
-    return { title, description }
+    return { title, description, openGraph: { title, description } }
 }
 
 export async function generateStaticParams() {
