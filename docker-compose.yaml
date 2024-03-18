@@ -6,6 +6,7 @@ services:
       - HOSTNAME=ui
     networks:
       - ui-miseenscreen
+    restart: 'always'
 networks:
   ui-miseenscreen:
     driver: bridge
