@@ -4,7 +4,21 @@ const nextIntlWrapper = require('next-intl/plugin')(
 
 /** @type {import('next').NextConfig} */
 const nextConfig = nextIntlWrapper({
-    output: 'standalone'
+    output: 'standalone',
+    images: {
+        remotePatterns: [
+            {
+                protocol: 'http',
+                hostname: 'localhost',
+                port: '3000'
+            },
+            {
+                protocol: 'http',
+                hostname: 'miseenscreen.com',
+                port: ''
+            }
+        ],
+    }
 })
 
 module.exports = nextConfig

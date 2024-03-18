@@ -22,7 +22,7 @@ interface Params {
 export default function Item({ video, theme, href, style, themeClass }: Params) {
     return (<Link href={href} className={styles.item} style={style}>
         <div className={styles.item__videoBlock}>
-                <BackgroundVideo {...video} loadingElement={<BasicLoading />} />
+            <BackgroundVideo {...video} loadingElement={<BasicLoading />} />
         </div>
         <h3 style={openSans.style} className={cl(styles.item__theme, themeClass)}>{theme}</h3>
     </Link>)

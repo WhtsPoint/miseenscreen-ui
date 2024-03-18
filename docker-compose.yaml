@@ -1,8 +1,12 @@
 services:
-  miseenscreen_ui:
+  ui:
     build: .
     environment:
-      - PORT=80
-      - HOST=localhost
-    ports:
-      - 80:80
+      - PORT=3000
+      - HOSTNAME=ui
+    networks:
+      - ui-miseenscreen
+networks:
+  ui-miseenscreen:
+    driver: bridge
+    name: miseenscreen

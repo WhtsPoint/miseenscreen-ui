@@ -1,8 +1,7 @@
-FROM node:20-alpine AS base
+FROM node:18-alpine AS base
 
 # 1. Install dependencies only when needed
 FROM base AS deps
-# Check https://github.com/nodejs/docker-node/tree/b4117f9333da4138b03a546ec926ef50a31506c3#nodealpine to understand why libc6-compat might be needed.
 RUN apk add --no-cache libc6-compat
 
 WORKDIR /app
@@ -10,7 +9,7 @@ WORKDIR /app
 # Install dependencies based on the preferred package manager
 COPY package.json ./
 RUN npm i
-
+RUN npm install -g --arch=x64 --platform=linux --libc=glibc sharp
 
 # 2. Rebuild the source code only when needed
 FROM base AS builder
@@ -27,15 +26,17 @@ FROM base AS runner
 WORKDIR /app
 
 ENV NODE_ENV=production
-ENV NEXT_SHARP_PATH=/app/node_modules/sharp
+ENV NEXT_SHARP_PATH=/usr/local/lib/node_modules/sharp
 
 RUN addgroup -g 1001 -S nodejs
 RUN adduser -S nextjs -u 1001
 
 # Automatically leverage output traces to reduce image size
 # https://nextjs.org/docs/advanced-features/output-file-tracing
+COPY --from=deps --chown=nextjs:nodejs /usr/local/lib/node_modules/sharp /usr/local/lib/node_modules/sharp
 COPY --from=builder --chown=nextjs:nodejs /app/.next/standalone ./
 COPY --from=builder --chown=nextjs:nodejs /app/.next/static ./.next/static
+COPY public ./public
 
 USER nextjs
 

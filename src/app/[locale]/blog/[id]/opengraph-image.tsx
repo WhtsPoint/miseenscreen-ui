@@ -14,16 +14,6 @@ interface Params {
     }
 }
 
-interface MetaDataParams {
-    params: {
-        locale: string
-    }
-}
-
-export async function generateImageMetadata({ params: { locale } }: MetaDataParams) {
-    return (await getAllBlogsId()).map((id) => ({ id }))
-}
-
 export default async function OGImage({ params: { locale, id } }: Params) {
     const { title } = await getBlogById(locale, id)
     const coverLink = await getBlogCoverById(locale, id)
@@ -41,11 +31,11 @@ export default async function OGImage({ params: { locale, id } }: Params) {
         </picture>
         <div style={{ width: '100%', display: 'flex', justifyContent: 'flex-end' }}>
             <div style={{ width: '400px', height: '100px', display: 'flex', justifyContent: 'center', alignItems: 'center', background: 'black' }}>
-                <h1 style={{ fontSize: '50px', color: 'white' }}>MISEENCREEN</h1>
+                <h1 style={{ fontSize: '50px', color: 'white' }}>MISEENSCREEN</h1>
             </div>
         </div>
         <div style={{ width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center', background: 'black' }}>
             <h2 style={{ fontSize: '25px', color: 'white', textAlign: 'center' }}>{title}</h2>
         </div>
-    </div>, { fonts: [{ name: 'openSans', data: await readFile('./src/utils/assets/fonts/open-sans.ttf') }] })
+    </div>)
 }

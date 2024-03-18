@@ -21,7 +21,7 @@ const config = {
         },
         blog: '/blog'
     },
-    api: 'http://localhost:5500/api/v0/'
+    api: process.env.NEXT_PUBLIC_API_URL
 }
 
 export default config

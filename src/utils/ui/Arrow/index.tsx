@@ -1,7 +1,7 @@
 'use client'
 
 import arrowImage from '@/utils/assets/images/arrow.svg'
-import styles from './styles.module.scss'
+import styles from './style.module.scss'
 import { cl } from '@/utils/lib/cl'
 import { ArrowDirection } from '@/utils/types/ArrowDirection'
 import { useEffect } from 'react'

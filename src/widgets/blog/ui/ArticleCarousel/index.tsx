@@ -2,7 +2,7 @@
 
 import { BlogPreview } from '../../interfaces/BlogPreview'
 import ArticlePreview from '../ArticlePreview'
-import styles from './styles.module.scss'
+import styles from './style.module.scss'
 import Arrow from '@/utils/ui/Arrow'
 import useCarousel from '@/utils/hooks/useCarousel'
 import { cl } from '@/utils/lib/cl'
