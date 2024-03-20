@@ -11,7 +11,8 @@ import { motion } from 'framer-motion'
 interface Params {
     direction?: ArrowDirection,
     className?: string,
-    onClick?: () => unknown
+    onClick?: () => unknown,
+    noAnimation?: boolean
 }
 
 const rotates = {
@@ -28,13 +29,13 @@ const animations = {
     'down': { x: 0, y: 5 }
 } as const
 
-export default function Arrow({ direction = 'right', className, onClick }: Params) {
+export default function Arrow({ direction = 'right', className, onClick, noAnimation }: Params) {
     const [ref, animate] = useAnimate()
     const isInView = useInView(ref, { once: true })
     const { x, y } = animations[direction]
 
     useEffect(() => {
-        if (isInView) {
+        if (isInView && !noAnimation) {
             animate(
                 ref.current,
                 { x: [0, x, 0], y: [0, y, 0] },

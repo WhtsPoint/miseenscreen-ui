@@ -1,3 +1,5 @@
+'use client'
+
 import { FormParams } from '../../interfaces/FormParams'
 import FileUpload from '../FileUpload'
 import { useTranslations } from 'next-intl'
@@ -13,7 +15,7 @@ import form from '@/utils/config/form'
 import { motion } from 'framer-motion'
 import { Option } from '../../types/Option'
 import useMultipleValues from '@/utils/hooks/useMultipleValues'
-import buttonStyles from '../../assets/styles/button.module.scss'
+import buttonStyles from '../../../../utils/assets/styles/button.module.scss'
 import styles from './styles.module.scss'
 import BasicLoading from '../../../../utils/ui/BasicLoading'
 

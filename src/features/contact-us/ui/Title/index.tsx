@@ -1,3 +1,5 @@
+'use client'
+
 import { useTranslations } from 'next-intl'
 import useTextTyping from '@/utils/hooks/useTextTyping'
 import { useEffect } from 'react'

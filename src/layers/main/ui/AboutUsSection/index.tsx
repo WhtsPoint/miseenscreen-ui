@@ -1,9 +1,7 @@
 'use client'
 
-import BackgroundVideo from '@/utils/ui/BackgroundVideo'
 import styles from './styles.module.scss'
 import { AboutUs } from '@/features/about-us'
-import videos from '@/utils/config/videos'
 import { useScroll, useTransform } from 'framer-motion'
 import { useRef } from 'react'
 import { motion } from 'framer-motion'
@@ -17,7 +15,6 @@ export default function AboutUsSection() {
     useCertainSection({ ref, section: 'our-story' })
 
     return (<motion.section style={{ opacity }} ref={ref} className={styles.aboutUs}>
-        <BackgroundVideo src={videos.aboutUs} className={styles.aboutUs__background} />
         <AboutUs className={styles.aboutUs__aboutUs} />
     </motion.section>)
 }

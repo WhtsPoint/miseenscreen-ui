@@ -1,0 +1,10 @@
+.adminPage {
+  display: flex;
+  flex-direction: column;
+  padding: 100px;
+  align-items: center;
+  &__list {
+    width: 100%;
+    max-width: 1000px;
+  }
+}

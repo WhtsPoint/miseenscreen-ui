@@ -1,9 +1,9 @@
-import styles from './styles.module.scss'
 import { useState } from 'react'
 import { Person } from '../../types/Person'
 import PersonInformation from '../PersonInformation'
 import PersonSelect from '../PersonSelect'
 import { cl } from '@/utils/lib/cl'
+import styles from './styles.module.scss'
 
 interface Params {
     className?: string

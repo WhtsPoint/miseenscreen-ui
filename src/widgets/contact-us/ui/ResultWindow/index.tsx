@@ -1,9 +1,11 @@
+'use client'
+
 import { cl } from '@/utils/lib/cl'
 import ResultCircle from '@/utils/ui/ResultCircle'
 import { useTranslations } from 'next-intl'
 import { useRef } from 'react'
 import styles from './styles.module.scss'
-import buttonStyle from '../../assets/styles/button.module.scss'
+import buttonStyle from '../../../../utils/assets/styles/button.module.scss'
 import { StaticImageData } from 'next/image'
 
 interface Params {

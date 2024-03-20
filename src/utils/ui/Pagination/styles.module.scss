@@ -1,0 +1,30 @@
+.pagination {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  &__list {
+    width: 100%;
+    padding: 0;
+    display: flex;
+    gap: 10px;
+    &__item {
+      width: 40px;
+      height: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      list-style-type: none;
+      border: 1px solid white;
+      color: white;
+      &_current {
+        background: white;
+        color: black;
+      }
+    }
+  }
+  &__arrow {
+    width: auto;
+    height: 25px;
+  }
+}

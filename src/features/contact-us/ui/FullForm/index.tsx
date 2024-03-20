@@ -1,3 +1,5 @@
+'use client'
+
 import { Form, FormParams } from '@/widgets/contact-us'
 import { useRef, useState } from 'react'
 import SectionSteps from '@/utils/ui/SectionSteps'
