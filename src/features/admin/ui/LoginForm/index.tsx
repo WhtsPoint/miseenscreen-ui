@@ -1,7 +1,6 @@
 'use client'
 
 import { LoginForm as UnfilledLoginForm, LoginFormData } from '@/widgets/admin'
-import login from '@/features/admin/api/login'
 import { useRouter } from '@/utils/lib/navigation'
 import loginWithCookie from '@/features/admin/action/loginWithCookie'
 

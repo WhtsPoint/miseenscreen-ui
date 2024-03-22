@@ -7,7 +7,7 @@
   position: relative;
   @media (max-width: 1024px) {
     height: fit-content;
-    & > div:nth-child(2) {
+    & > div:nth-child(1) {
       padding: 0 25px;
       flex-direction: column;
       & > div:first-child {
