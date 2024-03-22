@@ -1,3 +1,5 @@
+'use client'
+
 import Arrow from '@/utils/ui/Arrow'
 import styles from './styles.module.scss'
 import { cl } from '@/utils/lib/cl'
@@ -6,16 +8,17 @@ import { useState } from 'react'
 interface Pagination {
     setPage: (page: number) => unknown,
     page: number,
-    pageCount: number
+    pageCount: number|null
 }
 
 interface Params {
     pagination: Pagination
 }
 
-
 export default function Pagination({ pagination: { page: current, setPage, pageCount } }: Params) {
-    const length = 7
+    if (!pageCount) return
+
+    const length = 10
     const section = Math.ceil(current / length)
     const list = Array.from(Array(length).keys()).map((index) => {
         return length * (section - 1) + (index + 1)
@@ -50,11 +53,16 @@ export default function Pagination({ pagination: { page: current, setPage, pageC
     </nav>)
 }
 
-export function usePagination(pageCount: number): Pagination {
+export function usePagination(
+    pageCount: number|null,
+    onChange?: (value: number) => unknown
+): Pagination {
     const [value, setValue] = useState<number>(1)
 
-    const setPage = (value: number) => {
-        setValue(Math.max(1, Math.min(pageCount, value)))
+    const setPage = (newValue: number) => {
+        const correctValue = Math.max(1, Math.min(pageCount || newValue, newValue))
+        setValue(correctValue)
+        if (correctValue !== value) onChange?.(correctValue)
     }
 
     return { page: value, pageCount, setPage }

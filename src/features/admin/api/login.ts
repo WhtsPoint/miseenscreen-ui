@@ -10,7 +10,8 @@ export default async function login({ login, password }: LoginFormData): Promise
             {
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ username: login, password }),
-                method: 'POST'
+                method: 'POST',
+                cache: 'no-store'
             }
         )
     } catch (error) {

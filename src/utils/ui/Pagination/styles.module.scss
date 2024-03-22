@@ -1,12 +1,15 @@
 .pagination {
   width: 100%;
   display: flex;
+  justify-content: center;
   align-items: center;
   gap: 10px;
+  flex-wrap: wrap;
   &__list {
-    width: 100%;
-    padding: 0;
     display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 0;
     gap: 10px;
     &__item {
       width: 40px;
@@ -24,6 +27,7 @@
     }
   }
   &__arrow {
+    flex-shrink: 0;
     width: auto;
     height: 25px;
   }

@@ -1,17 +1,27 @@
+'use client'
+
 import { Form } from '../../interfaces/Form'
 import Accordion from '@/utils/ui/Accordion'
 import styles from './styles.module.scss'
 import config from '@/utils/config'
-import { cl } from '@/utils/lib/cl'
+import XIcon from '@/utils/ui/xIcon'
 
 interface Params {
-    form: Form
+    form: Form,
+    onDeleteButtonClick: () => unknown
 }
 
-export default function CallFormAccordion({ form }: Params) {
+export default function CallFormAccordion({ form, onDeleteButtonClick }: Params) {
     const { comment, fullName, companyName, email, phone, services, files, id } = form
 
-    return (<Accordion summary={<span className={styles.accordion__summary}>{comment}</span>}>
+    return (<Accordion
+        summary={<div className={styles.accordion__summary}>
+            <button className={styles.accordion__summary__delete} onClick={onDeleteButtonClick}>
+                <XIcon width={30} height={30} color={'white'} />
+            </button>
+            <span className={styles.accordion__summary__comment}>{comment}</span>
+    </div>}
+    >
         {<dl className={styles.accordion__formDetails}>
             <dt className={styles.accordion__formDetails__dt}>Comment</dt>
             <dd className={styles.accordion__formDetails__dd}>{comment}</dd>

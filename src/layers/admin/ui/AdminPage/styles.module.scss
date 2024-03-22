@@ -1,10 +1,20 @@
 .adminPage {
   display: flex;
   flex-direction: column;
-  padding: 100px;
+  padding: 100px 20px 0;
   align-items: center;
-  &__list {
+  color: white;
+  &__subscriptions, &__forms {
     width: 100%;
     max-width: 1000px;
+    &__list {
+      width: 100%;
+    }
+  }
+  &__forms__list > ul {
+    min-height: 620px;
+  }
+  &__subscriptions__list > ul {
+    min-height: 400px;
   }
 }

@@ -1,9 +1,19 @@
 .accordion {
   &__summary {
-    display: block;
-    width: 100%;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    &__delete {
+      border: none;
+      background: none;
+      padding: 0;
+    }
+    &__comment {
+      width: 100%;
+      display: block;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
   }
   &__formDetails {
     width: 100%;
@@ -14,7 +24,7 @@
     overflow: hidden;
     &__dt {
       padding: 10px 0;
-      font-size: 1.4em;
+      font-size: 1em;
     }
     &__dd {
       margin: 0;

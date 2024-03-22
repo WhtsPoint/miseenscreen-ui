@@ -7,7 +7,7 @@
     display: flex;
     align-items: center;
     gap: 20px;
-    border: 1px solid white;
+    border: 1px solid #989898;
     min-height: 50px;
     padding: 5px 20px;
     cursor: pointer;
@@ -23,7 +23,7 @@
   }
   &__details {
     width: 100%;
-    border: 1px solid white;
+    border: 1px solid #989898;
     margin-top: -1px;
   }
 }

@@ -11,7 +11,7 @@ interface Params extends Partial<Children<ReactNode>> {
 
 export default function Accordion({ summary, children }: Params) {
 
-    return (<details className={styles.accordion} onClick={console.log}>
+    return (<details className={styles.accordion}>
         <summary className={styles.accordion__summary}>
             <div className={styles.accordion__summary__content}>
                 {summary}
