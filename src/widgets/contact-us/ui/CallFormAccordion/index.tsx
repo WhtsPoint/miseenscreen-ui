@@ -42,7 +42,7 @@ export default function CallFormAccordion({ form, onDeleteButtonClick }: Params)
             <dt className={styles.accordion__formDetails__dt}>Files</dt>
             <ul className={styles.accordion__formDetails__files}>
                 {files.map((file, index) => <li key={index}><a
-                    href={`${config.api}call-form/${id}/${file}`}
+                    href={`/api/call-form/file?id=${id}&file=${file}`}
                 >
                     {'File ' + (index + 1)}
                 </a></li>)}

@@ -4,6 +4,7 @@ import { EmailSubscriptionsList } from '@/features/email-subscription'
 
 export default function AdminPage() {
     return (<div className={styles.adminPage}>
+        <h1>Admin Panel</h1>
         <section className={styles.adminPage__forms}>
             <h2>Contact Us Forms</h2>
             <CallFormsList countOnPage={8} className={styles.adminPage__forms__list} />
