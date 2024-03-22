@@ -11,9 +11,7 @@ export default async function loginWithCookie(data: LoginFormData): Promise<stri
 
     cookies().set({
         name: 'access_token',
-        value: token,
-        secure: true,
-        httpOnly: true
+        value: token
     })
 
     return null

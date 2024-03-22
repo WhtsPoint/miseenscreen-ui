@@ -31,7 +31,8 @@ export default function LoginForm({ className, onSend }: Params) {
             className={inputClass}
             onChange={onInput('login')}
             placeholder={'Login'}
-            name={'login'}/>
+            name={'login'}
+        />
         <input
             className={inputClass}
             onChange={onInput('password')}
