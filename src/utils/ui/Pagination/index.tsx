@@ -3,21 +3,20 @@
 import Arrow from '@/utils/ui/Arrow'
 import styles from './styles.module.scss'
 import { cl } from '@/utils/lib/cl'
-import { useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 
 interface Pagination {
-    setPage: (page: number) => unknown,
-    page: number,
-    pageCount: number|null
+    current: number,
+    pageCount: number,
+    setCurrent: (current: number) => unknown,
+    setPageCount: (pageCount: number) => unknown,
 }
 
 interface Params {
     pagination: Pagination
 }
 
-export default function Pagination({ pagination: { page: current, setPage, pageCount } }: Params) {
-    if (!pageCount) return
-
+export default function Pagination({ pagination: { current, pageCount, setCurrent } }: Params) {
     const length = 10
     const section = Math.ceil(current / length)
     const list = Array.from(Array(length).keys()).map((index) => {
@@ -27,7 +26,7 @@ export default function Pagination({ pagination: { page: current, setPage, pageC
 
     return (<nav className={styles.pagination}>
         <Arrow
-            onClick={() => setPage(current - 1)}
+            onClick={() => setCurrent(current - 1)}
             className={styles.pagination__arrow}
             direction={'left'}
             noAnimation
@@ -39,13 +38,13 @@ export default function Pagination({ pagination: { page: current, setPage, pageC
                     styles.pagination__list__item,
                     page === current && styles.pagination__list__item_current
                 )}
-                onClick={() => setPage(page)}
+                onClick={() => setCurrent(page)}
             >
                 {page}
             </li>)}
         </ul>
         <Arrow
-            onClick={() => setPage(current + 1)}
+            onClick={() => setCurrent(current + 1)}
             className={styles.pagination__arrow}
             direction={'right'}
             noAnimation
@@ -54,16 +53,29 @@ export default function Pagination({ pagination: { page: current, setPage, pageC
 }
 
 export function usePagination(
-    pageCount: number|null,
     onChange?: (value: number) => unknown
 ): Pagination {
-    const [value, setValue] = useState<number>(1)
+    const [current, setCurrent] = useState<number>(1)
+    const [pageCount, setPageCount] = useState<number>(1)
 
-    const setPage = (newValue: number) => {
-        const correctValue = Math.max(1, Math.min(pageCount || newValue, newValue))
-        setValue(correctValue)
-        if (correctValue !== value) onChange?.(correctValue)
+    const filterValue = useRef((nonCorrectValue: number, pageCount: number) => {
+        return Math.max(1, Math.min(pageCount, nonCorrectValue))
+    })
+
+    const onPageCountChange = ((pageCount: number) => {
+        setPageCount(pageCount)
+        changeCurrent(current, pageCount)
+    })
+
+    const onCurrentChange = (newCurrent: number) => {
+        changeCurrent(newCurrent, pageCount)
     }
 
-    return { page: value, pageCount, setPage }
+    const changeCurrent = (newValue: number, pageCount: number) => {
+        const correctValue = filterValue.current(newValue, pageCount)
+        setCurrent(correctValue)
+        if (correctValue !== current) onChange?.(correctValue)
+    }
+
+    return { current, pageCount, setCurrent: onCurrentChange, setPageCount: onPageCountChange }
 }

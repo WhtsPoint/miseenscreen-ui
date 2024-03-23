@@ -7,6 +7,7 @@ import useForms from '../../hooks/useForms'
 import useFormsDeleting from '../../hooks/useFormsDeleting'
 import { cl } from '@/utils/lib/cl'
 import styles from './styles.module.scss'
+import { useEffect } from 'react'
 
 interface Params {
     className?: string,
@@ -15,15 +16,17 @@ interface Params {
 
 export default function CallFormsList({ countOnPage, className }: Params) {
     const [forms, pageCount, getForms, isLoading] = useForms(countOnPage)
+    const pagination = usePagination(getForms)
     const [deleteForm, isDeleting] = useFormsDeleting()
-    const pagination = usePagination(pageCount, getForms)
+
+    useEffect(() => { pageCount && pagination.setPageCount(pageCount) }, [pageCount, pagination])
 
     const onDeleteButtonClick = (id: string) => async () => {
         const error = await deleteForm(id)
 
         if (error) return alert(error)
 
-        pagination.pageCount && await getForms(pagination.page)
+        pagination.pageCount && await getForms(pagination.current)
     }
 
     return (<div className={cl(styles.callFormList, className)}>
@@ -34,6 +37,6 @@ export default function CallFormsList({ countOnPage, className }: Params) {
                 onDeleteButtonClick={onDeleteButtonClick(form.id)}
             />)}
         </ul>
-        <Pagination pagination={pagination}  />
+        {pageCount && <Pagination pagination={pagination}  />}
     </div>)
 }
