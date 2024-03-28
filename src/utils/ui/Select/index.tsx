@@ -1,10 +1,10 @@
 import { ObjectType } from '@/utils/types/ObjectType'
-import styles from './style.module.scss'
 import Container from '@/utils/ui/Container'
 import { ReactNode, useState } from 'react'
 import { cl } from '@/utils/lib/cl'
 import { Children } from '@/utils/interfaces/Children'
 import useSelectClosing from '@/utils/hooks/useSelectClosing'
+import styles from './style.module.scss'
 
 interface Params extends Partial<Children<ReactNode>> {
     options: ObjectType<string, string>,
@@ -24,10 +24,10 @@ export default function Select(params: Params) {
     const swapVisibility = () => setIsVisible((prev) => !prev)
 
     return (<div ref={ref} onClick={swapVisibility} className={cl(styles.select, className)}>
-        <button type={'button'} className={cl(styles.select__value, valueClass)}>
-            {children}<span>{value ? options[value] : placeholder }</span>
+        <button data-tag={'select-value'} type={'button'} className={cl(styles.select__value, valueClass)}>
+            {children}<span>{value ? options[value] : placeholder}</span>
         </button>
-        <Container className={cl(styles.select__optionList, optionClass)} isShowed={isVisible}>
+        <Container tag={'select-optionList'} className={cl(styles.select__optionList, optionClass)} isHidden={!isVisible}>
             {Object.entries(options).map(([value, name]) => <button
                 type={'button'}
                 key={value}

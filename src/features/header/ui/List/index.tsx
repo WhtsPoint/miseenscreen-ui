@@ -24,7 +24,7 @@ export default function List({ children, className }: Params) {
         ])
     }
 
-    return (<div ref={ref} className={cl(styles.list, className)}>
+    return (<div  ref={ref} className={cl(styles.list, className)}>
         <button onClick={onClick} className={styles.list__button}>
             <Image alt={''} src={menuIcon} />
         </button>

@@ -8,9 +8,11 @@ import AboutUsSection from '../AboutUsSection'
 import FooterSection from '../FooterSection'
 import BlogSection from '../BlogSection'
 import WelcomeSectionWrapper from '../WelcomeSectionWrapper'
+import { HeaderThemeSwitcher } from '@/features/header'
 
 export default async function MainPage() {
    return (<WelcomeSectionWrapper>
+        <HeaderThemeSwitcher />
         <StackPage />
         <CooperationSection />
         <PhilosophySection />

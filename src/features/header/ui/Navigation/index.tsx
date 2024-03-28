@@ -1,18 +1,19 @@
-import { Link } from '@/utils/lib/navigation'
 import { LocaleSelect } from '@/widgets/header'
-import { Children } from '@/utils/interfaces/Children'
 import { forwardRef, ReactNode } from 'react'
+import { Link } from '@/utils/lib/navigation'
+import { Children } from '@/utils/interfaces/Children'
 import { ObjectType } from '@/utils/types/ObjectType'
 import { Translation } from '../../interfaces/Translation'
-import animations from '@/utils/assets/styles/animation.module.scss'
 import { cl } from '@/utils/lib/cl'
-import config from '@/utils/config'
 import { useSpecialSection } from '@/features/main'
+import { motion } from 'framer-motion'
+import config from '@/utils/config'
+import animations from '@/utils/assets/styles/animation.module.scss'
 
 interface Params {
     styles: ObjectType<string, string>,
     className?: string,
-    translation: Translation,
+    translation: Translation
 }
 
 const routes = config.routes.header
@@ -27,7 +28,7 @@ const Navigation = forwardRef<HTMLDivElement, Params>((
 ) => {
     const { invoke } = useSpecialSection()
 
-    return (<nav ref={ref} className={cl(styles.header__nav, className)}>
+    return (<nav data-tag={'header-navigation'} ref={ref} className={cl(styles.header__nav, className)}>
         <ul className={styles.header__nav__ul}>
             <StyledLi>
                 <Link href={routes.services} onClick={() => invoke('services')} scroll={false}>
@@ -65,5 +66,5 @@ const Navigation = forwardRef<HTMLDivElement, Params>((
 
 Navigation.displayName = 'Navigation'
 
-export default Navigation
+export default motion(Navigation)
 export type { Params as NavigationParams }

@@ -1,6 +1,8 @@
+const locales = ['en', 'ru', 'ua'] as const satisfies string[]
+
 const config = {
     locale: {
-        locales: ['en', 'ru', 'ua'],
+        locales,
         defaultLocale: 'en',
     },
     routes: {

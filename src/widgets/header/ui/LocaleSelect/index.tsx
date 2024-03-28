@@ -3,16 +3,17 @@
 import Select from '@/utils/ui/Select'
 import { useLocale } from 'use-intl'
 import { useRouter, usePathname } from '@/utils/lib/navigation'
-import styles from './style.module.scss'
-import icon from '@/utils/assets/images/planet.svg'
 import Image from 'next/image'
 import { cl } from '@/utils/lib/cl'
+import config from '@/utils/config'
+import styles from './style.module.scss'
+import icon from '@/utils/assets/images/planet.svg'
 
 const selectValues = {
     'en': 'ENG',
     'ru': 'RUS',
     'ua': 'UA'
-}
+} as const satisfies Record<(typeof config.locale.locales)[number], any>
 
 interface Params {
     className?: string
