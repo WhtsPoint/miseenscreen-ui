@@ -15,11 +15,11 @@ export default async function MainPage() {
         <HeaderThemeSwitcher />
         <StackPage />
         <CooperationSection />
-        <PhilosophySection />
         <StepsSection />
         <CasesSection />
         <CasesPointsSection />
         <AboutUsSection />
+        <PhilosophySection />
         <BlogSection />
         <FooterSection />
    </WelcomeSectionWrapper>)

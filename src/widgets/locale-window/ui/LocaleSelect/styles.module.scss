@@ -1,0 +1,47 @@
+.localeSelect {
+  max-width: 700px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px;
+  background: black;
+  color: white;
+  font-size: 1.5em;
+  text-align: center;
+  @media (max-width: 550px) {
+    font-size: 1.1em;
+  }
+}
+
+.localeList {
+  max-width: 250px;
+  width: 100%;
+  font-size: 0.8em;
+}
+
+.localeList .optionValue {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  border: 1px solid white;
+}
+
+.localeList .arrow {
+  display: block;
+  width: 10px;
+  height: 20px;
+  rotate: 90deg;
+  transform: translateY(50%);
+  margin-left: auto;
+}
+
+.localeSelect .localeList button:not(.arrow) {
+  padding: 10px;
+}
+
+.localeSelect .save {
+  margin-top: 30px;
+  font-size: 0.8em;
+
+}

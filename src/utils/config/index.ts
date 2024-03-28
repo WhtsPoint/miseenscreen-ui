@@ -1,8 +1,6 @@
-const locales = ['en', 'ru', 'ua'] as const satisfies string[]
-
 const config = {
     locale: {
-        locales,
+        locales: ['en', 'ru', 'ua'] as const,
         defaultLocale: 'en',
     },
     routes: {
@@ -22,6 +20,13 @@ const config = {
             analytics: '/services#custom-erp'
         },
         blog: '/blog'
+    },
+    contacts: {
+        email: 'commercial@miseenscreeen.com',
+        phone: {
+            current: '+1323-683-8107',
+            display: '+1 323 683 8107'
+        }
     },
     api: process.env.NEXT_PUBLIC_API_URL
 }

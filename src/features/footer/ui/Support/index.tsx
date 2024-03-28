@@ -7,7 +7,6 @@ export default function Support() {
     return (<Navigation title={t('title')} links={[
         { href: '#', text: t('graphic') },
         { href: '#', text: t('contact') },
-        { href: '#', text: t('personal-info') },
-        { href: '#', text: t('cookie') }
+        { href: '#', text: t('personal-info') }
     ]} />)
 }

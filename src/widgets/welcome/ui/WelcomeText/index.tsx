@@ -23,6 +23,6 @@ export default function WelcomeText({ scrollY }: Params) {
         <h3 className={styles.welcomeText__description}>
             {t('adaptation')}
         </h3>
-        <h2 className={styles.welcomeText__subtext}>Web app development</h2>
+        <h2 className={styles.welcomeText__subtext}>{t('sub')}</h2>
     </motion.article>)
 }

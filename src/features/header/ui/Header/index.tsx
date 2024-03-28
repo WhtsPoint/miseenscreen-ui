@@ -1,44 +1,33 @@
 'use client'
 
 import { HomeLogo, useHeaderSettings } from '@/widgets/header'
-import { Translation } from '../../interfaces/Translation'
 import Navigation from '../Navigation'
 import List from '../List'
 import { useEffect } from 'react'
 import { useAnimate } from 'framer-motion'
 import useWidthRef from '@/utils/hooks/useWidthRef'
+import { options, variants } from '../../utils/header-animation'
 import styles from './styles.module.scss'
 
-interface Params {
-    translation : Translation
-}
-
-const variants = {
-    solid: { background: 'rgba(0, 0, 0, 1)' },
-    transparent: { background: 'rgba(0, 0, 0, 0)' }
-} as const
-
-export default function Header({ translation }: Params) {
+export default function Header() {
     const { theme } = useHeaderSettings()
     const widthRef = useWidthRef()
     const [ref, animate] = useAnimate()
 
-    const navigationAttributes = { styles, translation }
-
     useEffect(() => {
-        const options = [variants[theme], { duration: 0.5 }] as const
+        const animation = [variants[theme], options] as const
         const width = widthRef.current
 
-        animate(ref.current, ...options)
-        animate('div[data-tag="select-optionList"]', ...options)
+        animate(ref.current, ...animation)
+        animate('div[data-tag="select-optionList"]', ...animation)
 
-        if (width && width < 1000) animate('nav[data-tag="header-navigation"]', ...options)
+        if (width && width < 1000) animate('nav[data-tag="header-navigation"]', ...animation)
     }, [widthRef, ref, theme, animate])
 
     return (<header ref={ref} className={styles.header}>
         <HomeLogo className={styles.header__logo} />
         <List className={styles.header__list}>
-            <Navigation {...navigationAttributes} />
+            <Navigation styles={styles} />
         </List>
     </header>)
 }

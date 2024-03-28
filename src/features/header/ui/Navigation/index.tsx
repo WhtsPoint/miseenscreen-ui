@@ -9,11 +9,11 @@ import { useSpecialSection } from '@/features/main'
 import { motion } from 'framer-motion'
 import config from '@/utils/config'
 import animations from '@/utils/assets/styles/animation.module.scss'
+import { useTranslations } from 'next-intl'
 
 interface Params {
     styles: ObjectType<string, string>,
     className?: string,
-    translation: Translation
 }
 
 const routes = config.routes.header
@@ -23,39 +23,40 @@ function StyledLi({ children }: Children<ReactNode>) {
 }
 
 const Navigation = forwardRef<HTMLDivElement, Params>((
-    { styles, translation: t, className }: Params,
+    { styles, className }: Params,
     ref
 ) => {
+    const t = useTranslations('header')
     const { invoke } = useSpecialSection()
 
     return (<nav data-tag={'header-navigation'} ref={ref} className={cl(styles.header__nav, className)}>
         <ul className={styles.header__nav__ul}>
             <StyledLi>
                 <Link href={routes.services} onClick={() => invoke('services')} scroll={false}>
-                    {t.services}
+                    {t('services')}
                 </Link>
             </StyledLi>
             <StyledLi>
                 <Link href={routes.cases} onClick={() => invoke('cases')} scroll={false}>
-                    {t.cases}
+                    {t('cases')}
                 </Link>
             </StyledLi>
             <StyledLi>
                 <Link href={routes.cooperation} onClick={() => invoke('cooperation')} scroll={false}>
-                    {t.cooperation}
+                    {t('cooperation')}
                 </Link>
             </StyledLi>
             <StyledLi>
                 <Link href={routes.ourStory} onClick={() => invoke('our-story')} scroll={false}>
-                    {t.ourStory}
+                    {t('our-story')}
                 </Link>
             </StyledLi>
             <StyledLi>
                 <Link href={routes.blog} onClick={() => invoke('blog')} scroll={false}>
-                    {t.blog}
+                    {t('blog')}
                 </Link>
             </StyledLi>
-            <StyledLi><Link href={routes.contactUs}>{t.contactUs}</Link></StyledLi>
+            <StyledLi><Link href={routes.contactUs}>{t('contact-us')}</Link></StyledLi>
             <LocaleSelect
                 className={styles.header__localeSelect}
                 optionClass={styles.header__localeSelect__optionList}

@@ -13,11 +13,12 @@ interface Params extends Partial<Children<ReactNode>> {
     optionClass?: string,
     className?: string,
     valueClass?: string,
-    placeholder?: string
+    placeholder?: string,
+    rightChildren?: ReactNode
 }
 
 export default function Select(params: Params) {
-    const {options, onChange, value, optionClass, className, children, valueClass, placeholder } = params
+    const {options, onChange, value, optionClass, className, children, valueClass, placeholder, rightChildren } = params
     const [isVisible, setIsVisible] = useState<boolean>(false)
     const ref = useSelectClosing<HTMLDivElement>({ onClose: () => { setIsVisible(false) } })
 
@@ -25,7 +26,7 @@ export default function Select(params: Params) {
 
     return (<div ref={ref} onClick={swapVisibility} className={cl(styles.select, className)}>
         <button data-tag={'select-value'} type={'button'} className={cl(styles.select__value, valueClass)}>
-            {children}<span>{value ? options[value] : placeholder}</span>
+            {children}<span>{value ? options[value] : placeholder}</span>{rightChildren}
         </button>
         <Container tag={'select-optionList'} className={cl(styles.select__optionList, optionClass)} isHidden={!isVisible}>
             {Object.entries(options).map(([value, name]) => <button

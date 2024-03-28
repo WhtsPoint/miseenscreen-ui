@@ -12,7 +12,8 @@ interface Params {
     direction?: ArrowDirection,
     className?: string,
     onClick?: () => unknown,
-    noAnimation?: boolean
+    noAnimation?: boolean,
+    noHover?: boolean
 }
 
 const rotates = {
@@ -29,7 +30,7 @@ const animations = {
     'down': { x: 0, y: 5 }
 } as const
 
-export default function Arrow({ direction = 'right', className, onClick, noAnimation }: Params) {
+export default function Arrow({ direction = 'right', className, onClick, noAnimation, noHover }: Params) {
     const [ref, animate] = useAnimate()
     const isInView = useInView(ref, { once: true })
     const { x, y } = animations[direction]
@@ -42,11 +43,11 @@ export default function Arrow({ direction = 'right', className, onClick, noAnima
                 { duration: 1, repeat: 1 }
             )
         }
-    }, [x, y, isInView, animate, ref])
+    }, [x, y, isInView, animate, ref, noAnimation])
 
     return (<button onClick={onClick} className={cl(styles.arrow, className)}>
         <motion.img
-            whileHover={{ x }}
+            {...(!noHover ? { whileHover: { x } } : {} )}
             ref={ref}
             src={arrowImage.src}
             style={{ rotate: rotates[direction] }}
