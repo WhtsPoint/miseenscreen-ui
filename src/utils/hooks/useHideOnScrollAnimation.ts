@@ -1,10 +1,18 @@
-import { TargetAndTransition, useAnimate, useMotionValueEvent, useScroll, useVelocity } from 'framer-motion'
+import {
+    TargetAndTransition,
+    useAnimate,
+    useMotionValueEvent,
+    useScroll,
+    useVelocity,
+    ValueAnimationTransition
+} from 'framer-motion'
 
 export default function useHideOnScrollAnimation(
     target: any,
     animate: (ReturnType<typeof useAnimate>)[1],
     showAnimation: TargetAndTransition,
-    hideAnimation: TargetAndTransition
+    hideAnimation: TargetAndTransition,
+    options?: ValueAnimationTransition
 ) {
     const { scrollYProgress } = useScroll()
     const speed = useVelocity(scrollYProgress)
@@ -12,10 +20,10 @@ export default function useHideOnScrollAnimation(
     useMotionValueEvent(speed, 'change', async (value) => {
         if (value === 0) return
 
-        await animate(
+        target && await animate(
             target,
             value > 0 ? hideAnimation : showAnimation,
-            { duration: 0.1, ease: 'linear' }
+            options
         )
     })
 }

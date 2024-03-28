@@ -5,8 +5,8 @@ import { options, variants } from '../../utils/header-animation'
 import config from '@/utils/config'
 import { useEffect } from 'react'
 import { motion, useAnimate } from 'framer-motion'
-import styles from './styles.module.scss'
 import useHideOnScrollAnimation from '@/utils/hooks/useHideOnScrollAnimation'
+import styles from './styles.module.scss'
 
 const contacts = config.contacts
 const containerHeight = 30
@@ -15,7 +15,13 @@ export default function Contacts() {
     const { theme } = useHeaderSettings()
     const [ref, animate] = useAnimate()
 
-    useHideOnScrollAnimation(ref.current, animate, { height: containerHeight }, { height: 0 })
+    useHideOnScrollAnimation(
+        ref.current,
+        animate,
+        { height: containerHeight },
+        { height: 0 },
+        { duration: 0.1, ease: 'linear' }
+    )
 
     useEffect(() => {
         animate(ref.current, variants[theme], options)
