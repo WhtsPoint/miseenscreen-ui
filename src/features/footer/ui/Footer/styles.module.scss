@@ -14,6 +14,9 @@
     flex: 1;
     border: 1px solid white;
     margin: -1px;
+    &__policyLink {
+      color: white;
+    }
     @media (max-width: 900px) {
       align-items: center;
       text-align: center;

@@ -19,7 +19,8 @@ const config = {
             hrSoftware: '/services#hr-software',
             analytics: '/services#custom-erp'
         },
-        blog: '/blog'
+        blog: '/blog',
+        privacyPolicy: '/privacy-policy'
     },
     contacts: {
         email: 'commercial@miseenscreeen.com',

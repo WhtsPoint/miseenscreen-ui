@@ -60,6 +60,9 @@ export default function Form({ onSend, className, isLoading }: Params) {
                     className={styles.form__services}
                     optionClass={styles.form__services__optionList}
                 />
+                {!getError('services') && <small className={styles.form__services__tip}>
+                    {t('services.multiple-select')}
+                </small>}
             </FormError>
             <FormError error={getError('employees-amount')}>
                 <input maxLength={100} name={'employeeNumber'} placeholder={t('employees-amount')} />
