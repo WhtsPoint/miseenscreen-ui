@@ -24,7 +24,7 @@ export default function LocaleSelect({ className, optionClass }: Params) {
     const currentLocale = useLocale()
     const { push } = useRouter()
     const currentPath = usePathname()
-    const onChange = (locale: string) => push(currentPath, { locale })
+    const onChange = (locale: string) => push(currentPath, { locale, scroll: false })
 
     return (<div className={styles.localSelect}>
         <Select

@@ -13,4 +13,6 @@ export default function HeaderTheme({ theme }: Params) {
     useEffect(() => {
         setTheme(theme)
     }, [setTheme, theme])
+
+    return null
 }

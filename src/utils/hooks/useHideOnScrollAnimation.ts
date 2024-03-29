@@ -14,15 +14,12 @@ export default function useHideOnScrollAnimation(
     hideAnimation: TargetAndTransition,
     options?: ValueAnimationTransition
 ) {
-    const { scrollYProgress } = useScroll()
-    const speed = useVelocity(scrollYProgress)
+    const { scrollY } = useScroll()
 
-    useMotionValueEvent(speed, 'change', async (value) => {
-        if (value === 0) return
-
+    useMotionValueEvent(scrollY, 'change', async (value) => {
         target && await animate(
             target,
-            value > 0 ? hideAnimation : showAnimation,
+            value > 100 ? hideAnimation : showAnimation,
             options
         )
     })

@@ -23,7 +23,7 @@ export default function LocaleWindowWrapper({ children }: Params) {
 
     const onSave = () => {
         setIsInvoked('true')
-        push(currentPath, { locale: selectedLocale })
+        push(currentPath, { locale: selectedLocale, scroll: false })
     }
 
     return (<>

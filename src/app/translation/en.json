@@ -15,6 +15,10 @@
     "privacy-policy": {
       "title": "Privacy Policy",
       "description": "This privacy statement explains what personal data MISEENSCREEN collects from you and how we use that data"
+    },
+    "terms": {
+      "title": "Terms",
+      "description": "This site provides online access to information about Company and our products, services and opportunities"
     }
   },
   "header": {
@@ -588,5 +592,8 @@
         ]
       }
     ]
+  },
+  "terms": {
+    "title": "Terms"
   }
 }

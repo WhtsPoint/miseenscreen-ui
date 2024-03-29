@@ -7,6 +7,6 @@ export default function Official() {
 
     return (<Navigation title={t('title')} links={[
         { href: config.routes.privacyPolicy, text: t('policy') },
-        { href: '#', text: t('terms') }
+        { href: config.routes.terms, text: t('terms') }
     ]} />)
 }

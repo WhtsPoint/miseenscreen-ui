@@ -20,7 +20,8 @@ const config = {
             analytics: '/services#custom-erp'
         },
         blog: '/blog',
-        privacyPolicy: '/privacy-policy'
+        privacyPolicy: '/privacy-policy',
+        terms: '/terms'
     },
     contacts: {
         email: 'commercial@miseenscreeen.com',
