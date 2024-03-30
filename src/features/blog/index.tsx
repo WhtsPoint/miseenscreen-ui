@@ -9,8 +9,7 @@ import WhatBlog from './ui/WhatBlog'
 import What2Blog from './ui/What2Blog'
 import BlogOtherArticles from './ui/BlogOtherArticles'
 import EmployeesPromotionBlog from './ui/EmployeesPromotionBlog'
-import ArticleTable from './ui/ArticleTable'
-import Logo from './ui/Logo'
+import ArticleTableWithButtonAndLogo from './ui/ArticleTableWithButtonAndLogo'
 
 export {
     ArticleCarousel,
@@ -23,7 +22,6 @@ export {
     EmployeesPromotionBlog,
     getBlogCoverById,
     getAllBlogsPreviews,
-    Logo,
     getAllBlogsPreviewsV2,
-    ArticleTable
+    ArticleTableWithButtonAndLogo
 }

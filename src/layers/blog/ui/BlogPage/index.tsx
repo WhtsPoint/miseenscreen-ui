@@ -1,8 +1,7 @@
 import { getLocale } from 'next-intl/server'
-import { getBlogById } from '@/features/blog'
+import { BlogOtherArticles, getBlogById } from '@/features/blog'
 import { Blog, BlogArticle } from '@/widgets/blog'
 import { FooterSection } from '@/layers/main'
-import { BlogSection } from '@/layers/main'
 import styles from './styles.module.scss'
 
 interface Params {
@@ -17,7 +16,7 @@ export default async function BlogPage({ blogId }: Params) {
         <BlogArticle blog={blog}>
             {blog.content}
         </BlogArticle>
-        <BlogSection />
+        <BlogOtherArticles id={blog.id} />
         <FooterSection className={styles.footer} />
     </div>)
 }

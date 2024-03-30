@@ -10,11 +10,11 @@ interface Params {
     articleClassName?: string
 }
 
-export default function ArticleTable({ blogs, ...rest }: Params) {
+export default function ArticleTable(params: Params) {
     const { push } = useRouter()
     const onClick = (blogId: BlogPreviewV2['id']) => {
         push(`${config.routes.blog}/${blogId}`)
     }
 
-    return (<NotFilledArticleTable {...rest} blogs={blogs} onClick={onClick} />)
+    return (<NotFilledArticleTable {...params} onClick={onClick} />)
 }

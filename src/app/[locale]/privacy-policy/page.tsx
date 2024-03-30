@@ -7,5 +7,7 @@ export const generateMetadata = async (params: Locale) => {
 }
 
 export default function Page() {
-    return (<PrivacyPolicy />)
+    return (<>
+        <PrivacyPolicy />
+    </>)
 }

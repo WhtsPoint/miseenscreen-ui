@@ -14,7 +14,7 @@ const pages = {
 
 const isPageExists = (locale: string): locale is keyof typeof pages=> locale in pages
 
-export default async function   Terms() {
+export default async function Terms() {
     const locale = await getLocale()
 
     if (!isPageExists(locale)) return notFound()

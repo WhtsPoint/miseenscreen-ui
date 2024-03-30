@@ -13,11 +13,8 @@ const containerHeight = 30
 
 export default function Contacts() {
     const { theme } = useHeaderSettings()
-    const [ref, animate] = useAnimate()
 
-    useHideOnScrollAnimation(
-        ref.current,
-        animate,
+    const [ref, animate] = useHideOnScrollAnimation(
         { height: containerHeight },
         { height: 0 },
         { duration: 0.1, ease: 'linear' }
