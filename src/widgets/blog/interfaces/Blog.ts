@@ -8,7 +8,8 @@ interface Blog {
     themes: string[],
     previewCover: StaticImageData,
     createdAt: Date,
-    content: ReactNode
+    content: ReactNode,
+    author: string
 }
 
 export type { Blog }

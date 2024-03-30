@@ -5,6 +5,7 @@ import { Fragment, ReactNode } from 'react'
 import styles from './styles.module.scss'
 import { getTranslations } from 'next-intl/server'
 import { HeaderThemeSwitcher } from '@/features/header'
+import dateToString from '@/utils/lib/dateToString'
 
 interface Params extends Children<ReactNode> {
     blog: Pick<Blog, 'title' | 'themes' | 'previewCover' | 'id' | 'createdAt'>
@@ -13,11 +14,6 @@ interface Params extends Children<ReactNode> {
 export default async function BlogArticle({ blog, children }: Params) {
     const t = await getTranslations('blogs.content.general')
     const { title, themes, previewCover: { width, height, src }, createdAt } = blog
-    const [year, month, day] = [
-        createdAt.getFullYear(),
-        ("0" + (createdAt.getMonth() + 1)).slice(-2),
-        ("0" + (createdAt.getDay() + 1)).slice(-2),
-    ]
 
     return (<section className={styles.blogArticle}>
         <Image
@@ -41,7 +37,7 @@ export default async function BlogArticle({ blog, children }: Params) {
                     </div>
                     <div className={styles.blogArticle__content__header__meta__themes}>
                         <p>{t('created-at')}</p>
-                        <p>{`${month}.${day}.${year}`}</p>
+                        <p>{dateToString(createdAt)}</p>
                     </div>
                 </div>
             </header>

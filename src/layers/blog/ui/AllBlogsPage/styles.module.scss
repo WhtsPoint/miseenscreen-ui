@@ -1,0 +1,9 @@
+.page {
+  padding: 100px 20px 0;
+  & .table {
+    padding: 20px 0;
+    & .blog {
+      padding: 20px;
+    }
+  }
+}

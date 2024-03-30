@@ -1,0 +1,12 @@
+.articleList {
+  max-width: 1500px;
+  width: 100%;
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(auto-fill, minmax(0, 400px));
+  gap: 40px;
+  margin: auto;
+  & .blogTitle {
+    min-height: 70px;
+  }
+}

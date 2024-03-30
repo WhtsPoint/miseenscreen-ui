@@ -6,10 +6,11 @@ import { HeaderWithContacts } from '@/layers/header'
 import { Children } from '@/utils/interfaces/Children'
 import useCertainMessages from '@/app/hooks/useCertainIntlMessages'
 import { ReactNode } from 'react'
-import IBMPlexSans from '@/utils/assets/fonts/IBMPlexSans'
 import config from '@/utils/config'
 import styles from './styles/root.module.scss'
 import './styles/global.scss'
+import IBMPlexSans from '@/utils/assets/fonts/IBMPlexSans'
+import { cl } from '@/utils/lib/cl'
 
 export function generateStaticParams() {
     return config.locale.locales.map((locale) => ({locale}));
@@ -27,7 +28,7 @@ export default function DefaultLayout({ children, params }: Children<ReactNode> 
     const messages = useCertainMessages(messageKeys)
 
     return (<html lang={locale}>
-    <body style={IBMPlexSans.style} className={styles.root}>
+    <body className={cl(styles.root, IBMPlexSans.variable)}>
     <ReCaptchaModal />
         <ReCaptchaProvider>
                 <NextIntlClientProvider messages={messages} locale={locale}>
