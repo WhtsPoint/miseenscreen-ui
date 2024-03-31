@@ -5,14 +5,17 @@ import Accordion from '@/utils/ui/Accordion'
 import styles from './styles.module.scss'
 import config from '@/utils/config'
 import XIcon from '@/utils/ui/xIcon'
+import { dateToStringWithTime } from '@/utils/lib/dateToString'
+import { ReactNode } from 'react'
 
 interface Params {
     form: Form,
-    onDeleteButtonClick: () => unknown
+    onDeleteButtonClick: () => unknown,
+    statusComponent: ReactNode
 }
 
-export default function CallFormAccordion({ form, onDeleteButtonClick }: Params) {
-    const { comment, fullName, companyName, email, phone, services, files, id } = form
+export default function CallFormAccordion({ form, onDeleteButtonClick, statusComponent }: Params) {
+    const { comment, fullName, companyName, email, phone, services, files, id, postedAt } = form
 
     return (<Accordion
         summary={<div className={styles.accordion__summary}>
@@ -47,6 +50,12 @@ export default function CallFormAccordion({ form, onDeleteButtonClick }: Params)
                     {'File ' + (index + 1)}
                 </a></li>)}
             </ul>
+            {postedAt && (<>
+                <dt className={styles.accordion__formDetails__dt}>Posted At</dt>
+                <dd className={styles.accordion__formDetails__dd}>{dateToStringWithTime(new Date(postedAt))}</dd>
+            </>)}
+            <dt className={styles.accordion__formDetails__dt}>Status</dt>
+            {statusComponent}
         </dl>}
     </Accordion>)
 }

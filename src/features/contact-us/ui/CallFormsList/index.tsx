@@ -8,6 +8,8 @@ import useFormsDeleting from '../../hooks/useFormsDeleting'
 import { cl } from '@/utils/lib/cl'
 import styles from './styles.module.scss'
 import { useEffect } from 'react'
+import StatusSwitcher from '../StatusSwitcher'
+import { frame } from 'framer-motion'
 
 interface Params {
     className?: string,
@@ -35,6 +37,7 @@ export default function CallFormsList({ countOnPage, className }: Params) {
                 key={form.id}
                 form={form}
                 onDeleteButtonClick={onDeleteButtonClick(form.id)}
+                statusComponent={<StatusSwitcher formId={form.id} initStatus={form.status} />}
             />)}
         </ul>
         {pageCount && <Pagination pagination={pagination}  />}

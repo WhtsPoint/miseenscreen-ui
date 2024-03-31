@@ -8,7 +8,7 @@ const config = {
             cases: '/#cases',
             cooperation: '/#cooperation',
             ourStory: '/#our-story',
-            blog: '/#blog',
+            blog: '/blog',
             contactUs: '/contact',
             services: '/#services'
         },

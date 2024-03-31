@@ -1,0 +1,1 @@
+export const statuses = ['inWork', 'done'] as const

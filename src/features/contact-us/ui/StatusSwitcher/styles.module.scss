@@ -1,0 +1,8 @@
+.statusSwitcher {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  & .loading {
+    width: fit-content;
+  }
+}

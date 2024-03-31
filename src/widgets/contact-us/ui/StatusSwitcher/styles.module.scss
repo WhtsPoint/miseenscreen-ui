@@ -1,0 +1,13 @@
+.statusSwitcher {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  & .status {
+    width: 70px;
+    text-align: center;
+  }
+  & .arrow {
+    width: auto;
+    height: 30px;
+  }
+}

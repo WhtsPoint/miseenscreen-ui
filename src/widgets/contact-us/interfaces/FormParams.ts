@@ -1,6 +1,6 @@
 import { Form } from './Form'
 
-interface FormParams extends Omit<Form, 'id' | 'files'> {
+interface FormParams extends Omit<Form, 'id' | 'files' | 'postedAt' | 'status'> {
     files: File[]
 }
 

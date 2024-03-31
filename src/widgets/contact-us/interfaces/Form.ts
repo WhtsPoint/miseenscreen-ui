@@ -1,3 +1,5 @@
+import { Status } from '../types/Status'
+
 interface Form {
     id: string,
     comment: string,
@@ -7,7 +9,9 @@ interface Form {
     employeeNumber: string,
     phone: string,
     services: string[],
-    files: string[]
+    files: string[],
+    postedAt?: string,
+    status?: Status
 }
 
 export type { Form }

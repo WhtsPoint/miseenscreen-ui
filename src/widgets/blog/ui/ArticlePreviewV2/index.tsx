@@ -1,6 +1,5 @@
 import { BlogPreviewV2 } from '../../interfaces/BlogPreviewV2'
 import { cl } from '@/utils/lib/cl'
-import dateToString from '@/utils/lib/dateToString'
 import { motion } from 'framer-motion'
 import styles from './styles.module.scss'
 
@@ -14,7 +13,7 @@ interface Params {
 export default function ArticlePreviewV2(
     { blog, className, titleClassName, onClick }: Params
 ) {
-    const { title, previewCover, createdAt, author, themes } = blog
+    const { title, previewCover, themes } = blog
     const { src, width, height } = previewCover
 
     return (<motion.button whileHover={'hover'} onClick={onClick} className={cl(styles.articlePreview, className)}>
@@ -32,9 +31,9 @@ export default function ArticlePreviewV2(
                 })
             }
             </ul>
-            <div className={styles.another}>
-                <span>{dateToString(createdAt)}</span>
-                <span>{author}</span>
-            </div>
+            {/*<div className={styles.another}>*/}
+            {/*    <span>{dateToString(createdAt)}</span>*/}
+            {/*    <span>{author}</span>*/}
+            {/*</div>*/}
     </motion.button>)
 }
