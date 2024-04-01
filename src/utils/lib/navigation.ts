@@ -6,6 +6,6 @@ export const { Link, useRouter, usePathname, redirect } = createLocalizedPathnam
     string[],
     ObjectType<string, string>
 >({
-    locales: config.locale.locales,
+    locales: [...config.locale.locales] as string[],
     pathnames: { '/': '/' }
 })

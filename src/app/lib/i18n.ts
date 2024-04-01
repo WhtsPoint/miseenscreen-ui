@@ -1,14 +1,14 @@
 import { getRequestConfig } from 'next-intl/server'
-import config from '@/utils/config'
 import deepAssign from '@/utils/lib/deepAssign'
 import { notFound } from 'next/navigation'
+import config from '@/utils/config'
 
 const loadTranslation = async (locale: string) => ({
     messages: (await import(`../translation/${locale}.json`)).default
 })
 
 export default getRequestConfig(async ({locale}) => {
-    if (!config.locale.locales.includes(locale)) notFound()
+    if (!([...config.locale.locales] as string[]).includes(locale)) notFound()
 
     const defaultTranslation = await loadTranslation(config.locale.defaultLocale)
 

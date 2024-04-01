@@ -1,13 +1,13 @@
 'use client'
 
-import { BlogPreview } from '../../interfaces/BlogPreview'
+import { BlogPreviewV2 } from '../../interfaces/BlogPreviewV2'
 import ArticlePreviewV2 from '@/widgets/blog/ui/ArticlePreviewV2'
 import { cl } from '@/utils/lib/cl'
 import styles from './styles.module.scss'
 
 interface Params {
-    blogs: BlogPreview[],
-    onClick?: (blogId: BlogPreview['id']) => unknown,
+    blogs: BlogPreviewV2[],
+    onClick?: (blogId: BlogPreviewV2['id']) => unknown,
     className?: string,
     articleClassName?: string
 }
