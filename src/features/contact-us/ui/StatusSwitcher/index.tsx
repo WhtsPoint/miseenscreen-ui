@@ -1,3 +1,5 @@
+'use client'
+
 import { Status, StatusSwitcher as UnfilledStatusSwitcher } from '@/widgets/contact-us'
 import useDebounce from '@/utils/hooks/useDebounce'
 import updateForm from '@/features/contact-us/action/updateForm'

@@ -1,0 +1,7 @@
+.adminComment {
+  display: flex;
+  gap: 10px;
+  & .loading {
+    width: fit-content;
+  }
+}

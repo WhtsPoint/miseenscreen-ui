@@ -1,10 +1,11 @@
+'use client'
+
 import { Status } from '@/widgets/contact-us'
 import { useState } from 'react'
-import styles from './styles.module.scss'
 import Arrow from '@/utils/ui/Arrow'
 import { statuses } from '@/widgets/contact-us/utils/status'
 import cycleMove from '@/utils/lib/cycleMove'
-
+import styles from './styles.module.scss'
 
 interface Params {
     initStatus?: Status,

@@ -11,7 +11,8 @@ interface Form {
     services: string[],
     files: string[],
     postedAt?: string,
-    status?: Status
+    status?: Status,
+    adminComment?: string
 }
 
 export type { Form }

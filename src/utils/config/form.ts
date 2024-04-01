@@ -10,6 +10,9 @@ const form = {
             'application/vnd.openxmlformats-officedocument.wordprocessingml.document',
             'application/msword'
         ]
+    },
+    authorComment: {
+        maxLength: 3000
     }
 }
 

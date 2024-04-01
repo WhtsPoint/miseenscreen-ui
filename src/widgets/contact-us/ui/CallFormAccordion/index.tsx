@@ -11,10 +11,11 @@ import { ReactNode } from 'react'
 interface Params {
     form: Form,
     onDeleteButtonClick: () => unknown,
-    statusComponent: ReactNode
+    statusComponent: ReactNode,
+    adminCommentComponent: ReactNode
 }
 
-export default function CallFormAccordion({ form, onDeleteButtonClick, statusComponent }: Params) {
+export default function CallFormAccordion({ form, onDeleteButtonClick, statusComponent, adminCommentComponent }: Params) {
     const { comment, fullName, companyName, email, phone, services, files, id, postedAt } = form
 
     return (<Accordion
@@ -56,6 +57,8 @@ export default function CallFormAccordion({ form, onDeleteButtonClick, statusCom
             </>)}
             <dt className={styles.accordion__formDetails__dt}>Status</dt>
             {statusComponent}
+            <dt className={styles.accordion__formDetails__dt}>Admin comment</dt>
+            {adminCommentComponent}
         </dl>}
     </Accordion>)
 }

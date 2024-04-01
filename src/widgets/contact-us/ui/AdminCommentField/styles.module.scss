@@ -1,0 +1,12 @@
+.adminComment {
+  max-width: 500px;
+  width: 100%;
+  height: 300px;
+  background: none;
+  resize: none;
+  color: white;
+  outline: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}

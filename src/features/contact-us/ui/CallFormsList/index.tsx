@@ -10,6 +10,7 @@ import styles from './styles.module.scss'
 import { useEffect } from 'react'
 import StatusSwitcher from '../StatusSwitcher'
 import { frame } from 'framer-motion'
+import AdminCommentField from '../AdminCommentField'
 
 interface Params {
     className?: string,
@@ -38,6 +39,7 @@ export default function CallFormsList({ countOnPage, className }: Params) {
                 form={form}
                 onDeleteButtonClick={onDeleteButtonClick(form.id)}
                 statusComponent={<StatusSwitcher formId={form.id} initStatus={form.status} />}
+                adminCommentComponent={<AdminCommentField formId={form.id} initComment={form.adminComment} />}
             />)}
         </ul>
         {pageCount && <Pagination pagination={pagination}  />}
