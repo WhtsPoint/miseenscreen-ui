@@ -12,7 +12,6 @@ import { HeaderThemeSwitcher } from '@/features/header'
 
 export default async function MainPage() {
    return (<WelcomeSectionWrapper>
-        <HeaderThemeSwitcher />
         <StackPage />
         <CooperationSection />
         <StepsSection />

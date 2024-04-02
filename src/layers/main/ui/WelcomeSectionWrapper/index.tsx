@@ -1,13 +1,14 @@
 'use client'
 
-import WelcomeSection from '@/layers/main/ui/WelcomeSection'
+import { ReactNode } from 'react'
+import WelcomeSection from '../WelcomeSection'
 import { Children } from '@/utils/interfaces/Children'
-import { ReactNode, useRef } from 'react'
+import useHeaderTransition from '../../hooks/useHeaderTransition'
 
 interface Params extends Children<ReactNode> {}
 
 export default function WelcomeSectionWrapper({ children }: Params ) {
-    const ref = useRef(null)
+    const ref = useHeaderTransition()
 
     return (<>
         <WelcomeSection ref={ref} />

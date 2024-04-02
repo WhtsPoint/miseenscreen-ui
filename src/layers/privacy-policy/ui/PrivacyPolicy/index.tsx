@@ -1,6 +1,6 @@
 import { getTranslations } from 'next-intl/server'
-import documentStyles from '@/utils/assets/styles/document.module.scss'
 import { Fragment } from 'react'
+import documentStyles from '@/utils/assets/styles/document.module.scss'
 
 export default async function PrivacyPolicy() {
     const t = await getTranslations('privacy-policy')
