@@ -1,9 +1,9 @@
 import { Item } from '@/widgets/stack'
 import { useTranslations } from 'next-intl'
-import styles from './styles.module.scss'
-import videos from '@/utils/config/videos'
+import AnalyticsLink from '@/features/stack/ui/AnalyticsLink'
 import { CSSProperties } from 'react'
-import config from '@/utils/config'
+import videos from '@/utils/config/videos'
+import styles from './styles.module.scss'
 
 interface Params {
     style?: CSSProperties
@@ -12,11 +12,11 @@ interface Params {
 export default function Analytics({ style }: Params) {
     const t = useTranslations('stack')
 
-    return (<Item
-        style={style}
-        video={{ src: videos.stack[0] }}
-        theme={t('analytics')}
-        themeClass={styles.themeText}
-        href={config.routes.services.analytics}
-    />)
+    return (<AnalyticsLink style={style}>
+        <Item
+            video={{ src: videos.stack[0] }}
+            theme={t('analytics')}
+            themeClass={styles.themeText}
+        />
+    </AnalyticsLink>)
 }

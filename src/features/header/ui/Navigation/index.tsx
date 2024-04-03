@@ -1,62 +1,27 @@
+import ServiceNavigation from '../ServiceNavigation'
 import { LocaleSelect } from '@/widgets/header'
-import { forwardRef, ReactNode } from 'react'
-import { Link } from '@/utils/lib/navigation'
-import { Children } from '@/utils/interfaces/Children'
-import { ObjectType } from '@/utils/types/ObjectType'
-import { Translation } from '../../interfaces/Translation'
-import { cl } from '@/utils/lib/cl'
-import { useSpecialSection } from '@/features/main'
+import { forwardRef } from 'react'
+import { useTranslations } from 'next-intl'
+import Item from '../Item'
 import { motion } from 'framer-motion'
 import config from '@/utils/config'
-import animations from '@/utils/assets/styles/animation.module.scss'
-import { useTranslations } from 'next-intl'
-
-interface Params {
-    styles: ObjectType<string, string>,
-    className?: string,
-}
+import styles from './styles.module.scss'
 
 const routes = config.routes.header
 
-function StyledLi({ children }: Children<ReactNode>) {
-    return (<li className={animations.underline}>{children}</li>)
-}
-
-const Navigation = forwardRef<HTMLDivElement, Params>((
-    { styles, className }: Params,
-    ref
-) => {
+const Navigation = forwardRef<HTMLDivElement>((_, ref) => {
     const t = useTranslations('header')
-    const { invoke } = useSpecialSection()
 
-    return (<nav data-tag={'header-navigation'} ref={ref} className={cl(styles.header__nav, className)}>
-        <ul className={styles.header__nav__ul}>
-            <StyledLi>
-                <Link href={routes.services} onClick={() => invoke('services')} scroll={false}>
-                    {t('services')}
-                </Link>
-            </StyledLi>
-            <StyledLi>
-                <Link href={routes.cases} onClick={() => invoke('cases')} scroll={false}>
-                    {t('cases')}
-                </Link>
-            </StyledLi>
-            <StyledLi>
-                <Link href={routes.cooperation} onClick={() => invoke('cooperation')} scroll={false}>
-                    {t('cooperation')}
-                </Link>
-            </StyledLi>
-            <StyledLi>
-                <Link href={routes.ourStory} onClick={() => invoke('our-story')} scroll={false}>
-                    {t('our-story')}
-                </Link>
-            </StyledLi>
-            <StyledLi>
-                <Link href={routes.blog} onClick={() => invoke('blog')} scroll={false}>
-                    {t('blog')}
-                </Link>
-            </StyledLi>
-            <StyledLi><Link href={routes.contactUs}>{t('contact-us')}</Link></StyledLi>
+    return (<nav data-tag={'header-navigation'} ref={ref} className={styles.nav}>
+        <ul className={styles.list}>
+            <ServiceNavigation>
+                <Item href={routes.services} section={'services'}>{t('services')}</Item>
+            </ServiceNavigation>
+            <Item href={routes.cases} section={'cases'}>{t('cases')}</Item>
+            <Item href={routes.cooperation} section={'cooperation'}>{t('cooperation')}</Item>
+            <Item href={routes.ourStory} section={'our-story'}>{t('our-story')}</Item>
+            <Item href={routes.blog} section={'blog'}>{t('blog')}</Item>
+            <Item href={routes.contactUs} section={'contact-us'}>{t('contact-us')}</Item>
             <LocaleSelect
                 className={styles.header__localeSelect}
                 optionClass={styles.header__localeSelect__optionList}
@@ -68,4 +33,3 @@ const Navigation = forwardRef<HTMLDivElement, Params>((
 Navigation.displayName = 'Navigation'
 
 export default motion(Navigation)
-export type { Params as NavigationParams }

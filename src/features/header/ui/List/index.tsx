@@ -20,11 +20,11 @@ export default function List({ children, className }: Params) {
         isHidden.set(!isHidden.get())
         !isHidden.get() && animate([
             ['nav li', { opacity: [0, 1] }, { delay: stagger(0.1) }],
-            ['nav div', { opacity: [0, 1] }, { at: '-0.2' }]
+            ['nav div[data-tag="locale-select"]', { opacity: [0, 1] }, { at: '-0.2' }]
         ])
     }
 
-    return (<div  ref={ref} className={cl(styles.list, className)}>
+    return (<div ref={ref} className={cl(styles.list, className)}>
         <button onClick={onClick} className={styles.list__button}>
             <Image alt={''} src={menuIcon} />
         </button>

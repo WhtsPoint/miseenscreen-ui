@@ -27,7 +27,7 @@ export default function Header() {
     return (<header ref={ref} className={styles.header}>
         <HomeLogo className={styles.header__logo} />
         <List className={styles.header__list}>
-            <Navigation styles={styles} />
+            <Navigation />
         </List>
     </header>)
 }

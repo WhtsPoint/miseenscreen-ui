@@ -1,4 +1,4 @@
-@mixin header {
+.header {
   width: 100%;
   display: flex;
   align-items: center;
@@ -11,23 +11,6 @@
     }
     @media (max-width: 340px) {
       font-size: 0.6em;
-    }
-  }
-  &__nav {
-    &__ul {
-      display: flex;
-      align-items: center;
-      gap: 20px;
-      list-style: none;
-      text-transform: uppercase;
-      margin: 0;
-    }
-    li, a {
-      color: white;
-      cursor: pointer;
-    }
-    @media (max-width: 1000px) {
-      //background: inherit;
     }
   }
   &__list {
@@ -55,8 +38,4 @@
   &__localeSelect button {
     font-weight: bold;
   }
-}
-
-.header {
-  @include header
 }

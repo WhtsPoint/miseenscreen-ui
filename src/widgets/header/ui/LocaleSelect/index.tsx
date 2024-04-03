@@ -26,7 +26,7 @@ export default function LocaleSelect({ className, optionClass }: Params) {
     const currentPath = usePathname()
     const onChange = (locale: string) => push(currentPath, { locale, scroll: false })
 
-    return (<div className={styles.localSelect}>
+    return (<div data-tag={'locale-select'} className={styles.localSelect}>
         <Select
             className={cl(styles.localSelect__select, className)}
             optionClass={cl(styles.localSelect__select__options, optionClass)}
