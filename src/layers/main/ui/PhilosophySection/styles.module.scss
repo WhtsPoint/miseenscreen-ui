@@ -8,19 +8,21 @@
   }
   &__video {
     width: 100%;
-    flex: 3;
+    position: absolute;
+    z-index: -1;
+    opacity: 0.55;
     @media (max-width: 1024px) {
-      flex: none;
-      height: 150px;
+      height: 500px;
     }
   }
   &__information {
+    height: 100%;
     display: flex;
-    gap: 30px;
-    flex: 8;
+    align-items: center;
+    gap: 70px;
     padding: 50px;
     @media (max-width: 1024px) {
-      flex-direction: column;
+      flex-direction: column-reverse;
       padding: 20px;
     }
     &__title {
@@ -31,10 +33,10 @@
       color: white;
       font-size: 3em;
       text-transform: uppercase;
+      text-align: center;
       @media (max-width: 1024px) {
         width: 100%;
         flex: none;
-        text-align: center;
         margin: 20px 0;
       }
       @media (max-width: 600px) {
@@ -42,7 +44,8 @@
       }
     }
     &__point {
-      flex: 1;
+      height: 100%;
+      padding: 200px 0;
       @media (max-width: 1024px) {
         align-items: center;
         gap: 20px;

@@ -9,17 +9,21 @@ import FooterSection from '../FooterSection'
 import BlogSection from '../BlogSection'
 import WelcomeSectionWrapper from '../WelcomeSectionWrapper'
 import { HeaderThemeSwitcher } from '@/features/header'
+import { ContactUsModal } from '@/widgets/contact-us'
+import { ContactUsModalWrapper } from '@/features/contact-us'
 
 export default async function MainPage() {
-   return (<WelcomeSectionWrapper>
-        <StackPage />
-        <CooperationSection />
-        <StepsSection />
-        <CasesSection />
-        <CasesPointsSection />
-        <AboutUsSection />
-        <PhilosophySection />
-        <BlogSection />
-        <FooterSection />
-   </WelcomeSectionWrapper>)
+   return (<ContactUsModalWrapper>
+       <WelcomeSectionWrapper>
+            <StackPage />
+            <CooperationSection />
+            <StepsSection />
+            <CasesSection />
+            <CasesPointsSection />
+            <AboutUsSection />
+            <PhilosophySection />
+            <BlogSection />
+            <FooterSection />
+       </WelcomeSectionWrapper>
+   </ContactUsModalWrapper>)
 }

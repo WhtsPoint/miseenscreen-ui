@@ -55,12 +55,13 @@
   },
   "philosophy": {
     "title": "Miseenscreen philosophy",
-    "allInOnce-article": "Everything everywhere and at once",
+    "allInOnce-article": "Everything Everywhere And At Once",
     "allInOnce-description": "MISEENSCREEN offers a full range of services to bring your idea to life on smartphone screens and other devices. We can assist you with creating a name, style, logo, developing a concept, writing texts, implementing functionality, and providing support for project launch. We are prepared to provide everything needed for the successful realization of your project.",
-    "companyInSmartphone-article": "Company in smartphone concept",
+    "companyInSmartphone-article": "Company In Smartphone Concept",
     "companyInSmartphone-description": "When developing web applications, the MISEENSCREEN team adheres to the concept of \"company in a smartphone.\" This concept aims to assist businesses in optimizing their systems and consolidating processes that involve multiple departments into one button.\n\nWe also offer our clients a solution that streamlines subsequent maintenance of the web application. We develop key management functions that minimize the need to involve a programmer for product maintenance.",
-    "passionate-article": "Passionate and in touch",
-    "passionate-description": "At every stage of your project, the MISEENSCREEN team consists of individuals who are not only interested in the successful implementation of the project at present but also pay attention to the long-term perspective that influences the company's development history. We actively participate in every stage of your project.\n\nOur first major project was executed by two specialists who deeply studied each stage, starting from the technical requirements and design, and ending with back-end, front-end, and QA. Today, when developing a new project, we work as a team consisting of experienced specialists and talented professionals. However, at every stage of the project, we retain our expertise and support from the creators who continuously acquire knowledge of new systems and technologies in their respective areas of responsibility.\n\nYou can find additional information in the \"Our Story\" section."
+    "passionate-article": "Passionate And In Touch",
+    "passionate-description": "At every stage of your project, the MISEENSCREEN team consists of individuals who are not only interested in the successful implementation of the project at present but also pay attention to the long-term perspective that influences the company's development history. We actively participate in every stage of your project.\n\nOur first major project was executed by two specialists who deeply studied each stage, starting from the technical requirements and design, and ending with back-end, front-end, and QA. Today, when developing a new project, we work as a team consisting of experienced specialists and talented professionals. However, at every stage of the project, we retain our expertise and support from the creators who continuously acquire knowledge of new systems and technologies in their respective areas of responsibility.",
+    "passionate-link": "You can find additional information in the \"Our Story\" section."
   },
   "steps": {
     "title": "Web app\nDevelopment\nSteps",
@@ -192,6 +193,11 @@
       "to-form": "Return to form",
       "to-home": "Return to home page"
     }
+  },
+  "contact-us-modal": {
+    "description": " Get a plan and concept for the implementation of your goals and ideas with a calculation of the cost and terms.",
+    "button-text": "Contact",
+    "close": "Close"
   },
   "services": {
     "ecommerce": {

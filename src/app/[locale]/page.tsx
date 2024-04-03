@@ -19,7 +19,8 @@ const messageKeys = [
     'cases-points',
     'about-us',
     'footer',
-    'email-subscription'
+    'email-subscription',
+    'contact-us-modal'
 ] as const satisfies string[]
 
 interface Params {

@@ -8,9 +8,9 @@ const videos = {
         'https://www.dropbox.com/scl/fi/wsszeim1e435wdxpedjqs/5_1.mp4?rlkey=kadu13ba8c0330vj7lrwhycie&raw=1'
     ],
     cooperation: 'https://www.dropbox.com/scl/fi/at9fj6uwvk13yhkx4qh75/1.mp4?rlkey=9q4hriviq1lx091tbw850d2gn&raw=1',
-    philosophy: 'https://www.dropbox.com/scl/fi/u01tsapw05dj8lwkv13y2/1.mp4?rlkey=nyisgh1ktq054pe71w66l8de0&raw=1',
+    philosophy: 'https://www.dropbox.com/scl/fi/pvh9b2m7rsd90dxgx3nfk/philosophy.mp4?rlkey=5uildojhi8hnsud8ihvcxaxzk&raw=1',
     steps: 'https://www.dropbox.com/scl/fi/1gvhlvkawmwwjlcd2zy3x/1.mp4?rlkey=68dwk7sq1wil270acr8o9kwmy&raw=1',
-    cases: 'https://www.dropbox.com/scl/fi/4t5j3jsxdn2vyhzcpbn1m/1_1.mp4?rlkey=bm0wzdu1zv91nuajo9hzcmp35&raw=1',
+    cases: 'https://www.dropbox.com/scl/fi/fiyq3kekq5zxjvcjb4heh/cases.mp4?rlkey=94b16l6jscsizo64vbkxgwim5&raw=1',
     aboutUs: 'https://www.dropbox.com/scl/fi/mhfdarhglee2ccipobirr/1.mp4?rlkey=hp2mzmsdesi3d0cn9x7lutxnx&raw=1',
     footer: 'https://www.dropbox.com/scl/fi/yybb5ook2gi6ny66gvflt/1_1.mp4?rlkey=n5cks8egmnf3ldjxklvzarq4l&raw=1',
     services: 'https://www.dropbox.com/scl/fi/k39e1ccvxlwjvy32k169j/1.mp4?rlkey=3mo8jaxpizz8ndyroo2oxop89&raw=1'

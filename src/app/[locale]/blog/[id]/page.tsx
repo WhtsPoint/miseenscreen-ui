@@ -24,7 +24,8 @@ export async function generateStaticParams() {
 
 const messageKeys = [
     'footer',
-    'email-subscription'
+    'email-subscription',
+    'contact-us-modal'
 ] as const satisfies string[]
 
 interface Params {

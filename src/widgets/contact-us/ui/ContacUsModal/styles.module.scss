@@ -1,0 +1,48 @@
+.modal {
+  max-width: 700px;
+  display: flex;
+  align-items: center;
+  color: white;
+  & .avatar {
+    width: fit-content;
+    border-radius: 50%;
+    flex-shrink: 0;
+    background: black;
+    overflow: hidden;
+    img {
+      object-fit: contain;
+      position: relative;
+      scale: 2;
+      top: 80px;
+      pointer-events: none;
+      user-select: none;
+    }
+  }
+  & .container {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    background: black;
+    z-index: -1;
+    & .button {
+      width: 80px;
+      background: none;
+      border: none;
+      color: white;
+      flex-shrink: 0;
+      cursor: pointer;
+      position: relative;
+      &::before {
+        content: '';
+        width: 1px;
+        height: calc(100% - 20px);
+        display: block;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background: white;
+      }
+    }
+  }
+}

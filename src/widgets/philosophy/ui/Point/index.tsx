@@ -2,10 +2,11 @@ import styles from './styles.module.scss'
 import { cl } from '@/utils/lib/cl'
 import { motion, MotionStyle } from 'framer-motion'
 import Arrow from '@/utils/ui/Arrow'
+import { ReactNode } from 'react'
 
 interface Params {
     article: string,
-    description: string,
+    description: ReactNode,
     descriptionStyles?: MotionStyle
     className?: string,
     onLeft?: () => unknown,
@@ -21,9 +22,9 @@ export default function Point(
             <h3 className={styles.point__article__title}>{article}</h3>
             <Arrow className={styles.point__article__arrow} onClick={onRight} direction={'right'} />
         </div>
-        <motion.p style={descriptionStyles} className={styles.point__description}>
+        <motion.div style={descriptionStyles} className={styles.point__description}>
             {description}
-        </motion.p>
+        </motion.div>
         <hr className={styles.point__hr} />
     </article>)
 }

@@ -1,28 +1,23 @@
-'use client'
-
 import { FooterSection } from '@/layers/main'
+import { ContactUsModalWrapper } from '@/features/contact-us'
 import { BackgroundWrapper, CustomErp, Eccomerce, ELearning, HrSoftware, Note, WebPortals } from '@/features/services'
-import { useHeaderSettings } from '@/widgets/header'
-import { useEffect } from 'react'
 import styles from './styles.module.scss'
 
 export default function ServicePage() {
-    const { setTheme } = useHeaderSettings()
-
-    useEffect(() => { setTheme('solid') }, [setTheme])
-
-    return (<div className={styles.page}>
-        <BackgroundWrapper
-            servicesClassName={styles.page__content}
-            videoClassName={styles.page__background}
-        >
-            <Eccomerce />
-            <ELearning />
-            <HrSoftware />
-            <CustomErp />
-            <WebPortals />
-        </BackgroundWrapper>
-        <Note />
-        <FooterSection />
-    </div>)
+    return (<ContactUsModalWrapper>
+        <div className={styles.page}>
+            <BackgroundWrapper
+                servicesClassName={styles.page__content}
+                videoClassName={styles.page__background}
+            >
+                <Eccomerce />
+                <ELearning />
+                <HrSoftware />
+                <CustomErp />
+                <WebPortals />
+            </BackgroundWrapper>
+            <Note />
+            <FooterSection />
+        </div>
+    </ContactUsModalWrapper>)
 }

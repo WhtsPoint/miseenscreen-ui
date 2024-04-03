@@ -5,7 +5,8 @@ import { unstable_setRequestLocale } from 'next-intl/server'
 
 const messageKeys = [
     'footer',
-    'email-subscription'
+    'email-subscription',
+    'contact-us-modal'
 ] as const satisfies string[]
 
 interface Params {

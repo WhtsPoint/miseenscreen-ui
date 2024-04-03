@@ -23,13 +23,13 @@ export default function PhilosophySection(
             src={videos.philosophy}
         />
         <div className={styles.section__information}>
-            <h2 className={styles.section__information__title}>{t('title')}</h2>
             <ScrollPoint
                 className={styles.section__information__point}
                 scrollProgress={scrollProgress}
                 onLeft={onLeft}
                 onRight={onRight}
             />
+            <h2 className={styles.section__information__title}>{t('title')}</h2>
         </div>
     </section>)
 }

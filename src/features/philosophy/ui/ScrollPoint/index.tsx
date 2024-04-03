@@ -4,9 +4,9 @@ import { MotionValue, useMotionValueEvent } from 'framer-motion'
 import { useState } from 'react'
 import { useDescriptionAnimation } from '@/widgets/philosophy'
 import { cl } from '@/utils/lib/cl'
+import { Topic } from '../../types/Topic'
 import styles from './styles.module.scss'
-
-type Topic = 'allInOnce' | 'companyInSmartphone' | 'passionate'
+import descriptionComponents from '@/features/philosophy/utils/descriptionComponents'
 
 interface Params {
     className?: string,
@@ -35,7 +35,7 @@ export default function ScrollPoint(
     return (<Point
         className={cl(styles.scrollPoint, className)}
         article={t(topic + '-article')}
-        description={t(topic + '-description')}
+        description={descriptionComponents[topic]}
         descriptionStyles={descriptionStyles}
         onLeft={onLeft}
         onRight={onRight}
