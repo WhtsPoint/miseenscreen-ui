@@ -1,0 +1,22 @@
+.select {
+  min-width: 0;
+  width: fit-content;
+  .option {
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+  }
+  .optionList {
+    width: 100px;
+    max-height: 200px;
+    overflow-y: scroll;
+    left: 50%;
+    transform: translateX(-50%);
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+  .value {
+    text-align: center;
+  }
+}

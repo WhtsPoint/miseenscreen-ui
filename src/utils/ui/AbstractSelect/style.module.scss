@@ -13,13 +13,13 @@
     padding: 0;
     text-align: left;
   }
-  &, &__optionList__option {
+  &, & .optionList .option {
     min-height: 30px;
     display: flex;
     align-items: center;
     user-select: none;
   }
-  &__optionList {
+  & .optionList {
     z-index: 5;
     display: flex;
     flex-direction: column;
@@ -29,7 +29,7 @@
     animation: showOn 400ms forwards;
     position: absolute;
     background: black;
-    &__option {
+    & .option {
       width: 100%;
       &:hover {
         background: #1c1c1c;

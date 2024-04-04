@@ -8,16 +8,14 @@ import PhoneInput from '@/utils/ui/PhoneInput'
 import ServicesSelect from '@/widgets/contact-us/ui/ServicesSelect'
 import useFormSend from '../../hooks/useFormSend'
 import FormError from '@/widgets/contact-us/ui/FormError'
-import useFormAdaptation from '@/widgets/contact-us/hooks/useFormAnimation'
 import { cl } from '@/utils/lib/cl'
 import IBMPlexSans from '@/utils/assets/fonts/IBMPlexSans'
 import form from '@/utils/config/form'
-import { motion } from 'framer-motion'
 import { Option } from '../../types/Option'
 import useMultipleValues from '@/utils/hooks/useMultipleValues'
-import buttonStyles from '../../../../utils/assets/styles/button.module.scss'
+import buttonStyles from '@/utils/assets/styles/button.module.scss'
+import BasicLoading from '@/utils/ui/BasicLoading'
 import styles from './styles.module.scss'
-import BasicLoading from '../../../../utils/ui/BasicLoading'
 
 interface Params {
     onSend: (formData: FormParams) => unknown,
@@ -31,14 +29,14 @@ export default function Form({ onSend, className, isLoading }: Params) {
     const [services, onServiceChange] = useMultipleValues<Option>([])
     const [onFormSend, getError] = useFormSend({ services, files, onSend, validation: { files: form.file }, isLoading })
     const [lockedSubmit, setLockedSubmit] = useState<boolean>(true)
-    const animRef = useFormAdaptation()
+    //const animRef = useFormAdaptation()
 
     const fileError = getError('file-size') || getError('file-count') || getError('file-format')
 
     //BUG: Before next hydrate js, form event is not handled
     useEffect(() => setLockedSubmit(false), [lockedSubmit])
 
-    return (<motion.form ref={animRef} onSubmit={onFormSend} className={cl(styles.form, className)}>
+    return (<form onSubmit={onFormSend} className={cl(styles.form, className)}>
         <FormError error={getError('problem')}>
             <textarea maxLength={3000} style={IBMPlexSans.style} name={'comment'} placeholder={t('problem')} />
         </FormError>
@@ -84,5 +82,5 @@ export default function Form({ onSend, className, isLoading }: Params) {
         >
             { isLoading ? <BasicLoading radius={10} /> : t('submit')}
         </button>
-    </motion.form>)
+    </form>)
 }

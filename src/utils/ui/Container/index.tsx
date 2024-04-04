@@ -1,5 +1,5 @@
 import styles from './styles.module.scss'
-import { ReactNode } from 'react'
+import { forwardRef, ReactNode } from 'react'
 import { Children } from '@/utils/interfaces/Children'
 import { cl } from '@/utils/lib/cl'
 
@@ -10,7 +10,7 @@ interface Params extends Children<ReactNode> {
     tag?: string
 }
 
-export default function Container(params: Params) {
+const Container = forwardRef<HTMLDivElement, Params>((params: Params, ref) => {
     const { isHidden, children, className, isShowed = true, tag } = params
     const classes = cl(
         isHidden && styles.hidden,
@@ -20,4 +20,8 @@ export default function Container(params: Params) {
     return (isShowed && <div data-tag={tag} className={classes}>
         {children}
     </div>)
-}
+})
+
+Container.displayName = 'Container'
+
+export default Container

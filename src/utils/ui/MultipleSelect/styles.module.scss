@@ -1,11 +1,14 @@
 .select {
-  &__value {
+  & .value {
     width: 100%;
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
   }
-  &__optionList__option[data-selected='true'] {
+  //&__optionList__option[data-selected='true'] {
+  //  background: #1c1c1c;
+  //}
+  & .selectedOption {
     background: #1c1c1c;
   }
 }

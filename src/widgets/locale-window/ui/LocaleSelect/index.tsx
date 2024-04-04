@@ -1,5 +1,5 @@
 import Logo from '@/widgets/header/ui/Logo'
-import Select from '@/utils/ui/Select'
+import Select from '../../../../utils/ui/AbstractSelect'
 import config from '@/utils/config'
 import { cl } from '@/utils/lib/cl'
 import Image from 'next/image'

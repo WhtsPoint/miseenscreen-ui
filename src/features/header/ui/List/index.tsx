@@ -6,6 +6,7 @@ import { stagger, useAnimate, useMotionValue, useTransform } from 'framer-motion
 import { motion } from 'framer-motion'
 import styles from './styles.module.scss'
 import { ReactNode } from 'react'
+import { useOnClickOutside } from 'next/dist/client/components/react-dev-overlay/internal/hooks/use-on-click-outside'
 
 interface Params extends Children<ReactNode> {
     className?: string
@@ -15,6 +16,8 @@ export default function List({ children, className }: Params) {
     const [ref, animate] = useAnimate()
     const isHidden = useMotionValue<boolean>(true)
     const display = useTransform(isHidden, (value) => value ? 'none' : 'block')
+
+    useOnClickOutside(ref.current, () => isHidden.set(true))
 
     const onClick = () => {
         isHidden.set(!isHidden.get())

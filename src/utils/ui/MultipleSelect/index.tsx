@@ -1,49 +1,29 @@
-import { ObjectType } from '@/utils/types/ObjectType'
-import { useState } from 'react'
-import Container from '@/utils/ui/Container'
+import AbstractSelect from '@/utils/ui/AbstractSelect'
 import { cl } from '@/utils/lib/cl'
-import useSelectClosing from '@/utils/hooks/useSelectClosing'
-import selectStyles from '../Select/style.module.scss'
 import styles from './styles.module.scss'
 
-interface Params<T extends string> {
-    values: T[]
-    options: ObjectType<string, string>,
-    placeholder?: string,
-    onChange: (value: T) => unknown,
-    className?: string,
-    valueClass?: string,
-    optionClass?: string
+type AbstractSelectParams<T extends string> = Parameters<typeof AbstractSelect<T>>[0]
+
+interface Params<T extends string> extends Pick<
+    AbstractSelectParams<T>,
+    'options' | 'onChange' | 'optionClass' | 'valueClass' | 'className'
+> {
+    values: T[],
+    placeholder?: string
 }
 
 export default function MultipleSelect<T extends string>(params: Params<T>) {
-    const { values, options, placeholder, optionClass, onChange, valueClass, className } = params
-    const [isVisible, setIsVisible] = useState<boolean>(false)
-    const ref = useSelectClosing<HTMLDivElement>({ onClose: () => { setIsVisible(false) } })
+    const { className, valueClass, placeholder, ...rest } = params
+    const entries = Object.entries(params.options) as [T, string][]
+    const selectedValues = entries.filter(([value]) => params.values.includes(value)).map(([, name]) => name)
 
-    const swapVisibility = () => setIsVisible((prev) => !prev)
-
-    const entries = Object.entries(options) as [T, string][]
-    const selectedValues = entries.filter(([value]) => values.includes(value))
-        .map(([, name]) => name)
-    const text = values.length > 0 ? selectedValues.join(', ') : placeholder
-
-    return (<div ref={ref} className={cl(selectStyles.select, className)}>
-        <button type={'button'} onClick={swapVisibility} className={cl(styles.select__value, valueClass)}>{text}</button>
-        <Container className={cl(selectStyles.select__optionList, optionClass)} isShowed={isVisible}>
-            {entries.map(([value, name]) => <button
-                type={'button'}
-                data-selected={values.includes(value)}
-                key={value}
-                className={cl(
-                    selectStyles.select__optionList__option,
-                    styles.select__optionList__option,
-                    optionClass
-                )}
-                onClick={() => onChange(value)}
-            >
-                {name}
-            </button>)}
-        </Container>
-    </div>)
+    return (<AbstractSelect<T, T[]>
+        className={cl(styles.select, className)}
+        valueClass={cl(styles.value, valueClass)}
+        optionClassMap={(value) => params.values.includes(value) && styles.selectedOption}
+        value={params.values}
+        valueMap={() => selectedValues.length > 0 ? selectedValues.join(', ') : placeholder}
+        closeOnSelect={false}
+        {...rest}
+    />)
 }
