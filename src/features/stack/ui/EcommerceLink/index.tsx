@@ -6,7 +6,7 @@ type LinkParams = Parameters<typeof Link>[0]
 
 interface Params extends Omit<LinkParams, 'href' | 'onClick'> {}
 
-export default function EccomerceLink({ children, ...params }: Params) {
+export default function EcommerceLink({ children, ...params }: Params) {
     const { invoke } = useSpecialSection()
 
     return (<Link

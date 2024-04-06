@@ -1,3 +1,5 @@
+'use client'
+
 import Ring from '@/utils/ui/Ring'
 import { useMotionValue, useTime, useTransform } from 'framer-motion'
 import styles from './styles.module.scss'

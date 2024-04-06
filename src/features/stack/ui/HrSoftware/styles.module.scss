@@ -1,0 +1,21 @@
+.hrSoftware {
+  overflow: hidden;
+  .ellipseLight {
+    width: 50%;
+    position: absolute;
+    left: 0;
+    transform: translateX(-30%);
+    @media (max-width: 1281px) {
+      width: 100%;
+    }
+  }
+  .lineLight {
+    width: 600px;
+    transform: translateX(100px);
+    position: absolute;
+    right: 0;
+    @media (max-width: 1281px) {
+      bottom: 0;
+    }
+  }
+}

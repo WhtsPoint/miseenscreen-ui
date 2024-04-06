@@ -1,3 +1,5 @@
+'use client'
+
 import { motion, useInView } from 'framer-motion'
 import sectionStyles from '@/utils/assets/styles/services.module.scss'
 import { useRef } from 'react'

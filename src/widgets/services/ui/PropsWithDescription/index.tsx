@@ -1,3 +1,5 @@
+'use client'
+
 import sectionStyles from '@/utils/assets/styles/services.module.scss'
 import { Prop } from '@/widgets/services/intefaces/Prop'
 import { motion, useInView } from 'framer-motion'

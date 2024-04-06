@@ -1,0 +1,38 @@
+.ecommerce {
+  overflow: hidden;
+  & .poster {
+    position: relative;
+  }
+  & .glare {
+    width: 200px;
+    position: absolute;
+    left: calc(100% - 100px);
+    top: 50px;
+    z-index: -1;
+    pointer-events: none;
+    user-select: none;
+    @media (max-width: 1281px) {
+      left: 100%;
+      transform: translateX(-100%);
+      top: calc(100% - 50px);
+    }
+  }
+  & .content {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    & .title {
+      font-size: 5em;
+    }
+    & .props {
+      width: 100%;
+    }
+  }
+  & .sideLight {
+    width: 300px;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    z-index: -2;
+  }
+}

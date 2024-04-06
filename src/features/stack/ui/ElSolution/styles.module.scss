@@ -1,0 +1,17 @@
+.elSolution {
+  & .upLight {
+    width: 900px;
+    position: absolute;
+    left: 50%;
+    bottom: 400px;
+    transform: translateX(-50%);
+    z-index: 2;
+  }
+  & .glare {
+    width: 700px;
+    position: absolute;
+    left: 50%;
+    top: 250px;
+    transform: translateX(-50%);
+  }
+}

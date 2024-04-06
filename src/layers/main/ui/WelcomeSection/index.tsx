@@ -3,8 +3,8 @@
 import styles from './style.module.scss'
 import { forwardRef, RefObject } from 'react'
 import { useScroll } from 'framer-motion'
-import { WelcomeText } from '../../../../widgets/welcome'
-import { LightScene } from '../../../../widgets/welcome'
+import { WelcomeText } from '@/widgets/welcome'
+import { Background } from '@/features/welcome'
 
 const WelcomeSection = forwardRef<HTMLDivElement>((_params, ref) => {
     const { scrollYProgress } = useScroll({
@@ -13,7 +13,7 @@ const WelcomeSection = forwardRef<HTMLDivElement>((_params, ref) => {
     })
 
     return (<section ref={ref} className={styles.section}>
-        <LightScene scrollY={scrollYProgress} />
+        <Background className={styles.background} />
         <WelcomeText scrollY={scrollYProgress} />
     </section>)
 })

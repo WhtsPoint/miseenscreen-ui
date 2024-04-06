@@ -1,20 +1,20 @@
-import Eccomerce from './ui/Ecoomerce'
-import WebServices from './ui/WebServices'
+import Ecommerce from './ui/Ecommerce'
 import ElSolution from './ui/ElSolution'
 import HrSoftware from './ui/HrSoftware'
 import Analytics from './ui/Analytics'
-import EccomerceLink from './ui/EcoomerceLink'
+import WebPortals from './ui/WebPortals'
+import EccomerceLink from './ui/EcommerceLink'
 import WebServicesLink from './ui/WebServicesLink'
 import ElSolutionLink from './ui/ElSolutionLink'
 import HrSoftwareLink from './ui/HrSoftwareLink'
 import AnalyticsLink from './ui/AnalyticsLink'
 
 export {
-    Eccomerce,
-    WebServices,
+    Ecommerce,
     ElSolution,
     HrSoftware,
     Analytics,
+    WebPortals,
     EccomerceLink,
     WebServicesLink,
     ElSolutionLink,

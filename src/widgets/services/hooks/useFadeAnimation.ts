@@ -1,3 +1,5 @@
+'use client'
+
 import { MutableRefObject, useEffect } from 'react'
 import { useMotionValue, useScroll, useTransform } from 'framer-motion'
 

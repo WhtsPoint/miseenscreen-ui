@@ -1,10 +1,18 @@
-.themeText {
-  left: 5px;
-  top: 5px;
-  white-space: pre-line;
-  position: absolute;
-  line-height: 30px;
-  @media (max-width: 440px) {
-    line-height: 15px;
+.analytics {
+  & .poster {
+   position: relative;
+    & .tailLight {
+      position: absolute;
+      width: 100%;
+      left: 50px;
+      transform: translateX(-100%);
+    }
+    & .sphereLight {
+      position: absolute;
+      width: 400px;
+      left: 50px;
+      transform: translateX(-50%);
+      z-index: 2;
+    }
   }
 }

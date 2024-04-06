@@ -1,0 +1,21 @@
+.webPortals {
+  overflow: hidden;
+  position: relative;
+  & .poster {
+    position: relative;
+    & .straightLight {
+      height: 100%;
+      position: absolute;
+      left: calc(100% - 30px);
+    }
+  }
+  & .xLight {
+    width: 1200px;
+    position: absolute;
+    left: 100%;
+    transform: translateX(-50%);
+    @media (max-width: 1281px) {
+      top: 50%;
+    }
+  }
+}

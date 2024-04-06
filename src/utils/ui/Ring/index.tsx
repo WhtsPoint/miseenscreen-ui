@@ -1,4 +1,6 @@
-import { motion, MotionValue, useMotionValue, useMotionValueEvent, useTransform } from 'framer-motion'
+'use client'
+
+import { motion, MotionValue, useTransform } from 'framer-motion'
 import styles from './styles.module.scss'
 import { useRef } from 'react'
 

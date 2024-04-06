@@ -17,7 +17,9 @@ export default function PhoneInput({ className, defaultValue, ...params }: Param
     const [phone, setPhone] = useState<string>(defaultValue)
 
     const country = Object.entries(codesToFlags)
-        .find(([ code ]) => (new RegExp('^' + code)).exec(phone.replace(/^\+/, '')))
+        .toSorted(([ firstCode ], [ secondCode ]) => secondCode.length - firstCode.length)
+        .find(([ code ]) => (new RegExp('^' + code))
+        .exec(phone.replace(/^\+/, '')))
 
     const onCodeChange = (code: PhoneCode) => setPhone('+' + code)
 

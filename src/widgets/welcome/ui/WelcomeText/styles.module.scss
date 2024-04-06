@@ -5,29 +5,17 @@
   padding: 100px 0;
   z-index: 2;
   text-align: center;
-  @media (max-width: 760px) {
-    font-size: 0.8em;
-  }
-  @media (max-width: 600px) {
-    font-size: 0.5em;
-  }
-  @media (max-width: 375px) {
-    font-size: 0.45em;
-  }
-  @media (max-width: 345px) {
-    font-size: 0.3em;
-  }
-  
+  font-size: min(2vw, 1em);
   &__name {
-    font-size: 6em;
+    font-size: min(calc(13.5vw - 10px), 8em);
     margin: 0;
   }
   &__description {
-    font-size: 1.4em;
+    font-size: min(calc(10vw - 10px), 1.4em);
     margin: 0;
   }
   &__subtext {
-    font-size: 4em;
+    font-size: min(5.1vw, 4em);
     text-transform: uppercase;
     margin: 0;
   }
