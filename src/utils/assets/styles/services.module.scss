@@ -28,7 +28,7 @@
   width: 100%;
   padding: 0;
   display: grid;
-  grid-template-columns: repeat(auto-fill, 300px);
+  grid-template-columns: repeat(auto-fill, minmax(0, 300px));
   flex-wrap: wrap;
   gap: 50px;
   justify-content: center;

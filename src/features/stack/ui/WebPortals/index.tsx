@@ -37,7 +37,7 @@ export default function WebPortals() {
             animation={{
                 initial: { opacity: 0, y: 50 },
                 viewAnimation: { opacity: 1, y: 0 },
-                transition: { duration: 1 }
+                transition: { duration: 1, delay: 1 }
             }}
             image={{ src: xLightImage.src, sizes: '1200px' }}
         />

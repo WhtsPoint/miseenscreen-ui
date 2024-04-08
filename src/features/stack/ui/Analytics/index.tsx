@@ -25,7 +25,7 @@ export default function Analytics() {
         return Object.values(segment['props']).forEach(({ title }: any) => props.push(title))
     })
 
-    return (<section className={cl(sectionStyles.section, styles.analytics)}>
+    return (<section className={cl(sectionStyles.section, styles.analytics, sectionStyles.reverse)}>
         <div className={contentStyles.content}>
             <Title>{t('title')}</Title>
             <Props props={props} />

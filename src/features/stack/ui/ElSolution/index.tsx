@@ -23,16 +23,17 @@ export default function ElSolution() {
             <Title>{t('title')}</Title>
             <Props props={Object.values(t.raw('props'))} />
         </div>
-        <Poster src={posterImage.src} />
-        <Particle
-            className={styles.upLight}
-            animation={{ ...anim, transition: { duration: 1, delay: 2 } }}
-            image={{ src: upLightImage.src, sizes: '900px' }}
-        />
-        <Particle
-            className={styles.glare}
-            animation={{ ...anim, transition: { duration: 1, delay: 3 } }}
-            image={{ src: glare2Image.src, sizes: '700px' }}
-        />
+        <Poster className={styles.poster} src={posterImage.src}>
+            <Particle
+                className={styles.upLight}
+                animation={{ ...anim, transition: { duration: 1, delay: 2 } }}
+                image={{ src: upLightImage.src, sizes: '900px' }}
+            />
+            <Particle
+                className={styles.glare}
+                animation={{ ...anim, transition: { duration: 1, delay: 3 } }}
+                image={{ src: glare2Image.src, sizes: '700px' }}
+            />
+        </Poster>
     </section>)
 }

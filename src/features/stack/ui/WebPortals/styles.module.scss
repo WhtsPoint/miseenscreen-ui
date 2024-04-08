@@ -1,12 +1,12 @@
 .webPortals {
-  overflow: hidden;
   position: relative;
   & .poster {
     position: relative;
     & .straightLight {
+      width: 3%;
       height: 100%;
       position: absolute;
-      left: calc(100% - 30px);
+      left: calc(100% - 10px);
     }
   }
   & .xLight {

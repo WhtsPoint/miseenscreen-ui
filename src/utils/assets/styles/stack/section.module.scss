@@ -1,15 +1,19 @@
 .section {
   width: 100%;
+  min-height: 100vh;
   display: flex;
   align-items: center;
-  color: white;
   position: relative;
-  overflow: hidden;
-  & .reverse {}
+  overflow-x: clip;
+  overflow-y: visible;
+  color: white;
   @media (max-width: 1281px) {
     flex-direction: column;
-    & .reverse {
-      flex-direction: column-reverse;
-    }
+  }
+}
+
+.reverse {
+  @media (max-width: 1281px) {
+    flex-direction: column-reverse;
   }
 }
