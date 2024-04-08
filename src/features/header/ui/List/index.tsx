@@ -1,12 +1,12 @@
 import menuIcon from '@/utils/assets/images/menu.svg'
 import Image from 'next/image'
 import { Children } from '@/utils/interfaces/Children'
-import { cl } from '@/utils/lib/cl'
-import { stagger, useAnimate, useMotionValue, useTransform } from 'framer-motion'
+import { stagger, useAnimate } from 'framer-motion'
+import { ReactNode, useState } from 'react'
+import useSelectClosing from '@/utils/hooks/useSelectClosing'
 import { motion } from 'framer-motion'
+import { cl } from '@/utils/lib/cl'
 import styles from './styles.module.scss'
-import { ReactNode } from 'react'
-import { useOnClickOutside } from 'next/dist/client/components/react-dev-overlay/internal/hooks/use-on-click-outside'
 
 interface Params extends Children<ReactNode> {
     className?: string
@@ -14,23 +14,30 @@ interface Params extends Children<ReactNode> {
 
 export default function List({ children, className }: Params) {
     const [ref, animate] = useAnimate()
-    const isHidden = useMotionValue<boolean>(true)
-    const display = useTransform(isHidden, (value) => value ? 'none' : 'block')
-
-    useOnClickOutside(ref.current, () => isHidden.set(true))
+    const listRef = useSelectClosing<HTMLDivElement>({ onClose: () => setIsHidden(true) })
+    const [isHidden, setIsHidden] = useState<boolean>(true)
 
     const onClick = () => {
-        isHidden.set(!isHidden.get())
-        !isHidden.get() && animate([
-            ['nav li', { opacity: [0, 1] }, { delay: stagger(0.1) }],
-            ['nav div[data-tag="locale-select"]', { opacity: [0, 1] }, { at: '-0.2' }]
+        const swapped = !isHidden
+
+        setIsHidden(swapped)
+
+        !swapped && animate([
+            ['li, input[data-tag="global-search"]', { opacity: [0, 1] }, { delay: stagger(0.1) }],
+            ['div[data-tag="locale-select"]', { opacity: [0, 1] }, { at: '-0.2' }]
         ])
     }
 
-    return (<div ref={ref} className={cl(styles.list, className)}>
-        <button onClick={onClick} className={styles.list__button}>
-            <Image alt={''} src={menuIcon} />
-        </button>
-        <motion.div style={{ display }} className={styles.list__list}>{children}</motion.div>
+    return (<div className={styles.wrapper} ref={listRef}>
+        <div ref={ref} className={cl(styles.list, className)}>
+            <button onClick={onClick} className={styles.list__button}>
+                <Image alt={''} src={menuIcon} />
+            </button>
+            <motion.div
+                className={cl(styles.list__list, isHidden && styles.list__list_hidden)}
+            >
+                {children}
+            </motion.div>
+        </div>
     </div>)
 }

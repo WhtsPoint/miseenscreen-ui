@@ -21,13 +21,11 @@ export default function Header() {
         animate(ref.current, ...animation)
         animate('div[data-tag="select-optionList"]', ...animation)
 
-        if (width && width < 1000) animate('nav[data-tag="header-navigation"]', ...animation)
+        if (width && width < 1000) animate('div[data-tag="header-navigation"]', ...animation)
     }, [widthRef, ref, theme, animate])
 
     return (<header ref={ref} className={styles.header}>
         <HomeLogo className={styles.header__logo} />
-        <List className={styles.header__list}>
-            <Navigation />
-        </List>
+        <List><Navigation /></List>
     </header>)
 }

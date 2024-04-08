@@ -20,6 +20,7 @@ const messageKeys = [
     'about-us',
     'footer',
     'email-subscription',
+    'contact-us',
     'contact-us-modal'
 ] as const satisfies string[]
 

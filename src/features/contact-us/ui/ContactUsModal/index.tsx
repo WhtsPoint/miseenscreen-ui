@@ -11,7 +11,7 @@ interface Params {
     delay?: number
 }
 
-export default function ContactUsModal({ className, delay = 5000 }: Params) {
+export default function ContactUsModal({ className, delay = 1 }: Params) {
     const [isVisible, setIsVisible] = useState<boolean>(false)
     const [ref, animate] = useContactUsModalAnimation()
     const { push } = useRouter()

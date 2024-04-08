@@ -9,6 +9,7 @@ import BlogSection from '../BlogSection'
 import StackSectionV2 from '../StackSectionV2'
 import WelcomeSectionWrapper from '../WelcomeSectionWrapper'
 import { ContactUsModalWrapper } from '@/features/contact-us'
+import { ContactUsPage } from '@/layers/contact'
 
 export default async function MainPage() {
    return (<ContactUsModalWrapper>
@@ -21,7 +22,9 @@ export default async function MainPage() {
            <AboutUsSection />
            <PhilosophySection />
            <BlogSection />
-           <FooterSection />
+           <FooterSection>
+               <ContactUsPage />
+           </FooterSection>
        </WelcomeSectionWrapper>
    </ContactUsModalWrapper>)
 }

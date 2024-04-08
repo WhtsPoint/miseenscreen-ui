@@ -24,11 +24,16 @@ const config = {
         terms: '/terms'
     },
     contacts: {
-        email: 'commercial@miseenscreeen.com',
+        email: 'support@miseenscreen.com',
         phone: {
             current: '+1323-683-8107',
             display: '+1 323 683 8107'
-        }
+        },
+        instagram: 'https://www.instagram.com/invites/contact/?i=9x8se10rzuid&utm_content=ufl7961',
+        facebook: 'https://www.facebook.com/profile.php?id=61558356326051&mibextid=dGKdO6',
+        threads: 'https://www.facebook.com/profile.php?id=61558356326051&mibextid=dGKdO6',
+        twitter: 'https://twitter.com/Mise_en_screen',
+        youtube: '#'
     },
     api: process.env.NEXT_PUBLIC_API_URL
 }

@@ -1,35 +1,44 @@
-import { cl } from '@/utils/lib/cl'
+import XIcon from '@/utils/ui/xIcon'
 import Image from 'next/image'
-import daryaImage from '@/utils/assets/images/about-us/darya.png'
-import styles from './styles.module.scss'
 import { useTranslations } from 'next-intl'
+import { cl } from '@/utils/lib/cl'
+import { MouseEvent } from 'react'
+import styles from './styles.module.scss'
+import backgroundImage from '@/utils/assets/images/contact-us-modal/background.png'
+import lightImage from '@/utils/assets/images/contact-us-modal/light.png'
 
 interface Params {
     className?: string,
     onClick?: () => unknown,
-    onClose?: () => unknown
+    onClose?: () => unknown,
+    sizes?: string
 }
 
-const avatarSize = 150
-
-export default function ContactUsModal({ className, onClick, onClose }: Params) {
+export default function ContactUsModal({ className, onClick, onClose, ...rest }: Params) {
+    const { sizes = '(max-width: 700px) 100vw, 700px' } = rest
     const t = useTranslations('contact-us-modal')
 
-    return (<div data-tag={'contact-us-modal'} className={cl(styles.modal, className)}>
-        <div style={{ width: avatarSize / 2 }}>
-            <div className={styles.avatar}>
-                <Image
-                    width={avatarSize}
-                    height={avatarSize}
-                    src={daryaImage.src}
-                    alt={'Project manager photo'}
-                />
-            </div>
+    const onCloseWrapper = (event: MouseEvent) => {
+        event.stopPropagation()
+        onClose?.()
+    }
+
+    return (<div
+        data-tag={'contact-us-modal'}
+        tabIndex={0}
+        className={cl(styles.modal, className)}
+        onClick={onClick}
+    >
+        <Image className={styles.background} fill sizes={sizes} src={backgroundImage.src} alt={''} />
+        <div data-tag={'light'} className={styles.light}>
+            <Image fill src={lightImage.src} alt={''} />
         </div>
-        <div className={styles.container}>
-            <p style={{ paddingLeft: avatarSize / 2 + 20 }}>{t('description')}</p>
-            <button className={styles.button} onClick={onClick}>{t('button-text')}</button>
-            <button className={styles.button} onClick={onClose}>{t('close')}</button>
+        <button className={styles.close} onClick={onCloseWrapper}>
+            <XIcon width={30} height={30} color={'white'} />
+        </button>
+        <div className={styles.text}>
+            <p>{t('description')}</p>
+            <b className={styles.title}>{t('title')}</b>
         </div>
     </div>)
 }
