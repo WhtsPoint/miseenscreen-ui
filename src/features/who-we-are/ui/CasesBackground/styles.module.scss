@@ -1,0 +1,10 @@
+.casesBackground {
+  width: 500px;
+  overflow: hidden;
+  position: relative;
+  & .background {
+    width: 120%;
+    position: absolute;
+    right: 0;
+  }
+}

@@ -1,0 +1,22 @@
+.createNote {
+  max-width: 1600px;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  color: white;
+  padding: 50px 20px;
+  margin-inline: auto;
+  & .title {
+    margin: 0;
+  }
+  & .text {
+    width: 100%;
+  }
+  @media (max-width: 768px) {
+    flex-direction: column;
+    & .images {
+      width: 100%;
+      flex-direction: row;
+    }
+  }
+}

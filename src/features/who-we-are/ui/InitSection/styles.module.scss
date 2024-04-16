@@ -1,0 +1,49 @@
+.initSection {
+  max-width: 1600px;
+  width: 100%;
+  display: flex;
+  gap: 50px;
+  margin-inline: auto;
+  padding: 30px 20px;
+  opacity: 0;
+  overflow: hidden;
+  @media (max-width: 768px) {
+    display: flex;
+    flex-direction: column;
+  }
+  & .info {
+    flex: 1;
+    & .title {
+      text-transform: uppercase;
+      margin-block: 10px;
+      font-size: 1.5em;
+    }
+    & .location {
+      margin: 0;
+      white-space: pre-line;
+    }
+    & .quote {
+      display: flex;
+      flex-direction: column;
+      font-size: 0.7em;
+      margin: 0;
+    }
+    & .sign {
+      max-width: 300px;
+      width: 100%;
+      margin-inline-start: auto;
+      position: relative;
+      & .signImage {
+        position: static !important;
+      }
+    }
+  }
+  & .photo {
+    flex: 1;
+    position: relative;
+    & .image {
+      object-fit: cover;
+      position: static !important;
+    }
+  }
+}

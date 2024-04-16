@@ -1,3 +1,5 @@
+'use client'
+
 import YMarquee from '@/utils/ui/YMarquee'
 import { MotionValue } from 'framer-motion'
 import { Direction } from '@/utils/lib/y-marquee'

@@ -14,7 +14,10 @@ const videos = {
     aboutUs: 'https://www.dropbox.com/scl/fi/mhfdarhglee2ccipobirr/1.mp4?rlkey=hp2mzmsdesi3d0cn9x7lutxnx&raw=1',
     footer: 'https://www.dropbox.com/scl/fi/yybb5ook2gi6ny66gvflt/1_1.mp4?rlkey=n5cks8egmnf3ldjxklvzarq4l&raw=1',
     services: 'https://www.dropbox.com/scl/fi/k39e1ccvxlwjvy32k169j/1.mp4?rlkey=3mo8jaxpizz8ndyroo2oxop89&raw=1',
-    welcomeBackground: 'https://www.dropbox.com/scl/fi/kwww8se59gw3tmkglu8to/welcome-background.mp4?rlkey=eqdk4j7q5xxc5wr4f6ublz0li&raw=1'
+    welcomeBackground: 'https://www.dropbox.com/scl/fi/kwww8se59gw3tmkglu8to/welcome-background.mp4?rlkey=eqdk4j7q5xxc5wr4f6ublz0li&raw=1',
+    rotatingBook: 'https://www.dropbox.com/scl/fi/k939yq4ltfjw733irfgyq/book.mp4?rlkey=gl1ssg9r9qwf39idaur3saw4x&raw=1',
+    light: 'https://www.dropbox.com/scl/fi/z5zsw6xh0lg7jz07o6l3h/light.mp4?rlkey=vwnl9kscnuj9w7g8edq0dkxbb&raw=1',
+    projector: 'https://www.dropbox.com/scl/fi/8h4bjzauuun5pa2t297y8/projector.mp4?rlkey=n3a081ks91s822kx8mb4edepy&raw=1'
 } as const
 
 export default videos

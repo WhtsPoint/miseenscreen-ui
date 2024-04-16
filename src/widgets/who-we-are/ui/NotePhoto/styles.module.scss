@@ -1,0 +1,9 @@
+.notePhoto {
+  aspect-ratio: 1 / 1;
+  position: relative;
+  overflow: hidden;
+  border-radius: 10%;
+  & .image {
+    object-fit: cover;
+  }
+}

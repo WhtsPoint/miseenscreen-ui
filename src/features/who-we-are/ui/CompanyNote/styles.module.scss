@@ -1,0 +1,23 @@
+.companyNote {
+  display: flex;
+  align-items: center;
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+  opacity: 0;
+  & .lightImage {
+    margin-left: 400px;
+    top: 0;
+    transform: scaleX(-1);
+  }
+  & .text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+  }
+  @media (max-width: 1024px) {
+    flex-direction: column;
+
+  }
+}

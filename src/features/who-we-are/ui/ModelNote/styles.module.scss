@@ -1,0 +1,30 @@
+.modelNote {
+  min-height: 100vh;
+  flex-shrink: 0;
+  overflow-x: clip;
+  opacity: 0;
+  & .background {
+    float: left;
+    height: 800px;
+    flex-shrink: 0;
+    margin-right: 50px;
+    margin-bottom: 0;
+  }
+  & .text {
+    padding: 50px;
+  }
+  @media (max-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    & .background {
+      width: 100%;
+      height: auto;
+      float: none;
+      margin: 0;
+      padding: 0;
+    }
+    & .text {
+      padding: 0 20px;
+    }
+  }
+}

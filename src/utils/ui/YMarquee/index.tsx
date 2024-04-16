@@ -1,3 +1,5 @@
+'use client'
+
 import { MotionMarquee } from '@/utils/ui/Marquee'
 import { Children } from '@/utils/interfaces/Children'
 import { ReactNode } from 'react'

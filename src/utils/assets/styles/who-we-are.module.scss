@@ -1,0 +1,30 @@
+.section {
+  font-size: 1.7em;
+  color: white;
+  & .paragraph {
+    font-size: 0.8em;
+    margin-block: 40px;
+  }
+  & .photo {
+    border-radius: 20px;
+  }
+  & .centerText {
+    max-width: 1600px;
+    margin-inline: auto;
+    padding: 20px;
+  }
+}
+
+.sectionWithSidePhoto {
+  & .background {
+    & .photo {}
+  }
+  @media (max-width: 1024px) {
+    & .background {
+      width: 100%;
+      & .photo {
+        width: 100%;
+      }
+    }
+  }
+}

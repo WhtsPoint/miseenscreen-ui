@@ -1,10 +1,12 @@
-import styles from './styles.module.scss'
-import { cl } from '@/utils/lib/cl'
+'use client'
+
 import { motion } from 'framer-motion'
 import { Background as NotFilledBackground } from '@/widgets/cases-points'
 import { useEffect, useState } from 'react'
 import { StaticImageData } from 'next/image'
 import importImages from '@/utils/assets/images/cases-points'
+import { cl } from '@/utils/lib/cl'
+import styles from './styles.module.scss'
 
 interface Params {
     className?: string,

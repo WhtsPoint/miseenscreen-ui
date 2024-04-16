@@ -1,3 +1,5 @@
+'use client'
+
 import styles from './styles.module.scss'
 import { useScroll, useTransform, useVelocity } from 'framer-motion'
 import PhotoMarquee from '../PhotoMarquee'
