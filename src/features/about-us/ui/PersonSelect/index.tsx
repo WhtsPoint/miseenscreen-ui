@@ -1,20 +1,23 @@
+import { Select } from '@/widgets/about-us'
 import { Person } from '../../types/Person'
+import { ReactNode } from 'react'
 import daryaImage from '@/utils/assets/images/about-us/darya.png'
 import vladimirImage from '@/utils/assets/images/about-us/vladimir.png'
-import { Select } from '@/widgets/about-us'
 
 interface Params {
     person: Person,
     swapPerson: () => unknown,
-    className?: string
+    className?: string,
+    imagesChildren?: ReactNode
 }
 
-export default function PersonSelect({ className, person, swapPerson }: Params) {
+export default function PersonSelect({ className, person, swapPerson, imagesChildren }: Params) {
     return (<Select<Person>
         className={className}
         person={person}
         onNext={swapPerson}
         onPrev={swapPerson}
         images={{'darya': daryaImage, 'vladimir': vladimirImage}}
+        imagesChildren={imagesChildren}
     />)
 }

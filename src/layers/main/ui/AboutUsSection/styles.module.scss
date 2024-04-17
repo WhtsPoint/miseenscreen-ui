@@ -44,4 +44,11 @@
   &__aboutUs {
     flex: 1;
   }
+  & .ourStory {
+    color: white;
+    font-size: 2em;
+    position: absolute;
+    left: -50px;
+    bottom: 5%;
+  }
 }

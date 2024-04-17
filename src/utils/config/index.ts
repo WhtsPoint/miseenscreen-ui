@@ -10,7 +10,8 @@ const config = {
             ourStory: '/who-we-are',
             blog: '/blog',
             contactUs: '/contact',
-            services: '/#services'
+            services: '/#services',
+            steps: '/#steps'
         },
         services: {
             ecommerce: '/services#ecommerce',

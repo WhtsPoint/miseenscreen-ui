@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { ReactNode, useState } from 'react'
 import { Person } from '../../types/Person'
 import PersonInformation from '../PersonInformation'
 import PersonSelect from '../PersonSelect'
@@ -6,10 +6,11 @@ import { cl } from '@/utils/lib/cl'
 import styles from './styles.module.scss'
 
 interface Params {
-    className?: string
+    className?: string,
+    imagesChildren?: ReactNode
 }
 
-export default function AboutUs({ className }: Params) {
+export default function AboutUs({ className, imagesChildren }: Params) {
     const [person, setPerson] = useState<Person>('darya')
 
     const swapPerson = () => {
@@ -21,6 +22,7 @@ export default function AboutUs({ className }: Params) {
             person={person}
             swapPerson={swapPerson}
             className={styles.aboutUs__personSelect}
+            imagesChildren={imagesChildren}
         />
         <PersonInformation person={person} className={styles.aboutUs__infromation}/>
     </div>)

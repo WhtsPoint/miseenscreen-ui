@@ -13,7 +13,6 @@ export default async function EmployeesPromotionBlog() {
 
     return (<div className={blogStyles.main}>
         <ArticlePicture image={goslingImage} caption={t('employees-promotion.img-caption.3')} />
-        <p className={blogStyles.init}>{t('general.init')}</p>
         <h2>{t('employees-promotion.subtitle.0')}</h2>
         <p>{t('employees-promotion.paragraph.0')}</p>
         <p>{t('employees-promotion.paragraph.1')}</p>
@@ -41,5 +40,6 @@ export default async function EmployeesPromotionBlog() {
         <ArticlePicture image={insideOutImage} caption={t('employees-promotion.img-caption.1')} />
         <p className={blogStyles.bold}>{t('employees-promotion.bold.0')}</p>
         <Link className={blogStyles.link} href={'#'}>{t('employees-promotion.link.0')}</Link>
+        <p className={blogStyles.init}>{t('general.init')}</p>
     </div> )
 }

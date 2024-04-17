@@ -5,7 +5,8 @@ const translation = {
         "cooperation": "Cooperation",
         "our-story": "Our story",
         "blog": "Blog",
-        "contact-us": "Contact us"
+        "contact-us": "Contact us",
+        "steps": "Development"
     }
 }
 

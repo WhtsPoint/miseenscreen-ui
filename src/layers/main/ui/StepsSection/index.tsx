@@ -1,14 +1,15 @@
 'use client'
 
-import styles from './styles.module.scss'
 import { TitleBlock } from '@/features/steps'
-import { useInView, useMotionValue, useMotionValueEvent, useTransform } from 'framer-motion'
+import { useInView, useMotionValue, useMotionValueEvent } from 'framer-motion'
 import { useEffect, useRef, useState } from 'react'
 import { FilledPoints } from '@/features/steps'
 import StickyScroll from '@/utils/ui/StickyScroll'
 import ArrowWithText from '@/utils/ui/ArrowWithText'
 import useWidth from '@/utils/hooks/useWidth'
 import { useTranslations } from 'next-intl'
+import styles from './styles.module.scss'
+import useCertainSection from '@/utils/hooks/useCertainSection'
 
 export default function StepsSection() {
     const t = useTranslations('steps')
@@ -19,6 +20,8 @@ export default function StepsSection() {
     const moveProgress = useMotionValue<number>(0)
     const [isFirst, setIsFirst] = useState<boolean>(true)
     const width = useWidth()
+
+    useCertainSection({ ref, section: 'steps' })
 
     const updateProgress = () => {
         position.set(

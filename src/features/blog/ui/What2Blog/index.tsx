@@ -11,8 +11,6 @@ export default async function What2Blog() {
     const t = await getTranslations('blogs.content')
 
     return (<div className={blogStyles.main}>
-
-        <p className={blogStyles.init}>{t('general.init')}</p>
         <ArticlePicture image={elon} caption={t('company-consciousness-2.img-caption.0')} />
         <b className={blogStyles.bold}>{t('company-consciousness-2.bold.0')}</b>
         <p>{t('company-consciousness-2.paragraph.0')}</p>
@@ -61,5 +59,6 @@ export default async function What2Blog() {
             <p>{t('company-consciousness-2.paragraph.22')}</p>
             <p dangerouslySetInnerHTML={{ __html: t.raw('company-consciousness-2.paragraph.23') }} />
         </div>
+        <p className={blogStyles.init}>{t('general.init')}</p>
     </div>)
 }

@@ -11,7 +11,6 @@ export default async function WhatBlog() {
 
     return (<div className={blogStyles.main}>
         <ArticlePicture image={poorThingsImage} caption={t('company-consciousness.img-caption.0')} />
-        <p className={blogStyles.init}>{t('general.init')}</p>
         <h2>{t('company-consciousness.subtitle.0')}</h2>
         <p>{t('company-consciousness.paragraph.0')}</p>
         <b className={blogStyles.bold}>{t('company-consciousness.bold.0')}</b>
@@ -23,5 +22,6 @@ export default async function WhatBlog() {
         <p>{t('company-consciousness.paragraph.3')}</p>
         <p>{t('company-consciousness.paragraph.4')}</p>
         <Link className={blogStyles.link} href={'company-consciousness-2'}>{t('company-consciousness.link.0')}</Link>
+        <p className={blogStyles.init}>{t('general.init')}</p>
     </div>)
 }

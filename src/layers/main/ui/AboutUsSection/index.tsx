@@ -1,11 +1,13 @@
 'use client'
 
-import styles from './styles.module.scss'
-import { AboutUs } from '@/features/about-us'
+import useCertainSection from '@/utils/hooks/useCertainSection'
 import { useScroll, useTransform } from 'framer-motion'
+import { AboutUs } from '@/features/about-us'
 import { useRef } from 'react'
 import { motion } from 'framer-motion'
-import useCertainSection from '@/utils/hooks/useCertainSection'
+import { Link } from '@/utils/lib/navigation'
+import config from '@/utils/config'
+import styles from './styles.module.scss'
 
 export default function AboutUsSection() {
     const ref = useRef(null)
@@ -15,6 +17,8 @@ export default function AboutUsSection() {
     useCertainSection({ ref, section: 'our-story' })
 
     return (<motion.section style={{ opacity }} ref={ref} className={styles.aboutUs}>
-        <AboutUs className={styles.aboutUs__aboutUs} />
+        <AboutUs className={styles.aboutUs__aboutUs} imagesChildren={
+            <Link className={styles.ourStory} href={config.routes.header.ourStory}><b>OUR STORY</b></Link>
+        } />
     </motion.section>)
 }

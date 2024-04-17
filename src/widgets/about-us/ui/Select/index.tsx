@@ -6,13 +6,15 @@ import { cl } from '@/utils/lib/cl'
 import styles from './styles.module.scss'
 import ArrowWithText from '@/utils/ui/ArrowWithText'
 import { motion } from 'framer-motion'
+import { ReactNode } from 'react'
 
 interface Params<T extends string = string> {
     person: T,
     images: ObjectType<T, StaticImageData>,
     className?: string,
     onNext?: () => unknown,
-    onPrev?: () => unknown
+    onPrev?: () => unknown,
+    imagesChildren?: ReactNode
 }
 
 const calculateStyles = (delta: number) => {
@@ -28,7 +30,7 @@ const calculateStyles = (delta: number) => {
 }
 
 export default function Select<T extends string = string>(
-    { person, onNext, onPrev, images, className }: Params<T>
+    { person, onNext, onPrev, images, className, imagesChildren }: Params<T>
 ) {
     const persons: T[] = Object.keys(images) as T[]
     const imagesData = Object.values(images) as StaticImageData[]
@@ -37,6 +39,7 @@ export default function Select<T extends string = string>(
     return (<div className={cl(styles.personSelect, className)}>
         <ArrowWithText onClick={onPrev} direction={'left'} text={'Back'} />
         <div className={styles.personSelect__images}>
+            {imagesChildren}
             {imagesData.map(({ src }, index) => {
                 const animation = calculateStyles(index - currentIndex)
                 return <motion.div
