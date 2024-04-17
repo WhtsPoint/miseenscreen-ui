@@ -9,6 +9,7 @@ import header from './header'
 import main from './main'
 import terms from './terms'
 import enTranslation from '../en'
+import whoWeAre from './who-we-are'
 
 const translation = {
     ...pages,
@@ -20,7 +21,8 @@ const translation = {
     ...main,
     ...privacyPolicy,
     ...services,
-    ...terms
+    ...terms,
+    ...whoWeAre
 } satisfies typeof enTranslation
 
 

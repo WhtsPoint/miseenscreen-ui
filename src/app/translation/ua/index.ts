@@ -8,6 +8,7 @@ import footer from './footer'
 import header from './header'
 import main from './main'
 import terms from './terms'
+import whoWeAre from './who-we-are'
 import enTranslation from '../en'
 
 const translation = {
@@ -20,7 +21,8 @@ const translation = {
     ...main,
     ...privacyPolicy,
     ...services,
-    ...terms
+    ...terms,
+    ...whoWeAre
 } satisfies typeof enTranslation
 
 

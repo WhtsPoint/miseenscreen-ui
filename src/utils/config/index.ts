@@ -7,7 +7,7 @@ const config = {
         header: {
             cases: '/#cases',
             cooperation: '/#cooperation',
-            ourStory: '/#our-story',
+            ourStory: '/who-we-are',
             blog: '/blog',
             contactUs: '/contact',
             services: '/#services'

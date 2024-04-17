@@ -6,7 +6,7 @@ import { unstable_setRequestLocale } from 'next-intl/server'
 import { NextIntlClientProvider } from 'next-intl'
 
 export const generateMetadata = async (params: Locale) => {
-    return generateMetadataWithTranslation(params.params.locale, 'privacy-policy')
+    return generateMetadataWithTranslation(params.params.locale, 'who-we-are')
 }
 
 interface Params {

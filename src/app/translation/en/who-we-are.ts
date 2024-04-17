@@ -305,15 +305,6 @@ const translation = {
                         anywhere in the world through my own company.
                     </p>
                     <p>
-                        Miseenscreen is passionate about technology and process
-                        systematization. In our experience, a web portal developed
-                        for the training department with electronic learning
-                        systematization, analytics, and other processes has given me,
-                        as a manager, time for the creative part - writing training
-                        courses, communicating with colleagues through store visits,
-                        conducting various training sessions, meetings, and events.
-                    </p>
-                    <p>
                         If I love creating such projects, managing them, and helping businesses
                         through web applications so much, I can do it from
                         anywhere in the world through my own company.

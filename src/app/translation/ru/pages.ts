@@ -19,6 +19,10 @@ const translation = {
         "terms": {
             "title": "Terms",
             "description": "Этот сайт обеспечивает онлайн-доступ к информации о Компании и наших продуктах, услугах и возможностях"
+        },
+        "who-we-are": {
+            "title": "Who We Are",
+            "description": ""
         }
     }
 }
