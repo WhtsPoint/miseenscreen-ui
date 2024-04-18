@@ -1,0 +1,24 @@
+.resultBlock {
+  width: 100%;
+  cursor: pointer;
+  background-color: black;
+  padding: 20px;
+  &:hover {
+    transition: background-color 200ms;
+    background-color: #151515;
+  }
+  & .description {
+    display: -webkit-box;
+    word-break: break-all;
+    -webkit-box-orient: vertical;
+    -moz-box-orient: vertical;
+    -ms-box-orient: vertical;
+    box-orient: vertical;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+    overflow: hidden;
+  }
+  & .title {
+    font-size: 1.2em;
+  }
+}

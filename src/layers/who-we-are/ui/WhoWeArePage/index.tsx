@@ -1,19 +1,21 @@
 import {
     CreatorNote,
-    InitSection,
     CodeNote,
     ModelNote,
     TabletNote,
     BookNote,
     CasesNote,
     CompanyNote,
-    StackNote
+    StackNote,
+    InitSection
 } from '@/features/who-we-are'
 import { FooterSection } from '@/layers/main'
+import { HeaderTheme } from '@/features/header'
 import styles from './styles.module.scss'
 
 export default function WhoWeArePage() {
     return (<section className={styles.page}>
+        <HeaderTheme theme={'solid'} />
         <InitSection />
         <CreatorNote />
         <CodeNote />

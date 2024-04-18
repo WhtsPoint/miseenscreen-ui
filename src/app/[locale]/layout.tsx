@@ -18,7 +18,8 @@ export function generateStaticParams() {
 
 const messageKeys = [
     'header',
-    'stack'
+    'stack',
+    'search'
 ] as const satisfies string[]
 
 export default function DefaultLayout({ children, params }: Children<ReactNode> & any) {

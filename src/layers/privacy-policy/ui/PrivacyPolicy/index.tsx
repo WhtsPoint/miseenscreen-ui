@@ -1,4 +1,5 @@
 import { getTranslations } from 'next-intl/server'
+import { HeaderTheme } from '@/features/header'
 import { Fragment } from 'react'
 import documentStyles from '@/utils/assets/styles/document.module.scss'
 
@@ -6,6 +7,7 @@ export default async function PrivacyPolicy() {
     const t = await getTranslations('privacy-policy')
 
     return (<>
+        <HeaderTheme theme={'solid'} />
         <section className={documentStyles.document}>
             <h1>{t('title')}</h1>
             <h2>{t('section.0.title')}</h2>

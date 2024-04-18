@@ -9,6 +9,7 @@ import header from './header'
 import main from './main'
 import terms from './terms'
 import whoWeAre from './who-we-are'
+import search from './search'
 
 const translation = {
     ...pages,
@@ -21,7 +22,8 @@ const translation = {
     ...privacyPolicy,
     ...services,
     ...terms,
-    ...whoWeAre
+    ...whoWeAre,
+    ...search
 }
 
 

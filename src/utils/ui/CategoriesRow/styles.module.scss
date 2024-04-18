@@ -1,0 +1,17 @@
+.categoriesRow {
+  width: 100%;
+  display: flex;
+  color: white;
+  list-style: none;
+  justify-content: space-around;
+  padding: 0;
+  & .category {
+    cursor: pointer;
+    background: none;
+    border: none;
+    color: white;
+    padding: 0;
+    margin: 0;
+    font-size: 1em;
+  }
+}

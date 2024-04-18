@@ -1,10 +1,11 @@
+import { HeaderTheme } from '@/features/header'
 import { getLocale } from 'next-intl/server'
 import { ReactNode } from 'react'
-import config from '@/utils/config'
 import { notFound } from 'next/navigation'
 import EnTerms from '../EnTerms'
 import RuTerms from '@/layers/terms/ui/RuTerms'
 import UaTerms from '@/layers/terms/UaTerms'
+import config from '@/utils/config'
 
 const pages = {
     'en': <EnTerms />,
@@ -19,5 +20,8 @@ export default async function Terms() {
 
     if (!isPageExists(locale)) return notFound()
 
-    return pages[locale]
+    return (<>
+        <HeaderTheme theme={'solid'} />
+        {pages[locale]}
+    </>)
 }
