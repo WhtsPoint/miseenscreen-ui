@@ -1,7 +1,7 @@
 'use server'
 
 import getAllBlogs from './getAllBlogs'
-import { Blog } from '@/widgets/blog'
+import type { Blog } from '@/widgets/blog'
 import { notFound } from 'next/navigation'
 
 export default async function getBlogById(locale: string, id: string): Promise<Blog> {

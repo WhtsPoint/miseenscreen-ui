@@ -1,6 +1,6 @@
 import { getLocale } from 'next-intl/server'
 import { ContactUsModalWrapper } from '@/features/contact-us'
-import { BlogOtherArticles, getBlogById } from '@/features/blog'
+import { BlogOtherArticles, getBlogById, renderBlogContent } from '@/features/blog'
 import { Blog, BlogArticle } from '@/widgets/blog'
 import { FooterSection } from '@/layers/main'
 import styles from './styles.module.scss'
@@ -16,7 +16,7 @@ export default async function BlogPage({ blogId }: Params) {
     return (<ContactUsModalWrapper>
         <div className={styles.blog}>
             <BlogArticle blog={blog}>
-                {blog.content}
+                {renderBlogContent(blog)}
             </BlogArticle>
             <BlogOtherArticles id={blog.id} />
             <FooterSection className={styles.footer} />

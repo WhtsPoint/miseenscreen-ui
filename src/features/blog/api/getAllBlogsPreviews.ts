@@ -1,4 +1,4 @@
-import { BlogPreview } from '@/widgets/blog'
+import type { BlogPreview } from '@/widgets/blog'
 import { getAllBlogs } from '@/features/blog'
 
 export default async function getAllBlogsPreviews(locale: string): Promise<BlogPreview[]> {

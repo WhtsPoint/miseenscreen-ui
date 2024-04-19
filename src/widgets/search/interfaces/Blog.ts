@@ -1,6 +1,8 @@
+import type { SearchCoincidence } from '@/utils/types/SearchCoincidence'
+
 interface Blog {
-    title: string,
-    description: string,
+    title: SearchCoincidence,
+    description: SearchCoincidence,
     id: string
 }
 

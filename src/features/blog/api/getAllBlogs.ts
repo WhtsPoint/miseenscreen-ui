@@ -1,9 +1,7 @@
 'use server'
 
 import { getTranslations } from 'next-intl/server'
-import { Blog } from '@/widgets/blog'
-import { EmployeesPromotionBlog, What2Blog, WhatBlog } from '@/features/blog'
-import { createElement } from 'react'
+import type { Blog } from '@/widgets/blog'
 import cover1 from '@/../public/assets/blog/employees-promotion/preview.jpeg'
 import cover2 from '@/../public/assets/blog/what/preview.jpeg'
 import cover3 from '@/../public/assets/blog/what2/preview.png'
@@ -16,24 +14,25 @@ export default async function getAllBlogs(locale: string): Promise<Blog[]> {
             id: 'employees-promotion',
             previewCover: { ...cover3, src: '/assets/blog/employees-promotion/preview.jpeg' },
             createdAt: new Date('03.06.2024'),
-            content: createElement(EmployeesPromotionBlog),
+            content: '<p></p>',
             author: t('names.darya')
         },
         {
             id: 'company-consciousness-2',
             previewCover: { ...cover2, src: '/assets/blog/what2/preview.png' },
             createdAt: new Date('03.02.2024'),
-            content: createElement(What2Blog),
+            content: t.raw('content.company-consciousness-2'),
             author: t('names.darya')
         },
         {
             id: 'company-consciousness',
             previewCover: { ...cover1, src: '/assets/blog/what/preview.jpeg' },
             createdAt: new Date('03.02.2024'),
-            content: createElement(WhatBlog),
+            content: t.raw('content.company-consciousness'),
             author: t('names.darya')
         }
     ]
+
     blogs.sort((first, second) => {
         return second.createdAt.getTime() - first.createdAt.getTime()
     })

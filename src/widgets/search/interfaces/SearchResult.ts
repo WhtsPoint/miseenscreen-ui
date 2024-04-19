@@ -1,5 +1,5 @@
-import { Blog } from './Blog'
-import { Service } from './Service'
+import type { Blog } from './Blog'
+import type { Service } from './Service'
 
 interface SearchResult {
     blogs: Blog[],

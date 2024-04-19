@@ -11,6 +11,7 @@ import BlogOtherArticles from './ui/BlogOtherArticles'
 import EmployeesPromotionBlog from './ui/EmployeesPromotionBlog'
 import ArticleTableWithLogo from './ui/ArticleTableWithLogo'
 import ArticleTableWithButtonAndLogo from './ui/ArticleTableWithButtonAndLogo'
+import renderBlogContent from './utils/renderBlogContent'
 
 export {
     ArticleCarousel,
@@ -25,5 +26,6 @@ export {
     getAllBlogsPreviews,
     getAllBlogsPreviewsV2,
     ArticleTableWithLogo,
-    ArticleTableWithButtonAndLogo
+    ArticleTableWithButtonAndLogo,
+    renderBlogContent
 }

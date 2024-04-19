@@ -1,15 +1,14 @@
-import { StaticImageData } from 'next/image'
-import { ReactNode } from 'react'
+import type { StaticImageData } from 'next/image'
 
 interface Blog {
     id: string,
     title: string,
-    description: string
+    description: string,
     themes: string[],
     previewCover: StaticImageData,
     createdAt: Date,
-    content: ReactNode,
-    author: string
+    content: string,
+    author: string,
 }
 
 export type { Blog }
