@@ -1,5 +1,5 @@
 import openSans from '@/utils/assets/fonts/OpenSans'
-import styles from './style.module.scss'
+import styles from './styles.module.scss'
 import { cl } from '@/utils/lib/cl'
 
 interface Params {

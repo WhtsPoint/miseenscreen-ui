@@ -3,7 +3,7 @@ import Image from 'next/image'
 import { cl } from '@/utils/lib/cl'
 import { forwardRef } from 'react'
 import { motion, type MotionStyle } from 'framer-motion'
-import styles from './style.module.scss'
+import styles from './styles.module.scss'
 
 interface Params {
     blog: BlogPreview,

@@ -1,4 +1,4 @@
-import styles from './style.module.scss'
+import styles from './styles.module.scss'
 
 export default function Contacts() {
     return (<address className={styles.address}>

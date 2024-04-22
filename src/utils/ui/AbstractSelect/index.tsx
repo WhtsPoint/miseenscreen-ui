@@ -2,7 +2,7 @@ import Container from '@/utils/ui/Container'
 import { type ReactNode, useState } from 'react'
 import { cl } from '@/utils/lib/cl'
 import useSelectClosing from '@/utils/hooks/useSelectClosing'
-import styles from './style.module.scss'
+import styles from './styles.module.scss'
 
 interface Params<T extends string, V> {
     options: Record<T, string>,

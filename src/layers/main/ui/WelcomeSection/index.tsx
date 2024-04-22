@@ -1,10 +1,10 @@
 'use client'
 
-import styles from './style.module.scss'
 import { forwardRef, type RefObject } from 'react'
 import { useScroll } from 'framer-motion'
 import { WelcomeText } from '@/widgets/welcome'
 import { Background } from '@/features/welcome'
+import styles from './styles.module.scss'
 
 const WelcomeSection = forwardRef<HTMLDivElement>((_params, ref) => {
     const { scrollYProgress } = useScroll({
