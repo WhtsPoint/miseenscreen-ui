@@ -1,8 +1,8 @@
 'use client'
 
-import { Children } from '@/utils/interfaces/Children'
-import { ReactNode, useEffect, useState } from 'react'
-import ContactUsModal from '../ContactUsModal'
+import type { Children } from '@/utils/interfaces/Children'
+import { type ReactNode, useEffect, useState } from 'react'
+import { MemoContactUsModal } from '../ContactUsModal'
 import { createPortal } from 'react-dom'
 import styles from './styles.module.scss'
 
@@ -14,7 +14,7 @@ export default function ContactUsModalWrapper({ children }: Params) {
     useEffect(() => setIsClient(true), [])
 
     return (<>
-        {isClient && createPortal(<ContactUsModal className={styles.modal} />, document.body)}
+        {isClient && createPortal(<MemoContactUsModal className={styles.modal} />, document.body)}
         {children}
     </>)
 }

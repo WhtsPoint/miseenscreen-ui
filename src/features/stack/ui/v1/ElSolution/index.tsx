@@ -1,6 +1,6 @@
 import { Item } from '@/widgets/stack'
 import { useTranslations } from 'next-intl'
-import { CSSProperties } from 'react'
+import type { CSSProperties } from 'react'
 import ElSolutionLink from '../../ElSolutionLink'
 import videos from '@/utils/config/videos'
 

@@ -1,7 +1,7 @@
 'use client'
 
 import sectionStyles from '@/utils/assets/styles/services.module.scss'
-import { Prop } from '@/widgets/services/intefaces/Prop'
+import  type { Prop } from '@/widgets/services/intefaces/Prop'
 import { motion, useInView } from 'framer-motion'
 import { cl } from '@/utils/lib/cl'
 import { useRef } from 'react'

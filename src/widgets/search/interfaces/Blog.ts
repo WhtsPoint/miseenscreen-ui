@@ -1,4 +1,4 @@
-import type { SearchCoincidence } from '@/utils/types/SearchCoincidence'
+import type { SearchCoincidence } from '../types/SearchCoincidence'
 
 interface Blog {
     title: SearchCoincidence,

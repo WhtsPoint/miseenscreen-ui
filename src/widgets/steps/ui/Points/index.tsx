@@ -2,8 +2,8 @@ import { cl } from '@/utils/lib/cl'
 import styles from './styles.module.scss'
 import PointWithMarker from '@/widgets/steps/ui/PointWithMarker'
 import VerticalLine from '@/widgets/steps/ui/VerticalLine'
-import { MotionValue } from 'framer-motion'
-import { Topic } from '@/widgets/steps/interfaces/Topic'
+import type { MotionValue } from 'framer-motion'
+import type { Topic } from '@/widgets/steps/interfaces/Topic'
 
 interface Params {
     className?: string,

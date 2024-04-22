@@ -1,4 +1,4 @@
-import { ObjectType } from '@/utils/types/ObjectType'
+import type { ObjectType } from '@/utils/types/ObjectType'
 
 export default function deepAssign(...targets: ObjectType<string>[]) {
     const assigned = targets.reduce((prev, current) => ({ ...prev, ...current}), {})

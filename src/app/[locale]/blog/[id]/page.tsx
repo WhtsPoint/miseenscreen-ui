@@ -1,6 +1,6 @@
 import { getAllBlogsId, getBlogById } from '@/features/blog'
 import { BlogPage } from '@/layers/blog'
-import { Metadata } from 'next'
+import type{ Metadata } from 'next'
 import { NextIntlClientProvider } from 'next-intl'
 import { unstable_setRequestLocale } from 'next-intl/server'
 import useCertainMessages from '@/app/hooks/useCertainIntlMessages'

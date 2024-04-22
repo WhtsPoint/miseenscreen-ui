@@ -1,5 +1,5 @@
-import { ChangeEvent, ReactNode, useRef } from 'react'
-import { Children } from '@/utils/interfaces/Children'
+import { type ChangeEvent, type ReactNode, useRef } from 'react'
+import type { Children } from '@/utils/interfaces/Children'
 import fileListToArray from '@/utils/lib/fileListToArray'
 
 interface Params extends Partial<Children<ReactNode>> {

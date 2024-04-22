@@ -1,4 +1,4 @@
-import { EmailSubscriptionData } from '@/widgets/email-subscription'
+import type {EmailSubscriptionData} from '@/widgets/email-subscription'
 
 interface PaginatedEmailSubscriptions {
     data: EmailSubscriptionData[],

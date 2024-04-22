@@ -1,5 +1,5 @@
 import { PrivacyPolicy } from '@/layers/privacy-policy'
-import { Locale } from '@/utils/interfaces/Locale'
+import type { Locale } from '@/utils/interfaces/Locale'
 import generateMetadataWithTranslation from '../lib/generateMetadataWithTranslation'
 import { unstable_setRequestLocale } from 'next-intl/server'
 

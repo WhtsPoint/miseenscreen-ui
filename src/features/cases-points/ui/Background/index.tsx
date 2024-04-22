@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion'
 import { Background as NotFilledBackground } from '@/widgets/cases-points'
 import { useEffect, useState } from 'react'
-import { StaticImageData } from 'next/image'
+import type {StaticImageData} from 'next/image'
 import importImages from '@/utils/assets/images/cases-points'
 import { cl } from '@/utils/lib/cl'
 import styles from './styles.module.scss'

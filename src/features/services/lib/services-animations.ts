@@ -1,5 +1,5 @@
 import { stagger } from 'framer-motion'
-import { MutableRefObject } from 'react'
+import type {MutableRefObject} from 'react'
 
 const transitions = {
     default: { delay: stagger(0.2), ease: 'linear', at: '+0' }

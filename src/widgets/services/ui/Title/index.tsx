@@ -1,8 +1,8 @@
 'use client'
 
-import { Children } from '@/utils/interfaces/Children'
-import { ReactNode, useRef } from 'react'
-import { motion, Transition, useInView } from 'framer-motion'
+import type { Children } from '@/utils/interfaces/Children'
+import { type ReactNode, useRef } from 'react'
+import { motion, type Transition, useInView } from 'framer-motion'
 import sectionStyles from '@/utils/assets/styles/services.module.scss'
 
 interface Params extends Children<ReactNode> {

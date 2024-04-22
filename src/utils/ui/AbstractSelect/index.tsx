@@ -1,5 +1,5 @@
 import Container from '@/utils/ui/Container'
-import { ReactNode, useState } from 'react'
+import { type ReactNode, useState } from 'react'
 import { cl } from '@/utils/lib/cl'
 import useSelectClosing from '@/utils/hooks/useSelectClosing'
 import styles from './style.module.scss'

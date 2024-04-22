@@ -1,5 +1,5 @@
-import { Children } from '@/utils/interfaces/Children'
-import { forwardRef, ReactNode } from 'react'
+import type { Children } from '@/utils/interfaces/Children'
+import { forwardRef, type ReactNode } from 'react'
 import { cl } from '@/utils/lib/cl'
 import { motion } from 'framer-motion'
 import styles from './styles.module.scss'

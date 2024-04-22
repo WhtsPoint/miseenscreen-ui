@@ -1,4 +1,4 @@
-import { UpdateFormData } from '@/widgets/contact-us'
+import type {UpdateFormData} from '@/widgets/contact-us'
 import config from '@/utils/config'
 
 export default async function updateFormWithToken(form: UpdateFormData, accessToken: string): Promise<string | null> {

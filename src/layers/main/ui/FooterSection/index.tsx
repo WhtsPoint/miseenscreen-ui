@@ -1,7 +1,7 @@
 import { Footer, FooterBackground } from '@/features/footer'
 import { cl } from '@/utils/lib/cl'
-import { Children } from '@/utils/interfaces/Children'
-import { ReactNode } from 'react'
+import type { Children } from '@/utils/interfaces/Children'
+import type { ReactNode } from 'react'
 import styles from './styles.module.scss'
 
 interface Params extends Partial<Children<ReactNode>> {

@@ -1,6 +1,6 @@
 'use client'
 
-import { Form, FormParams } from '@/widgets/contact-us'
+import { Form, type FormParams } from '@/widgets/contact-us'
 import { useRef, useState } from 'react'
 import SectionSteps from '@/utils/ui/SectionSteps'
 import { useReCaptchaModal } from '@/features/re-captcha'

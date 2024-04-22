@@ -1,7 +1,7 @@
 import { useTranslations } from 'next-intl'
 import { Points } from '@/widgets/steps'
-import { MotionValue } from 'framer-motion'
-import { Topic } from '@/widgets/steps/interfaces/Topic'
+import type { MotionValue } from 'framer-motion'
+import type { Topic } from '@/widgets/steps/interfaces/Topic'
 
 const topics = [
     ['planning', 'qa'],

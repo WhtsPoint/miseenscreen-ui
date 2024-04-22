@@ -3,7 +3,7 @@
 import { useHeaderSettings } from '@/widgets/header'
 import { useEffect, useRef } from 'react'
 import { useInView } from 'framer-motion'
-import { Theme } from '@/widgets/header'
+import type {Theme} from '@/widgets/header'
 
 interface Params {
     whenInView?: Theme,

@@ -1,4 +1,4 @@
-import codesToFlags from '@/utils/config/country-icons'
+import type codesToFlags from '@/utils/config/country-icons'
 
 type PhoneCode = keyof typeof codesToFlags
 

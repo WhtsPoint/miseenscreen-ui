@@ -1,4 +1,4 @@
-import { InputHTMLAttributes } from 'react'
+import type { InputHTMLAttributes } from 'react'
 import Image from 'next/image'
 import styles from './styles.module.scss'
 import loupeImage from '@/utils/assets/images/loupe.svg'

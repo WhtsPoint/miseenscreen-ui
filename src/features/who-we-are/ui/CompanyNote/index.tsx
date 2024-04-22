@@ -31,8 +31,8 @@ export default function CompanyNote() {
             </div>
             <Image
                 fill
+                priority
                 sizes={'100vw'}
-                priority={'lazy'}
                 data-tag={'light'}
                 className={styles.lightImage}
                 src={lightImage.src}

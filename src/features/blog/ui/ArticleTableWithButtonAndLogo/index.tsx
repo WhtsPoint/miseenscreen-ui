@@ -1,7 +1,7 @@
 import { Link } from '@/utils/lib/navigation'
 import config from '@/utils/config'
 import { cl } from '@/utils/lib/cl'
-import { BlogPreviewV2 } from '@/widgets/blog'
+import type { BlogPreviewV2 } from '@/widgets/blog'
 import ArticleTableWithLogo from '@/features/blog/ui/ArticleTableWithLogo'
 import buttonStyles from '@/utils/assets/styles/button.module.scss'
 import styles from './styles.module.scss'

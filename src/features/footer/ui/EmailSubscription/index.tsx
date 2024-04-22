@@ -1,7 +1,7 @@
 import { EmailSubscription as Form } from '@/widgets/footer'
 import subscribeEmail from '@/features/footer/api/subscribeEmail'
 import BasicLoading from '../../../../utils/ui/BasicLoading'
-import { Status } from '@/widgets/footer/types/Status'
+import type {Status} from '@/widgets/footer/types/Status'
 import { useReCaptchaModal } from '@/features/re-captcha'
 import { useState } from 'react'
 import styles from './styles.module.scss'

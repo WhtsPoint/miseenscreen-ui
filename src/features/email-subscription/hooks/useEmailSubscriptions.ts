@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react'
-import { EmailSubscriptionData } from '@/widgets/email-subscription'
+import type {EmailSubscriptionData} from '@/widgets/email-subscription'
 import getEmailSubscriptions from '@/features/email-subscription/action/getEmailSubscriptions'
 import useLoading from '@/utils/hooks/useLoading'
 

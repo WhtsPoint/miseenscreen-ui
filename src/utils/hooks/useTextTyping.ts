@@ -3,8 +3,8 @@ import {
     useMotionValue,
     useTransform,
     animate,
-    ValueAnimationTransition,
-    AnimationPlaybackControls
+    type ValueAnimationTransition,
+    type AnimationPlaybackControls
 } from 'framer-motion'
 import { useRef } from 'react'
 

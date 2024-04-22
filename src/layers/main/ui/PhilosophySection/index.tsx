@@ -2,7 +2,7 @@ import { useTranslations } from 'next-intl'
 import BackgroundVideo from '@/utils/ui/BackgroundVideo'
 import videos from '@/utils/config/videos'
 import { ScrollPoint } from '@/features/philosophy'
-import { MotionValue } from 'framer-motion'
+import type { MotionValue } from 'framer-motion'
 import styles from './styles.module.scss'
 
 interface Params {

@@ -1,6 +1,6 @@
 'use client'
 
-import { FormParams } from '../../interfaces/FormParams'
+import type { FormParams } from '../../interfaces/FormParams'
 import FileUpload from '../FileUpload'
 import { useTranslations } from 'next-intl'
 import { useEffect, useState } from 'react'
@@ -11,7 +11,7 @@ import FormError from '@/widgets/contact-us/ui/FormError'
 import { cl } from '@/utils/lib/cl'
 import IBMPlexSans from '@/utils/assets/fonts/IBMPlexSans'
 import form from '@/utils/config/form'
-import { Option } from '../../types/Option'
+import type { Option } from '../../types/Option'
 import useMultipleValues from '@/utils/hooks/useMultipleValues'
 import buttonStyles from '@/utils/assets/styles/button.module.scss'
 import BasicLoading from '@/utils/ui/BasicLoading'
@@ -29,7 +29,6 @@ export default function Form({ onSend, className, isLoading }: Params) {
     const [services, onServiceChange] = useMultipleValues<Option>([])
     const [onFormSend, getError] = useFormSend({ services, files, onSend, validation: { files: form.file }, isLoading })
     const [lockedSubmit, setLockedSubmit] = useState<boolean>(true)
-    //const animRef = useFormAdaptation()
 
     const fileError = getError('file-size') || getError('file-count') || getError('file-format')
 
@@ -56,7 +55,7 @@ export default function Form({ onSend, className, isLoading }: Params) {
                     values={services}
                     onChange={onServiceChange}
                     className={styles.form__services}
-                    optionClass={styles.form__services__optionList}
+                    optionClass={styles.option}
                 />
                 {!getError('services') && <small className={styles.form__services__tip}>
                     {t('services.multiple-select')}

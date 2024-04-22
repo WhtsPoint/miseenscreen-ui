@@ -1,4 +1,3 @@
-import styles from './styles.module.scss'
 import { cl } from '@/utils/lib/cl'
 import { motion, useTransform } from 'framer-motion'
 import useTextTyping from '@/utils/hooks/useTextTyping'
@@ -6,6 +5,7 @@ import { useEffect } from 'react'
 import BackgroundVideo from '@/utils/ui/BackgroundVideo'
 import videos from '@/utils/config/videos'
 import { useTranslations } from 'next-intl'
+import styles from './styles.module.scss'
 
 interface Params {
     className?: string,

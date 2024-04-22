@@ -1,7 +1,7 @@
 import { getLocale } from 'next-intl/server'
 import { ContactUsModalWrapper } from '@/features/contact-us'
 import { BlogOtherArticles, getBlogById, renderBlogContent } from '@/features/blog'
-import { Blog, BlogArticle } from '@/widgets/blog'
+import { type Blog, BlogArticle } from '@/widgets/blog'
 import { FooterSection } from '@/layers/main'
 import styles from './styles.module.scss'
 

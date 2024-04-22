@@ -15,7 +15,7 @@ export default function BookBackground({ className }: Params) {
     const ref = useBackgroundAnimation()
 
     return (<div ref={ref} className={cl(styles.bookBackground, className)}>
-        <video data-tag={'background'} className={styles.video} autoPlay muted loop>
+        <video data-tag={'background'} className={styles.video} autoPlay muted loop playsInline>
             <source type={'video/mp4'} src={videos.rotatingBook} />
         </video>
         <div data-tag={'light'} className={styles.light}>

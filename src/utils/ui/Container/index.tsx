@@ -1,6 +1,6 @@
 import styles from './styles.module.scss'
-import { forwardRef, ReactNode } from 'react'
-import { Children } from '@/utils/interfaces/Children'
+import { forwardRef, type ReactNode } from 'react'
+import type { Children } from '@/utils/interfaces/Children'
 import { cl } from '@/utils/lib/cl'
 
 interface Params extends Children<ReactNode> {

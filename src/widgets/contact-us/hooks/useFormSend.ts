@@ -1,9 +1,9 @@
-import { FormEvent, useState } from 'react'
+import { type FormEvent, useState } from 'react'
 import validateForm from '../lib/validateForm'
-import { FormParams } from '../interfaces/FormParams'
-import { FormError } from '../interfaces/FormError'
+import type { FormParams } from '../interfaces/FormParams'
+import type { FormError } from '../interfaces/FormError'
 import { useTranslations } from 'next-intl'
-import { ValidationRules } from '../interfaces/ValidationRules'
+import type { ValidationRules } from '../interfaces/ValidationRules'
 
 interface Params {
     services: string[],

@@ -1,4 +1,4 @@
-import { statuses } from '../utils/status'
+import type { statuses } from '../utils/status'
 
 type Status = (typeof statuses)[number]
 

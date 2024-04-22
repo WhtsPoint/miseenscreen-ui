@@ -1,6 +1,6 @@
 import styles from './styles.module.scss'
 import Arrow from '@/utils/ui/Arrow'
-import { ArrowDirection } from '@/utils/types/ArrowDirection'
+import type { ArrowDirection } from '@/utils/types/ArrowDirection'
 import { cl } from '@/utils/lib/cl'
 
 interface Params {

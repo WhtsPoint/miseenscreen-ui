@@ -1,5 +1,5 @@
-import { Children } from '@/utils/interfaces/Children'
-import { ReactNode } from 'react'
+import type { Children } from '@/utils/interfaces/Children'
+import type { ReactNode } from 'react'
 import styles from './styles.module.scss'
 
 interface Params extends Children<ReactNode> {}

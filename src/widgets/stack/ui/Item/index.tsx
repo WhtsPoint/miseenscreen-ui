@@ -3,8 +3,7 @@ import { cl } from '@/utils/lib/cl'
 import openSans from '@/utils/assets/fonts/OpenSans'
 import BackgroundVideo from '@/utils/ui/BackgroundVideo'
 import BasicLoading from '../../../../utils/ui/BasicLoading'
-import { CSSProperties } from 'react'
-import { Link } from '@/utils/lib/navigation'
+import type { CSSProperties } from 'react'
 
 interface Video {
     src: string,

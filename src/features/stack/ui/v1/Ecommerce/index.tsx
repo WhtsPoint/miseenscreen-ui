@@ -1,7 +1,7 @@
 import { Item } from '@/widgets/stack'
 import { useTranslations } from 'next-intl'
 import videos from '@/utils/config/videos'
-import { CSSProperties } from 'react'
+import type { CSSProperties } from 'react'
 import EccomerceLink from '../../EcommerceLink'
 
 interface Params {

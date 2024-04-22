@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react'
-import { FormData } from '@/widgets/contact-us'
+import type {FormData} from '@/widgets/contact-us'
 import getAndSetFormsWithPages from '../utils/getAndSetFormsWithPages'
 import useLoading from '@/utils/hooks/useLoading'
 

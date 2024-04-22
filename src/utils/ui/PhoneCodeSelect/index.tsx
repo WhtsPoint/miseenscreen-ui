@@ -1,7 +1,7 @@
 import AbstractSelect from '../AbstractSelect'
 import styles from './styles.module.scss'
 import codesToFlags from '@/utils/config/country-icons'
-import { PhoneCode } from '@/utils/types/PhoneCode'
+import type { PhoneCode } from '@/utils/types/PhoneCode'
 
 interface Params {
     code?: PhoneCode,

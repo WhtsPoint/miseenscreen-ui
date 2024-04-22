@@ -1,6 +1,6 @@
-import { RefObject, useRef } from 'react'
+import { type RefObject, useRef } from 'react'
 import { useMotionValueEvent, useScroll } from 'framer-motion'
-import { Theme, useHeaderSettings } from '@/widgets/header'
+import { type Theme, useHeaderSettings } from '@/widgets/header'
 
 export default function useHeaderTransition(): RefObject<HTMLDivElement> {
     const ref = useRef<HTMLDivElement>(null)

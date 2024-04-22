@@ -1,7 +1,7 @@
 'use client'
 
 import { Points, TitleBlock } from '@/features/cooperation'
-import { RefObject, useRef } from 'react'
+import { type RefObject, useRef } from 'react'
 import { useInView } from 'framer-motion'
 import VerticalLine from '../../../../features/cooperation/ui/VerticalLine'
 import styles from './styles.module.scss'

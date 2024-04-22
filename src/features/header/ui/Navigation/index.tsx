@@ -1,4 +1,4 @@
-import { GlobalSearch } from '@/features/search'
+import { MemoGlobalSearch } from '@/features/search'
 import ServiceNavigation from '../ServiceNavigation'
 import { LocaleSelect } from '@/widgets/header'
 import { forwardRef } from 'react'
@@ -20,7 +20,7 @@ const Navigation = forwardRef<HTMLDivElement, Params>(({ className, listClassNam
     const t = useTranslations('header')
 
     return (<div data-tag={'header-navigation'} className={cl(styles.navigation, className)} ref={ref}>
-        <GlobalSearch />
+        <MemoGlobalSearch />
         <nav className={styles.nav}>
             <ul className={cl(styles.list, listClassName)}>
                 <ServiceNavigation>

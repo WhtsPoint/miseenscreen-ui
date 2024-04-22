@@ -1,11 +1,11 @@
 import { HeaderTheme } from '@/features/header'
 import { getLocale } from 'next-intl/server'
-import { ReactNode } from 'react'
+import type { ReactNode } from 'react'
 import { notFound } from 'next/navigation'
 import EnTerms from '../EnTerms'
 import RuTerms from '@/layers/terms/ui/RuTerms'
 import UaTerms from '@/layers/terms/UaTerms'
-import config from '@/utils/config'
+import type config from '@/utils/config'
 
 const pages = {
     'en': <EnTerms />,

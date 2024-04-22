@@ -1,9 +1,9 @@
 'use client'
 
 import styles from './styles.module.scss'
-import { ReactNode } from 'react'
+import type { ReactNode } from 'react'
 import Arrow from '@/utils/ui/Arrow'
-import { Children } from '@/utils/interfaces/Children'
+import type { Children } from '@/utils/interfaces/Children'
 
 interface Params extends Partial<Children<ReactNode>> {
     summary: ReactNode

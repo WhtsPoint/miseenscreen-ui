@@ -1,5 +1,5 @@
-import SearchedText from '@/utils/ui/SearchedText'
-import type { SearchCoincidence } from '@/utils/types/SearchCoincidence'
+import SearchedText from '../SearchedText'
+import type { SearchCoincidence } from '@/widgets/search'
 import styles from './styles.module.scss'
 
 interface Params {

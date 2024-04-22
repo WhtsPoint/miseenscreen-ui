@@ -1,12 +1,11 @@
 'use client'
 
-import { Form } from '../../interfaces/Form'
+import type { Form } from '../../interfaces/Form'
 import Accordion from '@/utils/ui/Accordion'
 import styles from './styles.module.scss'
-import config from '@/utils/config'
 import XIcon from '@/utils/ui/xIcon'
 import { dateToStringWithTime } from '@/utils/lib/dateToString'
-import { ReactNode } from 'react'
+import type { ReactNode } from 'react'
 
 interface Params {
     form: Form,

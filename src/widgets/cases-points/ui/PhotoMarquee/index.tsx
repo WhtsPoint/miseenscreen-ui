@@ -1,9 +1,9 @@
 'use client'
 
 import YMarquee from '@/utils/ui/YMarquee'
-import { MotionValue } from 'framer-motion'
-import { Direction } from '@/utils/lib/y-marquee'
-import { StaticImageData } from 'next/image'
+import type { MotionValue } from 'framer-motion'
+import type { Direction } from '@/utils/lib/y-marquee'
+import type { StaticImageData } from 'next/image'
 import MarqueeLine from '../MarqueeLine'
 
 interface Params {

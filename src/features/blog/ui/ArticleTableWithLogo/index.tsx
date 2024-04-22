@@ -1,6 +1,6 @@
 import Logo from '@/features/blog/ui/Logo'
 import ArticleTable from '@/features/blog/ui/ArticleTable'
-import { BlogPreviewV2 } from '@/widgets/blog'
+import type {BlogPreviewV2} from '@/widgets/blog'
 import { cl } from '@/utils/lib/cl'
 import styles from './styles.module.scss'
 

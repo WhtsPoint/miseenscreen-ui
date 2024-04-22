@@ -1,4 +1,4 @@
-import { EmailSubscriptionData } from '../../interfaces/EmailSubscriptionData'
+import type { EmailSubscriptionData } from '../../interfaces/EmailSubscriptionData'
 import { dateToStringWithTime } from '@/utils/lib/dateToString'
 import styles from './styles.module.scss'
 import XIcon from '@/utils/ui/xIcon'

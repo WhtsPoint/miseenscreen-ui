@@ -1,10 +1,10 @@
 import styles from './styles.module.scss'
 import { useTranslations } from 'next-intl'
 import { cl } from '@/utils/lib/cl'
-import { ChangeEvent, FormEvent, useRef, useState } from 'react'
+import { type ChangeEvent, type FormEvent, useRef, useState } from 'react'
 import { isEmail } from '@/utils/lib/validator'
 import SubscribeButton from '@/widgets/footer/ui/SubscribeButton'
-import { Status } from '../../types/Status'
+import type { Status } from '../../types/Status'
 
 interface Params {
     onSend: (email: string) => unknown,

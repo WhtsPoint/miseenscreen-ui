@@ -5,7 +5,7 @@ import { useLocale } from 'use-intl'
 import { useRouter, usePathname } from '@/utils/lib/navigation'
 import Image from 'next/image'
 import { cl } from '@/utils/lib/cl'
-import { Locale } from '@/utils/types/Locale'
+import type { Locale } from '@/utils/types/Locale'
 import styles from './style.module.scss'
 import icon from '@/utils/assets/images/planet.svg'
 

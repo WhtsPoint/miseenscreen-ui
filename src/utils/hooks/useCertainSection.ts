@@ -1,4 +1,4 @@
-import { RefObject, useCallback, useEffect, useRef } from 'react'
+import { type RefObject, useCallback, useEffect, useRef } from 'react'
 import { useSpecialSection } from '@/features/main'
 
 interface Params {

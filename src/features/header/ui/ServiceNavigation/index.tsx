@@ -1,8 +1,8 @@
 'use client'
 
 import { useTranslations } from 'next-intl'
-import { ReactNode, useState } from 'react'
-import { Children } from '@/utils/interfaces/Children'
+import { type ReactNode, useState } from 'react'
+import type {Children} from '@/utils/interfaces/Children'
 import { AnalyticsLink, EccomerceLink, ElSolutionLink, HrSoftwareLink, WebServicesLink } from '@/features/stack'
 import styles from './styles.module.scss'
 import Container from '@/utils/ui/Container'

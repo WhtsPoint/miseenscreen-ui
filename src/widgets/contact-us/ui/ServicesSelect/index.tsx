@@ -1,6 +1,6 @@
 import { useTranslations } from 'next-intl'
 import MultipleSelect from '@/utils/ui/MultipleSelect'
-import { Option } from '../../types/Option'
+import type { Option } from '../../types/Option'
 
 interface Params {
     values: Option[],

@@ -1,5 +1,5 @@
 import { getTranslations } from 'next-intl/server'
-import { Metadata } from 'next'
+import type { Metadata } from 'next'
 import openGraphImage from '../../opengraph-image.png'
 
 const { src, width, height } = openGraphImage

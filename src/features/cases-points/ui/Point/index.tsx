@@ -1,5 +1,5 @@
 import SceneSwitcher from '@/utils/ui/SceneSwitcher'
-import { MotionValue } from 'framer-motion'
+import type { MotionValue } from 'framer-motion'
 import { useTranslations } from 'next-intl'
 import styles from './styles.module.scss'
 

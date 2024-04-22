@@ -1,4 +1,4 @@
-import { DragEvent } from 'react'
+import type { DragEvent } from 'react'
 import { useTranslations } from 'next-intl'
 import { useEffect, useState } from 'react'
 import FileContainer from '../FileContainer'

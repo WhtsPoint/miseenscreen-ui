@@ -1,5 +1,5 @@
 import styles from './styles.module.scss'
-import { Description } from '../../interfaces/Description'
+import type { Description } from '../../interfaces/Description'
 import { cl } from '@/utils/lib/cl'
 
 interface Params {

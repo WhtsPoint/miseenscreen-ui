@@ -1,13 +1,13 @@
 'use client'
 
-import { Children } from '@/utils/interfaces/Children'
-import { ReactNode, useEffect, useState } from 'react'
+import type {Children} from '@/utils/interfaces/Children'
+import { type ReactNode, useEffect, useState } from 'react'
 import { createPortal } from 'react-dom'
 import { LocaleSelect } from '@/widgets/locale-window'
 import useLocalStorage from '@/utils/hooks/useLocaleStorage'
 import { usePathname, useRouter } from '@/utils/lib/navigation'
 import { useLocale } from 'use-intl'
-import { Locale } from '@/utils/types/Locale'
+import type {Locale} from '@/utils/types/Locale'
 import styles from './styles.module.scss'
 
 interface Params extends Partial<Children<ReactNode>> {}

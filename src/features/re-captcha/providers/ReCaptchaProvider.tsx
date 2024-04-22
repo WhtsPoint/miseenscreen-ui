@@ -1,10 +1,10 @@
 'use client'
 
 import { useCaptchaLoading } from '../stores/captcha-loading'
-import { Children } from '@/utils/interfaces/Children'
-import { ReactNode } from 'react'
+import type {Children} from '@/utils/interfaces/Children'
+import type {ReactNode} from 'react'
 import Script from 'next/script'
-import { ExtendedWindow } from '@/features/re-captcha/types/ExtendedWindow'
+import type {ExtendedWindow} from '@/features/re-captcha/types/ExtendedWindow'
 
 export default function ReCaptchaProvider({ children }: Children<ReactNode>) {
     const { onLoad } = useCaptchaLoading()

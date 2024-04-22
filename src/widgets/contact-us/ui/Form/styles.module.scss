@@ -60,8 +60,8 @@ $borderColor: #a4a4a4;
   &__other input:not([name='phone']), &__phone, &__services, textarea {
     border-bottom: 1px solid $borderColor;
   }
-  &__services__optionList {
-    & > button {
+  &__services {
+    & .option {
       padding: 10px;
     }
   }

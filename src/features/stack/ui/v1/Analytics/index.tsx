@@ -1,7 +1,7 @@
 import { Item } from '@/widgets/stack'
 import { useTranslations } from 'next-intl'
 import AnalyticsLink from '../../AnalyticsLink'
-import { CSSProperties } from 'react'
+import type { CSSProperties } from 'react'
 import videos from '@/utils/config/videos'
 import styles from './styles.module.scss'
 

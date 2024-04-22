@@ -1,9 +1,9 @@
 'use client'
 
 import BackgroundVideo from '@/utils/ui/BackgroundVideo'
-import { Children } from '@/utils/interfaces/Children'
-import { ReactNode, useRef } from 'react'
-import { useMotionValueEvent, useScroll, useTransform } from 'framer-motion'
+import type {Children} from '@/utils/interfaces/Children'
+import { type ReactNode, useRef } from 'react'
+import { useScroll, useTransform } from 'framer-motion'
 import { motion } from 'framer-motion'
 import videos from '@/utils/config/videos'
 

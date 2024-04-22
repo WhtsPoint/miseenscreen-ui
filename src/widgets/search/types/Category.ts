@@ -1,4 +1,4 @@
-import categories from '../utils/categories'
+import type categories from '../utils/categories'
 
 type Category = typeof categories[number]
 

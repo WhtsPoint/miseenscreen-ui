@@ -1,4 +1,4 @@
-import { getTranslations } from 'next-intl/server'
+import { getLocale } from 'next-intl/server'
 import { Link } from '@/utils/lib/navigation'
 import { ArticlePicture } from '@/widgets/blog'
 import blogStyles from '@/utils/assets/styles/blog.module.scss'
@@ -6,40 +6,26 @@ import arnoldImage from '@/utils/assets/images/blog/employees-promotion/arnold.g
 import goslingImage from '@/utils/assets/images/blog/employees-promotion/gosling.gif'
 import insideOutImage from '@/utils/assets/images/blog/employees-promotion/inside-out.gif'
 import westWorldImage from '@/utils/assets/images/blog/employees-promotion/westworld.gif'
+import { createTranslator } from 'next-intl'
+import { staticBlogElements } from '../../utils/static-blog-elements'
 
+interface Params {
+    content: string
+}
 
-export default async function EmployeesPromotionBlog() {
-    const t = await getTranslations('blogs.content')
+export default async function EmployeesPromotionBlog({ content }: Params) {
+    const locale = await getLocale()
+    const t = createTranslator({ locale, messages: { content } })
 
     return (<div className={blogStyles.main}>
-        <ArticlePicture image={goslingImage} caption={t('employees-promotion.img-caption.3')} />
-        <h2>{t('employees-promotion.subtitle.0')}</h2>
-        <p>{t('employees-promotion.paragraph.0')}</p>
-        <p>{t('employees-promotion.paragraph.1')}</p>
-        <p>{t('employees-promotion.paragraph.2')}</p>
-        <p>{t('employees-promotion.paragraph.3')}</p>
-        <p>{t('employees-promotion.paragraph.4')}</p>
-        <h2>{t('employees-promotion.subtitle.1')}</h2>
-        <ArticlePicture image={arnoldImage} caption={t('employees-promotion.img-caption.0')} />
-        <p>{t('employees-promotion.paragraph.5')}</p>
-        <p>{t('employees-promotion.paragraph.6')}</p>
-        <p>{t('employees-promotion.paragraph.7')}</p>
-        <p>{t('employees-promotion.paragraph.8')}</p>
-        <ArticlePicture image={westWorldImage} caption={t('employees-promotion.img-caption.2')} />
-        <h2>{t('employees-promotion.subtitle.2')}</h2>
-        <p>{t('employees-promotion.paragraph.9')}</p>
-        <ul>
-            {Object.values(t.raw('employees-promotion.list.0')).map((item, index) => {
-                return <li key={index}>{item as string}</li>
-            })}
-        </ul>
-        <p>{t('employees-promotion.paragraph.10')}</p>
-        <p>{t('employees-promotion.paragraph.11')}</p>
-        <p>{t('employees-promotion.paragraph.12')}</p>
-        <p dangerouslySetInnerHTML={{ __html: t.raw('employees-promotion.paragraph.13') }} />
-        <ArticlePicture image={insideOutImage} caption={t('employees-promotion.img-caption.1')} />
-        <p className={blogStyles.bold}>{t('employees-promotion.bold.0')}</p>
-        <Link className={blogStyles.link} href={'#'}>{t('employees-promotion.link.0')}</Link>
-        <p className={blogStyles.init}>{t('general.init')}</p>
+        {t.rich('content', {
+            'first-picture': (chunks) => <ArticlePicture image={goslingImage} caption={chunks?.toString() || ''} />,
+            'second-picture': (chunks) => <ArticlePicture image={arnoldImage} caption={chunks?.toString() || ''} />,
+            'third-picture': (chunks) => <ArticlePicture image={westWorldImage} caption={chunks?.toString() || ''} />,
+            'fourth-picture': (chunks) => <ArticlePicture image={insideOutImage} caption={chunks?.toString() || ''} />,
+            'another-article': (chunks) => <Link className={blogStyles.link} href={'#'}>{chunks}</Link>,
+            'pb': (chunks) => <p className={blogStyles.bold}>{chunks}</p>,
+            ...staticBlogElements
+        })}
     </div> )
 }

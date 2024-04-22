@@ -1,6 +1,6 @@
 import Ring from '@/utils/ui/Ring'
 import { useAnimate, useInView, useMotionValue } from 'framer-motion'
-import Image, { StaticImageData } from 'next/image'
+import Image, { type StaticImageData } from 'next/image'
 import { useEffect } from 'react'
 import { cl } from '@/utils/lib/cl'
 import styles from './styles.module.scss'

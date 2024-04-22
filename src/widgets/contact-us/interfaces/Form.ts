@@ -1,4 +1,4 @@
-import { Status } from '../types/Status'
+import type { Status } from '../types/Status'
 
 interface Form {
     id: string,

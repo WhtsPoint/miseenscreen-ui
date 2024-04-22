@@ -1,8 +1,8 @@
 import styles from './styles.module.scss'
 import Marker from '@/widgets/steps/ui/Marker'
-import { MotionValue } from 'framer-motion'
+import type { MotionValue } from 'framer-motion'
 import StyledDt from '@/utils/ui/StyledDt'
-import { Topic } from '@/widgets/steps/interfaces/Topic'
+import type { Topic } from '@/widgets/steps/interfaces/Topic'
 import { motion } from 'framer-motion'
 import useTextTransition from '@/widgets/steps/hooks/useTextTransition'
 

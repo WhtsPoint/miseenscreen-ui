@@ -1,12 +1,12 @@
 'use client'
 
-import { ObjectType } from '@/utils/types/ObjectType'
-import { StaticImageData } from 'next/image'
+import type { ObjectType } from '@/utils/types/ObjectType'
+import type { StaticImageData } from 'next/image'
 import { cl } from '@/utils/lib/cl'
 import styles from './styles.module.scss'
 import ArrowWithText from '@/utils/ui/ArrowWithText'
 import { motion } from 'framer-motion'
-import { ReactNode } from 'react'
+import type { ReactNode } from 'react'
 
 interface Params<T extends string = string> {
     person: T,

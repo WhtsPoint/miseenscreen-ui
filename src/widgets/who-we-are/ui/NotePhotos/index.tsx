@@ -1,4 +1,3 @@
-import Image from 'next/image'
 import NotePhoto from '../NotePhoto'
 import { cl } from '@/utils/lib/cl'
 import globalStyles from '@/utils/assets/styles/who-we-are.module.scss'

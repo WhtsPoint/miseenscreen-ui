@@ -2,7 +2,7 @@
 
 import { cl } from '@/utils/lib/cl'
 import styles from './styles.module.scss'
-import { ReactNode, useState } from 'react'
+import { type ReactNode, useState } from 'react'
 
 interface Params {
     className?: string,
@@ -26,9 +26,10 @@ export default function BackgroundVideo(
                 videoClass,
                 !isLoaded && styles.container__video_hidden
             )}
-            muted={true}
-            autoPlay={true}
-            loop={true}
+            muted
+            autoPlay
+            loop
+            playsInline
         >
             <source src={src} type={type} />
         </video>

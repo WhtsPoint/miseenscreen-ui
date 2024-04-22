@@ -1,7 +1,7 @@
 'use server'
 
 import { getAccessToken, unAuth } from '@/features/admin'
-import getFormsWithToken from '../api/getFormsWithToken'
+import type getFormsWithToken from '../api/getFormsWithToken'
 import deleteFormWithToken from '../api/deleteFormWithToken'
 
 export default async function deleteForm(

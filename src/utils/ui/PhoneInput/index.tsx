@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import PhoneCodeSelect from '@/utils/ui/PhoneCodeSelect'
-import { PhoneCode } from '@/utils/types/PhoneCode'
+import type { PhoneCode } from '@/utils/types/PhoneCode'
 import codesToFlags from '@/utils/config/country-icons'
 import { cl } from '@/utils/lib/cl'
 import styles from './styles.module.scss'

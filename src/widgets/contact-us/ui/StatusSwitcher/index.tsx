@@ -1,6 +1,6 @@
 'use client'
 
-import { Status } from '@/widgets/contact-us'
+import type { Status } from '@/widgets/contact-us'
 import { useState } from 'react'
 import Arrow from '@/utils/ui/Arrow'
 import { statuses } from '@/widgets/contact-us/utils/status'

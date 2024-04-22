@@ -1,6 +1,6 @@
 'use client'
 
-import { motion, Transition, useInView } from 'framer-motion'
+import { motion, type Transition, useInView } from 'framer-motion'
 import { useRef } from 'react'
 import { cl } from '@/utils/lib/cl'
 import sectionStyles from '@/utils/assets/styles/services.module.scss'

@@ -1,5 +1,5 @@
 import { ServicePage } from '@/layers/serivces'
-import { Locale } from '@/utils/interfaces/Locale'
+import type { Locale } from '@/utils/interfaces/Locale'
 import generateMetadataWithTranslation from '../lib/generateMetadataWithTranslation'
 import { NextIntlClientProvider } from 'next-intl'
 import useCertainMessages from '../../hooks/useCertainIntlMessages'

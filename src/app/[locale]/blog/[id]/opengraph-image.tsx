@@ -1,6 +1,5 @@
 import { ImageResponse } from 'next/og'
-import { getAllBlogsId, getBlogById, getBlogCoverById } from '@/features/blog'
-import { readFile } from 'fs/promises'
+import { getBlogById, getBlogCoverById } from '@/features/blog'
 
 export const alt = 'Blog cover'
 

@@ -1,4 +1,4 @@
-import { EmailSubscriptionData } from './interfaces/EmailSubscriptionData'
+import type { EmailSubscriptionData } from './interfaces/EmailSubscriptionData'
 import EmailSubscription from './ui/EmailSubscription'
 
 export { EmailSubscription }

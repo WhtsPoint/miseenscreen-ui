@@ -1,7 +1,6 @@
 import getBlogsWithExclude from '../../api/getBlogsWithExclude'
 import { getLocale } from 'next-intl/server'
-import styles from './styles.module.scss'
-import { BlogArticle, BlogPreviewV2 } from '@/widgets/blog'
+import type { BlogPreviewV2 } from '@/widgets/blog'
 import { ArticleTableWithButtonAndLogo } from '@/features/blog'
 
 interface Params {

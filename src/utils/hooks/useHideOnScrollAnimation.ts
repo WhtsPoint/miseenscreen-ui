@@ -1,10 +1,9 @@
 import {
-    TargetAndTransition,
+    type TargetAndTransition,
     useAnimate,
     useMotionValueEvent,
     useScroll,
-    useVelocity,
-    ValueAnimationTransition
+    type ValueAnimationTransition
 } from 'framer-motion'
 
 export default function useHideOnScrollAnimation(

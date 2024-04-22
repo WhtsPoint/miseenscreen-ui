@@ -1,7 +1,8 @@
 import type { SearchCoincidence } from '../types/SearchCoincidence'
 
 interface Service {
-    name: SearchCoincidence,
+    title: SearchCoincidence,
+    description: SearchCoincidence,
     id: string
 }
 

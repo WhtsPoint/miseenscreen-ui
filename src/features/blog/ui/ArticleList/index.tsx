@@ -1,6 +1,6 @@
 'use client'
 
-import { ArticleCarousel, BlogPreview } from '@/widgets/blog'
+import { ArticleCarousel, type BlogPreview } from '@/widgets/blog'
 import { useRouter } from '@/utils/lib/navigation'
 import config from '@/utils/config'
 

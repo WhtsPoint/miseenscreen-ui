@@ -1,4 +1,4 @@
-import { ValidationRules } from '../interfaces/ValidationRules'
+import type { ValidationRules } from '../interfaces/ValidationRules'
 
 export default function validateFiles(
     files: File[], { maxCount, maxSize, approvedFormats }: ValidationRules['files']

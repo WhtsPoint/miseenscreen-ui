@@ -1,7 +1,7 @@
 'use client'
 
 import styles from './style.module.scss'
-import { forwardRef, RefObject } from 'react'
+import { forwardRef, type RefObject } from 'react'
 import { useScroll } from 'framer-motion'
 import { WelcomeText } from '@/widgets/welcome'
 import { Background } from '@/features/welcome'

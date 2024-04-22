@@ -1,7 +1,7 @@
 'use client'
 
-import { Children } from '@/utils/interfaces/Children'
-import { ReactNode, useRef } from 'react'
+import type { Children } from '@/utils/interfaces/Children'
+import { type ReactNode, useRef } from 'react'
 import { useInView } from 'framer-motion'
 import { motion } from 'framer-motion'
 import { useFadeAnimation } from '@/widgets/services'

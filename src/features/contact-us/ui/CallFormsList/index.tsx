@@ -9,7 +9,6 @@ import { cl } from '@/utils/lib/cl'
 import styles from './styles.module.scss'
 import { useEffect } from 'react'
 import StatusSwitcher from '../StatusSwitcher'
-import { frame } from 'framer-motion'
 import AdminCommentField from '../AdminCommentField'
 
 interface Params {

@@ -24,9 +24,10 @@ export default function LightScene({ scrollY }: Params) {
         <video
             ref={ref}
             className={styles.lightScene__video}
-            autoPlay={true}
-            muted={true}
-            controls={false}
+            autoPlay
+            muted
+            controls
+            playsInline
             preload={'preload'}
         >
             <source src={videos.lightScene} type={'video/mp4'} />

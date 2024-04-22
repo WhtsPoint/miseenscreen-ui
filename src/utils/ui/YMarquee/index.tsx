@@ -1,10 +1,10 @@
 'use client'
 
 import { MotionMarquee } from '@/utils/ui/Marquee'
-import { Children } from '@/utils/interfaces/Children'
-import { ReactNode } from 'react'
+import type { Children } from '@/utils/interfaces/Children'
+import type { ReactNode } from 'react'
 import { MotionValue, useMotionValue, useMotionValueEvent, useTime, useTransform } from 'framer-motion'
-import { Direction, methods } from '@/utils/lib/y-marquee'
+import { type Direction, methods } from '@/utils/lib/y-marquee'
 
 interface Params extends Children<ReactNode> {
     className?: string

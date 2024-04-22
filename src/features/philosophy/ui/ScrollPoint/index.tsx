@@ -4,7 +4,7 @@ import { MotionValue, useMotionValueEvent } from 'framer-motion'
 import { useState } from 'react'
 import { useDescriptionAnimation } from '@/widgets/philosophy'
 import { cl } from '@/utils/lib/cl'
-import { Topic } from '../../types/Topic'
+import type {Topic} from '../../types/Topic'
 import styles from './styles.module.scss'
 import descriptionComponents from '@/features/philosophy/utils/descriptionComponents'
 

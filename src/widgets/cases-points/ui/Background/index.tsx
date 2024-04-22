@@ -3,7 +3,7 @@
 import styles from './styles.module.scss'
 import { useScroll, useTransform, useVelocity } from 'framer-motion'
 import PhotoMarquee from '../PhotoMarquee'
-import { StaticImageData } from 'next/image'
+import type { StaticImageData } from 'next/image'
 import chunk from '@/utils/lib/chunk'
 
 interface Params {

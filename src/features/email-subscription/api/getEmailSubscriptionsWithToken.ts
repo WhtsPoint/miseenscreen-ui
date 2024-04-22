@@ -1,5 +1,5 @@
 import config from '@/utils/config'
-import { PaginatedEmailSubscriptions } from '../interfaces/PaginatedEmailSubscriptions'
+import type {PaginatedEmailSubscriptions} from '../interfaces/PaginatedEmailSubscriptions'
 
 export default  async function getEmailSubscriptionsWithToken(
     count: number, page: number, accessToken: string

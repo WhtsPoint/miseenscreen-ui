@@ -1,6 +1,6 @@
 import { Select } from '@/widgets/about-us'
-import { Person } from '../../types/Person'
-import { ReactNode } from 'react'
+import type {Person} from '../../types/Person'
+import type {ReactNode} from 'react'
 import daryaImage from '@/utils/assets/images/about-us/darya.png'
 import vladimirImage from '@/utils/assets/images/about-us/vladimir.png'
 

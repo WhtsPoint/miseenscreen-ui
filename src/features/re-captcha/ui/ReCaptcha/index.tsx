@@ -1,6 +1,6 @@
 import { useEffect, useId, useRef } from 'react'
 import { useCaptchaLoading } from '../../stores/captcha-loading'
-import { ExtendedWindow } from '../../types/ExtendedWindow'
+import type {ExtendedWindow} from '../../types/ExtendedWindow'
 
 interface Params {
     onComplete?: (token: string) => unknown

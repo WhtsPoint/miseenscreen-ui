@@ -6,7 +6,7 @@ import { useTranslations } from 'next-intl'
 import { useRef } from 'react'
 import styles from './styles.module.scss'
 import buttonStyle from '../../../../utils/assets/styles/button.module.scss'
-import { StaticImageData } from 'next/image'
+import type { StaticImageData } from 'next/image'
 
 interface Params {
     className?: string,

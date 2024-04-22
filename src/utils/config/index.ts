@@ -14,6 +14,7 @@ const config = {
             steps: '/#steps'
         },
         services: {
+            index: '/services',
             ecommerce: '/services#ecommerce',
             webPortals: '/services#web-portals',
             elearning: '/services#e-learning',

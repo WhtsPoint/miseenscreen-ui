@@ -1,10 +1,10 @@
 'use client'
 
 import Image from 'next/image'
-import { motion, Transition, useInView } from 'framer-motion'
+import { motion, type Transition, useInView } from 'framer-motion'
 import { cl } from '@/utils/lib/cl'
 import styles from './styles.module.scss'
-import { CSSProperties, useRef } from 'react'
+import { type CSSProperties, useRef } from 'react'
 
 type ImageParams = Parameters<typeof Image>[0]
 

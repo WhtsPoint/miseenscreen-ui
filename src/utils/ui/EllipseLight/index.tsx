@@ -1,6 +1,6 @@
 'use client'
 
-import { motion, Transition, useInView } from 'framer-motion'
+import { motion, type Transition, useInView } from 'framer-motion'
 import Image from 'next/image'
 import { useRef } from 'react'
 import styles from './styles.module.scss'

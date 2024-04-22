@@ -1,7 +1,7 @@
 import { Poster as UnfilledPoster } from '@/widgets/stack'
 import { cl } from '@/utils/lib/cl'
-import { Children } from '@/utils/interfaces/Children'
-import { ReactNode } from 'react'
+import type { Children } from '@/utils/interfaces/Children'
+import type { ReactNode } from 'react'
 import styles from './styles.module.scss'
 
 type UnfilledPosterParams = Parameters<typeof UnfilledPoster>[0]

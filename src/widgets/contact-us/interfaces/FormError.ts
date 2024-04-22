@@ -1,4 +1,4 @@
-import { ObjectType } from '@/utils/types/ObjectType'
+import type { ObjectType } from '@/utils/types/ObjectType'
 
 interface FormError {
     name: string,

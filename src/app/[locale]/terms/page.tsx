@@ -1,6 +1,6 @@
 import generateMetadataWithTranslation from '../lib/generateMetadataWithTranslation'
 import { Terms } from '@/layers/terms'
-import { Locale } from '@/utils/interfaces/Locale'
+import type { Locale } from '@/utils/interfaces/Locale'
 import { unstable_setRequestLocale } from 'next-intl/server'
 
 export const generateMetadata = async (params: Locale) => {

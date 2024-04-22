@@ -1,5 +1,5 @@
-import { MutableRefObject, useEffect, useRef } from 'react'
-import { animate, MotionValue, useInView } from 'framer-motion'
+import { useEffect, useRef } from 'react'
+import { animate, useInView } from 'framer-motion'
 import useTextTyping from '@/utils/hooks/useTextTyping'
 
 interface Params {

@@ -1,7 +1,7 @@
 import Arrow from '@/utils/ui/Arrow'
 import { motion } from 'framer-motion'
-import { Children } from '@/utils/interfaces/Children'
-import { ReactNode } from 'react'
+import type { Children } from '@/utils/interfaces/Children'
+import type { ReactNode } from 'react'
 import styles from './styles.module.scss'
 import { cl } from '@/utils/lib/cl'
 

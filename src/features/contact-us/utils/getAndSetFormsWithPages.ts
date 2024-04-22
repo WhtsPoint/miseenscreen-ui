@@ -1,4 +1,4 @@
-import { FormData } from '@/widgets/contact-us'
+import type {FormData} from '@/widgets/contact-us'
 import getForms from '@/features/contact-us/action/getForms'
 
 const getAndSetFormsWithPages = (

@@ -1,6 +1,6 @@
 'use client'
 
-import { LoginForm as UnfilledLoginForm, LoginFormData } from '@/widgets/admin'
+import { LoginForm as UnfilledLoginForm, type LoginFormData } from '@/widgets/admin'
 import { useRouter } from '@/utils/lib/navigation'
 import loginWithCookie from '@/features/admin/action/loginWithCookie'
 

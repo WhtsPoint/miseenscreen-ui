@@ -1,4 +1,4 @@
-import { MotionValue } from 'framer-motion'
+import type {MotionValue} from 'framer-motion'
 import styles from './styles.module.scss'
 import { useTranslations } from 'next-intl'
 import { cl } from '@/utils/lib/cl'

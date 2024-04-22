@@ -1,5 +1,5 @@
-import { Children } from '@/utils/interfaces/Children'
-import { ReactNode, useRef } from 'react'
+import type { Children } from '@/utils/interfaces/Children'
+import { type ReactNode, useRef } from 'react'
 import { cl } from '@/utils/lib/cl'
 import styles from './styles.module.scss'
 import { MotionValue, useMotionValueEvent, useScroll } from 'framer-motion'

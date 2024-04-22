@@ -1,8 +1,8 @@
 import styles from './styles.module.scss'
 import { cl } from '@/utils/lib/cl'
-import { motion, MotionStyle } from 'framer-motion'
+import { motion, type MotionStyle } from 'framer-motion'
 import Arrow from '@/utils/ui/Arrow'
-import { ReactNode } from 'react'
+import type { ReactNode } from 'react'
 
 interface Params {
     article: string,

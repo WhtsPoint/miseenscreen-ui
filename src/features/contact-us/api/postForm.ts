@@ -1,4 +1,4 @@
-import { FormParams } from '@/widgets/contact-us'
+import type {FormParams} from '@/widgets/contact-us'
 import formToFormData from '@/features/contact-us/lib/formToFormData'
 import config from '@/utils/config'
 

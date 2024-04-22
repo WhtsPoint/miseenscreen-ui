@@ -1,6 +1,6 @@
 'use client'
 
-import { Theme, useHeaderSettings } from '@/widgets/header'
+import { type Theme, useHeaderSettings } from '@/widgets/header'
 import { useEffect } from 'react'
 
 interface Params {

@@ -1,4 +1,4 @@
-import Image, { StaticImageData } from 'next/image'
+import Image, { type StaticImageData } from 'next/image'
 import styles from './styles.module.scss'
 import { cl } from '@/utils/lib/cl'
 

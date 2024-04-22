@@ -1,5 +1,5 @@
 import config from '@/utils/config'
-import { PaginatedForms } from '../interfaces/PaginatedForms'
+import type {PaginatedForms} from '../interfaces/PaginatedForms'
 
 export default async function getFormsWithToken(
     count: number, page: number, accessToken: string

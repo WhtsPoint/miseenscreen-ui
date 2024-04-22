@@ -1,4 +1,4 @@
-import { ReactNode, useState } from 'react'
+import { type ReactNode, useState } from 'react'
 import CategoriesRow from '../CategoriesRow'
 import type { Category } from '@/widgets/search/types/Category'
 import { cl } from '@/utils/lib/cl'

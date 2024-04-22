@@ -1,6 +1,6 @@
 import styles from './styles.module.scss'
-import { ReactNode, useState } from 'react'
-import { Children } from '@/utils/interfaces/Children'
+import { type ReactNode, useState } from 'react'
+import type { Children } from '@/utils/interfaces/Children'
 import { MotionValue, motion, useMotionValueEvent } from 'framer-motion'
 import { cl } from '@/utils/lib/cl'
 

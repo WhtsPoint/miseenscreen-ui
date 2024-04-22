@@ -1,5 +1,5 @@
 import { ContactUsPage } from '@/layers/contact'
-import { Locale } from '@/utils/interfaces/Locale'
+import type { Locale } from '@/utils/interfaces/Locale'
 import generateMetadataWithTranslation from '../lib/generateMetadataWithTranslation'
 import useCertainMessages from '../../hooks/useCertainIntlMessages'
 import { NextIntlClientProvider } from 'next-intl'

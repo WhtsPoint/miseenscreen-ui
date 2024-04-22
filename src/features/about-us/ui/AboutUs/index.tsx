@@ -1,5 +1,5 @@
-import { ReactNode, useState } from 'react'
-import { Person } from '../../types/Person'
+import { type ReactNode, useState } from 'react'
+import type {Person} from '../../types/Person'
 import PersonInformation from '../PersonInformation'
 import PersonSelect from '../PersonSelect'
 import { cl } from '@/utils/lib/cl'

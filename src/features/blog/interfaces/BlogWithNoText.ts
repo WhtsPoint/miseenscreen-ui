@@ -1,4 +1,4 @@
-import { Blog } from '@/widgets/blog'
+import type { Blog } from '@/widgets/blog'
 
 interface BlogWithNoText extends Pick<Blog, 'id' | 'previewCover' | 'createdAt'>  {}
 

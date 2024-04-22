@@ -1,6 +1,6 @@
-import { Children } from '@/utils/interfaces/Children'
-import { ReactNode } from 'react'
-import { Metadata } from 'next'
+import type { Children } from '@/utils/interfaces/Children'
+import type { ReactNode } from 'react'
+import type { Metadata } from 'next'
 
 export function generateMetadata(): Metadata {
     const metadataBase = process.env.HOST_URL ? new URL(process.env.HOST_URL) : null

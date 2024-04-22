@@ -1,6 +1,6 @@
-import { FormParams } from '../interfaces/FormParams'
-import { FormError } from '../interfaces/FormError'
-import { ValidationRules } from '../interfaces/ValidationRules'
+import type { FormParams } from '../interfaces/FormParams'
+import type { FormError } from '../interfaces/FormError'
+import type { ValidationRules } from '../interfaces/ValidationRules'
 import validateFiles from '@/widgets/contact-us/lib/validateFiles'
 
 const minLength = 3

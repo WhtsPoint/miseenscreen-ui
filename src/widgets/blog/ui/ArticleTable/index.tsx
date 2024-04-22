@@ -1,6 +1,6 @@
 'use client'
 
-import { BlogPreviewV2 } from '../../interfaces/BlogPreviewV2'
+import type { BlogPreviewV2 } from '../../interfaces/BlogPreviewV2'
 import ArticlePreviewV2 from '@/widgets/blog/ui/ArticlePreviewV2'
 import { cl } from '@/utils/lib/cl'
 import styles from './styles.module.scss'

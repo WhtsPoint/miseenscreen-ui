@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useState } from 'react'
+import { memo, useEffect, useRef, useState } from 'react'
 import { ContactUsModal as UnfilledContactUsModal, useContactUsModalAnimation } from '@/widgets/contact-us'
 import useTimer from '@/utils/hooks/useTimer'
 import { useRouter } from '@/utils/lib/navigation'
@@ -11,14 +11,15 @@ interface Params {
     delay?: number
 }
 
-export default function ContactUsModal({ className, delay = 1 }: Params) {
+export default function ContactUsModal({ className, delay = 5000 }: Params) {
     const [isVisible, setIsVisible] = useState<boolean>(false)
     const [ref, animate] = useContactUsModalAnimation()
+    const animateRef = useRef(animate)
     const { push } = useRouter()
 
     useTimer(() => setIsVisible(true), delay)
 
-    useEffect(() => { isVisible && animate() }, [animate, isVisible])
+    useEffect(() => { isVisible && animateRef.current() }, [animateRef, isVisible])
 
     const onClick = () => push(config.routes.header.contactUs)
     const onClose = () => setIsVisible(false)
@@ -31,3 +32,5 @@ export default function ContactUsModal({ className, delay = 1 }: Params) {
         />}
     </div>)
 }
+
+export const MemoContactUsModal = memo(ContactUsModal)

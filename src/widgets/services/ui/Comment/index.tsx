@@ -1,6 +1,6 @@
 'use client'
 
-import Image, { StaticImageData } from 'next/image'
+import Image, { type StaticImageData } from 'next/image'
 import useTextTyping from '@/utils/hooks/useTextTyping'
 import { motion, useInView } from 'framer-motion'
 import { cl } from '@/utils/lib/cl'

@@ -1,6 +1,6 @@
 'use client'
 
-import { MutableRefObject, useEffect } from 'react'
+import { type MutableRefObject, useEffect } from 'react'
 import { useMotionValue, useScroll, useTransform } from 'framer-motion'
 
 export default function useFadeAnimation(ref: MutableRefObject<null>) {

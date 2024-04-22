@@ -1,4 +1,4 @@
-import { Locale } from '@/utils/interfaces/Locale'
+import type { Locale } from '@/utils/interfaces/Locale'
 import { WhoWeArePage } from '@/layers/who-we-are'
 import useCertainMessages from '@/app/hooks/useCertainIntlMessages'
 import generateMetadataWithTranslation from '../lib/generateMetadataWithTranslation'

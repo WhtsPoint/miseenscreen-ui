@@ -1,8 +1,7 @@
 import { Item } from '@/widgets/stack'
 import { useTranslations } from 'next-intl'
 import videos from '@/utils/config/videos'
-import config from '@/utils/config'
-import { CSSProperties } from 'react'
+import type { CSSProperties } from 'react'
 import WebServicesLink from '../../WebServicesLink'
 
 interface Params {

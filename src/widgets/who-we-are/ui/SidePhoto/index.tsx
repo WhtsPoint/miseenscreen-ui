@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import { cl } from '@/utils/lib/cl'
-import { SourceHTMLAttributes } from 'react'
+import type { SourceHTMLAttributes } from 'react'
 import styles from './styles.module.scss'
 import lightImage from '@/utils/assets/images/stack/particles/straight-line-light.png'
 
@@ -12,7 +12,7 @@ interface Params extends Pick<SourceHTMLAttributes<HTMLSourceElement>, 'src' | '
 export default function SidePhoto({ className, photoClassName, ...other }: Params) {
     return (<div data-tag={'background'} className={cl(className, styles.sidePhoto)}>
         <div className={cl(styles.videoContainer, photoClassName)}>
-            <video className={styles.video} autoPlay muted loop>
+            <video className={styles.video} autoPlay muted loop playsInline>
                 <source {...other} />
             </video>
         </div>

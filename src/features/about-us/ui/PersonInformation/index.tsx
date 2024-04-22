@@ -1,4 +1,4 @@
-import { Person } from '@/features/about-us/types/Person'
+import type {Person} from '@/features/about-us/types/Person'
 import { Information } from '@/widgets/about-us'
 import { useTranslations } from 'next-intl'
 

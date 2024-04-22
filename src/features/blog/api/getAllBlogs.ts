@@ -14,7 +14,7 @@ export default async function getAllBlogs(locale: string): Promise<Blog[]> {
             id: 'employees-promotion',
             previewCover: { ...cover3, src: '/assets/blog/employees-promotion/preview.jpeg' },
             createdAt: new Date('03.06.2024'),
-            content: '<p></p>',
+            content: t.raw('content.employees-promotion'),
             author: t('names.darya')
         },
         {

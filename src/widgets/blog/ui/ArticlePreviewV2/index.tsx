@@ -1,4 +1,4 @@
-import { BlogPreviewV2 } from '../../interfaces/BlogPreviewV2'
+import type { BlogPreviewV2 } from '../../interfaces/BlogPreviewV2'
 import { cl } from '@/utils/lib/cl'
 import { motion } from 'framer-motion'
 import styles from './styles.module.scss'

@@ -1,4 +1,4 @@
-import config from '@/utils/config'
+import type config from '@/utils/config'
 
 interface Locale {
     params: {

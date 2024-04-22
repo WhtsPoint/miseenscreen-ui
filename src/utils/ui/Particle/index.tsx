@@ -1,7 +1,7 @@
 'use client'
 
 import { useRef } from 'react'
-import { motion, useInView, Variant } from 'framer-motion'
+import { motion, useInView, type Variant } from 'framer-motion'
 import Image from 'next/image'
 import styles from './styles.module.scss'
 

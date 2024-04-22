@@ -1,4 +1,4 @@
-import { FormData } from '@/widgets/contact-us'
+import type {FormData} from '@/widgets/contact-us'
 
 interface PaginatedForms {
     data: FormData[],

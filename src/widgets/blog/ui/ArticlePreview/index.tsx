@@ -1,8 +1,8 @@
-import { BlogPreview } from '../../interfaces/BlogPreview'
+import type { BlogPreview } from '../../interfaces/BlogPreview'
 import Image from 'next/image'
 import { cl } from '@/utils/lib/cl'
 import { forwardRef } from 'react'
-import { motion, MotionStyle } from 'framer-motion'
+import { motion, type MotionStyle } from 'framer-motion'
 import styles from './style.module.scss'
 
 interface Params {

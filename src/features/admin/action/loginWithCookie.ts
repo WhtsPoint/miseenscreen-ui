@@ -1,6 +1,6 @@
 'use server'
 
-import { LoginFormData } from '@/widgets/admin'
+import type { LoginFormData } from '@/widgets/admin'
 import login from '@/features/admin/api/login'
 import { cookies } from 'next/headers'
 

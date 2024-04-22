@@ -1,6 +1,6 @@
 import { AnimatePresence, motion } from 'framer-motion'
-import { ReactNode } from 'react'
-import { Children } from '@/utils/interfaces/Children'
+import type { ReactNode } from 'react'
+import type { Children } from '@/utils/interfaces/Children'
 import styles from './styles.module.scss'
 import { cl } from '@/utils/lib/cl'
 

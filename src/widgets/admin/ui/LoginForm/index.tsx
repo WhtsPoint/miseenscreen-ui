@@ -1,8 +1,8 @@
 'use client'
 
-import { LoginFormData } from '../../interfaces/LoginFormData'
+import type { LoginFormData } from '../../interfaces/LoginFormData'
 import { cl } from '@/utils/lib/cl'
-import { ChangeEvent, FormEvent, useRef } from 'react'
+import { type ChangeEvent, type FormEvent, useRef } from 'react'
 import styles from './styles.module.scss'
 import inputsStyles from '@/utils/assets/styles/inputs.module.scss'
 import buttonStyles from '@/utils/assets/styles/button.module.scss'

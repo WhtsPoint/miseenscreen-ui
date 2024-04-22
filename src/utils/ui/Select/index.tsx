@@ -10,7 +10,6 @@ interface Params<T extends string> extends Pick<
     placeholder?: string
 }
 
-
 export default function Select<T extends string>(params: Params<T>) {
     const { placeholder, ...rest } = params
     return (<AbstractSelect<T>

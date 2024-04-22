@@ -1,4 +1,4 @@
-import { LoginFormData } from '@/widgets/admin'
+import type { LoginFormData } from '@/widgets/admin'
 import config from '@/utils/config'
 
 export default async function login({ login, password }: LoginFormData): Promise<[string, null] | [null, string]> {

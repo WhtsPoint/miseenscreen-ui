@@ -1,5 +1,5 @@
-import { AnimationScope, MotionValue, useAnimate, useMotionValueEvent } from 'framer-motion'
-import { Topic } from '../interfaces/Topic'
+import { type AnimationScope, MotionValue, useAnimate, useMotionValueEvent } from 'framer-motion'
+import type { Topic } from '../interfaces/Topic'
 import { useState } from 'react'
 
 interface Params {

@@ -1,6 +1,6 @@
 'use client'
 
-import { BlogPreview } from '../../interfaces/BlogPreview'
+import type { BlogPreview } from '../../interfaces/BlogPreview'
 import ArticlePreview from '../ArticlePreview'
 import styles from './style.module.scss'
 import Arrow from '@/utils/ui/Arrow'
