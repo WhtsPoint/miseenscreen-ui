@@ -1,12 +1,17 @@
-import { MainPage } from '@/layers/main'
 import type { Locale } from '@/utils/interfaces/Locale'
+import type { Metadata } from 'next'
+import { MainPage } from '@/layers/main'
 import generateMetadataWithTranslation from './lib/generateMetadataWithTranslation'
+import generateAlternates from './lib/generateAlternates'
 import { NextIntlClientProvider } from 'next-intl'
 import useCertainMessages from '../hooks/useCertainIntlMessages'
 import { unstable_setRequestLocale } from 'next-intl/server'
 
-export const generateMetadata = async (params: Locale) => {
-    return generateMetadataWithTranslation(params.params.locale, 'main')
+export const generateMetadata = async (params: Locale): Promise<Metadata> => {
+    return {
+        ...await generateMetadataWithTranslation(params.params.locale, 'main'),
+        ...generateAlternates('/blog')
+    }
 }
 
 const messageKeys = [

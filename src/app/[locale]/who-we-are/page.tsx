@@ -4,9 +4,13 @@ import useCertainMessages from '@/app/hooks/useCertainIntlMessages'
 import generateMetadataWithTranslation from '../lib/generateMetadataWithTranslation'
 import { unstable_setRequestLocale } from 'next-intl/server'
 import { NextIntlClientProvider } from 'next-intl'
+import generateAlternates from '../lib/generateAlternates'
 
 export const generateMetadata = async (params: Locale) => {
-    return generateMetadataWithTranslation(params.params.locale, 'who-we-are')
+    return {
+        ...await generateMetadataWithTranslation(params.params.locale, 'who-we-are'),
+        ...generateAlternates('/who-we-are')
+    }
 }
 
 interface Params {

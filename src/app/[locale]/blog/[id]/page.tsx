@@ -4,6 +4,7 @@ import type{ Metadata } from 'next'
 import { NextIntlClientProvider } from 'next-intl'
 import { unstable_setRequestLocale } from 'next-intl/server'
 import useCertainMessages from '@/app/hooks/useCertainIntlMessages'
+import generateAlternates from '@/app/[locale]/lib/generateAlternates'
 
 interface Params {
     params: {
@@ -15,7 +16,12 @@ interface Params {
 export async function generateMetadata({ params: { id, locale } }: Params): Promise<Metadata> {
     const { title, description } = await getBlogById(locale, id)
 
-    return { title, description, openGraph: { title, description } }
+    return {
+        title,
+        description,
+        openGraph: { title, description },
+        ...generateAlternates(`/blog/${id}`)
+    }
 }
 
 export async function generateStaticParams() {
