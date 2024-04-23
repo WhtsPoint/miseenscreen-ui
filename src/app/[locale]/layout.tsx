@@ -43,18 +43,18 @@ export default function DefaultLayout({ children, params }: Params) {
     const messages = useCertainMessages(messageKeys)
 
     return (<html lang={localeToLang[locale]}>
-    <body className={cl(styles.root, IBMPlexSans.variable)}>
-    <ReCaptchaModal />
-        <ReCaptchaProvider>
-                <NextIntlClientProvider messages={messages} locale={locale}>
-                    <LocaleWindowWrapper>
-                        <HeaderWithContacts />
-                        <main className={styles.root__main}>
-                            {children}
-                        </main>
-                    </LocaleWindowWrapper>
-                </NextIntlClientProvider>
-        </ReCaptchaProvider>
-    </body>
+        <body className={cl(styles.root, IBMPlexSans.variable)}>
+        <ReCaptchaModal />
+            <ReCaptchaProvider>
+                    <NextIntlClientProvider messages={messages} locale={locale}>
+                        <LocaleWindowWrapper>
+                            <HeaderWithContacts />
+                            <main className={styles.root__main}>
+                                {children}
+                            </main>
+                        </LocaleWindowWrapper>
+                    </NextIntlClientProvider>
+            </ReCaptchaProvider>
+        </body>
     </html>)
 }

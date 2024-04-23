@@ -4,12 +4,14 @@
   &__background {
     width: 100%;
     height: 500px;
+    inset: 0;
     position: sticky;
-    left: 0;
-    right: 0;
-    top: 0;
     z-index: -1;
     object-fit: cover;
+    &__image {
+      position: static !important;
+      object-fit: cover;
+    }
   }
   &__content {
     width: 100%;
