@@ -22,7 +22,7 @@ const images: Record<Status, ReactNode> = {
 export default function SubscribeButton({ className, status }: Params) {
     const isSuccess = status === 'success'
 
-    return (<button type={'submit'} className={cl(
+    return (<button aria-label={'send email on subscription'} type={'submit'} className={cl(
         isSuccess && styles.subscribeButton_success,
         status === 'failure' && styles.subscribeButton_failure,
         className

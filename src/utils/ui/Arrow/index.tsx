@@ -45,7 +45,7 @@ export default function Arrow({ direction = 'right', className, onClick, noAnima
         }
     }, [x, y, isInView, animate, ref, noAnimation])
 
-    return (<button onClick={onClick} className={cl(styles.arrow, className)}>
+    return (<button aria-label={'Switch arrow'} onClick={onClick} className={cl(styles.arrow, className)}>
         <motion.img
             {...(!noHover ? { whileHover: { x } } : {} )}
             ref={ref}

@@ -30,7 +30,7 @@ export default function List({ children, className }: Params) {
 
     return (<div className={styles.wrapper} ref={listRef}>
         <div ref={ref} className={cl(styles.list, className)}>
-            <button onClick={onClick} className={styles.list__button}>
+            <button aria-label={'Navigation open button'} onClick={onClick} className={styles.list__button}>
                 <Image alt={''} src={menuIcon} />
             </button>
             <motion.div

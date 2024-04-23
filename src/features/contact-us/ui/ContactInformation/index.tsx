@@ -14,7 +14,7 @@ export default function ContactInformation({ className }: Params) {
     const t = useTranslations('contact-us.contacts')
 
     return (<aside className={cl(styles.contactInformation, className)}>
-        <h3 className={styles.contactInformation__title}>{t('title')}</h3>
+        <b className={styles.contactInformation__title}>{t('title')}</b>
         <address>
             <ul className={styles.contactInformation__list}>
                 <li className={styles.contactInformation__list__item}>

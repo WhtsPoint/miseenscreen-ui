@@ -20,9 +20,9 @@ export default function WelcomeText({ scrollY }: Params) {
         <h1 style={openSans.style} className={styles.welcomeText__name}>
             MISEENSCREEN
         </h1>
-        <h3 className={styles.welcomeText__description}>
+        <h2 className={styles.welcomeText__description}>
             {t('adaptation')}
-        </h3>
-        <h2 className={styles.welcomeText__subtext}>{t('sub')}</h2>
+        </h2>
+        <h3 className={styles.welcomeText__subtext}>{t('sub')}</h3>
     </motion.article>)
 }

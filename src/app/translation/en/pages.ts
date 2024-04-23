@@ -22,7 +22,7 @@ const translation = {
         },
         "who-we-are": {
             "title": "Who We Are",
-            "description": ""
+            "description": "Behind the scenes: Our story about the path, strategy and mission of web application development. E-commerce, E-learning, HR Software, Custom ERP, Web Apps."
         }
     }
 }
