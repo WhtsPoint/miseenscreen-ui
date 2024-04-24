@@ -8,7 +8,7 @@ export default function Navigate() {
     const { invoke } = useSpecialSection()
 
     return (<Navigation title={t('title')} links={[
-        { href: config.routes.header.services, onClick: () => invoke('services'), scroll: false, text: t('services') },
+        { href: config.routes.header.services, text: t('services') },
         { href: config.routes.header.cases, onClick: () => invoke('cases'), scroll: false, text: t('cases') },
         { href: config.routes.header.cooperation, onClick: () => invoke('cooperation'), scroll: false, text: t('cooperation') },
         { href: config.routes.header.ourStory, text: t('our-story') },

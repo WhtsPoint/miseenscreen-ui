@@ -5,6 +5,7 @@ import WhatsappIcon from '@/utils/ui/WhatsappIcon'
 import TelegramIcon from '@/utils/ui/TelegramIcon'
 import { cl } from '@/utils/lib/cl'
 import styles from './styles.module.scss'
+import config from '@/utils/config'
 
 interface Params {
     className?: string
@@ -23,7 +24,7 @@ export default function ContactInformation({ className }: Params) {
                 </li>
                 <li className={styles.contactInformation__list__item}>
                     <LetterIcon width={20} height={20} />
-                    <a href={'tel:+13236838107'}>+1 323 683 8107</a>
+                    <a href={'mailto:' + config.contacts.email}>{config.contacts.email}</a>
                 </li>
                 <li className={styles.contactInformation__list__item}>
                     <WhatsappIcon width={20} height={20} color={'white'} />

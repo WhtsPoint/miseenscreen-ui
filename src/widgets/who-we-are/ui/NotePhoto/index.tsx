@@ -8,8 +8,8 @@ interface Params extends Pick<ImageParams, 'src' | 'alt' | 'sizes'> {
     className?: string
 }
 
-export default function NotePhoto({ className, ...params }: Params) {
+export default function NotePhoto({ className, alt, ...params }: Params) {
     return (<div data-tag={'note-photo'} className={cl(styles.notePhoto, className)}>
-        <Image fill className={styles.image} {...params} />
+        <Image fill className={styles.image} alt={alt} {...params} />
     </div>)
 }

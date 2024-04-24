@@ -19,6 +19,7 @@ export default async function BlogArticle({ blog, children }: Params) {
         <div className={styles.blogArticle__background}>
             <Image
                 fill
+                sizes={'100vw'}
                 src={previewCover.src}
                 className={styles.blogArticle__background__image}
                 alt={'Article cover page'}

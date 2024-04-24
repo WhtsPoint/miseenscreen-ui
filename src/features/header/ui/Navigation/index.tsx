@@ -29,8 +29,8 @@ const Navigation = forwardRef<HTMLDivElement, Params>(({ className, listClassNam
                 <Item href={routes.cases} section={'cases'}>{t('cases')}</Item>
                 <Item href={routes.cooperation} section={'cooperation'}>{t('cooperation')}</Item>
                 <Item href={routes.steps} section={'steps'}>{t('steps')}</Item>
-                <Item href={routes.ourStory}>{t('our-story')}</Item>
-                <Item href={routes.blog} section={'blog'}>{t('blog')}</Item>
+                <Item href={routes.ourStory} scroll={true}>{t('our-story')}</Item>
+                <Item href={routes.blog} section={'blog'} >{t('blog')}</Item>
                 <Item href={routes.contactUs} section={'contact-us'}>{t('contact-us')}</Item>
                 <LocaleSelect
                     className={styles.header__localeSelect}

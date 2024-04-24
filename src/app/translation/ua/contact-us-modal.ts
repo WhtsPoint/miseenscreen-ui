@@ -1,7 +1,7 @@
 const translation = {
     "contact-us-modal": {
-        "title": "Contact Us",
-        "description": "Get a plan and concept for the implementation of your goals and ideas with a calculation of the cost and terms."
+        "title":  "Звʼязатись з нами",
+        "description": "Отримайте план та концепт реалізації ваших цілей та ідей з розрахунком вартості та термінів"
     }
 }
 
