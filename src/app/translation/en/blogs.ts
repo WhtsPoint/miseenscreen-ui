@@ -3,29 +3,29 @@ const init = 'In each article, when we consider the benefits and possibilities o
 const translation = {
     "blogs": {
         "company-consciousness": {
-            "title": "Access to the company's consciousness. Chapter 1",
+            "title": "Access to the company's consciousness. Chapter\u00A01",
             "description": "\"I'm not a robot!\" - How often have you heard this statement during interactions with people? And often it continues like this: \"I'm not a robot, I can make mistakes!\" And it's true - humans are capable of making mistakes, feeling, loving, getting upset. However, it's important to understand that all these feelings are a result of the evolution and nature of biological intelligence, and how this can impact the work and success of your organization is also an important and interesting question. In this article, you will learn about the systematic building of relationships between employees and the organization through support for employees and freedom of speech in the company, about creating unified rules of the game in conditions of efficiency and healthy relationships, and how digital technologies can help with this",
             "themes": [
-                "Organizational culture",
-                "Employee support",
+                "Organizational Culture",
+                "Employee Support",
                 "ENPS",
-                "Freedom of speech and democracy in the company",
-                "Relationships between people",
-                "Gamified interaction",
-                "Digital technologies in employee culture"
+                "Freedom Of Speech and Democracy In The Company",
+                "Relationships Between People",
+                "Gamified Interaction",
+                "Digital Technologies in Employee Culture"
             ]
         },
         "company-consciousness-2": {
-            "title": "Access to the company's consciousness. Chapter 2",
+            "title": "Access to the company's consciousness. Chapter\u00A02",
             "description": "In the previous article on digital culture, we examined the reasons why implementing platforms and applications, as well as using digital options, can be a beneficial solution for both the organization and its employees. As technologies advance, so do people, as evolution demonstrates, from caves to the point where we create new life forms.",
             "themes": [
-                "Organizational culture",
-                "Employee support",
+                "Organizational Culture",
+                "Employee Support",
                 "ENPS",
-                "Freedom of speech and democracy in the company",
-                "Relationships between people",
-                "Gamified interaction",
-                "Digital technologies in employee culture"
+                "Freedom Of Speech and Democracy In The Company",
+                "Relationships Between People",
+                "Gamified Interaction",
+                "Digital Technologies In Employee Culture"
             ]
         },
         "employees-promotion": {

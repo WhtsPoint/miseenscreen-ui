@@ -61,7 +61,7 @@ const translation = {
     },
     "cases-points": {
         "title": "Cases",
-        "sub-title": "MNS Investment is the official representative of the CALZEDONIA, INTIMISSIMI, TEZENIS, FALCONERI brands in Ukraine.",
+        "sub-title": "Implemented individual project for MNS INVESTMENT - the official representative of the brands CALZEDONIA, INTIMISSIMI, TEZENIS, FALCONERI in Ukraine",
         "article": {
             "portal": "Multi-brand corporate portal for employees",
             "education": "Employee training and development system",
@@ -81,7 +81,7 @@ const translation = {
                     \n
                     3 years of experience in managing a store as a Chief Store Manager in a home appliances company, Foxtrot.
                 `,
-                "about": "Hello everyone,\n\nMy name is Daria, and I am a manager for bringing your ideas to the screen. I accompany and take responsibility for the project from the first communication to the signing of the delivery of the finished product. I will develop a commercial proposal, technical specifications, instructional materials, and instructions for using the finished product. I will also be your launch manager, providing informational support, conducting training, and education to help you effectively launch and implement new developments and processes into your business.\n\nRead our story (Our Story) to learn more about who, how, and with what philosophy will be developing new products for your business. "
+                "about": "Hello everyone,\n\nMy name is Daria, and I am a manager for bringing your ideas to the screen. I accompany and take responsibility for the project from the first communication to the signing of the delivery of the finished product. I will develop a commercial proposal, technical specifications, instructional materials, and instructions for using the finished product. I will also be your launch manager, providing informational support, conducting training, and education to help you effectively launch and implement new developments and processes into your business.\n\nRead our story <to-story>(Our Story)</to-story> to learn more about whom, how, and with what philosophy will be developing new products for your business. "
             }
         }
     }

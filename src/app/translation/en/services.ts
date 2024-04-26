@@ -3,10 +3,10 @@ const translation = {
         "ecommerce": {
             "title": "ECommerce",
             "props": [
-                "B2C/B2B eccomerce web apps",
-                "Online marketplaces",
-                "Progressive eccomerce web apps",
-                "Headless commerce"
+                "B2C/B2B Eccomerce Web Apps",
+                "Online Marketplaces",
+                "Progressive Eccomerce Web Apps",
+                "Headless Commerce"
             ],
             "description": [
                 "An efficient and innovative e-commerce platform that will help you increase sales and create your online business. Regardless of the scale of your project, our team of developers will create a user interface, payment system integration, catalog management, analytics, adaptation for all devices, necessary languages and countries, and other important features required for the successful operation of your online store.",
@@ -16,11 +16,11 @@ const translation = {
         "elearning": {
             "title": "E-Learning",
             "props": [
-                "Learning management system",
-                "E-learnings portals",
-                "Remote proctoring software",
-                "Learning content management system",
-                "Knowledge management solutions"
+                "Learning Management System",
+                "E-Learnings Portals",
+                "Remote Proctoring Software",
+                "Learning Content Management System",
+                "Knowledge Management Solutions"
             ],
             "stack": [
                 "Support for multilingual content",
@@ -58,40 +58,40 @@ const translation = {
         "hr-software": {
             "title": "Hr Software",
             "props": [
-                "Administrative tasks",
-                "Service management",
-                "Talent management",
-                "Labour management",
-                "Recruitment system"
+                "Administrative Tasks",
+                "Service Management",
+                "Talent Management",
+                "Labour Management",
+                "Recruitment System"
             ],
             "stack": [
-                "Employee database",
-                "Employee profiles",
-                "Employee lifecycle management",
-                "Payroll management",
-                "Employee benefits",
-                "Reporting and analytics",
-                "Corporate policies and procedures",
-                "Employee directory",
-                "Organizational structure",
-                "Knowledge base and employee development",
-                "Employee self-service portal",
-                "Virtual assistants and chat bots for employees",
-                "Staff recruitment",
-                "Onboarding and induction system",
-                "Performance management",
-                "Competency management",
-                "Promotion and certification system",
-                "Internal job transfer",
-                "Training and development",
-                "Workforce planning",
-                "Employee engagement management",
-                "Predictive analytics for employee behavior",
-                "Absence management",
-                "Time tracking",
-                "Attendance and absence analytics",
-                "Employee scheduling",
-                "Task and activity management"
+                "Employee Database",
+                "Employee Profiles",
+                "Employee Lifecycle Management",
+                "Payroll Management",
+                "Employee Benefits",
+                "Reporting and Analytics",
+                "Corporate Policies and Procedures",
+                "Employee Directory",
+                "Organizational Structure",
+                "Knowledge Base and Employee Development",
+                "Employee Self-Service Portal",
+                "Virtual Assistants and Chat Bots for Employees",
+                "Staff Recruitment",
+                "Onboarding and Induction System",
+                "Performance Management",
+                "Competency Management",
+                "Promotion and Certification System",
+                "Internal Job Transfer",
+                "Training and Development",
+                "Workforce Planning",
+                "Employee Engagement Management",
+                "Predictive Analytics for Employee Behavior",
+                "Absence Management",
+                "Time Tracking",
+                "Attendance and Absence Analytics",
+                "Employee Scheduling",
+                "Task and Activity Management"
             ]
         },
         "custom-erp": {
@@ -101,19 +101,19 @@ const translation = {
                     "subtitle": "The ERP system developed by MISEENSCREEN is designed to meet the unique operational and strategic needs of businesses by creating individual functionality. Our ERP ensures the integration of all business management functions and facilitates data-driven decision-making. It is also scalable and adaptable to the specific needs of the business.",
                     "props": [
                         {
-                            "title": "HR policy",
+                            "title": "HR Policy",
                             "details": "Human resources policy management and personnel management, from recruitment and onboarding to payroll calculation, attendance tracking, training, and employee request management."
                         },
                         {
-                            "title": "Sales and marketing",
+                            "title": "Sales and Marketing",
                             "details": "The functionality for automating customer order management, planning marketing campaigns based on data, communicating with customers, and obtaining sales dynamics information."
                         },
                         {
-                            "title": "Services operations  management",
+                            "title": "Services Operations Management",
                             "details": "Planning, controlling, and optimizing work processes related to service provision. Managing service level agreements. Conducting surveys and electronic voting to gather ideas for improving service."
                         },
                         {
-                            "title": "Project  management",
+                            "title": "Project  Management",
                             "details": "Project planning and monitoring, task assignment and tracking, collaborative tools (instant messaging, shared file space, etc.)."
                         }
                     ]
@@ -122,19 +122,19 @@ const translation = {
                     "subtitle": "",
                     "props": [
                         {
-                            "title": "Document management",
+                            "title": "Document Management",
                             "details": "Centralized storage of multiple document types, easy navigation and exchange of documents, document templates."
                         },
                         {
-                            "title": "Knowledge management",
+                            "title": "Knowledge Management",
                             "details": "Centralized knowledge repository with a powerful search system, automated knowledge classification, knowledge sharing, and collaboration tools."
                         },
                         {
-                            "title": "Services operations management",
+                            "title": "Services Operations Management",
                             "details": "Planning, controlling, and optimizing work processes related to service provision. Managing service level agreements. Conducting surveys and electronic voting to gather ideas for improving service."
                         },
                         {
-                            "title": "Data analytics and BI",
+                            "title": "Data Analytics and BI",
                             "details": "Comprehensive data analysis and visualization functions for monitoring, measuring, and optimizing the performance of each business department."
                         }
                     ]
@@ -148,27 +148,27 @@ const translation = {
             "subtitle": "The development of a web portal is a comprehensive service for planning and implementing a secure and user-friendly digital space to serve your customers, partners, and employees. Web portals provide self-service functions for targeted users and grant access to services, products, information, and communication tools.",
             "props": [
                 {
-                    "title": "Self-service portals",
+                    "title": "Self-Service Portals",
                     "details": "We aggregate information about your company's products or services and allow registered users to request information, activate/deactivate and plan services, communicate with company representatives, and address issues."
                 },
                 {
-                    "title": "Clients portals",
+                    "title": "Clients Portals",
                     "details": "We create a digital space where your clients can access your products, place online orders, subscribe to services, submit service requests, share their experiences with you and other users."
                 },
                 {
-                    "title": "Employee portals",
+                    "title": "Employee Portals",
                     "details": "We implement a secure platform that allows your employees to submit and manage requests for HR, IT services, and facilities-related services, access structured corporate data, collaborate, and stay informed about corporate events."
                 },
                 {
-                    "title": "Ecommerce portals",
+                    "title": "Ecommerce Portals",
                     "details": "We create an intuitive purchasing experience for business buyers and individual consumers and can integrate an e-commerce portal into an omnichannel retail ecosystem."
                 },
                 {
-                    "title": "E-learning",
+                    "title": "E-Learning",
                     "details": "We create portals for corporate training and employee development, as well as for educational institutions and business training."
                 },
                 {
-                    "title": "Community portals",
+                    "title": "Community Portals",
                     "details": "We bring together people with similar interests and encourage them to acquire new knowledge and share experiences through forums, blogs, chats, and other communication tools."
                 }
             ]

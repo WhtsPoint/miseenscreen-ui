@@ -21,6 +21,11 @@
       object-fit: cover;
     }
   }
+  & .title {
+    margin-block: 1em;
+    font-size: 1.17em;
+    word-wrap: break-word;
+  }
   & .description {
     color: #e1e1e1;
   }

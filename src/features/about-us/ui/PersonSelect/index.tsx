@@ -6,7 +6,7 @@ import vladimirImage from '@/utils/assets/images/about-us/vladimir.png'
 
 interface Params {
     person: Person,
-    swapPerson: () => unknown,
+    swapPerson?: () => unknown,
     className?: string,
     imagesChildren?: ReactNode
 }
@@ -17,7 +17,7 @@ export default function PersonSelect({ className, person, swapPerson, imagesChil
         person={person}
         onNext={swapPerson}
         onPrev={swapPerson}
-        images={{'darya': daryaImage, 'vladimir': vladimirImage}}
+        images={{ 'darya': daryaImage }}
         imagesChildren={imagesChildren}
     />)
 }

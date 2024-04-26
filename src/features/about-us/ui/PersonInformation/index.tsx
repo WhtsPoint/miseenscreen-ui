@@ -1,6 +1,9 @@
-import type {Person} from '@/features/about-us/types/Person'
+import type { Person } from '@/features/about-us/types/Person'
 import { Information } from '@/widgets/about-us'
 import { useTranslations } from 'next-intl'
+import { Link } from '@/utils/lib/navigation'
+import config from '@/utils/config'
+import styles from './styles.module.scss'
 
 interface Params {
     person: Person,
@@ -15,6 +18,9 @@ export default function PersonInformation({ person, className }: Params) {
         name: t(`person.${person}.name`),
         role: t(`person.${person}.role`),
         skills: t(`person.${person}.skills`),
-        about: t(`person.${person}.about`)
+        about: t.rich(
+            `person.${person}.about`,
+            { 'to-story': (chunks) => <Link className={styles.toStory} href={config.routes.header.ourStory}>{chunks}</Link> }
+        )
     }} />)
 }

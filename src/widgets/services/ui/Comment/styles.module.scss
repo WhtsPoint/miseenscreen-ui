@@ -19,12 +19,17 @@
     height: fit-content;
     display: flex;
     align-items: center;
-    &__icon {
+    gap: 10px;
+    &__avatar {
       width: 150px;
       height: 150px;
-      object-fit: contain;
       border-radius: 50%;
+      overflow: hidden;
       flex-shrink: 0;
+      position: relative;
+      &__image {
+        height: auto !important;
+      }
     }
     &__line {
       width: 3px;

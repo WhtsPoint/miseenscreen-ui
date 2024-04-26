@@ -6,7 +6,7 @@ import { motion, useInView } from 'framer-motion'
 import { cl } from '@/utils/lib/cl'
 import styles from './styles.module.scss'
 import sectionStyles from '@/utils/assets/styles/services.module.scss'
-import daryaImage from '@/utils/assets/images/about-us/darya.png'
+import daryaImage from '@/utils/assets/images/who-we-are/darya.jpeg'
 import { useRef } from 'react'
 
 interface Params {
@@ -17,8 +17,9 @@ interface Params {
 }
 
 export default function Comment(
-    { text, textClassName, commentatorImage = daryaImage }: Params
+    { text, textClassName, commentatorImage: commentatorImageOrUndefined }: Params
 ) {
+    const commentatorImage = commentatorImageOrUndefined || daryaImage
     const ref = useRef(null)
     const isInView = useInView(ref, { once: true })
     const [currentText, start] = useTextTyping({
@@ -40,11 +41,15 @@ export default function Comment(
         onAnimationComplete={onAnimationComplete}
     >
         <div className={styles.comment__start}>
-            <Image
-                className={styles.comment__start__icon}
-                src={commentatorImage}
-                alt={'Commentator portrait'}
-            />
+            <div className={styles.comment__start__avatar}>
+                <Image
+                    fill
+                    className={styles.comment__start__avatar__image}
+                    src={commentatorImage.src}
+                    sizes={'150px'}
+                    alt={'Commentator portrait'}
+                />
+            </div>
             <div className={styles.comment__start__line} />
         </div>
         <blockquote className={styles.comment__quote}>

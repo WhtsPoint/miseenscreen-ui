@@ -1,3 +1,3 @@
-type Person = 'darya' | 'vladimir'
+type Person = 'darya'
 
 export type { Person }
