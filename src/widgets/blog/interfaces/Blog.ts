@@ -8,7 +8,7 @@ interface Blog {
     previewCover: StaticImageData,
     createdAt: Date,
     content: string,
-    author: string,
+    author: string
 }
 
 export type { Blog }
