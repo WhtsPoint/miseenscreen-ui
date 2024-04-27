@@ -43,16 +43,82 @@ const translation = {
             "company-consciousness": `
                 <first-picture>The movie "Poor Things" (2023). Directed by Yorgos Lanthimos</first-picture>
                 <h2>To be alive? To be efficient in the system?</h2>
-                <p>"I'm not a robot!" - How often have you heard this statement during interactions with people? And often it continues like this: "I'm not a robot, I can make mistakes!\\" And it's true - humans are capable of making mistakes, feeling, loving, getting upset. However, it's important to understand that all these feelings are a result of the evolution and nature of biological intelligence, and how this can impact the work and success of your organization is also an important and interesting question. In this article, you will learn about the systematic building of relationships between employees and the organization through support for employees and freedom of speech in the company, about creating unified rules of the game in conditions of efficiency and healthy relationships, and how digital technologies can help with this</p>
-                <b>All living beings have certain behavior patterns. Only digital systems, artificial intelligence, and robots with programs cannot deviate from their programs.</b>
+                <p>
+                    "I'm not a robot!" - How often have you heard this statement during interactions with people?
+                    And often it continues like this: "I'm not a robot, I can make mistakes!\\" And it's true - humans
+                    are capable of making mistakes, feeling, loving, getting upset. However, it's important to
+                    understand that all these feelings are a result of the evolution and nature of biological
+                    intelligence, and how this can impact the work and success of your organization is also an
+                    important and interesting question. In several articles on this topic, you will learn about the
+                    systematic building of relationships between employees and the organization through support
+                    for employees and freedom of speech in the company, about creating unified rules of the game
+                    in conditions of efficiency and healthy relationships, and how digital technologies can help with
+                    this.
+                </p>
+                <b>
+                    All living beings have certain behavior patterns. Only digital systems, artificial intelligence, and
+                    robots with programs cannot deviate from their programs.
+                </b>
                 <second-picture>The movie "I,Robot" (2004). Directed by Alex Proyas</second-picture>
-                <p>Reflecting on my journey from a sales consultant to a Human Resources and Training Director, I can say that often organizations, without realizing it or perceiving it as a benefit, sincerely believe that by changing people, they are creating an effective environment for interaction that meets the organization's needs. However, working on changing human nature and biological intelligence is a complex and not always effective task, especially when resources are available for this purpose. Reprogramming a program to a new or necessary development vector is much more effective, simpler, and more natural than reprogramming living people. Most likely, in your organization, there are mature and formed individuals with their own history, past, associative memory, feelings, reactions, and perceptions shaped by evolution and personal experience through family and society. It is especially easier to give up moralizing, teachings about what is good and bad, and attempts to change people when you start to take an interest in human physiology. In my experience, as well as that of my colleagues, trainers, HR managers, and company owners, there have been or remain hobbies of reading best-selling business literature on how to be a manager, how to manage people, how to act and build a company culture in order to be as successful as the author's or speaker's organization. Such books and trainings often provide ready-made solutions, but the data and circumstances of the company often do not resemble yours, and there is also a lot of general information, personal stories, and fantasies in this genre that do not reveal the basis, such as who the person and employee is that I want to influence. Such stories also tell what the author wants to tell, often with a subjective view. By focusing on the knowledge of physiology and biological intelligence, you stop guessing and fantasizing, and understand and accept why a person behaves or reacts in certain ways in certain situations, and what needs to be done for employees to accept the company's rules of the game. I also want to note that it is not at all bad or good when an organization or manager applies methods to develop their organization and management. Having investments, commitments, and responsibilities, people act, often considering their philosophy true and effective in order to achieve their goal.</p>
-                <p>Summarizing the idea above, the foundation of successful interaction between people in an organization and business often lies in understanding the psychology of human behavior. However, it is better to develop unique approaches and strategies that consider the specific characteristics and needs of a particular organization and business. It is important not to disregard established principles and methodologies but to adapt them to the specific requirements and goals of the company. For example, there is no point in creating a round or triangular television, but it is important to consider the picture quality being broadcast and who the viewers will be.</p>
+                <p>
+                    Reflecting on my journey from a sales consultant to a Human Resources and Training Director, I
+                    can say that often organizations, without realizing it or perceiving it as a benefit, sincerely
+                    believe that by changing people, they are creating an effective environment for interaction that
+                    meets the organization's needs. However, working on changing human nature and biological
+                    intelligence is a complex and not always effective task, especially when resources are available
+                    for this purpose. Reprogramming a program to a new or necessary development vector is
+                    effective, simpler, and more natural than reprogramming living people. Most likely,
+                    in your organization, there are mature and formed individuals with their own history, past,
+                    associative memory, feelings, reactions, and perceptions shaped by evolution and personal
+                    experience through family and society. It is especially easier to give up moralizing, teachings
+                    about what is good and bad, and attempts to change people when you start to take an interest
+                    in human physiology. In my experience, as well as that of my colleagues, trainers, HR
+                    managers, and company owners, there have been or remain hobbies of reading best-selling
+                    business literature on how to be a manager, how to manage people, how to act and build a
+                    company culture in order to be as successful as the author's or speaker's organization. Such
+                    books and trainings often provide ready-made solutions, but the data and circumstances of the
+                    company often do not resemble yours, and there is also a lot of general information, personal
+                    stories, and fantasies in this genre that do not reveal the basis, such as who the person and
+                    employee is that I want to influence. Such stories also tell what the author wants to tell, often
+                    with a subjective view. By focusing on the knowledge of physiology and biological intelligence,
+                    you stop guessing and fantasizing, and understand and accept why a person behaves or
+                    reacts in certain ways in certain situations, and what needs to be done for employees to accept
+                    the company's rules of the game. I also want to note that it is not at all bad or good when an
+                    organization or manager applies methods to develop their organization and management.
+                    Having investments, commitments, and responsibilities, people act, often considering their
+                    philosophy true and effective in order to achieve their goal.
+                </p>
                 <b>If we cannot reprogram a person, what can we do to ensure that people interact within an efficient system necessary for the organization, while minimizing the negative impact of emotions?</b>
                 <third-picture>The animation movie "Soul" (2020). Directed by Pete Docter</third-picture>
-                <p>One possible answer can be found through the character 22 in the animated film "Soul." In this animated movie, the narcissistic character 22 cannot be convinced by anyone that life on Earth is beautiful. Not even great personalities of humanity or Mother Teresa can change this character's opinion. Nothing influences 22 except real-life experience. When she accidentally ends up on Earth, she begins to realize that she likes life on Earth and changes her mind. Neither moralizing, nor persuasion, nor influential personalities achieved what the environment did.</p>
+                <p>
+                    One possible answer can be found through the character of 22 in the animated movie "Soul".
+                    In this animated film, the narcissistic character 22 cannot be convinced by anyone that life on
+                    Earth is beautiful. Not even the great figures of humanity, not even Mother Teresa... Nothing
+                    influences 22, except for real experience. After 22's soul accidentally ends up on Earth and
+                    begins to explore life, she comes to a personal understanding that she enjoys life on Earth, and
+                    she changes her mind. No moralizing, no persuasion, no influential personalities could achieve
+                    what reality did.
+                </p>
+                <p>
+                    In summary, the basis of successful interaction between people in organizations and
+                    businesses often lies in understanding the physiology of human behavior, abandoning
+                    attempts to change people, and considering alternatives to implementing digital systems
+                    that will create the same environment where people will work according to the
+                    organization's efficiency rules in a pleasant and healthy environment for all employees.
+                    For each organization and business, we suggest developing unique approaches and
+                    strategies that take into account the characteristics and requests of that particular
+                    business. Of course, it is necessary to consider commonly accepted principles and
+                    methodologies, but to adapt them to the specific needs and goals of the company. For
+                    example, it makes no sense to create a round or triangular television, but it is important
+                    to pay attention to the quality of the image and the viewers. What emotions and actions
+                    will the environment of your organization evoke in your employees?
+                </p>
                 <p>And this is by no means a call to abandon one in favor of the other. Training, informal communication, and words also have a right to exist. It's like a special effect that decorates the scene of the movie and makes it brighter, but the special effect is not the meaning or the plot that we suggest focusing on. People can attend lavish training sessions, enjoy a delicious lunch, get motivated by their manager's words, but then return to their workplaces where processes often work situationally, subjectively, and bureaucratically, and fluorescent and HID lighting in workplaces only exacerbates depression.</p>
-                <second-part>About what can be done and how digital technologies can help in such Given the culture and respect for staff, it is further stated in article - Access to the consciousness of the company. Chapter 2.</second-part>
+                <second-part>
+                    The article continues to discuss what can be done and how digital technologies can help in
+                    such issues as culture and employee relations in the following chapter - Access to Company
+                    Consciousness. Chapter 2.
+                </second-part>
                 <init>${init}</init>
             `,
             "company-consciousness-2": `
@@ -129,7 +195,6 @@ const translation = {
                 <p>And constant interim results help reduce the "pain" of a person's work expectations, as <b>most people suffer not from actual circumstances, but from their expectations</b>. The system covers all requests and embedded calculations, while a person's ability to control everything down to the smallest detail is limited.</p>
                 <fourth-picture>The animation movie «Inside Out» (2015). Directed by Pete Docter; Ronnie del Carmen</fourth-picture>
                 <pb>With a digital system involving both the employee and the company, there is a "rational dialogue" whereas people can only be as rational with others as they allow themselves to be.</pb>
-                <another-article>An article about promoting employees to key positions in the company - Digital Promotion. «Great at doing stuff».</another-article>
                 <init>${init}</init>
             `,
             "general": {
