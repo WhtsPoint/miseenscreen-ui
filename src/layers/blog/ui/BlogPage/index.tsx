@@ -3,6 +3,7 @@ import { ContactUsModalWrapper } from '@/features/contact-us'
 import { BlogOtherArticles, getBlogById, renderBlogContent } from '@/features/blog'
 import { type Blog, BlogArticle } from '@/widgets/blog'
 import { FooterSection } from '@/layers/main'
+import { ContactUsPage } from '@/layers/contact'
 import styles from './styles.module.scss'
 
 interface Params {
@@ -19,7 +20,9 @@ export default async function BlogPage({ blogId }: Params) {
                 {renderBlogContent(blog)}
             </BlogArticle>
             <BlogOtherArticles id={blog.id} />
-            <FooterSection className={styles.footer} />
+            <FooterSection className={styles.footer}>
+                <ContactUsPage />
+            </FooterSection>
         </div>
     </ContactUsModalWrapper>)
 }

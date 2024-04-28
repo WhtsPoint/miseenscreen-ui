@@ -63,7 +63,7 @@ const translation = {
             {
                 "text": `
                     <p>
-                        When I was involved in this, I felt a special satisfaction and
+                        When I was involved in this, I
                         understood that this was one of the directions in which I was
                         interested in deepening, as it is a scenario where the activity
                         brings incredible satisfaction. And my skills in analysis and
@@ -146,7 +146,8 @@ const translation = {
                         the creation and development of the training department. 
                     </p>
                     <p>
-                        An important factor in creating the project was my 14-years old brother Volodymyr,
+                        An important person in creating the project was my 14-year-old brother Volodymyr at
+                        that time
                         who is now a partner and project
                         developer at MISEENSCREEN. I found out that he was
                         programming games and asked him to write a demo version
@@ -300,7 +301,10 @@ const translation = {
                         where your brother is a talented developer, and working with
                         the CEO who may not have believed, but still supported the
                         passionate eyes and the demonstration version of creating
-                        the training department. And, of course, following the path
+                        the training department.
+                    </p>
+                    <p>    
+                        And, of course, following the path
                         of a dream and the desire to explore this world. If I hadn't
                         chosen a new path of development with moving to the USA,
                         we don't know what would have happened, but we do know

@@ -15,19 +15,22 @@ import { ContactUsPage } from '@/layers/contact'
 import styles from './styles.module.scss'
 
 export default function WhoWeArePage() {
-    return (<section className={styles.page}>
-        <HeaderTheme theme={'solid'} />
-        <InitSection />
-        <CreatorNote />
-        <CodeNote />
-        <ModelNote />
-        <TabletNote />
-        <BookNote />
-        <CasesNote />
-        <CompanyNote />
-        <StackNote />
+    return (<>
+            <section className={styles.page}>
+            <HeaderTheme theme={'solid'} />
+            <InitSection />
+            <CreatorNote />
+            <CodeNote />
+            <ModelNote />
+            <TabletNote />
+            <BookNote />
+            <CasesNote />
+            <CompanyNote />
+            <StackNote />
+        </section>
         <FooterSection>
             <ContactUsPage />
         </FooterSection>
-    </section>)
+    </>)
+
 }

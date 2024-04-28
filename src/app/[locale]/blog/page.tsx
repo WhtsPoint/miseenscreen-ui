@@ -5,17 +5,20 @@ import { NextIntlClientProvider } from 'next-intl'
 import useCertainMessages from '../../hooks/useCertainIntlMessages'
 import generateAlternates from '../lib/generateAlternates'
 import { unstable_setRequestLocale } from 'next-intl/server'
+import generateMetadataWithTranslation from '../lib/generateMetadataWithTranslation'
 
 export const generateMetadata = async (params: Locale): Promise<Metadata> => {
     return {
-        ...generateAlternates('/')
+        ...await generateMetadataWithTranslation(params.params.locale, 'blogs'),
+        ...generateAlternates('/blog')
     }
 }
 
 const messageKeys = [
     'footer',
     'email-subscription',
-    'contact-us-modal'
+    'contact-us-modal',
+    'contact-us'
 ] as const satisfies string[]
 
 interface Params {

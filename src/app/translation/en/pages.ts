@@ -23,6 +23,10 @@ const translation = {
         "who-we-are": {
             "title": "Who We Are",
             "description": "Behind the scenes: Our story about the path, strategy and mission of web application development. E-commerce, E-learning, HR Software, Custom ERP, Web Apps."
+        },
+        "blogs": {
+            "title": "Custom Web Apps Development",
+            "description": "Why is it important and how to create your own world of digital company consciousness?"
         }
     }
 }
