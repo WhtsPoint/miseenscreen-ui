@@ -9,19 +9,11 @@ const translation = {
             },
             "text": `
                 <p>
-                    This is not your typical company section where we usually
-                    describe how great the organization is, its mission and
-                    values, as well as our desire to turn you into our customer.
-                    We have presented the professional side of our work in all
-                    sections of our website. However, if you have landed on this
-                    page, which is usually considered one of the least visited, it
-                    may mean that we have piqued your interest in learning
-                    more about us.
+                    In this section, we want to talk about our values, principles and approach to work
+                    through our history.
                 </p>
                 <p>
-                    We will tell you about MISEENSCREEN through our
-                    history, which more deeply and sincerely reveals who we
-                    are, our values, principles, and approach to work.
+                    What experience and philosophy is the basis for creating MISEENSCREEN? 
                 </p>
             `
         },
@@ -56,10 +48,7 @@ const translation = {
                     </p>
                     <p>
                         Working as a store director with a team of 40 people, I
-                        enjoyed the recruitment and training process. In addition,
-                        during my school years, I dreamed of becoming a history or
-                        literature teacher. Perhaps this unrealized childhood dream
-                        of teaching people manifested itself in me. 
+                        enjoyed the recruitment and training process.
                     </p>
                     <p>
                         As a director, I built and developed the training process in
@@ -80,15 +69,12 @@ const translation = {
                         brings incredible satisfaction. And my skills in analysis and
                         working with results and indicators, according to the
                         principle of "measure actions with numbers," strengthened
-                        my creative personality in this.
+                        my creative ambitions.
                     </p>
                     <p>
                         Creating and developing a training and recruiting system is
                         not just about the creativity that I love so much. First and
                         foremost, it is about working with business performance.
-                        And these two aspects are combined in me. I know how to
-                        influence results through advanced managerial competencies
-                        and complement this with a creative approach.
                     </p>
                     <p>
                         In my resume, I could demonstrate my experience in
@@ -97,9 +83,7 @@ const translation = {
                         department manager, recruiter, or trainer turned out to be
                         unsuccessful. Companies offered me a position as a regional
                         retail manager, emphasizing that people with such results are 
-                        needed in retail, and there were no problems with personnel
-                        in the office, or the need for retail was higher than in the
-                        office for the positions I desired.
+                        needed in retail.
                     </p>
                     <p>
                         While sending out my resume once, I accidentally opened
@@ -116,21 +100,11 @@ const translation = {
             {
                 "text": `
                     <p>
-                        When they called me to invite me for an interview, I was in a
-                        noisy place, and among all the words I could make out, it
-                        was the date, time, and the fact that I was invited for an
-                        interview at the Iq Business Center. For me, this was the
-                        most beautiful business center in Kyiv, and I really wanted to
-                        be inside that office at that time. The company's location in
-                        the best office building in the country also intensified my
-                        interest in going for the interview.
-                    </p>
-                    <p>
                         This company had a lot that was perfect for me - the type of
                         activity, specifically selling Italian lingerie, hosiery, and
                         knitwear, the working conditions, as well as the desired
-                        location in the capital and a beautiful office. All these factors
-                        were important to me, especially considering that at the time.
+                        location in the capital and a beautiful office. All these factors 
+                        were important to me, especially considering that at the time. 
                         I was living in a small town near the capital.
                     </p>
                     <p>
@@ -145,14 +119,12 @@ const translation = {
                     </p>
                     <p>
                         The power of interest and intuition drove me to go, and this
-                        stage with the CEO was a great interview experience. The
-                        ease and substance of communication from discussing sales
-                        by categories to the books read, discussing results and
-                        marketing campaigns of competitors, and I was impressed to
-                        see in the leader the qualities important to me - it was a
-                        business approach and ease of communication. This leader
-                        was one of the owners, and I admit that after talking to him, I
-                        became interested in working with a person with whom
+                        stage with the CEO was a great interview experience.
+                        Intelligence and rationality, discussion of indicators and books read, competitor
+                        marketing companies and analysis of sales by category. I was impressed, seeing
+                        in the manager the qualities that are important to me - a business approach and
+                        ease of communication. This leader was one of the owners, and I admit that after
+                        talking to him, I became interested in working with a person with whom
                         communication impressed and stuck with me.
                     </p>
                     <p>
@@ -170,18 +142,7 @@ const translation = {
             {
                 text: `
                     <p>
-                        At that time, out of 18 regional managers, I was the only
-                        employee hired from outside. All the others had grown up
-                        within the company and many of them also considered the
-                        possibility of creating a training department, which gave
-                        them a clear advantage in experience 
-                    </p>
-                    <p>
-                        However, I quickly memorize and learn, which also partly
-                        influences the fact that after 1-2 years, I lose interest in
-                        working in the same position and look for opportunities for
-                        career growth, acquiring new knowledge and skills. After 8
-                        months, I developed a project to confirm my candidacy for
+                        After 8 months, I developed a project to confirm my candidacy for
                         the creation and development of the training department. 
                     </p>
                     <p>
@@ -250,7 +211,7 @@ const translation = {
                     <p>
                         I had the opportunity and support to move to the USA, and I
                         considered it an incredible opportunity in life. I dreamed of
-                        America, wanted to get an American education and develop
+                        the USA, wanted to get an American education and develop
                         in one of the leading countries in the world.
                     </p>
                     <p>
@@ -314,7 +275,7 @@ const translation = {
             {
                 text: `
                     <p>
-                        Miseenscreen is passionate about technology and process
+                        MISEENSCREEN is passionate about technology and process
                         systematization. In our experience, a web portal developed
                         for the training department with electronic learning
                         systematization, analytics, and other processes has given me,
@@ -323,7 +284,7 @@ const translation = {
                         conducting various training sessions, meetings, and events.
                     </p>
                     <p>
-                        Miseenscreen believes that every person has the power and
+                        MISEENSCREEN believes that every person has the power and
                         abilities to develop in this world, and when there is a
                         resource where technology and artificial intelligence can
                         help solve a range of tasks, the person and the organization
@@ -344,8 +305,7 @@ const translation = {
                         chosen a new path of development with moving to the USA,
                         we don't know what would have happened, but we do know
                         that this circumstance definitely accelerated the creation of
-                        MISEENSCREEN. However, not stronger than the love for
-                        my role in this world! 
+                        MISEENSCREEN.
                     </p>
                 `
             },

@@ -2,9 +2,12 @@ import BackgroundVideo from '@/utils/ui/BackgroundVideo'
 import videos from '@/utils/config/videos'
 
 interface Params {
-    className?: string
+    className?: string,
 }
 
 export default function FooterBackground({ className }: Params) {
-    return <BackgroundVideo className={className} src={videos.footer} />
+    return <BackgroundVideo
+        src={videos.footer}
+        className={className}
+    />
 }

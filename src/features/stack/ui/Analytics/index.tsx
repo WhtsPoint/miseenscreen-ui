@@ -3,6 +3,8 @@ import { useTranslations } from 'next-intl'
 import { Props, Title } from '@/widgets/stack'
 import { cl } from '@/utils/lib/cl'
 import Particle from '@/utils/ui/Particle'
+import { Link } from '@/utils/lib/navigation'
+import config from '@/utils/config'
 import styles from './styles.module.scss'
 import sectionStyles from '@/utils/assets/styles/stack/section.module.scss'
 import contentStyles from '@/utils/assets/styles/stack/content.module.scss'
@@ -25,7 +27,10 @@ export default function Analytics() {
         return Object.values(segment['props']).forEach(({ title }: any) => props.push(title))
     })
 
-    return (<section className={cl(sectionStyles.section, styles.analytics, sectionStyles.reverse)}>
+    return (<Link
+        href={config.routes.services.analytics}
+        className={cl(sectionStyles.section, styles.analytics, sectionStyles.reverse)}
+    >
         <div className={contentStyles.content}>
             <Title>{t('title')}</Title>
             <Props props={props} />
@@ -42,5 +47,5 @@ export default function Analytics() {
                 image={{ src: sphereLightImage.src, sizes: '400px' }}
             />
         </Poster>
-    </section>)
+    </Link>)
 }

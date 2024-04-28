@@ -4,7 +4,7 @@ import { notFound } from 'next/navigation'
 import config from '@/utils/config'
 
 const loadTranslation = async (locale: string) => ({
-    messages: (await import(`../translation/${locale}/index.ts`)).default
+    messages: (await import(`../translation/${locale}/index`)).default
 })
 
 export default getRequestConfig(async ({locale}) => {

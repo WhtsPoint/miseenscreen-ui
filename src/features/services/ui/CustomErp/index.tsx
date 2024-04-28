@@ -7,7 +7,6 @@ import styles from './styles.module.scss'
 export default function CustomErp() {
     const t = useTranslations('services.custom-erp')
 
-    console.log(t.raw('segments.1.props'))
     return (<Service name={'custom-erp'}>
         <Title>{t('title')}</Title>
         <Description>{t('segments.0.subtitle')}</Description>

@@ -2,7 +2,9 @@ import { Props, Title } from '@/widgets/stack'
 import { useTranslations } from 'next-intl'
 import Particle from '@/utils/ui/Particle'
 import Poster from '../Poster'
+import { Link } from '@/utils/lib/navigation'
 import { cl } from '@/utils/lib/cl'
+import config from '@/utils/config'
 import styles from './styles.module.scss'
 import sectionStyles from '@/utils/assets/styles/stack/section.module.scss'
 import contentStyles from '@/utils/assets/styles/stack/content.module.scss'
@@ -18,7 +20,10 @@ const anim = {
 export default function ElSolution() {
     const t = useTranslations('services.elearning')
 
-    return (<section className={cl(sectionStyles.section, styles.elSolution, sectionStyles.reverse)}>
+    return (<Link
+        href={config.routes.services.elearning}
+        className={cl(sectionStyles.section, styles.elSolution, sectionStyles.reverse)}
+    >
         <div className={contentStyles.content}>
             <Title>{t('title')}</Title>
             <Props props={Object.values(t.raw('props'))} />
@@ -35,5 +40,5 @@ export default function ElSolution() {
                 image={{ src: glare2Image.src, sizes: '700px' }}
             />
         </Poster>
-    </section>)
+    </Link>)
 }

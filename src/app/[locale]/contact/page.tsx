@@ -14,7 +14,7 @@ export const generateMetadata = async (params: Locale) => {
 }
 
 const messageKeys = [
-    'contact-us',
+    'contact-us'
 ] as const satisfies string[]
 
 interface Params {

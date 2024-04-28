@@ -11,8 +11,6 @@ interface Params {
 export default function EmailSubscription({ emailSubscription: { email, postedAt }, onDeleteButtonClick }: Params) {
     const date = postedAt && dateToStringWithTime(new Date(postedAt));
 
-    console.log(date)
-
     return (<div className={styles.emailSubscription}>
         <button className={styles.emailSubscription__delete} onClick={onDeleteButtonClick}>
             <XIcon width={30} height={30} color={'white'} />

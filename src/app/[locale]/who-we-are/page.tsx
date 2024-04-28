@@ -22,7 +22,8 @@ interface Params {
 const messageKeys = [
     'who-we-are',
     'footer',
-    'email-subscription'
+    'email-subscription',
+    'contact-us'
 ] as const satisfies string[]
 
 export default function Page({ params: { locale } }: Params) {

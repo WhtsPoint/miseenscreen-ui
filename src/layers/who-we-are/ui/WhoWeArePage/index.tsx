@@ -11,6 +11,7 @@ import {
 } from '@/features/who-we-are'
 import { FooterSection } from '@/layers/main'
 import { HeaderTheme } from '@/features/header'
+import { ContactUsPage } from '@/layers/contact'
 import styles from './styles.module.scss'
 
 export default function WhoWeArePage() {
@@ -25,6 +26,8 @@ export default function WhoWeArePage() {
         <CasesNote />
         <CompanyNote />
         <StackNote />
-        <FooterSection />
+        <FooterSection>
+            <ContactUsPage />
+        </FooterSection>
     </section>)
 }

@@ -10,7 +10,7 @@ const translation = {
             ],
             "description": [
                 "An efficient and innovative e-commerce platform that will help you increase sales and create your online business. Regardless of the scale of your project, our team of developers will create a user interface, payment system integration, catalog management, analytics, adaptation for all devices, necessary languages and countries, and other important features required for the successful operation of your online store.",
-                "One of the principles of our work is system optimization and freeing up human resources for creativity, management, involvement in processes, and achieving other customer goals. Our team analyzes and offers a maximum number of options for optimizing workflow based on the client's objectives."
+                "One of the principles of our work is system optimization and freeing up human resources for creativity, management, involvement in processes, and achieving other goals. Our team analyzes and offers a maximum number of options for optimizing workflow based on the client's objectives."
             ]
         },
         "elearning": {

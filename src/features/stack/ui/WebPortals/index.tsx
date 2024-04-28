@@ -2,11 +2,13 @@ import Particle from '@/utils/ui/Particle'
 import { useTranslations } from 'next-intl'
 import { Props, Title } from '@/widgets/stack'
 import Poster from '@/features/stack/ui/Poster'
+import { Link } from '@/utils/lib/navigation'
 import { cl } from '@/utils/lib/cl'
+import config from '@/utils/config'
+import styles from './styles.module.scss'
 import sectionStyles from '@/utils/assets/styles/stack/section.module.scss'
 import contentStyles from '@/utils/assets/styles/stack/content.module.scss'
 import posterImage from '@/utils/assets/images/stack/posters/web-portals.jpg'
-import styles from './styles.module.scss'
 import straightLightImage from '@/utils/assets/images/stack/particles/straight-line-light.png'
 import xLightImage from '@/utils/assets/images/stack/particles/x-light.png'
 
@@ -16,7 +18,10 @@ export default function WebPortals() {
     //TODO: Refactor with types
     const props = Object.values(t.raw('props')).map(({ title }: any) => title)
 
-    return (<section className={cl(sectionStyles.section, styles.webPortals)}>
+    return (<Link
+        href={config.routes.services.webPortals}
+        className={cl(sectionStyles.section, styles.webPortals)}
+    >
         <Poster className={styles.poster} src={posterImage.src}>
             <Particle
                 className={styles.straightLight}
@@ -41,5 +46,5 @@ export default function WebPortals() {
             }}
             image={{ src: xLightImage.src, sizes: '1200px' }}
         />
-    </section>)
+    </Link>)
 }

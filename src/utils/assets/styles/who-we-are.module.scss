@@ -1,6 +1,9 @@
 .section {
+  max-width: 1600px;
   font-size: 1.7em;
   color: white;
+  padding: 0 20px;
+  margin-inline: auto;
   & .paragraph {
     font-size: 0.8em;
     margin-block: 40px;
@@ -11,7 +14,6 @@
   & .centerText {
     max-width: 1600px;
     margin-inline: auto;
-    padding: 20px;
   }
 }
 

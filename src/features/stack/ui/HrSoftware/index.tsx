@@ -3,6 +3,8 @@ import Poster from '../Poster'
 import { useTranslations } from 'next-intl'
 import { Props, Title } from '@/widgets/stack'
 import { cl } from '@/utils/lib/cl'
+import { Link } from '@/utils/lib/navigation'
+import config from '@/utils/config'
 import styles from './styles.module.scss'
 import sectionStyles from '@/utils/assets/styles/stack/section.module.scss'
 import contentStyles from '@/utils/assets/styles/stack/content.module.scss'
@@ -13,7 +15,10 @@ import lineLightImage from '@/utils/assets/images/stack/particles/line-light.png
 export default function HrSoftware() {
     const t = useTranslations('services.hr-software')
 
-    return (<section className={cl(sectionStyles.section, styles.hrSoftware)}>
+    return (<Link
+        href={config.routes.services.hrSoftware}
+        className={cl(sectionStyles.section, styles.hrSoftware)}
+    >
         <Poster src={posterImage.src}>
             <Particle
                 className={styles.ellipseLight}
@@ -38,5 +43,5 @@ export default function HrSoftware() {
             }}
             image={{ src: lineLightImage.src, sizes: '600px' }}
         />
-    </section>)
+    </Link>)
 }

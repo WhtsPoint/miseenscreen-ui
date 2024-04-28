@@ -75,11 +75,9 @@ const translation = {
                 "name": "Daria Pryimak",
                 "role": "Project manager & Owner",
                 "skills": `
-                    3 years of experience in developing and managing web apps.
-                    \n
-                    3 years of experience in developing an employee training, development, and evaluation system, recruiting system, and creating a corporate culture as the head of the training and personnel department at MNS Investment, the official representative of Calzedonia, Intimissimi, Tezenis, and Falconeri brands in Ukraine.
-                    \n
-                    3 years of experience in managing a store as a Chief Store Manager in a home appliances company, Foxtrot.
+                    THREE YEARS OF EXPERIENCE IN DEVELOPING AND MANAGING WEB APPS\n
+                    THREE YEARS OF EXPERIENCE IN DEVELOPING AN EMPLOYEE TRAINING, DEVELOPMENT, AND EVALUATION SYSTEM, RECRUITING SYSTEM, AND CREATING A CORPORATE CULTURE AS THE HEAD OF THE TRAINING AND PERSONNEL DEPARTMENT AT MNS INVESTMENT, THE OFFICIAL REPRESENTATIVE OF CALZEDONIA, INTIMISSIMI, TEZENIS, AND FALCONERI BRANDS IN UKRAINE\n
+                    THREE YEARS OF EXPERIENCE IN MANAGING A STORE AS A CHIEF STORE MANAGER IN A HOME APPLIANCES COMPANY, FOXTROT
                 `,
                 "about": "Hello everyone,\n\nMy name is Daria, and I am a manager for bringing your ideas to the screen. I accompany and take responsibility for the project from the first communication to the signing of the delivery of the finished product. I will develop a commercial proposal, technical specifications, instructional materials, and instructions for using the finished product. I will also be your launch manager, providing informational support, conducting training, and education to help you effectively launch and implement new developments and processes into your business.\n\nRead our story <to-story>(Our Story)</to-story> to learn more about whom, how, and with what philosophy will be developing new products for your business. "
             }
