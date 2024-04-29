@@ -5,13 +5,13 @@ import { notFound } from 'next/navigation'
 import EnTerms from '../EnTerms'
 import RuTerms from '@/layers/terms/ui/RuTerms'
 import UaTerms from '@/layers/terms/UaTerms'
-import type config from '@/utils/config'
+import type { Locale } from '@/utils/types/Locale'
 
 const pages = {
     'en': <EnTerms />,
     'ru': <RuTerms />,
     'ua': <UaTerms />
-} as const satisfies Record<(typeof config.locale.locales)[number], ReactNode>
+} as const satisfies Record<Locale, ReactNode>
 
 const isPageExists = (locale: string): locale is keyof typeof pages=> locale in pages
 
