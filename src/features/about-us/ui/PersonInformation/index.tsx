@@ -18,8 +18,9 @@ export default function PersonInformation({ person, className }: Params) {
         name: t(`person.${person}.name`),
         role: t(`person.${person}.role`),
         skills: t(`person.${person}.skills`),
-        about: t.rich(
-            `person.${person}.about`,
+        about: t(`person.${person}.about`),
+        story: t.rich(
+            `person.story`,
             { 'to-story': (chunks) => <Link className={styles.toStory} href={config.routes.header.ourStory}>{chunks}</Link> }
         )
     }} />)

@@ -10,15 +10,19 @@ interface Params {
     imagesChildren?: ReactNode
 }
 
-const person = 'darya'
-
 export default function AboutUs({ className, imagesChildren }: Params) {
+    const [person, setPerson] = useState<Person>('darya')
+
+    const swapPerson = () => setPerson((prev) => prev === 'darya' ? 'vladimir' : 'darya')
+
+
     return (<div className={cl(styles.aboutUs, className)}>
         <PersonSelect
             person={person}
             className={styles.aboutUs__personSelect}
             imagesChildren={imagesChildren}
+            swapPerson={swapPerson}
         />
-        <PersonInformation person={person} className={styles.aboutUs__infromation}/>
+        <PersonInformation person={person} className={styles.aboutUs__infromation} />
     </div>)
 }

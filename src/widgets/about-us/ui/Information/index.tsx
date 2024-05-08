@@ -13,11 +13,12 @@ export default function Information({ text, className }: Params) {
             <h2 className={styles.information__title}>{text.title}</h2>
             <h3 className={styles.information__name}>{text.name}</h3>
             <b className={styles.information__role}>{text.role}</b>
-            <p>{text.skills}</p>
+            <p className={styles.information__skills}>{text.skills}</p>
         </div>
         <hr className={styles.information__hr} />
         <div className={styles.information__block}>
             <p>{text.about}</p>
+            <p>{text.story}</p>
         </div>
     </div>)
 }

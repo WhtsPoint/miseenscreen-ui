@@ -17,7 +17,7 @@ export default function PersonSelect({ className, person, swapPerson, imagesChil
         person={person}
         onNext={swapPerson}
         onPrev={swapPerson}
-        images={{ 'darya': daryaImage }}
+        images={{ 'darya': daryaImage, 'vladimir': vladimirImage }}
         imagesChildren={imagesChildren}
     />)
 }

@@ -5,7 +5,8 @@ interface Description {
     name: string,
     role: string,
     skills: string,
-    about: ReactNode
+    about: string,
+    story: ReactNode
 }
 
 export type { Description }
