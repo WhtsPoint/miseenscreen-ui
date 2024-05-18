@@ -12,6 +12,7 @@ import config from '@/utils/config'
 import IBMPlexSans from '@/utils/assets/fonts/IBMPlexSans'
 import styles from './styles/root.module.scss'
 import './styles/global.scss'
+import GoogleTagManager from '@/app/components/GoogleTagManager'
 
 export function generateStaticParams() {
     return config.locale.locales.map((locale) => ({locale}));
@@ -44,6 +45,7 @@ export default function DefaultLayout({ children, params }: Params) {
 
     return (<html lang={localeToLang[locale]}>
         <body className={cl(styles.root, IBMPlexSans.variable)}>
+        <GoogleTagManager id={process.env.GOOGLE_TAG_MANAGER_ID as string} />
         <ReCaptchaModal />
             <ReCaptchaProvider>
                     <NextIntlClientProvider messages={messages} locale={locale}>
