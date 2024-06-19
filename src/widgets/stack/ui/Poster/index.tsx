@@ -27,7 +27,7 @@ export default function Poster({ className, alt = '', transition, style, ...para
             transition={{ duration: 1.5, ...transition }}
             className={styles.imageContainer}
         >
-            <Image className={styles.image} fill priority={true} alt={alt} { ...params } />
+            <Image className={styles.image} fill alt={alt} { ...params } />
         </motion.div>
     </div>)
 }

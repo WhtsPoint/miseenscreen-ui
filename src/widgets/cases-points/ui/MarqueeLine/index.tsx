@@ -15,7 +15,6 @@ export default function MarqueeLine({ photos, isHidden }: Params) {
             src={photo}
             className={styles.photoMarquee__image}
             alt={''}
-            priority
         /></div>)}
     </div>)
 }

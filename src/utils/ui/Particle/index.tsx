@@ -27,7 +27,7 @@ export default function Particle({ className, animation, image }: Params) {
             transition={animation.transition}
             variants={{ view: animation.viewAnimation }}
         >
-            <Image className={styles.image} fill priority={true} {...image} alt={''} />
+            <Image className={styles.image} fill {...image} alt={''} />
         </motion.div>
     </div>)
 }
