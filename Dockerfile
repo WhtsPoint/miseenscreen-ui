@@ -8,6 +8,7 @@ WORKDIR /app
 
 # Install dependencies based on the preferred package manager
 COPY package.json ./
+COPY package-lock.json ./
 RUN npm i
 RUN npm install -g --arch=x64 --platform=linux --libc=glibc sharp
 
