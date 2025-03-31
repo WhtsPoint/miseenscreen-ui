@@ -4,7 +4,6 @@ import type { Children } from '@/utils/interfaces/Children'
 import { Fragment, type ReactNode } from 'react'
 import { getTranslations } from 'next-intl/server'
 import { HeaderThemeSwitcher } from '@/features/header'
-import dateToString from '@/utils/lib/dateToString'
 import styles from './styles.module.scss'
 
 interface Params extends Children<ReactNode> {
@@ -38,10 +37,6 @@ export default async function BlogArticle({ blog, children }: Params) {
                                 {index !== themes.length - 1 ? ' | ' : ''}
                             </Fragment>)}
                         </ul>
-                    </div>
-                    <div className={styles.blogArticle__content__header__meta__themes}>
-                        <p>{t('created-at')}</p>
-                        <p>{dateToString(createdAt)}</p>
                     </div>
                 </div>
             </header>
