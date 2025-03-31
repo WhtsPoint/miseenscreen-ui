@@ -8,7 +8,8 @@ const translation = {
         "web-services": "Online services&Web portals",
         "elearning-solution": "Elearning solution",
         "hr-software": "Hr software",
-        "analytics": "CUSTOM ERP\n\nCOMPANY IN SMARTPHONE SOLUTIONS\n\nMANAGEMENT&ANALYTICS"
+        "analytics": "CUSTOM ERP\n\nCOMPANY IN SMARTPHONE SOLUTIONS\n\nMANAGEMENT&ANALYTICS",
+        "crm": "CRM"
     },
     "cooperation": {
         "title": "Cooperation with MISEENSCREEN",

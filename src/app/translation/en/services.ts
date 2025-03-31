@@ -173,6 +173,92 @@ const translation = {
                 }
             ]
         },
+        "crm": {
+            "title": "CRM",
+            "subtitle": "",
+            "props": [
+                { "title": "Clients Portal" },
+                { "title": "CRM Self-Service" },
+                { "title": "Sales Portal" },
+                { "title": "Support Portal" },
+                { "title": "Partner CRM" },
+                { "title": "Mobile CRM Applications" }
+            ],
+            "service-props": [
+                {
+                    "title": "Clients Portal (CRM Self-Service)",
+                    "details": "• Viewing and updating profile\n" +
+                        "information.\n" +
+                        "• Submitting online support requests\n" +
+                        "(creating tickets, tracking their status).\n" +
+                        "• Managing subscriptions and services.\n" +
+                        "• Accessing personalized offers and\n" +
+                        "discounts.\n" +
+                        "• Viewing payment history, orders, and\n" +
+                        "interactions with the company.\n" +
+                        "• Accessing a knowledge base (FAQs,\n" +
+                        "instructions, training materials)."
+                },
+                {
+                    "title": "Sales Portal",
+                    "details": "• Managing and automating sales\n" +
+                        "pipelines.\n" +
+                        "• Managing customer databases:\n" +
+                        "segmentation, prioritization, and analysis.\n" +
+                        "• Integrating with marketing tools (email\n" +
+                        "campaigns, ads).\n" +
+                        "• Sales forecasting and analytics.\n" +
+                        "• Managing employee tasks (reminders,\n" +
+                        "performance tracking).\n" +
+                        "• Generating reports on sales\n" +
+                        "performance."
+                },
+                {
+                    "title": "Support Portal (Helpdesk CRM)",
+                    "details": "• Creating, assigning, and managing\n" +
+                        "client requests (tickets).\n" +
+                        "• Automating responses (scenarios,\n" +
+                        "chatbots).\n" +
+                        "• Cataloging frequently asked questions\n" +
+                        "and maintaining a knowledge base for\n" +
+                        "clients and employees.\n" +
+                        "• Integrating with phones, messengers,\n" +
+                        "and email.\n" +
+                        "• Analyzing customer satisfaction\n" +
+                        "(CSAT, NPS).\n" +
+                        "• Tools for managing SLA (Service Level\n" +
+                        "Agreements)."
+                },
+                {
+                    "title": "Partner CRM (Partner Portal)",
+                    "details": "• Managing partner profiles (data,\n" +
+                        "interaction history).\n" +
+                        "• Providing access to documents:\n" +
+                        "contracts, marketing materials, price lists.\n" +
+                        "• Tools for analyzing partner\n" +
+                        "performance (sales volumes, activity).\n" +
+                        "• Allowing partners to create orders and\n" +
+                        "requests directly through the portal.\n" +
+                        "• Joint planning of marketing activities.\n"
+                },
+                {
+                    "title": "Mobile CRM Applications",
+                    "details": "• Full access to customer information\n" +
+                        "(contacts, interaction history, deals).\n" +
+                        "• Creating and managing tasks,\n" +
+                        "meetings, and calls.\n" +
+                        "• Conveniently updating data in real\n" +
+                        "time (e.g., after negotiations).\n" +
+                        "• Push notifications for important events\n" +
+                        "(e.g., new requests, missed deadlines).\n" +
+                        "• Integration with geolocation (for\n" +
+                        "planning meeting routes).\n" +
+                        "• Built-in communication tools: calls,\n" +
+                        "messengers."
+                }
+            ],
+            "comment": "Each of these solutions provides essential functionality to enhance interactions with customers and partners."
+        },
         "note": {
             "title": "A note from our founder",
             "quote": "“People love what other people are passionate about”",

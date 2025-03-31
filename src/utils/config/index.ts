@@ -19,7 +19,8 @@ const config = {
             webPortals: '/services#web-portals',
             elearning: '/services#e-learning',
             hrSoftware: '/services#hr-software',
-            analytics: '/services#custom-erp'
+            analytics: '/services#custom-erp',
+            crm: '/services#crm'
         },
         blog: '/blog',
         privacyPolicy: '/privacy-policy',

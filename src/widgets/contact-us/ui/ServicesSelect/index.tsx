@@ -19,6 +19,7 @@ export default function ServicesSelect(params: Params) {
             'elearning': t('elearning-solution'),
             'hrSoftware': t('hr-software'),
             'analytics': t('analytics'),
+            'crm': t('crm'),
             'other': t('other')
         }}
         placeholder={t('placeholder')}

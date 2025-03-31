@@ -1,4 +1,4 @@
-import { Analytics, Ecommerce, ElSolution, HrSoftware, WebPortals } from '@/features/stack'
+import { Analytics, Ecommerce, ElSolution, HrSoftware, WebPortals, CRM } from '@/features/stack'
 import styles from './styles.module.scss'
 
 export default function StackSectionV2() {
@@ -8,5 +8,6 @@ export default function StackSectionV2() {
         <HrSoftware />
         <Analytics />
         <WebPortals />
+        <CRM />
     </div>)
 }

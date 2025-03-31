@@ -3,7 +3,14 @@
 import { useTranslations } from 'next-intl'
 import { type ReactNode, useState } from 'react'
 import type {Children} from '@/utils/interfaces/Children'
-import { AnalyticsLink, EccomerceLink, ElSolutionLink, HrSoftwareLink, WebServicesLink } from '@/features/stack'
+import {
+    AnalyticsLink,
+    CRMSolutionLink,
+    EccomerceLink,
+    ElSolutionLink,
+    HrSoftwareLink,
+    WebServicesLink
+} from '@/features/stack'
 import styles from './styles.module.scss'
 import Container from '@/utils/ui/Container'
 
@@ -29,6 +36,7 @@ export default function ServiceNavigation({ children }: Params) {
                         <li><ElSolutionLink className={styles.item}>{t('elearning-solution')}</ElSolutionLink></li>
                         <li><HrSoftwareLink className={styles.item}>{t('hr-software')}</HrSoftwareLink></li>
                         <li><AnalyticsLink className={styles.item}>{t('analytics')}</AnalyticsLink></li>
+                        <li><CRMSolutionLink className={styles.item}>{t('crm')}</CRMSolutionLink></li>
                     </ul>
                 </nav>
             </div>

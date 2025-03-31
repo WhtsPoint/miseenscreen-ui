@@ -1,6 +1,6 @@
 interface Prop {
     title: string,
-    details: string
+    details?: string
 }
 
 export type { Prop }
