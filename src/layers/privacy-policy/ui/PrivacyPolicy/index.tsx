@@ -16,16 +16,24 @@ export default async function PrivacyPolicy() {
             {Object.values(t.raw('section.1.paragraph')).map((p, i) => {
                 return <p key={i}>{p as string}</p>
             })}
+            <ul>
+                {Object.values(t.raw('section.1.information-list')).map((p, i) => {
+                    return (<li key={i}>{p as string}</li>)
+                })}
+            </ul>
+            {Object.values(t.raw('section.1.paragraph-2')).map((p, i) => {
+                return <p key={i}>{p as string}</p>
+            })}
             <dl>
                 {Object.values(t.raw('section.1.description-list'))
-                    .map(({ title, description }: any, i) => {
-                    return (<Fragment key={i}>
-                        <dt>{title as string}</dt>
-                        <dd>{description as string}</dd>
-                    </Fragment>)
-                })}
+                    .map(({title, description}: any, i) => {
+                        return (<Fragment key={i}>
+                            <dt>{title as string}</dt>
+                            <dd>{description as string}</dd>
+                        </Fragment>)
+                    })}
             </dl>
-            {Object.values(t.raw('section.1.paragraph-1')).map((p, i) => {
+            {Object.values(t.raw('section.1.paragraph-2')).map((p, i) => {
                 return <p key={i}>{p as string}</p>
             })}
             <h2>{t('section.2.title')}</h2>
@@ -36,8 +44,24 @@ export default async function PrivacyPolicy() {
             {Object.values(t.raw('section.3.paragraph')).map((p, i) => {
                 return <p key={i}>{p as string}</p>
             })}
+            <ul>
+                {Object.values(t.raw('section.3.list')).map((p, i) => {
+                    return (<li key={i}>{p as string}</li>)
+                })}
+            </ul>
+            {Object.values(t.raw('section.3.paragraph-1')).map((p, i) => {
+                return <p key={i}>{p as string}</p>
+            })}
             <h2>{t('section.4.title')}</h2>
             {Object.values(t.raw('section.4.paragraph')).map((p, i) => {
+                return <p key={i}>{p as string}</p>
+            })}
+            <ul>
+                {Object.values(t.raw('section.4.list')).map((p, i) => {
+                    return (<li key={i}>{p as string}</li>)
+                })}
+            </ul>
+            {Object.values(t.raw('section.4.paragraph-1')).map((p, i) => {
                 return <p key={i}>{p as string}</p>
             })}
             <h2>{t('section.5.title')}</h2>
@@ -50,6 +74,14 @@ export default async function PrivacyPolicy() {
             })}
             <h2>{t('section.7.title')}</h2>
             {Object.values(t.raw('section.7.paragraph')).map((p, i) => {
+                return <p key={i}>{p as string}</p>
+            })}
+            <ul>
+                {Object.values(t.raw('section.7.list')).map((p, i) => {
+                    return (<li key={i}>{p as string}</li>)
+                })}
+            </ul>
+            {Object.values(t.raw('section.7.paragraph-1')).map((p, i) => {
                 return <p key={i}>{p as string}</p>
             })}
             <h2>{t('section.8.title')}</h2>
