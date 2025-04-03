@@ -10,6 +10,7 @@ import posterImage from '@/utils/assets/images/stack/posters/crm.jpg'
 import circleImage from '@/utils/assets/images/stack/particles/crm.png'
 import xLightImage from '@/utils/assets/images/stack/particles/x-light.png'
 import styles from './styles.module.scss'
+import { cl } from '@/utils/lib/cl'
 
 export default function CRM() {
     const t = useTranslations('services.crm')
@@ -17,11 +18,7 @@ export default function CRM() {
     const props = Object.values(t.raw('props')).map(({ title }: any) => title)
 
     return (<Link className={sectionStyles.section} href={config.routes.services.crm}>
-        <div className={contentStyles.content}>
-            <Title>{t('title')}</Title>
-            <Props props={props} />
-        </div>
-        <Poster src={posterImage.src} className={sectionStyles.section}>
+        <Poster src={posterImage.src} className={cl(styles.background, sectionStyles.section)}>
             <Particle
                 className={styles.centerParticle}
                 animation={{
@@ -41,5 +38,9 @@ export default function CRM() {
                 image={{ src: xLightImage.src, sizes: '1100px' }}
             />
         </Poster>
+        <div className={contentStyles.content}>
+            <Title>{t('title')}</Title>
+            <Props props={props} />
+        </div>
     </Link>)
 }

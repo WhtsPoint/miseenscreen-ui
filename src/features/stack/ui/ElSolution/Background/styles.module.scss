@@ -1,0 +1,38 @@
+.background {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 2;
+
+  & .left {
+    & .leftHand {
+      width: 50%;
+      height: auto;
+    }
+  }
+
+  & .right {
+    display: flex;
+    justify-content: end;
+    & .rightHand {
+      width: 50%;
+      height: auto;
+    }
+  }
+
+  & .circle {
+    width: 80%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  & .light {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-22%);
+    scale: 2.2;
+    z-index: 1;
+  }
+}

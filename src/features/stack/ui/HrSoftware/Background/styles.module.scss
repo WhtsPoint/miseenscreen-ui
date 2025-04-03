@@ -1,0 +1,21 @@
+.background {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  position: relative;
+
+  & .hearth {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    padding-top: 100px;
+  }
+
+  & .light {
+    min-width: 500px;
+    position: absolute;
+    left: 50%;
+    scale: 8;
+    transform: translateX(-8%);
+  }
+}

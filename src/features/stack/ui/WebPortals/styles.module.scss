@@ -18,4 +18,10 @@
       top: 50%;
     }
   }
+
+  & .background {
+    width: 50%;
+    height: 50vw;
+    max-height: 800px;
+  }
 }

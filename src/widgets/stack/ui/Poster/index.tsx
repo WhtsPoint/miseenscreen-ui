@@ -21,7 +21,6 @@ export default function Poster({ className, alt = '', transition, style, ...para
     return (<div ref={ref} style={style} className={cl(styles.poster, className)}>
         <motion.div
             animate={isInView && 'view'}
-            style={{ scale: 1.2 }}
             initial={{ y: 50, opacity: 0 }}
             variants={{ view: { y: 0, opacity: 1 } }}
             transition={{ duration: 1.5, ...transition }}
