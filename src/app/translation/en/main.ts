@@ -57,12 +57,12 @@ const translation = {
     },
     "cases": {
         "title": "Cases",
-        "sub-title": "ELEARNING &\nMANAGEMENT RETAIL PROCESS \nWEB APP",
-        "text": "Our first web application development is designed for MNS Investment, the official representative of Italian fashion brands Calzedonia, Intimissimi, Tezenis, and Falconeri in Ukraine. We have created a corporate portal for employee training, support, and the development of corporate culture, as well as systematizing the company's retail processes."
+        "sub-title": "E-LEARNING &\nMANAGEMENT RETAIL PROCESS \nWEB APP",
+        "text": "Our first web application was developed for MNS Investment, the official representative of Italian fashion brands Calzedonia, Intimissimi, Tezenis, and Falconeri in Ukraine.\n\nWe created a corporate portal for employee training, corporate culture development, and the systematization of the company's retail processes."
     },
     "cases-points": {
         "title": "Cases",
-        "sub-title": "Implemented individual project for MNS INVESTMENT - the official representative of the brands CALZEDONIA, INTIMISSIMI, TEZENIS, FALCONERI in Ukraine",
+        "sub-title": "An individual project has been implemented for the international company CALZEDONIA GROUP UKRAINE (the official representative of the brands CALZEDONIA, INTIMISSIMI, TEZENIS, FALCONERI in Ukraine)",
         "article": {
             "portal": "Multi-brand corporate portal for employees",
             "education": "Employee training and development system",
