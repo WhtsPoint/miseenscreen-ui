@@ -17,52 +17,54 @@ const translation = {
             "title": "E-Learning",
             "props": [
                 "Learning Management System",
-                "E-Learnings Portals",
-                "Remote Proctoring Software",
+                "E-Learning Portals",
+                "Online Proctoring Software",
                 "Learning Content Management System",
                 "Knowledge Management Solutions"
             ],
             "stack": [
                 "Support for multilingual content",
-                "Support for multiple types of content (text, audio, images, videos, animations, virtual reality)",
+                "Support for multiple content types (text, audio, images, video, animation, virtual reality)",
                 "User-generated content",
-                "Structured storage of educational materials",
-                "Tools for creating courses",
+                "Structured storage of learning materials",
+                "Tools for course creation",
                 "Search for educational content by titles, metadata, and full text",
-                "Multi-platform access for students, trainers, and managers",
-                "Self-registration or user registration managed by a manager",
-                "Student profiles with contact information, course information, exams, certificates, and more",
+                "Cross-platform access for students, trainers, and managers",
+                "Self-registration or manager-controlled user registration",
+                "Student profiles with contact details, course information, exams, certificates, and more",
                 "Personalized learning paths",
                 "Online assignments and courses",
-                "Assessment of results with analytics (testing, certification)",
-                "Management of electronic certificates upon course/training completion",
+                "Performance assessment with analytics (testing, certification)",
+                "Management of electronic certificates after course completion",
                 "Recommendations and tips for users",
                 "Analytics, learning history, and progress tracking",
                 "Collection and processing of user feedback",
-                "Tool panels for using educational content, portal usage, time spent on courses, performance, user satisfaction, and more for trainers and managers",
+                "Dashboards with learning content analytics: portal usage intensity; time spent on courses; success rates and user satisfaction levels, along with other similar features for trainers and managers",
                 "Discussion forums",
                 "Chats",
                 "Educational communities",
-                "Interaction with e-learning content through likes, sharing, comments",
+                "Interaction with e-learning content through likes, sharing, and comments",
                 "Gamified learning",
-                "Automatic rating system for user results",
-                "Notification system through any communication channel (SMS, email, internal platform chat)",
-                "User satisfaction rating system"
+                "Automatic user performance ranking system",
+                "Notification system via any communication channel (SMS, email, in-platform chat)",
+                "User satisfaction evaluation system"
             ],
             "description": [
-                "We will help you create online training for your staff and develop a corporate culture in your organization. After studying your goals, we will offer recommendations, proven technologies, and case studies for creating online employee training.",
-                "Your training materials will be interesting and engaging, with a system of gamified testing, fast and systematic feedback on results, a development system, and automatic certification, analytics, and automatic rating building, available on your employee's smartphone. We will also add features to the platform to engage employees in corporate life - news feeds, automated holiday and job change greetings, effectiveness ratings, staff support, and satisfaction level calculation."
+                "We help you create online learning for employees and develop corporate culture in your company. By analyzing your goals, we provide recommendations, tested technologies, and case studies for employee training programs.",
+                "Your educational materials will be engaging and interactive: with a gamified testing system, fast and systematic feedback on results, a structured development and automated certification system, analytics, and automatic ranking generation accessible from employees' smartphones.",
+                "We also develop platform features to enhance employee engagement in corporate life: news feeds, automated holiday and job change greetings, efficiency ratings, employee support, and satisfaction level tracking."
             ],
-            "comment": " My dream of developing the training department, creating a learning system, and writing trainings has come true at MNS INVESTMENT company.\n\nI always combine the qualities of a systematic manager acquired in leadership positions with a creative personality in my work. Therefore, my key goal in process building has always been maximum optimization through technology, leaving more time for creativity.\n\nI am currently 28 years old and have 10 years of experience in management and business. However, I always strive for learning and development. Currently, I am a college student in Los Angeles, where I study cinematography and production. This helps me not only develop my creative side but also study various teaching methodologies in the USA, analyze their effectiveness, and apply the best ideas in developing my projects."
+            "comment": "My dream of developing a training department, creating a learning system, and training programs came true at the international company CALZEDONIA GROUP.\n\nI always combine system management qualities, acquired in leadership roles, with a creative approach. That’s why my key goal in process building has always been to maximize optimization through technology, allowing more time for creativity.\n\nI am currently 29 years old and have 10 years of experience in management and business. However, I am always eager to learn and grow. Right now, I am a college student in Los Angeles, studying cinematic arts and production. This helps me not only develop my creative potential but also explore various learning methodologies in the U.S., analyze their effectiveness, and apply the best ideas when developing my projects."
         },
         "hr-software": {
-            "title": "Hr Software",
+            "title": "HRM System Development",
             "props": [
-                "Administrative Tasks",
-                "Service Management",
-                "Talent Management",
-                "Labour Management",
-                "Recruitment System"
+                "Recruitment Optimization",
+                "Automation of Administrative Processes",
+                "Effective Workforce Management",
+                "Productivity Enhancement",
+                "Analytics and Reporting",
+                "Improved Team Collaboration"
             ],
             "stack": [
                 "Employee Database",
@@ -71,26 +73,25 @@ const translation = {
                 "Payroll Management",
                 "Employee Benefits",
                 "Reporting and Analytics",
-                "Corporate Policies and Procedures",
-                "Employee Directory",
+                "Corporate Policies and Employee Handbook",
                 "Organizational Structure",
                 "Knowledge Base and Employee Development",
                 "Employee Self-Service Portal",
-                "Virtual Assistants and Chat Bots for Employees",
-                "Staff Recruitment",
-                "Onboarding and Induction System",
+                "Virtual Assistants and Chatbots for Employees",
+                "Recruitment Process",
+                "Onboarding and Orientation System",
                 "Performance Management",
                 "Competency Management",
                 "Promotion and Certification System",
-                "Internal Job Transfer",
+                "Internal Transfers to Other Positions",
                 "Training and Development",
                 "Workforce Planning",
                 "Employee Engagement Management",
-                "Predictive Analytics for Employee Behavior",
-                "Absence Management",
-                "Time Tracking",
-                "Attendance and Absence Analytics",
-                "Employee Scheduling",
+                "Behavior Prediction Using Predictive Analytics",
+                "Employee Absence Management",
+                "Work Time Tracking",
+                "Presence and Absence Analytics",
+                "Employee Work Schedule Planning",
                 "Task and Activity Management"
             ]
         },
@@ -98,79 +99,36 @@ const translation = {
             "title": "Custom Erp",
             "segments": [
                 {
-                    "subtitle": "The ERP system developed by MISEENSCREEN is designed to meet the unique operational and strategic needs of businesses by creating individual functionality. Our ERP ensures the integration of all business management functions and facilitates data-driven decision-making. It is also scalable and adaptable to the specific needs of the business.",
+                    "subtitle": "The ERP system developed by MISEENSCREEN is designed to meet the unique operational and strategic needs of enterprises by creating custom functionality.\n\nOur ERP system ensures the integration of all business management functions, facilitates data-driven decision-making, and provides a scalable and business-adapted solution.",
                     "props": [
-                        {
-                            "title": "HR Policy",
-                            "details": "Human resources policy management and personnel management, from recruitment and onboarding to payroll calculation, attendance tracking, training, and employee request management."
-                        },
-                        {
-                            "title": "Sales and Marketing",
-                            "details": "The functionality for automating customer order management, planning marketing campaigns based on data, communicating with customers, and obtaining sales dynamics information."
-                        },
-                        {
-                            "title": "Services Operations Management",
-                            "details": "Planning, controlling, and optimizing work processes related to service provision. Managing service level agreements. Conducting surveys and electronic voting to gather ideas for improving service."
-                        },
-                        {
-                            "title": "Project  Management",
-                            "details": "Project planning and monitoring, task assignment and tracking, collaborative tools (instant messaging, shared file space, etc.)."
-                        }
+                        { "title": "HR Management", "details": "Management of HR policies and personnel, from recruitment and onboarding to payroll, attendance, training, and employee request management." },
+                        { "title": "Sales and Marketing Management", "details": "Functionality to automate customer order management, plan data-driven marketing campaigns, communicate with clients, and track sales dynamics." },
+                        { "title": "Service Operations Management", "details": "Planning, controlling, and optimizing service-related workflows. Managing Service Level Agreements (SLAs). Conducting surveys and electronic voting to gather improvement ideas." },
+                        { "title": "Project Management", "details": "Project planning and monitoring, task assignment and tracking, collaboration tools (instant messaging, shared file space, etc.)." }
                     ]
                 },
                 {
                     "subtitle": "",
                     "props": [
-                        {
-                            "title": "Document Management",
-                            "details": "Centralized storage of multiple document types, easy navigation and exchange of documents, document templates."
-                        },
-                        {
-                            "title": "Knowledge Management",
-                            "details": "Centralized knowledge repository with a powerful search system, automated knowledge classification, knowledge sharing, and collaboration tools."
-                        },
-                        {
-                            "title": "Services Operations Management",
-                            "details": "Planning, controlling, and optimizing work processes related to service provision. Managing service level agreements. Conducting surveys and electronic voting to gather ideas for improving service."
-                        },
-                        {
-                            "title": "Data Analytics and BI",
-                            "details": "Comprehensive data analysis and visualization functions for monitoring, measuring, and optimizing the performance of each business department."
-                        }
+                        { "title": "Document Management", "details": "Centralized storage of various document types, convenient navigation and document sharing, and document templates." },
+                        { "title": "Knowledge and Development Management", "details": "A centralized knowledge repository with a powerful search system, automated knowledge classification, knowledge-sharing tools, and collaboration features." },
+                        { "title": "Business Analytics", "details": "Comprehensive data analysis and visualization features for monitoring, measuring, and optimizing the productivity of each business unit." }
                     ]
                 }
             ],
-            "description": "When developing web applications, the MISEENSCREEN team adheres to the concept of \"company in a smartphone,\" aimed at helping businesses optimize systems and consolidating processes involving multiple departments into a single button.\n\nWe also offer our clients a solution that optimizes subsequent maintenance of the web application and develop key management functions, minimizing the need to involve a programmer for product maintenance.",
-            "comment": "I started my career as a sales consultant and gradually progressed to the position of HR and training department manager. At each stage, it was important for me to ensure a quick connection between the employee or client with a request and the responsible employee who can address that request. I also aimed to minimize the human factor in business processes.\n\nThanks to the experience and skills gained at various stages of my career, I have developed a product that helps optimize key business processes, systematize work according to the organization's vision and requirements, and automatically calculate the analytics of these events in digital format and present the results."
+            "description": "When developing web applications, the MISEENSCREEN team adheres to the concept of 'Company in a Smartphone.' This concept is aimed at helping businesses optimize their systems and consolidate processes that require the involvement of multiple departments into a single click.\n\nWe also offer our clients a solution that optimizes the maintenance of web applications and develop key management functions, minimizing the need for programmers to support the product.",
+            "comment": "I started my journey as a sales consultant and gradually progressed to the role of Head of HR and Training. At every stage, it was important for me to ensure a quick connection between an employee or client with a request and a competent specialist who could resolve it. I also aimed to minimize the human factor in business processes.\n\nThanks to the experience and skills gained at various stages of my career, I developed a product that helps optimize key business processes, systematize work according to the organization's vision and requirements, and automatically calculate analytics of these events in digital format and present the results."
         },
         "web-portals": {
             "title": "Web Portals",
-            "subtitle": "The development of a web portal is a comprehensive service for planning and implementing a secure and user-friendly digital space to serve your customers, partners, and employees. Web portals provide self-service functions for targeted users and grant access to services, products, information, and communication tools.",
+            "subtitle": "Developing a web portal is a comprehensive service that involves planning and implementing a secure and user-friendly digital space for serving your clients, partners, and employees. Web portals provide self-service functions for target users and offer access to services, products, information, and communication tools.",
             "props": [
-                {
-                    "title": "Self-Service Portals",
-                    "details": "We aggregate information about your company's products or services and allow registered users to request information, activate/deactivate and plan services, communicate with company representatives, and address issues."
-                },
-                {
-                    "title": "Clients Portals",
-                    "details": "We create a digital space where your clients can access your products, place online orders, subscribe to services, submit service requests, share their experiences with you and other users."
-                },
-                {
-                    "title": "Employee Portals",
-                    "details": "We implement a secure platform that allows your employees to submit and manage requests for HR, IT services, and facilities-related services, access structured corporate data, collaborate, and stay informed about corporate events."
-                },
-                {
-                    "title": "Ecommerce Portals",
-                    "details": "We create an intuitive purchasing experience for business buyers and individual consumers and can integrate an e-commerce portal into an omnichannel retail ecosystem."
-                },
-                {
-                    "title": "E-Learning",
-                    "details": "We create portals for corporate training and employee development, as well as for educational institutions and business training."
-                },
-                {
-                    "title": "Community Portals",
-                    "details": "We bring together people with similar interests and encourage them to acquire new knowledge and share experiences through forums, blogs, chats, and other communication tools."
-                }
+                { "title": "Self-Service Portals", "details": "We aggregate information about your company’s products or services and allow registered users to request information, activate/deactivate and schedule services, contact company representatives, and resolve issues." },
+                { "title": "Client Portals", "details": "We create a digital space where your clients can access your products, place online orders, subscribe to services, submit service requests, and share their experiences with you and other users." },
+                { "title": "Employee Portals", "details": "We implement a secure platform that provides your employees with the ability to submit and manage requests for HR, IT, and facility-related services. The platform ensures convenient access to structured corporate data, enhances collaboration, and keeps employees informed about corporate events." },
+                { "title": "E-commerce Portals", "details": "We create an intuitive shopping experience for business buyers and individual consumers and can integrate an e-commerce portal into a retail ecosystem." },
+                { "title": "E-Learning Portals", "details": "We develop portals for corporate training and employee development, educational institutions, and business training." },
+                { "title": "Communication Portals", "details": "We connect people with shared interests and encourage them to gain new knowledge and share experiences through forums, blogs, chats, and other communication tools." }
             ]
         },
         "crm": {

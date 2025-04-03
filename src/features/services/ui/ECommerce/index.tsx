@@ -1,6 +1,6 @@
 'use client'
 
-import { Comment, Props, Service, Title, Description } from '@/widgets/services'
+import { Comment, Props, Service, Title, Description, Stack } from '@/widgets/services'
 import { useTranslations } from 'next-intl'
 import { Hl } from '@/widgets/services'
 
@@ -12,6 +12,7 @@ export default function ECommerce() {
         <Props props={t.raw('props') as string[]} />
         <Hl />
         <Description>{t('description.0')}</Description>
+        <Stack params={Object.values(t.raw('stack'))} />
         <Comment isAnimate={true} text={t('description.1')} />
     </Service>)
 }

@@ -76,9 +76,10 @@ const translation = {
                 "name": "Daria Pryimak",
                 "role": "Project manager & Owner",
                 "skills": `
-                    3 YEARS OF EXPERIENCE IN DEVELOPING AND MANAGING WEB APPS\n
-                    3 YEARS OF EXPERIENCE IN DEVELOPING AN EMPLOYEE TRAINING, DEVELOPMENT, AND EVALUATION SYSTEM, RECRUITING SYSTEM, AND CREATING A CORPORATE CULTURE AS THE HEAD OF THE TRAINING AND PERSONNEL DEPARTMENT AT MNS INVESTMENT, THE OFFICIAL REPRESENTATIVE OF CALZEDONIA, INTIMISSIMI, TEZENIS, AND FALCONERI BRANDS IN UKRAINE\n
-                    3 YEARS OF EXPERIENCE IN MANAGING A STORE AS A CHIEF STORE MANAGER IN A HOME APPLIANCES COMPANY, FOXTROT
+                    MORE THAN 10 YEARS OF EXPERIENCE IN DEVELOPING A SYSTEM OF TRAINING, DEVELOPMENT AND EVALUATION OF EMPLOYEES,
+                    SYSTEM OF RECRUITMENT AND FORMATION OF CORPORATE CULTURE IN BOTH INTERNATIONAL AND UKRAINIAN COMPANIES.\n
+                    5 YEARS OF EXPERIENCE IN MANAGEMENT AT THE POSITIONS OF DIRECTOR/REGIONAL MANAGER.\n
+                    AS WELL AS 4 YEARS OF EXPERIENCE IN DEVELOPING AND MANAGING WEB-DATA.
                 `,
                 "about": "Hello everyone,\n\nMy name is Daria, and I am a manager for bringing your ideas to the screen. I accompany and take responsibility for the project from the first communication to the signing of the delivery of the finished product. I will develop a commercial proposal, technical specifications, instructional materials, and instructions for using the finished product. I will also be your launch manager, providing informational support, conducting training, and education to help you effectively launch and implement new developments and processes into your business."
             },
@@ -86,9 +87,9 @@ const translation = {
                 "name": "Volodymyr Poltavskyi",
                 "role": "IT Director",
                 "skills": `
-                    1.5 YEARS OF EXPERIENCE IN DEVELOPING WEB APPS\n
-                    1.5 YEARS OF BACK-END DEVELOPING\n
-                    1.5 YEARS OF FRONT-END DEVELOPING
+                    3 YEARS OF EXPERIENCE IN DEVELOPING WEB APPS\n
+                    3 YEARS OF BACK-END DEVELOPING\n
+                    3 YEARS OF FRONT-END DEVELOPING
                 `,
                 "about": "Hi, my name is Vladimir and I am the IT director of the MISEENSCREEN project. I develop UI interfaces and server applications of any level of complexity. Your products will work stably all 24/7, will be easily extensible for any of your requirements."
             },
