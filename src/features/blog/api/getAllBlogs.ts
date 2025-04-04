@@ -3,7 +3,7 @@
 import { getTranslations } from 'next-intl/server'
 import type { Blog } from '@/widgets/blog'
 import cover1 from '@/../public/assets/blog/employees-promotion/preview.jpeg'
-import cover2 from '@/../public/assets/blog/what2/preview.jpeg'
+import cover2 from '../../../../public/assets/blog/what/preview.jpeg'
 import cover3 from '@/../public/assets/blog/what/preview.jpeg'
 
 export default async function getAllBlogs(locale: string): Promise<Blog[]> {

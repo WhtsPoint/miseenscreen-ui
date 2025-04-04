@@ -3,11 +3,13 @@
 import { type BlogPreviewV2, ArticleTable as NotFilledArticleTable } from '@/widgets/blog'
 import { useRouter } from '@/utils/lib/navigation'
 import config from '@/utils/config'
+import type { ReactNode } from 'react'
 
 interface Params {
     blogs: BlogPreviewV2[],
     className?: string,
-    articleClassName?: string
+    articleClassName?: string,
+    blogsChildren?: Record<number, ReactNode>
 }
 
 export default function ArticleTable(params: Params) {

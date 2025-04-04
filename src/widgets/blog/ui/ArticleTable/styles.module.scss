@@ -6,6 +6,11 @@
   grid-template-columns: repeat(auto-fill, minmax(0, 400px));
   gap: 40px;
   margin: auto;
+
+  & .article {
+    position: relative;
+  }
+
   & .blogTitle {
     min-height: 70px;
   }
