@@ -133,7 +133,7 @@ const translation = {
         },
         "crm": {
             "title": "CRM",
-            "subtitle": "",
+            "subtitle": "Boosting business efficiency, improving customer communication, and increasing sales through CRM systems for your business.",
             "props": [
                 { "title": "Clients Portal" },
                 { "title": "CRM Self-Service" },
