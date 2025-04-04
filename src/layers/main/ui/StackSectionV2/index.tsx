@@ -4,10 +4,10 @@ import styles from './styles.module.scss'
 export default function StackSectionV2() {
     return (<div className={styles.section}>
         <Ecommerce />
+        <WebPortals />
         <ElSolution />
         <HrSoftware />
-        <Analytics />
-        <WebPortals />
         <CRM />
+        <Analytics />
     </div>)
 }
