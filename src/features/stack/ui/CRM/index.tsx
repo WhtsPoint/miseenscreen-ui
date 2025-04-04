@@ -1,3 +1,5 @@
+'use client'
+
 import { useTranslations } from 'next-intl'
 import { Link } from '@/utils/lib/navigation'
 import config from '@/utils/config'
@@ -11,15 +13,20 @@ import circleImage from '@/utils/assets/images/stack/particles/crm.png'
 import xLightImage from '@/utils/assets/images/stack/particles/x-light.png'
 import styles from './styles.module.scss'
 import { cl } from '@/utils/lib/cl'
+import { useRef } from 'react'
+import { useInView } from 'framer-motion'
 
 export default function CRM() {
+    const ref = useRef(null)
+    const isInView = useInView(ref, { once: true })
     const t = useTranslations('services.crm')
 
     const props = Object.values(t.raw('props')).map(({ title }: any) => title)
 
-    return (<Link className={sectionStyles.section} href={config.routes.services.crm}>
-        <Poster src={posterImage.src} className={cl(styles.background, sectionStyles.section)}>
+    return (<Link ref={ref} className={sectionStyles.section} href={config.routes.services.crm}>
+        <Poster src={posterImage.src} isInView={isInView} className={cl(styles.background, sectionStyles.section)}>
             <Particle
+                isInView={isInView}
                 className={styles.centerParticle}
                 animation={{
                     initial: { opacity: 0 },
@@ -29,6 +36,7 @@ export default function CRM() {
                 image={{ src: circleImage.src, sizes: '1100px' }}
             />
             <Particle
+                isInView={isInView}
                 className={styles.centerParticle}
                 animation={{
                     initial: { opacity: 0 },

@@ -7,10 +7,11 @@ import styles from './styles.module.scss'
 type UnfilledPosterParams = Parameters<typeof UnfilledPoster>[0]
 
 interface Params extends Omit<UnfilledPosterParams, 'sizes'>, Partial<Children<ReactNode>> {
-    className?: string
+    className?: string,
+    isInView: boolean
 }
 
-export default function Poster({ children, className, ...params }: Params) {
+export default function Poster({ children, isInView, className, ...params }: Params) {
     return (<div className={cl(styles.poster, className)}>
         <UnfilledPoster style={{ width: '100%' }} transition={{ delay: 1 }} sizes={'50vw'} {...params} />
         {children}

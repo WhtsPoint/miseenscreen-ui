@@ -12,14 +12,13 @@ type ImageParams = Parameters<typeof Image>[0]
 interface Params {
     className?: string,
     animation: Pick<MotionDivParams, 'initial' | 'transition'> & { viewAnimation: Variant },
-    image: Pick<ImageParams, 'src' | 'sizes'>
+    image: Pick<ImageParams, 'src' | 'sizes'>,
+    isInView: boolean
 }
 
-export default function Particle({ className, animation, image }: Params) {
-    const ref = useRef(null)
-    const isInView = useInView(ref)
+export default function Particle({ className, animation, image, isInView }: Params) {
 
-    return (<div className={cl(styles.particle, className)} ref={ref}>
+    return (<div className={cl(styles.particle, className)}>
         <motion.div
             className={styles.imageContainer}
             animate={isInView && 'view'}

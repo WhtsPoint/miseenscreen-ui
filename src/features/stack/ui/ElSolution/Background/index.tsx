@@ -7,43 +7,48 @@ import circleImage from '@/utils/assets/images/stack/posters/elearning/circle.pn
 import lightImage from '@/utils/assets/images/stack/particles/x-light-2.png'
 
 interface Params {
-    className?: string
+    className?: string,
+    isInView: boolean
 }
 
-export default function Background({ className }: Params) {
+export default function Background({ className, isInView }: Params) {
     return (<div className={cl(styles.background, className)}>
         <div className={styles.right}>
             <Particle
+                isInView={isInView}
                 className={styles.rightHand}
                 animation={{
                     initial: { y: -100, opacity: 0 },
                     viewAnimation: { y: 0, opacity: 1 },
                     transition: { duration: 1, delay: 1 }
                 }}
-                image={{ src: rightHandImage.src }}
+                image={{ src: rightHandImage.src, sizes: '50vw' }}
             />
         </div>
         <div className={styles.left}>
             <Particle
+                isInView={isInView}
                 className={styles.leftHand}
                 animation={{
                     initial: { y: 100, opacity: 0 },
                     viewAnimation: { y: 0, opacity: 1 },
                     transition: { duration: 1, delay: 1 }
                 }}
-                image={{ src: leftHandImage.src }}
+                image={{ src: leftHandImage.src, sizes: '50vw' }}
             />
         </div>
         <Particle
+            isInView={isInView}
             className={styles.circle}
             animation={{
                 initial: { opacity: 0 },
                 viewAnimation: { opacity: 1 },
                 transition: { duration: 1, delay: 2 }
             }}
-            image={{ src: circleImage.src }}
+            image={{ src: circleImage.src, sizes: '50vw' }}
         />
         <Particle
+            isInView={isInView}
             className={styles.light}
             animation={{
                 initial: { opacity: 0 },

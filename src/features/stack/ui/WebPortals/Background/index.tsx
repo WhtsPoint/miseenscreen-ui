@@ -1,46 +1,39 @@
 'use client'
 
-import Image from 'next/image'
 import styles from './styles.module.scss'
-import { motion, useInView, type Variant } from 'framer-motion'
 import lightImage from '@/utils/assets/images/stack/particles/portals-light.png'
 import laptopImage from '@/utils/assets/images/stack/posters/web-portals/laptop.png'
 import robotImage from '@/utils/assets/images/stack/posters/web-portals/robot.png'
 import { cl } from '@/utils/lib/cl'
-import { useRef } from 'react'
 import Particle from '@/utils/ui/Particle'
 
 interface Params {
-    className?: string
+    className?: string,
+    isInView: boolean
 }
 
-export default function Background({ className }: Params) {
-    const ref = useRef(null)
-    const isInView = useInView(ref, { once: true })
-    const animation = (params: Variant) => ({
-        animate: isInView && 'view',
-        initial: { opacity: 0 },
-        variants: { view: { ...params } }
-    })
-
-    return (<div ref={ref} className={cl(styles.background, className)}>
+export default function Background({ className, isInView }: Params) {
+    return (<div className={cl(styles.background, className)}>
         <div className={styles.main}>
             <div className={styles.top}>
                 <Particle
+                    isInView={isInView}
                     className={styles.laptop}
                     animation={{ initial: { opacity: 0 }, viewAnimation: { opacity: 1 }, transition: { duration: 1, delay: 2 } }}
-                    image={{ src: laptopImage.src }}
+                    image={{ src: laptopImage.src, sizes: '50vw' }}
                 />
                 <Particle
+                    isInView={isInView}
                     className={styles.light}
                     animation={{ initial: { opacity: 0 }, viewAnimation: { opacity: 1 }, transition: { duration: 1, delay: 1.5 } }}
-                    image={{ src: lightImage.src }}
+                    image={{ src: lightImage.src, sizes: '50vw' }}
                 />
             </div>
             <Particle
+                isInView={isInView}
                 className={styles.robot}
                 animation={{ initial: { opacity: 0 }, viewAnimation: { opacity: 1 }, transition: { duration: 1, delay: 1 } }}
-                image={{ src: robotImage.src }}
+                image={{ src: robotImage.src, sizes: '50vw' }}
             />
         </div>
     </div>)

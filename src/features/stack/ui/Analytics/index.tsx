@@ -1,3 +1,5 @@
+'use client'
+
 import { useTranslations } from 'next-intl'
 import { Props, Title } from '@/widgets/stack'
 import { cl } from '@/utils/lib/cl'
@@ -7,13 +9,12 @@ import styles from './styles.module.scss'
 import sectionStyles from '@/utils/assets/styles/stack/section.module.scss'
 import contentStyles from '@/utils/assets/styles/stack/content.module.scss'
 import Background from './Background'
-
-const anim = {
-    initial: { opacity: 0, y: 30 },
-    viewAnimation: { opacity: 1, y: 0 },
-} as const
+import { useRef } from 'react'
+import { useInView } from 'framer-motion'
 
 export default function Analytics() {
+    const ref = useRef(null)
+    const isInView = useInView(ref, { once: true })
     const t = useTranslations('services.custom-erp')
 
     let props: string[] = []
@@ -24,6 +25,7 @@ export default function Analytics() {
     })
 
     return (<Link
+        ref={ref}
         href={config.routes.services.analytics}
         className={cl(sectionStyles.section, styles.analytics, sectionStyles.reverse)}
     >
@@ -31,6 +33,6 @@ export default function Analytics() {
             <Title>{t('title')}</Title>
             <Props props={props} />
         </div>
-        <Background className={styles.background}/>
+        <Background isInView={isInView} className={styles.background} />
     </Link>)
 }
