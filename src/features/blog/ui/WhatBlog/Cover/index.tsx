@@ -52,21 +52,21 @@ export default function Cover({}: Params) {
             style={{ gridArea: 'b' }}
             className={styles.element}
         >
-            <Image fill src={bImage.src} alt={'Left cover picture'} />
+            <Image fill src={bImage.src} alt={'Center cover picture'} />
         </motion.div>
         <motion.div
             {...animation(0.5)}
             style={{ gridArea: 'c' }}
             className={styles.element}
         >
-            <Image fill src={cImage.src} alt={'Left cover picture'} />
+            <Image fill src={cImage.src} alt={'Center cover picture'} />
         </motion.div>
         <motion.div
             {...animation(0.75)}
             style={{ gridArea: 'd' }}
             className={cl(styles.element, styles.contain)}
         >
-            <Image fill src={dImage.src} alt={'Left cover picture'} />
+            <Image fill src={dImage.src} alt={'Right cover picture'} />
             <Particle
                 className={styles.glare}
                 animation={{
