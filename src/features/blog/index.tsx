@@ -11,6 +11,7 @@ import EmployeesPromotionBlog from './ui/EmployeesPromotionBlog'
 import ArticleTableWithLogo from './ui/ArticleTableWithLogo'
 import ArticleTableWithButtonAndLogo from './ui/ArticleTableWithButtonAndLogo'
 import renderBlogContent from './utils/renderBlogContent'
+import renderBlogCover from './utils/renderBlogCover'
 
 export {
     getAllBlogs,
@@ -25,5 +26,6 @@ export {
     getAllBlogsPreviewsV2,
     ArticleTableWithLogo,
     ArticleTableWithButtonAndLogo,
-    renderBlogContent
+    renderBlogContent,
+    renderBlogCover
 }

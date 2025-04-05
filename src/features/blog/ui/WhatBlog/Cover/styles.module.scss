@@ -1,0 +1,40 @@
+.cover {
+  width: 100%;
+  max-height: inherit;
+  aspect-ratio: 2;
+  display: grid;
+  grid-template-areas:
+    "a b d d"
+    "a c d d";
+  gap: 2%;
+  padding: 3%;
+
+  & .element {
+    position: relative;
+    & img {
+      object-fit: cover;
+    }
+  }
+
+  & .contain img {
+    object-fit: contain;
+  }
+
+  & .straightLine {
+    width: 20px;
+    height: 100%;
+    left: calc(100% - 10px);
+    position: absolute;
+
+    & img {
+      object-fit: fill !important;
+    }
+  }
+
+  & .glare {
+    width: 75%;
+    max-width: 500px;
+    position: absolute;
+    left: -30px;
+  }
+}
