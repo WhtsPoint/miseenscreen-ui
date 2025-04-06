@@ -1,11 +1,13 @@
 import type { Blog } from '@/widgets/blog'
 import { createElement, type ReactNode } from 'react'
-import Cover from '../ui/WhatBlog/Cover'
+import WhatCover from '../ui/WhatBlog/Cover'
+import What2Cover from '../ui/What2Blog/Cover'
+import EPromotionCover from '../ui/EmployeesPromotionBlog/Cover'
 
 const coverElements = {
-    // 'employees-promotion': null,
-    // 'company-consciousness-2': null,
-    'company-consciousness': Cover
+    'employees-promotion': EPromotionCover,
+    'company-consciousness-2': What2Cover,
+    'company-consciousness': WhatCover
 } as const
 
 

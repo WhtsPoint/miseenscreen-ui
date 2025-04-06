@@ -1,0 +1,20 @@
+.cover {
+  display: grid;
+  width: 100%;
+  aspect-ratio: 2;
+  max-height: inherit;
+  position: relative;
+  padding: 2%;
+  grid-template-areas:
+    "a a b e e"
+    "a a c e e"
+    "a a c e e"
+    "a a d e e";
+  gap: 2%;
+  & .element {
+    position: relative;
+    & img {
+      object-fit: cover;
+    }
+  }
+}

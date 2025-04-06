@@ -17,7 +17,7 @@ export default function ArticleTableWithButtonAndLogo(params: Params) {
         1: <Particle
             className={styles.particle}
             animation={{ viewAnimation: {}}}
-            image={{ src: glareImage.src }}
+            image={{ src: glareImage.src, sizes: '200px' }}
             isInView={true}
         />
     }

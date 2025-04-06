@@ -1,0 +1,22 @@
+.cover {
+  display: grid;
+  width: 100%;
+  aspect-ratio: 2;
+  max-height: inherit;
+  position: relative;
+  grid-template-columns: 1.5fr 1fr 1fr 1.5fr;
+  & .element {
+    margin: 5%;
+    position: relative;
+    & img {
+      object-fit: cover;
+    }
+  }
+  & .spotlight {
+    height: 100%;
+    left: 50%;
+    transform: translateX(-40%);
+    position: absolute;
+    z-index: 2;
+  }
+}

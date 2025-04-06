@@ -15,7 +15,6 @@ interface Params {
 }
 
 export default function ArticleTable({ className, blogsChildren, articleClassName, blogs, onClick }: Params) {
-    console.log(blogsChildren)
     return (<div className={cl(styles.articleList, className)}>
         {blogs.map((blog, index) => <ArticlePreviewV2
             key={blog.id}

@@ -1,25 +1,23 @@
 body .ecommerce {
-  overflow-y: hidden;
+
   & .poster {
-    padding: 0;
     position: relative;
     @media (max-width: 1281px) {
       padding: 0 100px;
     }
   }
   & .glare {
-    width: 300px;
+    width: 20vw;
     position: absolute;
-    left: calc(50% + 60px);
-    transform: translateX(-10%);
-    top: -80px;
+    right: 100px;
+    bottom: 0;
     pointer-events: none;
     user-select: none;
     scale: 5;
   }
   & .backGlare {
     position: absolute;
-    top: -150px;
+    top: 45%;
     right: -150px;
     scale: 2.5;
   }

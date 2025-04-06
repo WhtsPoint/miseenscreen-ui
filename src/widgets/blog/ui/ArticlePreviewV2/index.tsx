@@ -18,8 +18,6 @@ export default function ArticlePreviewV2(
     const { title, previewCover, themes } = blog
     const { src, width, height } = previewCover
 
-    console.log(children)
-
     return (<motion.button whileHover={'hover'} onClick={onClick} className={cl(styles.articlePreview, className)}>
         <div className={styles.cover}>
             <motion.img

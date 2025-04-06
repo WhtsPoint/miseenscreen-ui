@@ -27,7 +27,7 @@ const animationWithView = (isInView: boolean) => (delay: number) => ({
 
 export default function Cover({}: Params) {
     const ref = useRef(null)
-    const isInView = useInView(ref)
+    const isInView = useInView(ref, { once: true })
     const animation = animationWithView(isInView)
 
     return (<div ref={ref} className={styles.cover}>
@@ -35,7 +35,7 @@ export default function Cover({}: Params) {
             {...animation(0)}
             style={{ gridArea: 'a' }} className={styles.element}
         >
-            <Image fill src={aImage.src} alt={'Left cover picture'} />
+            <Image fill sizes={'33.3vw'} src={aImage.src} alt={'Left cover picture'} />
             <Particle
                 className={styles.straightLine}
                 animation={{
@@ -52,21 +52,21 @@ export default function Cover({}: Params) {
             style={{ gridArea: 'b' }}
             className={styles.element}
         >
-            <Image fill src={bImage.src} alt={'Center cover picture'} />
+            <Image fill sizes={'33.3vw'} src={bImage.src} alt={'Center cover picture'} />
         </motion.div>
         <motion.div
             {...animation(0.5)}
             style={{ gridArea: 'c' }}
             className={styles.element}
         >
-            <Image fill src={cImage.src} alt={'Center cover picture'} />
+            <Image fill sizes={'33.3vw'} src={cImage.src} alt={'Center cover picture'} />
         </motion.div>
         <motion.div
             {...animation(0.75)}
             style={{ gridArea: 'd' }}
             className={cl(styles.element, styles.contain)}
         >
-            <Image fill src={dImage.src} alt={'Right cover picture'} />
+            <Image fill sizes={'33.3vw'} src={dImage.src} alt={'Right cover picture'} />
             <Particle
                 className={styles.glare}
                 animation={{
