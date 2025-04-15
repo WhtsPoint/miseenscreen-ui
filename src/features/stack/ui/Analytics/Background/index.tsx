@@ -34,7 +34,7 @@ export default function Background({ className, isInView }: Params) {
             isInView={isInView}
             className={styles.light}
             animation={{ initial: { opacity: 0 }, viewAnimation: { opacity: 1 }, transition: { duration: 1, delay: 1.5 } }}
-            image={{ src: crossImage.src }}
+            image={{ src: crossImage.src, sizes: '25vw' }}
         />
     </div>)
 }

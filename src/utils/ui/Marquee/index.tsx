@@ -5,11 +5,12 @@ import { motion } from 'framer-motion'
 import styles from './styles.module.scss'
 
 interface Params extends Children<ReactNode> {
-    className?: string
+    className?: string,
+    mainClassName?: string
 }
 
-const Marquee = forwardRef<HTMLDivElement, Params>(({ children, className }, ref) => {
-    return (<div className={styles.marquee}>
+const Marquee = forwardRef<HTMLDivElement, Params>(({ children, className, mainClassName }, ref) => {
+    return (<div className={cl(styles.marquee, mainClassName)}>
         <div ref={ref} className={cl(styles.marquee__list, className)}>
             {children}
             {children}

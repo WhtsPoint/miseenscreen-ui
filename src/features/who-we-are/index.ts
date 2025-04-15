@@ -7,5 +7,9 @@ import BookNote from './ui/BookNote'
 import CasesNote from './ui/CasesNote'
 import CompanyNote from './ui/CompanyNote'
 import StackNote from './ui/StackNote'
+import Experience from './ui/Experience'
+import FoxtrotStack from './ui/FoxtrotStack'
+import MNSStack from './ui/MNSStack'
+import MSStack from './ui/MSStack'
 
-export { InitSection, CreatorNote, CodeNote, ModelNote, TabletNote, BookNote, CasesNote, CompanyNote, StackNote }
+export { InitSection, CreatorNote, CodeNote, ModelNote, TabletNote, BookNote, CasesNote, CompanyNote, StackNote, Experience, FoxtrotStack, MNSStack, MSStack }

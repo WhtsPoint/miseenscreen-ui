@@ -12,9 +12,9 @@ export default function generateAlternates(path: string): Metadata {
         alternates: {
             languages: {
                 ...Object.fromEntries(Object.entries(languages).map(([locale, language]) => {
-                    return [language, `${process.env.HOST_URL}/${locale}${path}`]
+                    return [language, `${process.env.NEXT_PUBLIC_HOST_URL}/${locale}${path}`]
                 })),
-                'x-default': `${process.env.HOST_URL}${path}`
+                'x-default': `${process.env.NEXT_PUBLIC_HOST_URL}${path}`
             }
         }
     }

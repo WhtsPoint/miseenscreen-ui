@@ -31,6 +31,11 @@ const services = [
         "title": "Web Portals",
         "description": `Custom Web Apps Development: Self-service portals, Clients portals, Emploee portals, Ecommerce portals, E-learning, Community portals`,
         "id": "web-portals"
+    },
+    {
+        "title": "CRM",
+        "description": `Boosting business efficiency, improving customer communication, and increasing sales through CRM systems for your business`,
+        "id": "crm"
     }
 ] satisfies NotSearchedService[]
 

@@ -29,8 +29,8 @@
 ### Environment setup
 
 
-|              Variable              |                               Description                                |                                            Default Value                                             |
-|:----------------------------------:|:------------------------------------------------------------------------:|:----------------------------------------------------------------------------------------------------:|
-| `NEXT_PUBLIC_RECAPTCHA_PUBLIC_KEY` |                        Public key of ReCaptcha v2                        |                                                  -                                                   |
-|             `HOST_URL`             |          Url of host, where you run app (need for metadataBase)          |                        http://localhost:3000 (Prod: http://miseenscreen.com/)                        |
-|       `NEXT_PUBLIC_API_URL`        | Url of [Miseenscreen API](https://github.com/WhtsPoint/miseenscreen-api) |              http://localhost:5500/api/v0/ (Prod: http://api.miseenscreen.com/api/v0/)               |
+|                   Variable                    |                               Description                                |                                            Default Value                                             |
+|:---------------------------------------------:|:------------------------------------------------------------------------:|:----------------------------------------------------------------------------------------------------:|
+|      `NEXT_PUBLIC_RECAPTCHA_PUBLIC_KEY`       |                        Public key of ReCaptcha v2                        |                                                  -                                                   |
+|            `NEXT_PUBLIC_HOST_URL`             |          Url of host, where you run app (need for metadataBase)          |                        http://localhost:3000 (Prod: http://miseenscreen.com/)                        |
+|             `NEXT_PUBLIC_API_URL`             | Url of [Miseenscreen API](https://github.com/WhtsPoint/miseenscreen-api) |              http://localhost:5500/api/v0/ (Prod: http://api.miseenscreen.com/api/v0/)               | 

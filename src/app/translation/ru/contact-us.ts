@@ -19,6 +19,7 @@ const translation = {
                 "hr-software": "Hr приложения",
                 "analytics": "Управление и аналитика",
                 "other": "Другое",
+                "crm": "CRM",
                 "multiple-select": "*доступен множественный выбор"
             },
             "submit": "Отправить",

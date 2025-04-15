@@ -7,7 +7,11 @@ import {
     CasesNote,
     CompanyNote,
     StackNote,
-    InitSection
+    InitSection,
+    Experience,
+    FoxtrotStack,
+    MNSStack,
+    MSStack
 } from '@/features/who-we-are'
 import { FooterSection } from '@/layers/main'
 import { HeaderTheme } from '@/features/header'
@@ -19,6 +23,10 @@ export default function WhoWeArePage() {
             <section className={styles.page}>
             <HeaderTheme theme={'solid'} />
             <InitSection />
+            <Experience />
+            <FoxtrotStack />
+            <MNSStack />
+            <MSStack />
             <CreatorNote />
             <CodeNote />
             <ModelNote />

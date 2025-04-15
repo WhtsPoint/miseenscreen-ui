@@ -5,8 +5,10 @@
   margin-inline: auto;
   display: contents;
   & .paragraph {
-    font-size: 0.8em;
     margin-block: 40px;
+  }
+  & .paragraph, & .item {
+    font-size: 0.8em;
   }
   & .photo {
     border-radius: 20px;

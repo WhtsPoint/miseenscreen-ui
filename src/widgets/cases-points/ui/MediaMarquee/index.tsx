@@ -3,23 +3,25 @@
 import YMarquee from '@/utils/ui/YMarquee'
 import type { MotionValue } from 'framer-motion'
 import type { Direction } from '@/utils/lib/y-marquee'
-import type { StaticImageData } from 'next/image'
 import MarqueeLine from '../MarqueeLine'
+import type { Media } from '@/widgets/cases-points/types/Media'
 
 interface Params {
-    allPhotos: StaticImageData[][]
+    allMedia: Media[][]
     speed: MotionValue<number>,
     direction: Direction,
     position: number,
+    mainClassName?: string,
+    lineClassName?: string
 }
 
-export default function PhotoMarquee({ allPhotos, position, ...params }: Params) {
-    return (<YMarquee {...params}>
-        {allPhotos.map((photos, index) => {
+export default function MediaMarquee({ allMedia, position, lineClassName, ...params }: Params) {
+    return (<YMarquee {...params} className={lineClassName}>
+        {allMedia.map((media, index) => {
             return <MarqueeLine
             key={index}
             isHidden={index !== position}
-            photos={photos}
+            media={media}
         />})}
     </YMarquee>)
 }

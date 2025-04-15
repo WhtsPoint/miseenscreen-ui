@@ -33,8 +33,8 @@ export default function Background({ className, isInViewMotion, position }: Para
         >
             <NotFilledBackground
                 position={position}
-                downPhotos={photos.slice(0, photosOnPosition * positionsCount)}
-                upPhotos={photos.slice(photosOnPosition * positionsCount)}
+                downMedia={photos.slice(0, photosOnPosition * positionsCount)}
+                upMedia={photos.slice(photosOnPosition * positionsCount)}
                 photoOnPosition={photosOnPosition}
             />
         </motion.div>

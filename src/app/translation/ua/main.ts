@@ -8,7 +8,8 @@ const translation = {
         "web-services": "Онлайн сервіси та веб портали",
         "elearning-solution": "Електронне навчання",
         "hr-software": "Додатки для Hr",
-        "analytics": "ERP системи\n\nКомпанія в смартфоні\n\nУправління та аналітика"
+        "analytics": "ERP системи\n\nКомпанія в смартфоні\n\nУправління та аналітика",
+        "crm": "CRM"
     },
     "cooperation": {
         "title": "Cooperation with MISEENSCREEN",
@@ -73,7 +74,7 @@ const translation = {
         "person": {
             "darya": {
                 "name": "Daria Pryimak",
-                "role": "Project manager & Owner",
+                "role": "Project manager & Creator",
                 "skills": `
                     МАЙЖЕ 10 РОКІВ ДОСВІДУ РОЗРОБКИ СИСТЕМИ НАВЧАННЯ, РОЗВИТКУ ТА ОЦІНКИ СПІВРОБІТНИКІВ,
                     СИСТЕМИ РЕКРУТИНГУ ТА ФОРМУВАННЯ КОРПОРАТИВНОЇ КУЛЬТУРИ ЯК В МІЖНАРОДНИХ, ТАК І В УКРАЇНСЬКИХ КОМПАНІЯХ.\n

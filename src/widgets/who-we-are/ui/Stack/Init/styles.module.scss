@@ -1,0 +1,11 @@
+.init {
+  text-align: center;
+  & .light {
+    height: 40px;
+    position: relative;
+    img {
+      padding: 0 5px;
+      object-fit: contain;
+    }
+  }
+}

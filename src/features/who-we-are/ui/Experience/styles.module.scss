@@ -1,0 +1,15 @@
+.experience {
+  .list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    list-style: none;
+    padding: 0;
+    gap: 30px;
+  }
+  @media (max-width: 900px) {
+    text-align: center;
+    .list {
+      grid-template-columns: 1fr;
+    }
+  }
+}

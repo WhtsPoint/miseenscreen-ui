@@ -3,7 +3,7 @@ import type { ReactNode } from 'react'
 import type { Metadata } from 'next'
 
 export function generateMetadata(): Metadata {
-    const metadataBase = process.env.HOST_URL ? new URL(process.env.HOST_URL) : null
+    const metadataBase = process.env.NEXT_PUBLIC_HOST_URL ? new URL(process.env.NEXT_PUBLIC_HOST_URL) : null
 
     return {
         metadataBase,

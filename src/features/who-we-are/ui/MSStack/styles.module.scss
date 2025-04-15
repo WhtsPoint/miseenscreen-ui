@@ -1,0 +1,13 @@
+body .leftLineClassName {
+  height: 150%;
+  & div {
+    flex: 1;
+  }
+  & div:nth-child(2) {
+    flex: 1;
+  }
+}
+
+body .rightLineClassName {
+  height: 150%;
+}

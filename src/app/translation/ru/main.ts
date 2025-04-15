@@ -74,7 +74,7 @@ const translation = {
         "person": {
             "darya": {
                 "name": "Daria Pryimak",
-                "role": "Project manager & Owner",
+                "role": "Project manager & Creator",
                 "skills": `
                     ПОЧТИ 10 ЛЕТ ОПЫТА РАЗРАБОТКИ СИСТЕМЫ ОБУЧЕНИЯ, РАЗВИТИЯ И ОЦЕНКИ СОТРУДНИКОВ,
                     СИСТЕМЫ РЕКРУТИНГА И ФОРМИРОВАНИЯ КОРПОРАТИВНОЙ КУЛЬТУРЫ КАК В МЕЖДУНАРОДНЫХ, ТАК И В УКРАИНСКИХ КОМПАНИЯХ.\n

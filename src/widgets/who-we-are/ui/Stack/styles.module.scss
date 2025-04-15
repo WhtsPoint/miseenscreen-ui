@@ -1,0 +1,40 @@
+.stack {
+  width: 100%;
+  display: flex;
+  flex: 1;
+  position: relative;
+  & .main {
+    width: 50%;
+  }
+  & .backgroundBlock {
+    width: 50%;
+    position: relative;
+    & .background {
+      position: absolute;
+      bottom: 0;
+      & .leftLine {
+        width: 45%;
+      }
+      & .rightLine {
+        width: 55%;
+      }
+    }
+  }
+  &_reverse {
+    flex-direction: row-reverse;
+  }
+  @media(max-width: 1024px) {
+    padding: 0;
+    flex-direction: column;
+    align-items: center;
+    & .main {
+      width: 100%;
+      text-align: center;
+    }
+    & .backgroundBlock {
+      width: 100%;
+      max-width: 600px;
+      height: 500px;
+    }
+  }
+}

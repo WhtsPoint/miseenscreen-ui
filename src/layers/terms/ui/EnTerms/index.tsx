@@ -6,7 +6,7 @@ export default function EnTerms() {
     return (<section className={documentStyles.document}>
         <h1>Terms of Use</h1>
         <p>
-            Please read these Terms of Use ("Terms", "Terms of Use") carefully before using the Website operated by
+            Please read these Terms of Use (&quot;Terms&quot;, &quot;Terms of Use&quot;) carefully before using the Website operated by
             MISEENSCREEN.
         </p>
         <p>
@@ -26,7 +26,7 @@ export default function EnTerms() {
             All texts, materials, data, and information, data files, descriptions of our services and/or products,
             graphics,
             images, user interfaces, visual interfaces, photographs, trademarks, logos, and computer code, etc.
-            ("Content"),
+            (&quot;Content&quot;),
             contained on the Website are owned, controlled, or licensed by the Company and are protected by applicable
             intellectual
             property laws and other laws, including trademark and copyright laws. The Company is the owner and holder of
@@ -53,7 +53,7 @@ export default function EnTerms() {
             reproduced,
             modified, published, republished, uploaded, publicly displayed, coded, translated, transmitted, or
             distributed in any way
-            (including "copying/reproducing") to any other computer, server, website, or other medium for publication or
+            (including &quot;copying/reproducing&quot;) to any other computer, server, website, or other medium for publication or
             distribution,
             or for any commercial enterprise without the prior written consent of the Company. You also agree not to
             alter, rent, lease,
@@ -79,7 +79,7 @@ export default function EnTerms() {
         </ul>
         <h2>Payment</h2>
         <p>
-            If you wish to purchase any of our products or services ("Purchase"), you may
+            If you wish to purchase any of our products or services (&quot;Purchase&quot;), you may
             submit a request in one of the following ways:
         </p>
         <ul>
@@ -128,7 +128,7 @@ export default function EnTerms() {
             </li>
             <li>
                 Use the Website in any way that damages, disables, overburdens, or impairs the Website,
-                or interferes with any other party's use and enjoyment of the Website.
+                or interferes with any other party&apos;s use and enjoyment of the Website.
             </li>
             <li>
                 Copy or embed the Website or any part of it into another website or webpage.
@@ -249,7 +249,7 @@ export default function EnTerms() {
         <h2>Miscellaneous</h2>
         <p>
             These Terms constitute the entire agreement between the parties concerning the subject matter herein.
-            The Company's failure to insist upon or enforce strict performance of any provision of these Terms shall
+            The Company&apos;s failure to insist upon or enforce strict performance of any provision of these Terms shall
             not be construed as a waiver of any provision or right.
         </p>
         <p>

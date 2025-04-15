@@ -17,6 +17,74 @@ const translation = {
                 </p>
             `
         },
+        "experience": {
+            "text": `
+                Before delving into the philosophical side of our professional story,
+                let's start with facts and figures, i.e.,
+                the experience and results behind developing applications for your business.
+            `,
+            "experience": [
+                "10 YEARS OF EXPERIENCE IN RETAIL",
+                "8 YEARS IN MANAGEMENT",
+                "4 YEARS IN WEB APPS DEVELOPMENT",
+                "4 YEARS IN MANAGING HR & TRAINING DEPARTMENT"
+            ]
+        },
+        "stack": {
+            "foxtrot": {
+                "init": `
+                    Our team is led by management and sales skills.
+                    The whole world is all about sales, and we are the
+                    salespeople in it!
+                `,
+                "header": `
+                    4 years of managing a store with a team of 60 employees.
+                    FOXTROT Electronic Company
+                `,
+                "list": [
+                    "systematic improvement of efficiency: high-performance indicators such as CR, KPI, average check, revenue, traffic, credits, and customer satisfaction level.",
+                    "the store ranked 3rd among 147 stores in Ukraine in terms of revenue, while it was in 12th place before management.",
+                    "the only store that, after 6 months of operation, surpassed its direct competitor Comfy in revenue. A lag of 30-40% transformed into growth of +15-20%.",
+                    "the store's growth compared to the previous year was +100%, while the network's growth was +10%.",
+                    "a system of adaptation for managers was created.",
+                    "a training system for staff was developed, specifically the universalization program: employees who previously worked in and knew only one department and product category now know and sell products across the entire store."
+                ]
+            },
+            "mns": {
+                "init": `Our team is led by people's creativity and the system. Creativity and seamless interaction grow when the system is in place.`,
+                "header": `
+                    4 years of experience in managing HR and Training
+                    Department. CALZEDONIA SPA.
+                `,
+                "list": [
+                    "ensured results in recruitment. The average quarterly vacancy completion rate was 99%",
+                    "reduced annual staff turnover to 20%",
+                    "built the recruitment and hiring system",
+                    "conducted analytics and statistics in the HR field",
+                    "created and implemented an annual staff and management appraisal system",
+                    "developed and introduced a system for employee promotion to the next position",
+                    "established a support system for staff and corporate culture",
+                    `
+                        developed an individual formula and manager rating to
+                        measure and influence business outcomes, which included
+                        KPI indicators and aspects of working with staff.
+                    `
+                ]
+            },
+            "miseenscreen": {
+                "header": `
+                    4 years of experience in Web App Development.
+                    CALZEDONIA SPA and MISEENSCREEN
+                `,
+                "paragraph": "What if there is more time?",
+                "list": [
+                    "managing all stages of an IT project from technical specification to launch support",
+                    "aunching the project and implementing the use of the web application within the company by all employees",
+                    "creating training materials for the use of the application",
+                    "managing the technical support of the project"
+                ]
+            }
+        },
         "creator-note": [
             {
                 "title": "From creator",

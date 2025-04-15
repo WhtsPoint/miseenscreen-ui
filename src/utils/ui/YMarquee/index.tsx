@@ -7,13 +7,14 @@ import { MotionValue, useMotionValue, useMotionValueEvent, useTime, useTransform
 import { type Direction, methods } from '@/utils/lib/y-marquee'
 
 interface Params extends Children<ReactNode> {
-    className?: string
+    className?: string,
+    mainClassName?: string,
     speed: MotionValue<number>,
     direction: Direction,
 }
 
 export default function YMarquee(
-    { children, className, speed, direction }: Params
+    { children, className, speed, direction, mainClassName }: Params
 ) {
     const method = methods[direction]
     const time = useTime()
@@ -27,6 +28,7 @@ export default function YMarquee(
     return (<MotionMarquee
         style={{ y }}
         className={className}
+        mainClassName={mainClassName}
     >
         {children}
     </MotionMarquee>)

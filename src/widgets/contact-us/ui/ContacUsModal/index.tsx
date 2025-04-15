@@ -31,7 +31,7 @@ export default function ContactUsModal({ className, onClick, onClose, ...rest }:
     >
         <Image className={styles.background} fill sizes={sizes} src={backgroundImage.src} alt={''} />
         <div data-tag={'light'} className={styles.light}>
-            <Image fill src={lightImage.src} alt={''} />
+            <Image fill src={lightImage.src} alt={''} sizes={'500px'} />
         </div>
         <button className={styles.close} onClick={onCloseWrapper}>
             <XIcon width={30} height={30} color={'white'} />
