@@ -13,7 +13,7 @@ const videos = {
     cases: 'https://www.dropbox.com/scl/fi/fiyq3kekq5zxjvcjb4heh/cases.mp4?rlkey=94b16l6jscsizo64vbkxgwim5&raw=1',
     aboutUs: 'https://www.dropbox.com/scl/fi/mhfdarhglee2ccipobirr/1.mp4?rlkey=hp2mzmsdesi3d0cn9x7lutxnx&raw=1',
     footer: 'https://www.dropbox.com/scl/fi/yybb5ook2gi6ny66gvflt/1_1.mp4?rlkey=n5cks8egmnf3ldjxklvzarq4l&raw=1',
-    services: 'https://www.dropbox.com/scl/fi/k39e1ccvxlwjvy32k169j/1.mp4?rlkey=3mo8jaxpizz8ndyroo2oxop89&raw=1',
+    services: process.env.NEXT_PUBLIC_HOST_URL + "/video/services.mp4",
     welcomeBackground: 'https://www.dropbox.com/scl/fi/1oo85otwhsijoh7493jnk/init-background.webm?rlkey=ah2ry92jo7ie3155mdjfgacdb&st=u206doky&raw=1',
     rotatingBook: 'https://www.dropbox.com/scl/fi/k939yq4ltfjw733irfgyq/book.mp4?rlkey=gl1ssg9r9qwf39idaur3saw4x&raw=1',
     light: 'https://www.dropbox.com/scl/fi/z5zsw6xh0lg7jz07o6l3h/light.mp4?rlkey=vwnl9kscnuj9w7g8edq0dkxbb&raw=1',

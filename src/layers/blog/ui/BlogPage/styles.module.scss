@@ -1,4 +1,8 @@
-.blog {}
+.blog {
+  @media (max-width: 620px) {
+    margin-top: 80px;
+  }
+}
 
 .blog .footer {
   padding-top: 0;
