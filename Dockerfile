@@ -19,6 +19,14 @@ COPY . .
 # This will do the trick, use the corresponding env file for each environment.
 COPY .env .env
 COPY .env.production .env.production
+# Allow overriding the public API URL at build time (e.g. for IP-based deploys).
+# When the build args are passed, they replace .env.production; otherwise the
+# committed .env.production (domain-based) is used as before.
+ARG NEXT_PUBLIC_API_URL
+ARG HOST_URL
+RUN if [ -n "$NEXT_PUBLIC_API_URL" ]; then \
+      printf "HOST_URL=%s\nNEXT_PUBLIC_API_URL=%s\n" "$HOST_URL" "$NEXT_PUBLIC_API_URL" > .env.production; \
+    fi
 RUN npm run build
 
 # 3. Production image, copy all the files and run next
