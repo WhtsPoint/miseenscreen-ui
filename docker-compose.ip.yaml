@@ -1,5 +1,5 @@
 # IP-based deployment of the UI (Next.js).
-# The container is NOT published directly — the API's nginx proxies :5554 -> ui:3000
+# The container is NOT published directly — the API's nginx proxies :4447 -> ui:3000
 # over the shared `miseenscreen` network.
 #
 # The public API URL is baked into the JS bundle at BUILD time and is read from
