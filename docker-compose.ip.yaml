@@ -2,17 +2,13 @@
 # The container is NOT published directly — the API's nginx proxies :5554 -> ui:3000
 # over the shared `miseenscreen` network.
 #
-# NEXT_PUBLIC_API_URL is baked into the JS bundle at BUILD time, so SERVER_IP must
-# be set when building:
-#   export SERVER_IP=1.2.3.4
+# The public API URL is baked into the JS bundle at BUILD time and is read from
+# the committed .env.production (HOST_URL / NEXT_PUBLIC_API_URL). To change the
+# server IP, edit .env.production and rebuild — no env vars needed:
 #   docker compose -f docker-compose.ip.yaml up -d --build
 services:
   ui:
-    build:
-      context: .
-      args:
-        - NEXT_PUBLIC_API_URL=http://${SERVER_IP}:5553/api/v0/
-        - HOST_URL=http://${SERVER_IP}:5554
+    build: .
     environment:
       - PORT=3000
       - HOSTNAME=ui
